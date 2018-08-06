@@ -1,0 +1,61 @@
+<div class="container" 
+     >
+  <div><img src="assets/img/bdoLogo.png" class="header-logo" alt="">  </div>
+  <div style="margin-left:10px;"> <span class="mat-title">{{text}}</span> 
+  	<br>
+  	<span style="color:orange" class="mat-subheading-2">{{sub_text}}</span>
+  </div>
+  <span fxFlex ></span>
+
+  <mat-toolbar class="request-mat-toolbar" fxFlex fxShow=”true” fxHide.sm=”true”>
+  	
+  	<div  fxLayout="row"  fxLayoutGap="6px" fxLayoutAlign="space-around center" >
+		  <span fxFlex ></span>
+		  
+		<div *ngIf="showApprovalOptions">
+				<button mat-fab style="font-size: 12px;" color="primary" matTooltip="Approve Request" >
+						<span style="color:white">Approve</span>  
+						</button>
+							<button mat-fab   style="font-size: 12px;" matTooltip="Decline request">
+						  <!-- <mat-icon  class="request-mat-icon">clear</mat-icon> -->
+						  <span style="color:white">Decline</span>  
+						  </button>
+						  
+		</div>  
+		
+  		
+				<button *ngIf="showRequestFlowOptions" mat-mini-fab style="font-size: 12px;" matTooltip="Return Request"><mat-icon  class="request-mat-icon">subdirectory_arrow_left</mat-icon></button>
+				<button *ngIf="showRequestFlowOptions" mat-mini-fab   matTooltip="Submit Request" ><mat-icon  class="request-mat-icon">arrow_forward</mat-icon></button>
+	  
+		 
+  	<!-- 	<button mat-button color="primary" matTooltip="Approve Request" ><mat-icon  class="request-mat-icon">done</mat-icon>Approve</button>
+      <button mat-button color="primary" matTooltip="Decline request"><mat-icon  class="request-mat-icon">clear</mat-icon>Decline</button>
+      <button mat-button color="primary" matTooltip="Return Request"><mat-icon  class="request-mat-icon">subdirectory_arrow_left</mat-icon>Return </button>
+      <button mat-button  color="primary" matTooltip="Submit Request" ><mat-icon  class="request-mat-icon">arrow_forward</mat-icon>Submit</button> -->
+  	</div>
+  </mat-toolbar>
+
+  <div>
+  	<button fxFlex fxShow=”true” fxHide.lg=”true” mat-mini-fab [matMenuTriggerFor]="requestMenu" >
+  			<mat-icon color="primary">menu</mat-icon>
+  	</button> 
+  	
+  	<mat-menu class="request-menu-container" #requestMenu="matMenu" style="padding:0;">
+  	
+  	<div  fxLayout="column" fxLayoutAlign="start">
+  		
+  		<button mat-menu-item color="primary" matTooltip="Approve Request" ><mat-icon class="request-mat-icon" >done</mat-icon>Approve</button>
+  		<button mat-menu-item  color="primary" matTooltip="Decline request"><mat-icon  class="request-mat-icon" >clear</mat-icon>Decline</button>
+  		<button mat-menu-item  color="primary" matTooltip="Return Request" matTooltip="Return Request"><mat-icon  class="request-mat-icon" >subdirectory_arrow_left</mat-icon>Return</button>
+  		<button mat-menu-item  color="primary" matTooltip="Submit Request"  matTooltip="Submit Request"><mat-icon  class="request-mat-icon">arrow_forward</mat-icon>Submit</button>
+
+  		
+  	</div>
+  	  
+	</mat-menu>
+  	
+  </div>
+  
+</div>
+
+

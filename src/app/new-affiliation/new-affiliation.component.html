@@ -1,0 +1,22 @@
+
+<mat-card class="mat-card-screen">
+  
+  <mat-card-content>
+<app-bdo-form-header [text]="title" [sub_text]="subTitle" [mode]="mode"></app-bdo-form-header>
+ <form [formGroup]="form" (ngSubmit)="submit()">
+  <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form">
+   <div fxLayout="row wrap" fxLayoutAlign="end center" fxLayoutGap="3px">
+          <button type="submit" color="primary" mat-raised-button >Save </button>
+          <button type="submit" color="accent" mat-raised-button>Cancel</button>
+        </div>
+  </formly-form>
+</form>
+<hr>
+<div style="margin-top:10px">
+
+  <app-branch-list></app-branch-list>
+</div>
+
+</mat-card-content>
+</mat-card>
+

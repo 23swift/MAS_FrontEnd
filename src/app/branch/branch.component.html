@@ -1,0 +1,16 @@
+
+<mat-card class="mat-card-screen">
+  
+  <mat-card-content>
+<app-bdo-form-header [text]="title" [sub_text]="subTitle" [mode]="mode"></app-bdo-form-header>
+<div fxLayout="row wrap" fxLayoutAlign="end center" fxLayoutGap="3px">
+          
+  <button  (click)="baseExecuteFunction();" color="primary" mat-raised-button >{{subTitle}}</button>
+ 
+    <!-- <a routerLink="/na" color="accent" mat-raised-button>Cancel</a> -->
+    <a (click)="cancel();" color="accent" mat-raised-button>Cancel</a>
+  </div>
+
+</mat-card-content>
+</mat-card>
+
