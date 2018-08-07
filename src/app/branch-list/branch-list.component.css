@@ -1,4 +1,10 @@
 table {
     width: 100%;
-  }
-  
+}
+
+.flex-branch-list-header {
+    display: flex;
+    flex-direction: row;
+    /* border:4px blue solid; */
+    justify-content: space-between;
+}

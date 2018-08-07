@@ -20,7 +20,8 @@ import {MatListModule} from '@angular/material/list';
 import { NewAffiliationComponent } from './new-affiliation/new-affiliation.component';
 import { PosRequestComponent } from './pos-request/pos-request.component';
 import { MatDatepickerModule , MatInputModule, MatNativeDateModule,MatTableModule,
-MatTabsModule,MatStepperModule} from '@angular/material';
+MatTabsModule,MatChipsModule} from '@angular/material';
+import {MatStepperModule} from '@angular/material/stepper';
 import { CalendarTypeComponent } from './calendar-type/calendar-type.component';
 import { BdoFormHeaderComponent } from './bdo-form-header/bdo-form-header.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
@@ -34,6 +35,7 @@ import { FileMaintenanceComponent } from './file-maintenance/file-maintenance.co
 import { AppBaseComponent } from './app-base/app-base.component';
 import { ExtentionComponent } from './extention/extention.component';
 import { BranchComponent } from './branch/branch.component';
+import { NewAffiliationStepComponent } from './new-affiliation-step/new-affiliation-step.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,8 @@ import { BranchComponent } from './branch/branch.component';
     FileMaintenanceComponent,
     AppBaseComponent,
     ExtentionComponent,
-    BranchComponent
+    BranchComponent,
+    NewAffiliationStepComponent
   ],
   imports: [
     BrowserModule,
@@ -86,7 +89,8 @@ import { BranchComponent } from './branch/branch.component';
     MatTooltipModule,
     MatTableModule,
     MatTabsModule,
-    MatStepperModule
+    MatStepperModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

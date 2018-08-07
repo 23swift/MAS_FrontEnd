@@ -8,6 +8,7 @@ import{AdditionalFacilityComponent} from './additional-facility/additional-facil
 import{FileMaintenanceComponent} from './file-maintenance/file-maintenance.component';
 import {ExtentionComponent} from './extention/extention.component';
 import { BranchComponent } from './branch/branch.component';
+import {NewAffiliationStepComponent} from './new-affiliation-step/new-affiliation-step.component'
 const routes: Routes = [
 {path:'na/:mode',component:NewAffiliationComponent},
 {path:'pos/:mode',component:PosRequestComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
 {path:'fileMaintenance', component:FileMaintenanceComponent},
 {path:'ext/:mode', component:ExtentionComponent},
 {path:'branch/:mode/:id', component:BranchComponent},
-{path:'branch/:mode', component:BranchComponent}
+{path:'branch/:mode', component:BranchComponent},
+{path:'naStep/:mode', component:NewAffiliationStepComponent}
 ];
 
 @NgModule({
