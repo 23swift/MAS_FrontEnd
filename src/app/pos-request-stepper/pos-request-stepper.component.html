@@ -4,7 +4,10 @@
 <mat-vertical-stepper [linear]="isLinear" #stepper>
   <mat-step [stepControl]="firstFormGroup">
     
-      <ng-template matStepLabel>Fill out POS Request form</ng-template>
+      <ng-template matStepLabel>
+        <mat-icon>check_box</mat-icon>
+        Fill out POS Form
+      </ng-template>
       <app-pos-request></app-pos-request>
   </mat-step>
   <mat-step [stepControl]="secondFormGroup">
