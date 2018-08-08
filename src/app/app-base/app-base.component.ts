@@ -71,7 +71,7 @@ public initialize() {
   public noAction(){
     alert('No Action Found, Mode Not Found');
   }
-  private getFields() {
+  public getFields() {
     // this.fields=this._branchService.getBranchFields();
   }
   //  public executeBaseFunction(){

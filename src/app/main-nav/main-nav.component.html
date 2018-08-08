@@ -51,21 +51,23 @@
     <mat-sidenav-content>
 
         <mat-toolbar color="primary" class="mat-elevation-z5">
-
+            <a routerLink="/home" mat-icon-button>
+                <mat-icon>home</mat-icon>
+            </a>
             <span>Merchant Acquiring System</span>
-
+            <span fxFlex></span>
             <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>description</mat-icon></button>
             <mat-menu #menu="matMenu">
                 <a routerLink="/naStep/create" mat-menu-item>New Affiliation</a>
                 <a routerLink="/ba/create" mat-menu-item>Branch Affiliation</a>
 
-                <a routerLink="/pos/create" mat-menu-item>POS Request</a>
+                <a routerLink="/posStep" mat-menu-item>POS Request</a>
                 <a routerLink="/additionalFacility" mat-menu-item>Additional Facility</a>
                 <a routerLink="/fileMaintenance" mat-menu-item>File Maintenance</a>
             </mat-menu>
             <button mat-icon-button><mat-icon>settings</mat-icon></button>
             <button mat-icon-button><mat-icon>assignment</mat-icon></button>
-            <span fxFlex></span>
+
 
             <button type="submit" mat-icon-button><mat-icon>search</mat-icon> </button>
             <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
@@ -77,7 +79,6 @@
         </mat-toolbar>
         <ng-content></ng-content>
         <!-- Add Content Here -->
-
 
     </mat-sidenav-content>
 </mat-sidenav-container>

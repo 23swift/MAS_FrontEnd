@@ -1,16 +1,33 @@
-
 <mat-card class="mat-card-screen">
-  
-  <mat-card-content>
-<app-bdo-form-header [text]="title" [sub_text]="subTitle" [mode]="mode"></app-bdo-form-header>
-<div fxLayout="row wrap" fxLayoutAlign="end center" fxLayoutGap="3px">
-          
-  <button  (click)="baseExecuteFunction();" color="primary" mat-raised-button >{{subTitle}}</button>
- 
-    <!-- <a routerLink="/na" color="accent" mat-raised-button>Cancel</a> -->
-    <a (click)="cancel();" color="accent" mat-raised-button>Cancel</a>
-  </div>
 
-</mat-card-content>
+    <mat-card-content>
+        <app-bdo-form-header [text]="title" [sub_text]="subTitle" [mode]="mode"></app-bdo-form-header>
+
+        <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="3px">
+            <button mat-button color="warn">
+                <mat-icon >attachment</mat-icon>
+                OIF
+            </button>
+            <button mat-button color="warn">
+                <mat-icon>attachment</mat-icon>
+                POS
+            </button>
+        </div>
+
+
+
+        <form [formGroup]="form" (ngSubmit)="submit()">
+            <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form">
+
+            </formly-form>
+
+        </form>
+        <div fxLayout="row wrap" fxLayoutAlign="end center" fxLayoutGap="3px">
+
+            <button (click)="executeFunction();" color="primary" mat-raised-button>{{subTitle}}</button>
+
+            <button (click)="cancel();" color="accent" mat-raised-button>Cancel</button>
+        </div>
+
+    </mat-card-content>
 </mat-card>
-
