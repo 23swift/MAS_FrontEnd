@@ -1,13 +1,13 @@
 <app-bdo-form-header [text]="title" [sub_text]="subTitle" [mode]="mode"></app-bdo-form-header>
 <span class="mat-headline">Please follow the steps:</span>
-<mat-vertical-stepper>
+<mat-vertical-stepper [linear]="true" #stepper>
     <!-- <ng-template  [matStepperIcon]="'edit'">
         <mat-icon>check</mat-icon>
     </ng-template>
     <ng-template  matStepperIcon="done">
         <mat-icon>done_outline</mat-icon>
     </ng-template> -->
-    <mat-step>
+    <mat-step [completed]="false">
 
         <ng-template matStepLabel>
 
@@ -21,9 +21,9 @@
           Customer Profile
         </span>
         <app-new-affiliation></app-new-affiliation>
-        <button mat-button (click)="doneWithCustomer()">Done?</button>
+        <button mat-button (click)="doneWithCustomer(stepper);">Done?</button>
     </mat-step>
-    <mat-step>
+    <mat-step [completed]="false">
         <ng-template matStepLabel>
             <span class="mat-subheading-1">
                     
@@ -32,7 +32,7 @@
 
         <app-branch-list></app-branch-list>
     </mat-step>
-    <mat-step>
+    <mat-step [completed]="false">
         <ng-template matStepLabel>
             <span class="mat-subheading-1">
                         

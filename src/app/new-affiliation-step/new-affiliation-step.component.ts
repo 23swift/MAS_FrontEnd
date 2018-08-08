@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder,FormGroup,Validators} from '@angular/forms';
 import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { MatStepper } from '@angular/material';
 @Component({
   selector: 'app-new-affiliation-step',
   templateUrl: './new-affiliation-step.component.html',
@@ -29,9 +30,8 @@ export class NewAffiliationStepComponent implements OnInit {
       secondCtrl: ['', Validators.required]
     });
   }
-  doneWithCustomer(){
-
-    this.customerProf="edit";
-    alert(this.customerProf);
+  doneWithCustomer(stepper: MatStepper){
+    stepper.selected.completed=true;
+    // this.customerProf="edit";
   }
 }
