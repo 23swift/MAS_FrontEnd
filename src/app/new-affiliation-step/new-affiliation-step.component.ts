@@ -15,7 +15,8 @@ export class NewAffiliationStepComponent implements OnInit {
   title = 'New Affiliation';
    subTitle = 'Create';
    mode='create';
-   status="done";
+   statusDone:boolean = false;
+   public customerProf:string='';
   constructor(private _formBuilder: FormBuilder) { }
 
   ngOnInit() {
@@ -28,5 +29,9 @@ export class NewAffiliationStepComponent implements OnInit {
       secondCtrl: ['', Validators.required]
     });
   }
+  doneWithCustomer(){
 
+    this.customerProf="edit";
+    alert(this.customerProf);
+  }
 }
