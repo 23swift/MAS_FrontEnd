@@ -13,6 +13,8 @@ export class PosRequestStepperComponent implements OnInit {
 	isOptional= false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
+  mode='create';
+  status="done";
   constructor(private _formBuilder: FormBuilder) { }
 
   ngOnInit() {

@@ -20,7 +20,7 @@ import {MatListModule} from '@angular/material/list';
 import { NewAffiliationComponent } from './new-affiliation/new-affiliation.component';
 import { PosRequestComponent } from './pos-request/pos-request.component';
 import { MatDatepickerModule , MatInputModule, MatNativeDateModule,MatTableModule,
-MatTabsModule,MatChipsModule} from '@angular/material';
+MatTabsModule,MatChipsModule,MatGridListModule} from '@angular/material';
 import {MatStepperModule} from '@angular/material/stepper';
 import { CalendarTypeComponent } from './calendar-type/calendar-type.component';
 import { BdoFormHeaderComponent } from './bdo-form-header/bdo-form-header.component';
@@ -36,6 +36,7 @@ import { AppBaseComponent } from './app-base/app-base.component';
 import { ExtentionComponent } from './extention/extention.component';
 import { BranchComponent } from './branch/branch.component';
 import { NewAffiliationStepComponent } from './new-affiliation-step/new-affiliation-step.component';
+import { HomeScreenComponent } from './home-screen/home-screen.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { NewAffiliationStepComponent } from './new-affiliation-step/new-affiliat
     AppBaseComponent,
     ExtentionComponent,
     BranchComponent,
-    NewAffiliationStepComponent
+    NewAffiliationStepComponent,
+    HomeScreenComponent
   ],
   imports: [
     BrowserModule,
@@ -90,7 +92,8 @@ import { NewAffiliationStepComponent } from './new-affiliation-step/new-affiliat
     MatTableModule,
     MatTabsModule,
     MatStepperModule,
-    MatChipsModule
+    MatChipsModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

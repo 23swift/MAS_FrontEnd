@@ -9,7 +9,9 @@ import{FileMaintenanceComponent} from './file-maintenance/file-maintenance.compo
 import {ExtentionComponent} from './extention/extention.component';
 import { BranchComponent } from './branch/branch.component';
 import {NewAffiliationStepComponent} from './new-affiliation-step/new-affiliation-step.component'
+import{HomeScreenComponent} from './home-screen/home-screen.component'
 const routes: Routes = [
+{ path: '', redirectTo: '/home', pathMatch: 'full' },
 {path:'na/:mode',component:NewAffiliationComponent},
 {path:'pos/:mode',component:PosRequestComponent},
 {path:'posStep',component:PosRequestStepperComponent},
@@ -19,7 +21,8 @@ const routes: Routes = [
 {path:'ext/:mode', component:ExtentionComponent},
 {path:'branch/:mode/:id', component:BranchComponent},
 {path:'branch/:mode', component:BranchComponent},
-{path:'naStep/:mode', component:NewAffiliationStepComponent}
+{path:'naStep/:mode', component:NewAffiliationStepComponent},
+{path:'home', component:HomeScreenComponent}
 ];
 
 @NgModule({
