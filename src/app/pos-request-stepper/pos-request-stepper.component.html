@@ -3,7 +3,11 @@
 <mat-vertical-stepper [linear]="isLinear" #stepper>
     <mat-step>
 
-        <ng-template matStepLabel>Fill out POS Request form</ng-template>
+        <ng-template matStepLabel>
+            <span class="mat-subheading-1">
+            Fill out POS Request form
+                </span>
+        </ng-template>
         <span class="mat-headline">
             POS Request Details
           </span>
@@ -11,7 +15,11 @@
     </mat-step>
     <mat-step>
 
-        <ng-template matStepLabel>Add MID Request</ng-template>
+        <ng-template matStepLabel>
+            <span class="mat-subheading-1">
+            Add MID Request
+        </span>
+        </ng-template>
         <app-mid-request></app-mid-request>
     </mat-step>
     <mat-step state="done">

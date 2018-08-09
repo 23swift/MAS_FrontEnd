@@ -1,13 +1,12 @@
 <app-bdo-form-header [text]="title" [sub_text]="subTitle" [mode]="mode"></app-bdo-form-header>
 <span class="mat-headline">Please follow the steps:</span>
-<mat-vertical-stepper [linear]="true" #stepper style="background-color:#fafafa;">
-    <!-- <mat-vertical-stepper [linear]="true" #stepper> -->
-    <ng-template matStepperIcon="edit">
+<mat-vertical-stepper [linear]="true" #stepper>
+    <!-- <ng-template  [matStepperIcon]="'edit'">
         <mat-icon>check</mat-icon>
     </ng-template>
-    <ng-template matStepperIcon="done">
+    <ng-template  matStepperIcon="done">
         <mat-icon>done_outline</mat-icon>
-    </ng-template>
+    </ng-template> -->
     <mat-step [completed]="false">
 
         <ng-template matStepLabel>
@@ -18,26 +17,13 @@
 
         </ng-template>
         <!-- <mat-step-header state="done">Complete</mat-step-header> -->
-        <mat-card class="mat-card-screen">
-
-            <mat-card-content>
-                <span class="mat-headline">
-                            Customer Profile
-                          </span>
-                <app-new-affiliation></app-new-affiliation>
-
-            </mat-card-content>
-        </mat-card>
-
-        <div fxLayout="row wrap" fxLayoutAlign="end center">
-            <button (click)="completed(stepper);" mat-button color="warn">
-                        <mat-icon>check</mat-icon>Done?
-                        <!-- <mat-icon *ngIf="!completed">check</mat-icon> -->
-                    </button>
-        </div>
-
+        <span class="mat-headline">
+          Customer Profile
+        </span>
+        <app-new-affiliation></app-new-affiliation>
+        <button mat-button (click)="doneWithCustomer(stepper);">Done?</button>
     </mat-step>
-    <mat-step>
+    <mat-step [completed]="false">
         <ng-template matStepLabel>
             <span class="mat-subheading-1">
                     
@@ -47,7 +33,7 @@
         <!-- <app-branch-list></app-branch-list> -->
         <router-outlet></router-outlet>
     </mat-step>
-    <mat-step>
+    <mat-step [completed]="false">
         <ng-template matStepLabel>
             <span class="mat-subheading-1">
                         
@@ -124,6 +110,6 @@
 
     <!-- Stepper steps go here -->
     <!-- <mat-step label="step 1">step 1 content</mat-step>
-    <mat-step label="step 2">step 2 content</mat-step>
+    <mat-step label="step 2">step 2 content</mat-stngep>
     <mat-step label="step 3">step 3 content</mat-step> -->
 </mat-vertical-stepper>

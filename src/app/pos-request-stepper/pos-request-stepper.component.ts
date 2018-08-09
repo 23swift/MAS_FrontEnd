@@ -13,6 +13,8 @@ export class PosRequestStepperComponent implements OnInit {
 	isOptional= false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
+  title:string="";
+  subTitle:string="";
   mode='create';
   status="done";
   constructor(private _formBuilder: FormBuilder) { }

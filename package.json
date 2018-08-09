@@ -1,5 +1,6 @@
 {
-    "name": "sample-routing",
+
+    "name": "MAS",
     "version": "0.0.0",
     "scripts": {
         "ng": "ng",
