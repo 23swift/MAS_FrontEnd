@@ -1,7 +1,6 @@
 <app-bdo-form-header [text]="title" [sub_text]="subTitle" [mode]="mode"></app-bdo-form-header>
 <span class="mat-headline">Please follow the steps:</span>
 <mat-vertical-stepper [linear]="isLinear" #stepper>
-<<<<<<< HEAD
     <mat-step>
 
         <ng-template matStepLabel>Fill out POS Request form</ng-template>
@@ -30,34 +29,3 @@
         </div>
     </mat-step>
 </mat-vertical-stepper>
-=======
-  <mat-step [stepControl]="firstFormGroup">
-    
-      <ng-template matStepLabel>
-        <mat-icon>check_box</mat-icon>
-        Fill out POS Form
-      </ng-template>
-      <app-pos-request></app-pos-request>
-  </mat-step>
-  <mat-step [stepControl]="secondFormGroup">
-    <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>Fill out MID Request</ng-template>
-      <mat-form-field>
-        <input matInput placeholder="Address" formControlName="secondCtrl" required>
-      </mat-form-field>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    You are now done.
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button (click)="stepper.reset()">Reset</button>
-    </div>
-  </mat-step>
-</mat-vertical-stepper>
->>>>>>> 737cb2b25f68ba2f09054a3781ec865cb9f8df41

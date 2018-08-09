@@ -1,13 +1,14 @@
 <app-bdo-form-header [text]="title" [sub_text]="subTitle" [mode]="mode"></app-bdo-form-header>
 <span class="mat-headline">Please follow the steps:</span>
-<mat-vertical-stepper>
+<mat-vertical-stepper [linear]="true" #stepper style="background-color:#fafafa;">
+    <!-- <mat-vertical-stepper [linear]="true" #stepper> -->
     <ng-template matStepperIcon="edit">
         <mat-icon>check</mat-icon>
     </ng-template>
     <ng-template matStepperIcon="done">
         <mat-icon>done_outline</mat-icon>
     </ng-template>
-    <mat-step>
+    <mat-step [completed]="false">
 
         <ng-template matStepLabel>
 
@@ -17,10 +18,24 @@
 
         </ng-template>
         <!-- <mat-step-header state="done">Complete</mat-step-header> -->
-        <span class="mat-headline">
-          Customer Profile
-        </span>
-        <app-new-affiliation></app-new-affiliation>
+        <mat-card class="mat-card-screen">
+
+            <mat-card-content>
+                <span class="mat-headline">
+                            Customer Profile
+                          </span>
+                <app-new-affiliation></app-new-affiliation>
+
+            </mat-card-content>
+        </mat-card>
+
+        <div fxLayout="row wrap" fxLayoutAlign="end center">
+            <button (click)="completed(stepper);" mat-button color="warn">
+                        <mat-icon>check</mat-icon>Done?
+                        <!-- <mat-icon *ngIf="!completed">check</mat-icon> -->
+                    </button>
+        </div>
+
     </mat-step>
     <mat-step>
         <ng-template matStepLabel>
@@ -29,7 +44,8 @@
                 Add Branches</span>
         </ng-template>
 
-        <app-branch-list></app-branch-list>
+        <!-- <app-branch-list></app-branch-list> -->
+        <router-outlet></router-outlet>
     </mat-step>
     <mat-step>
         <ng-template matStepLabel>
@@ -38,7 +54,41 @@
                     Attach Occular Inspection Form to Branches</span>
         </ng-template>
 
-        <app-branch-list></app-branch-list>
+        <!-- <app-branch-list></app-branch-list> -->
+        <mat-accordion class="mat-elevation-z0">
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Aldo
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        This is a summary of the content
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <span class="mat-headline">
+                                                    Occular Inspection Form
+                                                  </span>
+                <app-ocular-inspection-form></app-ocular-inspection-form>
+            </mat-expansion-panel>
+
+
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Bench
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        This is a summary of the content
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <span class="mat-headline">
+                                                        Occular Inspection Form
+                                                      </span>
+                <app-ocular-inspection-form></app-ocular-inspection-form>
+            </mat-expansion-panel>
+        </mat-accordion>
+
+
     </mat-step>
     <mat-step>
         <ng-template matStepLabel>
@@ -48,6 +98,13 @@
         </ng-template>
 
         <app-branch-list></app-branch-list>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>
+            <span class="mat-subheading-1">
+                            
+                        Check Required Documents</span>
+        </ng-template>
     </mat-step>
     <mat-step state="done">
         <ng-template matStepLabel>
