@@ -37,6 +37,7 @@ import { ExtentionComponent } from './extention/extention.component';
 import { BranchComponent } from './branch/branch.component';
 import { NewAffiliationStepComponent } from './new-affiliation-step/new-affiliation-step.component';
 import { HomeScreenComponent } from './home-screen/home-screen.component';
+import { OcularInspectionFormComponent } from './ocular-inspection-form/ocular-inspection-form.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { HomeScreenComponent } from './home-screen/home-screen.component';
     ExtentionComponent,
     BranchComponent,
     NewAffiliationStepComponent,
-    HomeScreenComponent
+    HomeScreenComponent,
+    OcularInspectionFormComponent
   ],
   imports: [
     BrowserModule,

@@ -30,7 +30,8 @@
                 Add Branches</span>
         </ng-template>
 
-        <app-branch-list></app-branch-list>
+        <!-- <app-branch-list></app-branch-list> -->
+        <router-outlet></router-outlet>
     </mat-step>
     <mat-step [completed]="false">
         <ng-template matStepLabel>
@@ -39,7 +40,41 @@
                     Attach Occular Inspection Form to Branches</span>
         </ng-template>
 
-        <app-branch-list></app-branch-list>
+        <!-- <app-branch-list></app-branch-list> -->
+        <mat-accordion class="mat-elevation-z0">
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Aldo
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        This is a summary of the content
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <span class="mat-headline">
+                                                    Occular Inspection Form
+                                                  </span>
+                <app-ocular-inspection-form></app-ocular-inspection-form>
+            </mat-expansion-panel>
+
+
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Bench
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        This is a summary of the content
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <span class="mat-headline">
+                                                        Occular Inspection Form
+                                                      </span>
+                <app-ocular-inspection-form></app-ocular-inspection-form>
+            </mat-expansion-panel>
+        </mat-accordion>
+
+
     </mat-step>
     <mat-step>
         <ng-template matStepLabel>
@@ -49,6 +84,13 @@
         </ng-template>
 
         <app-branch-list></app-branch-list>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>
+            <span class="mat-subheading-1">
+                            
+                        Check Required Documents</span>
+        </ng-template>
     </mat-step>
     <mat-step state="done">
         <ng-template matStepLabel>
