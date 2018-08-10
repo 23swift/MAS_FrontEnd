@@ -33,7 +33,7 @@ export class NewAffiliationStepComponent implements OnInit {
   }
   public completed(stepper: MatStepper){
     stepper.selected.completed = true;
-    
+    stepper.next();
     return true;
   }
 }

@@ -21,7 +21,16 @@
           Customer Profile
         </span>
         <app-new-affiliation></app-new-affiliation>
-        <button mat-button (click)="doneWithCustomer(stepper);">Done?</button>
+        <label>Done? </label>
+        <button mat-mini-fab (click)="completed(stepper);">
+            <mat-icon color="primary">check</mat-icon>
+        </button>
+
+        <!-- <div fxLayout="row wrap" fxLayoutAlign="end center" fxLayoutGap="3px">
+            <button mat-mini-fab (click)="doneWithCustomer(stepper);">
+                <mat-icon>check</mat-icon>
+            </button>
+        </div> -->
     </mat-step>
     <mat-step [completed]="false">
         <ng-template matStepLabel>
@@ -32,6 +41,11 @@
 
         <!-- <app-branch-list></app-branch-list> -->
         <router-outlet></router-outlet>
+        <label>Done? </label>
+        <button mat-mini-fab (click)="completed(stepper);">
+            <mat-icon color="primary">check</mat-icon>
+        </button>
+
     </mat-step>
     <mat-step [completed]="false">
         <ng-template matStepLabel>
@@ -74,9 +88,13 @@
             </mat-expansion-panel>
         </mat-accordion>
 
+        <label>Done? </label>
+        <button mat-mini-fab (click)="completed(stepper);">
+            <mat-icon color="primary">check</mat-icon>
+        </button>
 
     </mat-step>
-    <mat-step>
+    <mat-step [completed]="false">
         <ng-template matStepLabel>
             <span class="mat-subheading-1">
                             
@@ -84,13 +102,24 @@
         </ng-template>
 
         <app-branch-list></app-branch-list>
+        <label>Done? </label>
+        <button mat-mini-fab (click)="completed(stepper);">
+            <mat-icon color="primary">check</mat-icon>
+        </button>
+
     </mat-step>
-    <mat-step>
+    <mat-step [completed]="false">
         <ng-template matStepLabel>
             <span class="mat-subheading-1">
                             
-                        Check Required Documents</span>
+                        Attach Required Documents</span>
         </ng-template>
+        <app-document-check-list></app-document-check-list>
+        <label>Done? </label>
+        <button mat-mini-fab (click)="completed(stepper);">
+            <mat-icon color="primary">check</mat-icon>
+        </button>
+
     </mat-step>
     <mat-step state="done">
         <ng-template matStepLabel>

@@ -38,6 +38,7 @@ import { BranchComponent } from './branch/branch.component';
 import { NewAffiliationStepComponent } from './new-affiliation-step/new-affiliation-step.component';
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { OcularInspectionFormComponent } from './ocular-inspection-form/ocular-inspection-form.component';
+import { DocumentCheckListComponent } from './document-check-list/document-check-list.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { OcularInspectionFormComponent } from './ocular-inspection-form/ocular-i
     BranchComponent,
     NewAffiliationStepComponent,
     HomeScreenComponent,
-    OcularInspectionFormComponent
+    OcularInspectionFormComponent,
+    DocumentCheckListComponent
   ],
   imports: [
     BrowserModule,
