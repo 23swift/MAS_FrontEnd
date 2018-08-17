@@ -9,8 +9,10 @@ import{FileMaintenanceComponent} from './file-maintenance/file-maintenance.compo
 import {ExtentionComponent} from './extention/extention.component';
 import { BranchComponent } from './branch/branch.component';
 import {NewAffiliationStepComponent} from './new-affiliation-step/new-affiliation-step.component'
-import{HomeScreenComponent} from './home-screen/home-screen.component'
-import {BranchListComponent} from './branch-list/branch-list.component'
+import{HomeScreenComponent} from './home-screen/home-screen.component';
+import {BranchListComponent} from './branch-list/branch-list.component';
+import {NewAffiliationSumComponent} from './new-affiliation-sum/new-affiliation-sum.component';
+
 const routes: Routes = [
 { path: '', redirectTo: '/home', pathMatch: 'full' },
 {path:'na/:mode',component:NewAffiliationComponent},
@@ -31,6 +33,7 @@ const routes: Routes = [
     ]
     
 },
+{path:'newAffSum',component:NewAffiliationSumComponent},
 {path:'home', component:HomeScreenComponent}
 ];
 

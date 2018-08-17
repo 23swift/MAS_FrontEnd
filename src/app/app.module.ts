@@ -39,6 +39,9 @@ import { NewAffiliationStepComponent } from './new-affiliation-step/new-affiliat
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { OcularInspectionFormComponent } from './ocular-inspection-form/ocular-inspection-form.component';
 import { DocumentCheckListComponent } from './document-check-list/document-check-list.component';
+import { NewAffiliationSumComponent } from './new-affiliation-sum/new-affiliation-sum.component';
+import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
+
 
 @NgModule({
   declarations: [
@@ -60,7 +63,10 @@ import { DocumentCheckListComponent } from './document-check-list/document-check
     NewAffiliationStepComponent,
     HomeScreenComponent,
     OcularInspectionFormComponent,
-    DocumentCheckListComponent
+    DocumentCheckListComponent,
+    NewAffiliationSumComponent,
+    CustomerProfileComponent
+    
   ],
   imports: [
     BrowserModule,

@@ -146,8 +146,12 @@ body {
     background-color: orange !important;
     color: #fff !important;
 }
-.mat-step-header:hover {
 
+.mat-step-header:hover {
     background-color: aliceblue;
     // border: #0d47a1 1px solid;
+}
+
+.mat-input-element:disabled {
+    color: #0d47a1;
 }

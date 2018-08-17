@@ -20,10 +20,10 @@
         <span class="mat-headline">
           Customer Profile
         </span>
-        <app-new-affiliation></app-new-affiliation>
-        <label>Done? </label>
-        <button mat-mini-fab (click)="completed(stepper);">
-            <mat-icon color="primary">check</mat-icon>
+        <app-customer-profile [displayMode]="false"></app-customer-profile>
+
+        <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
+            <mat-icon color="primary">navigate_next</mat-icon>
         </button>
 
         <!-- <div fxLayout="row wrap" fxLayoutAlign="end center" fxLayoutGap="3px">
@@ -41,9 +41,9 @@
 
         <!-- <app-branch-list></app-branch-list> -->
         <router-outlet></router-outlet>
-        <label>Done? </label>
-        <button mat-mini-fab (click)="completed(stepper);">
-            <mat-icon color="primary">check</mat-icon>
+
+        <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
+            <mat-icon color="primary">navigate_next</mat-icon>
         </button>
 
     </mat-step>
@@ -88,11 +88,9 @@
             </mat-expansion-panel>
         </mat-accordion>
 
-        <label>Done? </label>
-        <button mat-mini-fab (click)="completed(stepper);">
-            <mat-icon color="primary">check</mat-icon>
+        <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
+            <mat-icon color="primary">navigate_next</mat-icon>
         </button>
-
     </mat-step>
     <mat-step [completed]="false">
         <ng-template matStepLabel>
@@ -102,9 +100,9 @@
         </ng-template>
 
         <app-branch-list></app-branch-list>
-        <label>Done? </label>
-        <button mat-mini-fab (click)="completed(stepper);">
-            <mat-icon color="primary">check</mat-icon>
+
+        <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
+            <mat-icon color="primary">navigate_next</mat-icon>
         </button>
 
     </mat-step>
@@ -115,9 +113,8 @@
                         Attach Required Documents</span>
         </ng-template>
         <app-document-check-list></app-document-check-list>
-        <label>Done? </label>
-        <button mat-mini-fab (click)="completed(stepper);">
-            <mat-icon color="primary">check</mat-icon>
+        <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
+            <mat-icon color="primary">navigate_next</mat-icon>
         </button>
 
     </mat-step>
@@ -130,8 +127,8 @@
 
         <span class="mat-subheading-1">You are now done. Would you like to submit the Request?</span>
         <div xLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="3px">
-            <button mat-stroked-button matStepperPrevious color="primary">Yes</button>
-            <a mat-stroked-button routerLink="/home" color="accent">No</a>
+            <button style="margin-top:3px" mat-stroked-button matStepperPrevious color="primary">Yes</button>
+            <a mat-stroked-button routerLink="/newAffSum" color="accent">No</a>
 
         </div>
     </mat-step>
