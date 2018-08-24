@@ -12,7 +12,11 @@ import {NewAffiliationStepComponent} from './new-affiliation-step/new-affiliatio
 import{HomeScreenComponent} from './home-screen/home-screen.component';
 import {BranchListComponent} from './branch-list/branch-list.component';
 import {NewAffiliationSumComponent} from './new-affiliation-sum/new-affiliation-sum.component';
-
+import {BranchListAttachmentComponent} from './branch-list-attachment/branch-list-attachment.component'
+import{OcularInspectionFormComponent} from './ocular-inspection-form/ocular-inspection-form.component'
+import { AoCheckerDashboardComponent  } from "./ao-checker-dashboard/ao-checker-dashboard.component";
+import {AoCheckerComponent} from './ao-checker/ao-checker.component'
+import {AoCheckingComponent}from './ao-checking/ao-checking.component'
 const routes: Routes = [
 { path: '', redirectTo: '/home', pathMatch: 'full' },
 {path:'na/:mode',component:NewAffiliationComponent},
@@ -29,12 +33,26 @@ const routes: Routes = [
       // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
       {path:'', component:BranchListComponent},
       {path:'branch/:mode/:id', component:BranchComponent},
-      {path:'branch/:mode', component:BranchComponent}
+      {path:'branch/:mode', component:BranchComponent},
+      {path:'', component:BranchListAttachmentComponent,
+         outlet: "branchOIF"
+      },
+      {path:'OIF/:id', component:OcularInspectionFormComponent,
+         outlet: "branchOIF"
+      }
+
+      
     ]
     
 },
 {path:'newAffSum',component:NewAffiliationSumComponent},
-{path:'home', component:HomeScreenComponent}
+{path:'home', component:HomeScreenComponent},
+{path:'aoDashboard', component:AoCheckerDashboardComponent},
+{path:'aoCheck', component:AoCheckerComponent},
+{path:'aoChecking', component:AoCheckingComponent},
+
+
+
 ];
 
 @NgModule({

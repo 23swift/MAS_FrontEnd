@@ -40,6 +40,7 @@
         </ng-template>
 
         <!-- <app-branch-list></app-branch-list> -->
+
         <router-outlet></router-outlet>
 
         <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
@@ -53,40 +54,9 @@
                         
                     Attach Occular Inspection Form to Branches</span>
         </ng-template>
-
+        <router-outlet name="branchOIF"></router-outlet>
         <!-- <app-branch-list></app-branch-list> -->
-        <mat-accordion class="mat-elevation-z0">
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Aldo
-                    </mat-panel-title>
-                    <mat-panel-description>
-                        This is a summary of the content
-                    </mat-panel-description>
-                </mat-expansion-panel-header>
-                <span class="mat-headline">
-                                                    Occular Inspection Form
-                                                  </span>
-                <app-ocular-inspection-form></app-ocular-inspection-form>
-            </mat-expansion-panel>
 
-
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Bench
-                    </mat-panel-title>
-                    <mat-panel-description>
-                        This is a summary of the content
-                    </mat-panel-description>
-                </mat-expansion-panel-header>
-                <span class="mat-headline">
-                                                        Occular Inspection Form
-                                                      </span>
-                <app-ocular-inspection-form></app-ocular-inspection-form>
-            </mat-expansion-panel>
-        </mat-accordion>
 
         <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
             <mat-icon color="primary">navigate_next</mat-icon>

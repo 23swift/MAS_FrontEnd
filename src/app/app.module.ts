@@ -41,6 +41,11 @@ import { OcularInspectionFormComponent } from './ocular-inspection-form/ocular-i
 import { DocumentCheckListComponent } from './document-check-list/document-check-list.component';
 import { NewAffiliationSumComponent } from './new-affiliation-sum/new-affiliation-sum.component';
 import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
+import { BranchListAttachmentComponent } from './branch-list-attachment/branch-list-attachment.component';
+import { AoCheckerComponent } from './ao-checker/ao-checker.component';
+import { AoCheckerDashboardComponent } from './ao-checker-dashboard/ao-checker-dashboard.component';
+import { AoCheckingComponent } from './ao-checking/ao-checking.component';
+import { RequestHeaderComponent } from './request-header/request-header.component';
 
 
 @NgModule({
@@ -65,7 +70,12 @@ import { CustomerProfileComponent } from './customer-profile/customer-profile.co
     OcularInspectionFormComponent,
     DocumentCheckListComponent,
     NewAffiliationSumComponent,
-    CustomerProfileComponent
+    CustomerProfileComponent,
+    BranchListAttachmentComponent,
+    AoCheckerComponent,
+    AoCheckerDashboardComponent,
+    AoCheckingComponent,
+    RequestHeaderComponent
     
   ],
   imports: [

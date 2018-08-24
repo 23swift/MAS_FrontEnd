@@ -76,13 +76,13 @@ export class BranchService {
         label: 'Remarks'
       },
     },
-    {
-      type: 'checkbox',
-      key: 'otherToo',
-      templateOptions: {
-        label: 'Other Checkbox'
-      },
-    },
+    // {
+    //   type: 'checkbox',
+    //   key: 'otherToo',
+    //   templateOptions: {
+    //     label: 'Other Checkbox'
+    //   },
+    // },
   ];
   constructor() { }
   getBranchFields(): FormlyFieldConfig[]{

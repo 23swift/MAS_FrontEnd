@@ -3,7 +3,8 @@ import {FormBuilder,FormGroup,Validators} from '@angular/forms';
 import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { MatStepper } from '@angular/material';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
+
 @Component({
   selector: 'app-new-affiliation-step',
   templateUrl: './new-affiliation-step.component.html',
@@ -19,7 +20,9 @@ export class NewAffiliationStepComponent implements OnInit {
    mode='create';
    status="done";
   //  completed:boolean=false;
-  constructor(private _formBuilder: FormBuilder,private route: ActivatedRoute) { }
+  constructor(private _formBuilder: FormBuilder,private route: ActivatedRoute,
+  private router:Router
+  ) { }
 
   ngOnInit() {
 
@@ -30,6 +33,8 @@ export class NewAffiliationStepComponent implements OnInit {
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required]
     });
+
+    //  this.router.navigate([{outlets: {primary: 'branch/create' ,branchOIF: ''}}]);
   }
   public completed(stepper: MatStepper){
     stepper.selected.completed = true;
