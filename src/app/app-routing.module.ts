@@ -17,6 +17,9 @@ import{OcularInspectionFormComponent} from './ocular-inspection-form/ocular-insp
 import { AoCheckerDashboardComponent  } from "./ao-checker-dashboard/ao-checker-dashboard.component";
 import {AoCheckerComponent} from './ao-checker/ao-checker.component'
 import {AoCheckingComponent}from './ao-checking/ao-checking.component'
+import { AwrFormComponent } from './forms/awr-form/awr-form.component';
+import { RequestFormComponent } from './forms/request-form/request-form.component';
+
 const routes: Routes = [
 { path: '', redirectTo: '/home', pathMatch: 'full' },
 {path:'na/:mode',component:NewAffiliationComponent},
@@ -50,7 +53,8 @@ const routes: Routes = [
 {path:'aoDashboard', component:AoCheckerDashboardComponent},
 {path:'aoCheck', component:AoCheckerComponent},
 {path:'aoChecking', component:AoCheckingComponent},
-
+{path: 'awr', component: AwrFormComponent},
+{path: 'requestForm', component: RequestFormComponent}
 
 
 ];

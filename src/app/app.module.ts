@@ -46,6 +46,9 @@ import { AoCheckerComponent } from './ao-checker/ao-checker.component';
 import { AoCheckerDashboardComponent } from './ao-checker-dashboard/ao-checker-dashboard.component';
 import { AoCheckingComponent } from './ao-checking/ao-checking.component';
 import { RequestHeaderComponent } from './request-header/request-header.component';
+import { MaefFieldsComponent } from './maef-fields/maef-fields.component';
+import { AwrFormComponent } from './forms/awr-form/awr-form.component';
+import { RequestFormComponent } from './forms/request-form/request-form.component';
 
 
 @NgModule({
@@ -75,8 +78,10 @@ import { RequestHeaderComponent } from './request-header/request-header.componen
     AoCheckerComponent,
     AoCheckerDashboardComponent,
     AoCheckingComponent,
-    RequestHeaderComponent
-    
+    RequestHeaderComponent,
+    MaefFieldsComponent,
+    AwrFormComponent,
+    RequestFormComponent
   ],
   imports: [
     BrowserModule,
