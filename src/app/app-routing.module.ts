@@ -9,16 +9,11 @@ import{FileMaintenanceComponent} from './file-maintenance/file-maintenance.compo
 import {ExtentionComponent} from './extention/extention.component';
 import { BranchComponent } from './branch/branch.component';
 import {NewAffiliationStepComponent} from './new-affiliation-step/new-affiliation-step.component'
-<<<<<<< HEAD
-import{HomeScreenComponent} from './home-screen/home-screen.component'
-import {BranchListComponent} from './branch-list/branch-list.component'
 import {MaefComponent} from './maef/maef.component';
 
 import {ServiceFeeContractComponent} from './ServiceFeeContract/service-fee-contract/service-fee-contract.component'
 import {ServiceFeeContractListComponent} from './ServiceFeeContract/service-fee-contract-list/service-fee-contract-list.component'
 import {ServiceFeeContractFormComponent} from './ServiceFeeContract/service-fee-contract-form/service-fee-contract-form.component'
-
-=======
 import{HomeScreenComponent} from './home-screen/home-screen.component';
 import {BranchListComponent} from './branch-list/branch-list.component';
 import {NewAffiliationSumComponent} from './new-affiliation-sum/new-affiliation-sum.component';
@@ -29,7 +24,6 @@ import {AoCheckerComponent} from './ao-checker/ao-checker.component'
 import {AoCheckingComponent}from './ao-checking/ao-checking.component'
 import { AwrFormComponent } from './forms/awr-form/awr-form.component';
 import { RequestFormComponent } from './forms/request-form/request-form.component';
->>>>>>> b8a9e169bced98113f6cd746ad6229864fdf9d36
 
 const routes: Routes = [
 { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -60,17 +54,6 @@ const routes: Routes = [
     ]
     
 },
-<<<<<<< HEAD
-{path:'serviceFeeContract', component:ServiceFeeContractComponent},
-/*{path:'serviceFeeContract/:mode',component:ServiceFeeContractComponent,
-    children: [
-      {path:'', component:ServiceFeeContractListComponent}
-      
-    ]
-
-},*/
-{path:'home', component:HomeScreenComponent}
-=======
 {path:'newAffSum',component:NewAffiliationSumComponent},
 {path:'home', component:HomeScreenComponent},
 {path:'aoDashboard', component:AoCheckerDashboardComponent},
@@ -80,7 +63,6 @@ const routes: Routes = [
 {path: 'requestForm', component: RequestFormComponent}
 
 
->>>>>>> b8a9e169bced98113f6cd746ad6229864fdf9d36
 ];
 
 @NgModule({
