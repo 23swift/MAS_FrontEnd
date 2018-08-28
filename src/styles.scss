@@ -9,8 +9,9 @@
     }
     
     .display-flex {
-        max-width: 1400px;
-        /*margin:auto;*/
+        max-width: 100%;
+        /*max-width: 1400px;
+        margin:auto;*/
     }
     
     @media (min-width: 900px) {
