@@ -39,6 +39,10 @@ import { NewAffiliationStepComponent } from './new-affiliation-step/new-affiliat
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { OcularInspectionFormComponent } from './ocular-inspection-form/ocular-inspection-form.component';
 import { DocumentCheckListComponent } from './document-check-list/document-check-list.component';
+import { ServiceFeeContractFormComponent } from './ServiceFeeContract/service-fee-contract-form/service-fee-contract-form.component';
+import { ServiceFeeContractListComponent } from './ServiceFeeContract/service-fee-contract-list/service-fee-contract-list.component';
+import { ServiceFeeContractComponent } from './ServiceFeeContract/service-fee-contract/service-fee-contract.component';
+import { MaefComponent } from './maef/maef.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +64,11 @@ import { DocumentCheckListComponent } from './document-check-list/document-check
     NewAffiliationStepComponent,
     HomeScreenComponent,
     OcularInspectionFormComponent,
-    DocumentCheckListComponent
+    DocumentCheckListComponent,
+    ServiceFeeContractFormComponent,
+    ServiceFeeContractListComponent,
+    ServiceFeeContractComponent,
+    MaefComponent
   ],
   imports: [
     BrowserModule,

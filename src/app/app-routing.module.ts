@@ -11,6 +11,13 @@ import { BranchComponent } from './branch/branch.component';
 import {NewAffiliationStepComponent} from './new-affiliation-step/new-affiliation-step.component'
 import{HomeScreenComponent} from './home-screen/home-screen.component'
 import {BranchListComponent} from './branch-list/branch-list.component'
+import {MaefComponent} from './maef/maef.component';
+
+import {ServiceFeeContractComponent} from './ServiceFeeContract/service-fee-contract/service-fee-contract.component'
+import {ServiceFeeContractListComponent} from './ServiceFeeContract/service-fee-contract-list/service-fee-contract-list.component'
+import {ServiceFeeContractFormComponent} from './ServiceFeeContract/service-fee-contract-form/service-fee-contract-form.component'
+
+
 const routes: Routes = [
 { path: '', redirectTo: '/home', pathMatch: 'full' },
 {path:'na/:mode',component:NewAffiliationComponent},
@@ -20,6 +27,7 @@ const routes: Routes = [
 {path:'additionalFacility',component:AdditionalFacilityComponent},
 {path:'fileMaintenance', component:FileMaintenanceComponent},
 {path:'ext/:mode', component:ExtentionComponent},
+{path:'maef', component:MaefComponent},
 // {path:'branch/:mode/:id', component:BranchComponent},
 {path:'branch/:mode', component:BranchComponent},
 {path:'naStep/:mode', component:NewAffiliationStepComponent,
@@ -31,6 +39,14 @@ const routes: Routes = [
     ]
     
 },
+{path:'serviceFeeContract', component:ServiceFeeContractComponent},
+/*{path:'serviceFeeContract/:mode',component:ServiceFeeContractComponent,
+    children: [
+      {path:'', component:ServiceFeeContractListComponent}
+      
+    ]
+
+},*/
 {path:'home', component:HomeScreenComponent}
 ];
 

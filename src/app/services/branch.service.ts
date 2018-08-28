@@ -14,7 +14,7 @@ export class BranchService {
           type: 'input',
           key: 'branchName',
           templateOptions: {
-            label: 'Branch Name',
+            label: 'Branch Name11',
             placeholder:'Branch Name'
           },
         },
