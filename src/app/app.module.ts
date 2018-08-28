@@ -41,6 +41,7 @@ import { OcularInspectionFormComponent } from './ocular-inspection-form/ocular-i
 import { DocumentCheckListComponent } from './document-check-list/document-check-list.component';
 import { NewAffiliationSumComponent } from './new-affiliation-sum/new-affiliation-sum.component';
 import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
+import { PosFormComponent } from './pos-form/pos-form.component';
 
 
 @NgModule({
@@ -65,7 +66,8 @@ import { CustomerProfileComponent } from './customer-profile/customer-profile.co
     OcularInspectionFormComponent,
     DocumentCheckListComponent,
     NewAffiliationSumComponent,
-    CustomerProfileComponent
+    CustomerProfileComponent,
+    PosFormComponent
     
   ],
   imports: [

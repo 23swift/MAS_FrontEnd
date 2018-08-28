@@ -12,6 +12,7 @@ import {NewAffiliationStepComponent} from './new-affiliation-step/new-affiliatio
 import{HomeScreenComponent} from './home-screen/home-screen.component';
 import {BranchListComponent} from './branch-list/branch-list.component';
 import {NewAffiliationSumComponent} from './new-affiliation-sum/new-affiliation-sum.component';
+import { OcularInspectionFormComponent } from './ocular-inspection-form/ocular-inspection-form.component';
 
 const routes: Routes = [
 { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -34,7 +35,8 @@ const routes: Routes = [
     
 },
 {path:'newAffSum',component:NewAffiliationSumComponent},
-{path:'home', component:HomeScreenComponent}
+{path:'home', component:HomeScreenComponent},
+{path:'oif', component:OcularInspectionFormComponent}
 ];
 
 @NgModule({
