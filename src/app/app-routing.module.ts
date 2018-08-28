@@ -17,17 +17,13 @@ import {ServiceFeeContractFormComponent} from './ServiceFeeContract/service-fee-
 import{HomeScreenComponent} from './home-screen/home-screen.component';
 import {BranchListComponent} from './branch-list/branch-list.component';
 import {NewAffiliationSumComponent} from './new-affiliation-sum/new-affiliation-sum.component';
-<<<<<<< HEAD
 import { OcularInspectionFormComponent } from './ocular-inspection-form/ocular-inspection-form.component';
-=======
-import {BranchListAttachmentComponent} from './branch-list-attachment/branch-list-attachment.component'
-import{OcularInspectionFormComponent} from './ocular-inspection-form/ocular-inspection-form.component'
+import {BranchListAttachmentComponent} from './branch-list-attachment/branch-list-attachment.component';
 import { AoCheckerDashboardComponent  } from "./ao-checker-dashboard/ao-checker-dashboard.component";
 import {AoCheckerComponent} from './ao-checker/ao-checker.component'
 import {AoCheckingComponent}from './ao-checking/ao-checking.component'
 import { AwrFormComponent } from './forms/awr-form/awr-form.component';
 import { RequestFormComponent } from './forms/request-form/request-form.component';
->>>>>>> c1fa04e83b78647491bc6b083991332b5ee59ba1
 
 const routes: Routes = [
 { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -60,9 +56,7 @@ const routes: Routes = [
 },
 {path:'newAffSum',component:NewAffiliationSumComponent},
 {path:'home', component:HomeScreenComponent},
-<<<<<<< HEAD
-{path:'oif', component:OcularInspectionFormComponent}
-=======
+{path:'oif', component:OcularInspectionFormComponent},
 {path:'aoDashboard', component:AoCheckerDashboardComponent},
 {path:'aoCheck', component:AoCheckerComponent},
 {path:'aoChecking', component:AoCheckingComponent},
@@ -70,7 +64,6 @@ const routes: Routes = [
 {path: 'requestForm', component: RequestFormComponent}
 
 
->>>>>>> c1fa04e83b78647491bc6b083991332b5ee59ba1
 ];
 
 @NgModule({
