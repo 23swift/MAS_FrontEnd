@@ -1,7 +1,7 @@
 import { Component, OnInit,Input } from '@angular/core';
 import {FormGroup} from '@angular/forms';
 import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
-import{BranchService} from '../services/branch.service';
+import{BranchService} from './branch.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { AppBaseComponent } from '../app-base/app-base.component';
 

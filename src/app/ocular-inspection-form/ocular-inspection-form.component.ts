@@ -29,5 +29,8 @@ constructor(private ocularInspectionFormService: OcularInspectionFormService,
 
   ngOnInit() {
   }
-
+  public cancel(){  
+    this.router.navigateByUrl('/naStep/create');
+  }
+ 
 }

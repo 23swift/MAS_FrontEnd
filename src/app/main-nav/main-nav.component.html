@@ -60,12 +60,19 @@
             <mat-menu #menu="matMenu">
                 <a routerLink="/naStep/create" mat-menu-item>New Affiliation</a>
                 <a routerLink="/ba/create" mat-menu-item>Branch Affiliation</a>
+                <a routerLink="/maef" mat-menu-item>MAEF</a> 
 
                 <a routerLink="/posStep" mat-menu-item>POS Request</a>
                 <a routerLink="/additionalFacility" mat-menu-item>Additional Facility</a>
                 <a routerLink="/fileMaintenance" mat-menu-item>File Maintenance</a>
             </mat-menu>
-            <button mat-icon-button><mat-icon>settings</mat-icon></button>
+            <button mat-icon-button [matMenuTriggerFor]="admin"><mat-icon>settings</mat-icon></button>
+            <mat-menu #admin="matMenu">
+                    <a mat-menu-item>Parameter Maintenance</a>
+                    <a mat-menu-item>AO Maintenance</a>    
+                    <a routerLink="/serviceFeeContract" mat-menu-item>Service Fee Contract</a>               
+            </mat-menu>
+
             <button mat-icon-button><mat-icon>assignment</mat-icon></button>
 
 
@@ -77,6 +84,7 @@
 
 
         </mat-toolbar>
+        
         <ng-content></ng-content>
         <!-- Add Content Here -->
 

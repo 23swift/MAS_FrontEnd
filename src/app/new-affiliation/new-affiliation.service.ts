@@ -85,6 +85,31 @@ fields: FormlyFieldConfig[] = [
         label: 'Other Checkbox'
       },
     },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'businessName',
+          templateOptions: {
+            label: 'Business/Legal Name',
+            placeholder:'Business Name'
+          },
+        },
+        {
+          className: 'flex-1',
+          type: 'select',
+          key: 'ownership',
+          templateOptions: {
+            label: 'Ownership',
+          },
+          expressionProperties: {
+            
+          },
+        },
+      ],
+    },
   ];
      
   constructor() { }

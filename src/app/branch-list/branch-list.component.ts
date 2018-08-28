@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 export interface BranchDisplayInfo {
     Id:number;
@@ -22,6 +22,8 @@ const ELEMENT_DATA: BranchDisplayInfo[] = [
 export class BranchListComponent implements OnInit {
   displayedColumns: string[] = ['BranchName', 'BranchCode', 'DBAName', 'Attachment'];
   dataSource = ELEMENT_DATA;
+ 
+  // @Input() mode:string;
   constructor(
     public route: ActivatedRoute,
     public router: Router

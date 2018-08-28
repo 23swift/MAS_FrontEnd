@@ -1,0 +1,19 @@
+table {
+    width: 100%;
+    background-color: #fafafa;
+}
+
+.flex-ServiceFeeRate-list-header {
+    display: flex;
+    flex-direction: row;
+    /* border:4px blue solid; */
+    justify-content: space-between;
+}
+
+.mat-subheading-1 {
+    font-size: 20px;
+}
+
+.mat-subheading-1 {
+    color: #0d47a1;
+}

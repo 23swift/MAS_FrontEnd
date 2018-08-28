@@ -14,7 +14,7 @@ export class BranchService {
           type: 'input',
           key: 'branchName',
           templateOptions: {
-            label: 'Branch Name',
+            label: 'Branch Name11',
             placeholder:'Branch Name'
           },
         },
@@ -76,13 +76,13 @@ export class BranchService {
         label: 'Remarks'
       },
     },
-    {
-      type: 'checkbox',
-      key: 'otherToo',
-      templateOptions: {
-        label: 'Other Checkbox'
-      },
-    },
+    // {
+    //   type: 'checkbox',
+    //   key: 'otherToo',
+    //   templateOptions: {
+    //     label: 'Other Checkbox'
+    //   },
+    // },
   ];
   constructor() { }
   getBranchFields(): FormlyFieldConfig[]{

@@ -41,7 +41,19 @@ import { OcularInspectionFormComponent } from './ocular-inspection-form/ocular-i
 import { DocumentCheckListComponent } from './document-check-list/document-check-list.component';
 import { NewAffiliationSumComponent } from './new-affiliation-sum/new-affiliation-sum.component';
 import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
+<<<<<<< HEAD
 import { PosFormComponent } from './pos-form/pos-form.component';
+=======
+import { BranchListAttachmentComponent } from './branch-list-attachment/branch-list-attachment.component';
+import { AoCheckerComponent } from './ao-checker/ao-checker.component';
+import { AoCheckerDashboardComponent } from './ao-checker-dashboard/ao-checker-dashboard.component';
+import { AoCheckingComponent } from './ao-checking/ao-checking.component';
+import { RequestHeaderComponent } from './request-header/request-header.component';
+import { MaefFieldsComponent } from './maef-fields/maef-fields.component';
+import { AwrFormComponent } from './forms/awr-form/awr-form.component';
+import { RequestFormComponent } from './forms/request-form/request-form.component';
+import { MaefComponent } from './maef/maef.component';
+>>>>>>> c1fa04e83b78647491bc6b083991332b5ee59ba1
 
 
 @NgModule({
@@ -67,8 +79,20 @@ import { PosFormComponent } from './pos-form/pos-form.component';
     DocumentCheckListComponent,
     NewAffiliationSumComponent,
     CustomerProfileComponent,
+<<<<<<< HEAD
     PosFormComponent
     
+=======
+    BranchListAttachmentComponent,
+    AoCheckerComponent,
+    AoCheckerDashboardComponent,
+    AoCheckingComponent,
+    RequestHeaderComponent,
+    MaefFieldsComponent,
+    AwrFormComponent,
+    RequestFormComponent,
+    MaefComponent
+>>>>>>> c1fa04e83b78647491bc6b083991332b5ee59ba1
   ],
   imports: [
     BrowserModule,
