@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {MatToolbarModule,MatTooltipModule,} from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HttpClientModule } from '@angular/common/http';
 
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
@@ -41,6 +42,9 @@ import { OcularInspectionFormComponent } from './ocular-inspection-form/ocular-i
 import { DocumentCheckListComponent } from './document-check-list/document-check-list.component';
 import { NewAffiliationSumComponent } from './new-affiliation-sum/new-affiliation-sum.component';
 import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
+
+import { PosFormComponent } from './pos-form/pos-form.component';
+
 import { BranchListAttachmentComponent } from './branch-list-attachment/branch-list-attachment.component';
 import { AoCheckerComponent } from './ao-checker/ao-checker.component';
 import { AoCheckerDashboardComponent } from './ao-checker-dashboard/ao-checker-dashboard.component';
@@ -50,6 +54,7 @@ import { MaefFieldsComponent } from './maef-fields/maef-fields.component';
 import { AwrFormComponent } from './forms/awr-form/awr-form.component';
 import { RequestFormComponent } from './forms/request-form/request-form.component';
 import { MaefComponent } from './maef/maef.component';
+
 
 
 @NgModule({
@@ -75,6 +80,7 @@ import { MaefComponent } from './maef/maef.component';
     DocumentCheckListComponent,
     NewAffiliationSumComponent,
     CustomerProfileComponent,
+    PosFormComponent,
     BranchListAttachmentComponent,
     AoCheckerComponent,
     AoCheckerDashboardComponent,
@@ -120,7 +126,8 @@ import { MaefComponent } from './maef/maef.component';
     MatTabsModule,
     MatStepperModule,
     MatChipsModule,
-    MatGridListModule
+    MatGridListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

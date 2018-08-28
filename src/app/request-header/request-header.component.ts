@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./request-header.component.css']
 })
 export class RequestHeaderComponent implements OnInit {
-
+  dateToday = new Date()
   constructor() { }
 
   ngOnInit() {
