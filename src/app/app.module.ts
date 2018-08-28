@@ -39,10 +39,24 @@ import { NewAffiliationStepComponent } from './new-affiliation-step/new-affiliat
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { OcularInspectionFormComponent } from './ocular-inspection-form/ocular-inspection-form.component';
 import { DocumentCheckListComponent } from './document-check-list/document-check-list.component';
+<<<<<<< HEAD
 import { ServiceFeeContractFormComponent } from './ServiceFeeContract/service-fee-contract-form/service-fee-contract-form.component';
 import { ServiceFeeContractListComponent } from './ServiceFeeContract/service-fee-contract-list/service-fee-contract-list.component';
 import { ServiceFeeContractComponent } from './ServiceFeeContract/service-fee-contract/service-fee-contract.component';
 import { MaefComponent } from './maef/maef.component';
+=======
+import { NewAffiliationSumComponent } from './new-affiliation-sum/new-affiliation-sum.component';
+import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
+import { BranchListAttachmentComponent } from './branch-list-attachment/branch-list-attachment.component';
+import { AoCheckerComponent } from './ao-checker/ao-checker.component';
+import { AoCheckerDashboardComponent } from './ao-checker-dashboard/ao-checker-dashboard.component';
+import { AoCheckingComponent } from './ao-checking/ao-checking.component';
+import { RequestHeaderComponent } from './request-header/request-header.component';
+import { MaefFieldsComponent } from './maef-fields/maef-fields.component';
+import { AwrFormComponent } from './forms/awr-form/awr-form.component';
+import { RequestFormComponent } from './forms/request-form/request-form.component';
+
+>>>>>>> b8a9e169bced98113f6cd746ad6229864fdf9d36
 
 @NgModule({
   declarations: [
@@ -65,10 +79,23 @@ import { MaefComponent } from './maef/maef.component';
     HomeScreenComponent,
     OcularInspectionFormComponent,
     DocumentCheckListComponent,
+<<<<<<< HEAD
     ServiceFeeContractFormComponent,
     ServiceFeeContractListComponent,
     ServiceFeeContractComponent,
     MaefComponent
+=======
+    NewAffiliationSumComponent,
+    CustomerProfileComponent,
+    BranchListAttachmentComponent,
+    AoCheckerComponent,
+    AoCheckerDashboardComponent,
+    AoCheckingComponent,
+    RequestHeaderComponent,
+    MaefFieldsComponent,
+    AwrFormComponent,
+    RequestFormComponent
+>>>>>>> b8a9e169bced98113f6cd746ad6229864fdf9d36
   ],
   imports: [
     BrowserModule,

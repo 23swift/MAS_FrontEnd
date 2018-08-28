@@ -9,6 +9,7 @@ import{FileMaintenanceComponent} from './file-maintenance/file-maintenance.compo
 import {ExtentionComponent} from './extention/extention.component';
 import { BranchComponent } from './branch/branch.component';
 import {NewAffiliationStepComponent} from './new-affiliation-step/new-affiliation-step.component'
+<<<<<<< HEAD
 import{HomeScreenComponent} from './home-screen/home-screen.component'
 import {BranchListComponent} from './branch-list/branch-list.component'
 import {MaefComponent} from './maef/maef.component';
@@ -17,6 +18,18 @@ import {ServiceFeeContractComponent} from './ServiceFeeContract/service-fee-cont
 import {ServiceFeeContractListComponent} from './ServiceFeeContract/service-fee-contract-list/service-fee-contract-list.component'
 import {ServiceFeeContractFormComponent} from './ServiceFeeContract/service-fee-contract-form/service-fee-contract-form.component'
 
+=======
+import{HomeScreenComponent} from './home-screen/home-screen.component';
+import {BranchListComponent} from './branch-list/branch-list.component';
+import {NewAffiliationSumComponent} from './new-affiliation-sum/new-affiliation-sum.component';
+import {BranchListAttachmentComponent} from './branch-list-attachment/branch-list-attachment.component'
+import{OcularInspectionFormComponent} from './ocular-inspection-form/ocular-inspection-form.component'
+import { AoCheckerDashboardComponent  } from "./ao-checker-dashboard/ao-checker-dashboard.component";
+import {AoCheckerComponent} from './ao-checker/ao-checker.component'
+import {AoCheckingComponent}from './ao-checking/ao-checking.component'
+import { AwrFormComponent } from './forms/awr-form/awr-form.component';
+import { RequestFormComponent } from './forms/request-form/request-form.component';
+>>>>>>> b8a9e169bced98113f6cd746ad6229864fdf9d36
 
 const routes: Routes = [
 { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -35,10 +48,19 @@ const routes: Routes = [
       // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
       {path:'', component:BranchListComponent},
       {path:'branch/:mode/:id', component:BranchComponent},
-      {path:'branch/:mode', component:BranchComponent}
+      {path:'branch/:mode', component:BranchComponent},
+      {path:'', component:BranchListAttachmentComponent,
+         outlet: "branchOIF"
+      },
+      {path:'OIF/:id', component:OcularInspectionFormComponent,
+         outlet: "branchOIF"
+      }
+
+      
     ]
     
 },
+<<<<<<< HEAD
 {path:'serviceFeeContract', component:ServiceFeeContractComponent},
 /*{path:'serviceFeeContract/:mode',component:ServiceFeeContractComponent,
     children: [
@@ -48,6 +70,17 @@ const routes: Routes = [
 
 },*/
 {path:'home', component:HomeScreenComponent}
+=======
+{path:'newAffSum',component:NewAffiliationSumComponent},
+{path:'home', component:HomeScreenComponent},
+{path:'aoDashboard', component:AoCheckerDashboardComponent},
+{path:'aoCheck', component:AoCheckerComponent},
+{path:'aoChecking', component:AoCheckingComponent},
+{path: 'awr', component: AwrFormComponent},
+{path: 'requestForm', component: RequestFormComponent}
+
+
+>>>>>>> b8a9e169bced98113f6cd746ad6229864fdf9d36
 ];
 
 @NgModule({

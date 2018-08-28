@@ -1,32 +1,37 @@
 import { Injectable } from '@angular/core';
 import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
+import { Observable, of } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class BranchService {
+export class NewAffiliationSumService {
+
   fields: FormlyFieldConfig[] = [
     {
-      
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
-          key: 'branchName',
+          key: 'businessName',
           templateOptions: {
-            label: 'Branch Name11',
-            placeholder:'Branch Name'
+            label: 'Business/Legal Name',
+            placeholder:'Business Name'
           },
+          expressionProperties: {
+            'templateOptions.disabled': 'true'
+          }
         },
         {
           className: 'flex-1',
-          type: 'input',
-          key: 'branchCode',
+          type: 'select',
+          key: 'ownership',
           templateOptions: {
-            label: 'Branch Code',
+            label: 'Ownership',
           },
-          expressionProperties: { 
-          },
+          expressionProperties: {
+            'templateOptions.disabled': 'true'
+          }
         },
       ],
     },
@@ -43,6 +48,9 @@ export class BranchService {
           templateOptions: {
             label: 'Street',
           },
+          expressionProperties: {
+            'templateOptions.disabled': 'true'
+          }
         },
         {
           className: 'flex-1',
@@ -51,6 +59,9 @@ export class BranchService {
           templateOptions: {
             label: 'City',
           },
+          expressionProperties: {
+            'templateOptions.disabled': 'true'
+          }
         },
         {
           className: 'flex-1',
@@ -63,6 +74,9 @@ export class BranchService {
             min: 0,
             pattern: '\\d{5}',
           },
+          expressionProperties: {
+            'templateOptions.disabled': 'true'
+          }
         },
       ],
     },
@@ -75,17 +89,24 @@ export class BranchService {
       templateOptions: {
         label: 'Remarks'
       },
+      expressionProperties: {
+        'templateOptions.disabled': 'true'
+      }
     },
-    // {
-    //   type: 'checkbox',
-    //   key: 'otherToo',
-    //   templateOptions: {
-    //     label: 'Other Checkbox'
-    //   },
-    // },
+    {
+      type: 'checkbox',
+      key: 'otherToo',
+      templateOptions: {
+        label: 'Other Checkbox'
+      },
+      expressionProperties: {
+        'templateOptions.disabled': 'true'
+      }
+    },
   ];
+     
   constructor() { }
-  getBranchFields(): FormlyFieldConfig[]{
+  getPosFields(): FormlyFieldConfig[]{
 
 		return this.fields;
   }

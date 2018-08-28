@@ -12,6 +12,7 @@ export class AppBaseComponent  {
   form = new FormGroup({});
   model: any = {};
   options: FormlyFormOptions = {};
+  
   fields: FormlyFieldConfig[];
   title :string='';
   subTitle:string='Create';
