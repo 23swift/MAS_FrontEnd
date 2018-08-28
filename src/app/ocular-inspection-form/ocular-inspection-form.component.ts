@@ -23,7 +23,7 @@ constructor(private ocularInspectionFormService: OcularInspectionFormService,
   public route: ActivatedRoute,
   public router: Router) { 
   super(route,router);
-   this.fields=ocularInspectionFormService.getPosFields();
+  this.fields=ocularInspectionFormService.getOIFFields();
    
 }
 
