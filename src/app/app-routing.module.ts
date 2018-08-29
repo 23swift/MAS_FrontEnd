@@ -24,6 +24,7 @@ import { AoCheckerComponent } from './ao-checker/ao-checker.component'
 import { AoCheckingComponent } from './ao-checking/ao-checking.component'
 import { AwrFormComponent } from './forms/awr-form/awr-form.component';
 import { RequestFormComponent } from './forms/request-form/request-form.component';
+import { DocumentCheckListComponent } from './document-check-list/document-check-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -60,9 +61,11 @@ const routes: Routes = [
   { path: 'aoDashboard', component: AoCheckerDashboardComponent },
   { path: 'aoCheck', component: AoCheckerComponent },
   { path: 'aoChecking', component: AoCheckingComponent },
+  ///////////////////// FOR TESTING PURPOSES ///////////////////////
   { path: 'awr', component: AwrFormComponent },
-  { path: 'requestForm', component: RequestFormComponent }
-
+  { path: 'requestForm', component: RequestFormComponent },
+  { path: 'dcl', component: DocumentCheckListComponent },
+  {path: 'branchlist', component: BranchListComponent}
 ];
 
 @NgModule({
