@@ -17,7 +17,8 @@ export class BranchService {
       },
       templateOptions: {
           label: 'Business / Legal Name',
-          placeholder:'Business / Legal Name'
+          placeholder:'Business / Legal Name',
+          required: true
       },
   },
       {
@@ -140,6 +141,7 @@ export class BranchService {
       },
       templateOptions: {
         label: 'DBA City',
+        required: true,
         options:[
       { label: 'PASIG', value: '1'},
       { label: 'MAKATI CITY', value: '2'},
@@ -161,6 +163,7 @@ export class BranchService {
           },
           templateOptions: {
           label: 'Zipcode',
+          required: true,
           options:[
             { label: '0400', value: '1'},
             { label: '0401', value: '2'},
@@ -1412,8 +1415,9 @@ export class BranchService {
                   },
                   templateOptions: { 
                   label: 'Currency',
+                  required: true,
                   options:[
-                    { label:'', value:'1' }
+                    { label:'Philippine Pesos', value:'1' }
                   ]
                   }      
                 },
@@ -1426,6 +1430,7 @@ export class BranchService {
                   },
                   templateOptions: { 
                   label: 'Monitor Code',
+                  required: true,
                   options:[
                     { label:'', value:'1'}
                   ]
