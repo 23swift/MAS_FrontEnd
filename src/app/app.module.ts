@@ -1,27 +1,30 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {BrowserAnimationsModule}  from '@angular/platform-browser/animations';
-import {FormlyModule} from '@ngx-formly/core';
-import {ReactiveFormsModule} from '@angular/forms';
-import {FormlyMaterialModule} from '@ngx-formly/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormlyModule } from '@ngx-formly/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormlyMaterialModule } from '@ngx-formly/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {MatToolbarModule,MatTooltipModule,} from '@angular/material';
+import { MatToolbarModule, MatTooltipModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HttpClientModule } from '@angular/common/http';
 
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatIconModule} from '@angular/material/icon';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatListModule} from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
 import { NewAffiliationComponent } from './new-affiliation/new-affiliation.component';
 import { PosRequestComponent } from './pos-request/pos-request.component';
-import { MatDatepickerModule , MatInputModule, MatNativeDateModule,MatTableModule,
-MatTabsModule,MatChipsModule,MatGridListModule} from '@angular/material';
-import {MatStepperModule} from '@angular/material/stepper';
+import {
+  MatDatepickerModule, MatInputModule, MatNativeDateModule, MatTableModule,
+  MatTabsModule, MatChipsModule, MatGridListModule
+} from '@angular/material';
+import { MatStepperModule } from '@angular/material/stepper';
 import { CalendarTypeComponent } from './calendar-type/calendar-type.component';
 import { BdoFormHeaderComponent } from './bdo-form-header/bdo-form-header.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
@@ -41,16 +44,24 @@ import { OcularInspectionFormComponent } from './forms/ocular-inspection-form/oc
 import { DocumentCheckListComponent } from './document-check-list/document-check-list.component';
 import { NewAffiliationSumComponent } from './new-affiliation-sum/new-affiliation-sum.component';
 import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
+<<<<<<< HEAD
 import { PosFormComponent } from './forms/pos-form/pos-form.component';
+=======
+import { PosFormComponent } from './pos-form/pos-form.component';
+>>>>>>> f0aa87c66d867ab3163c605003dcba42da40d42a
 import { BranchListAttachmentComponent } from './branch-list-attachment/branch-list-attachment.component';
 import { AoCheckerComponent } from './ao-checker/ao-checker.component';
-import { AoCheckerDashboardComponent } from './ao-checker-dashboard/ao-checker-dashboard.component';
+import { AoCheckerDashboardComponent } from './dashboard/ao-checker-dashboard/ao-checker-dashboard.component';
 import { AoCheckingComponent } from './ao-checking/ao-checking.component';
 import { RequestHeaderComponent } from './request-header/request-header.component';
 import { MaefFieldsComponent } from './maef-fields/maef-fields.component';
 import { AwrFormComponent } from './forms/awr-form/awr-form.component';
 import { RequestFormComponent } from './forms/request-form/request-form.component';
 import { MaefComponent } from './maef/maef.component';
+<<<<<<< HEAD
+=======
+import { DocumentCheckListFormComponent } from './forms/document-check-list-form/document-check-list-form.component';
+>>>>>>> f0aa87c66d867ab3163c605003dcba42da40d42a
 
 
 @NgModule({
@@ -77,7 +88,10 @@ import { MaefComponent } from './maef/maef.component';
     NewAffiliationSumComponent,
     CustomerProfileComponent,
     PosFormComponent,
+<<<<<<< HEAD
     
+=======
+>>>>>>> f0aa87c66d867ab3163c605003dcba42da40d42a
     BranchListAttachmentComponent,
     AoCheckerComponent,
     AoCheckerDashboardComponent,
@@ -86,22 +100,26 @@ import { MaefComponent } from './maef/maef.component';
     MaefFieldsComponent,
     AwrFormComponent,
     RequestFormComponent,
+<<<<<<< HEAD
     MaefComponent
+=======
+    MaefComponent,
+    DocumentCheckListFormComponent
+>>>>>>> f0aa87c66d867ab3163c605003dcba42da40d42a
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    
     FormlyModule.forRoot(
-        {
-      types: [{
-        name: 'calendar',
-        component: CalendarTypeComponent
-        // wrappers: ['form-field'],
-      }]
-    }
-      ),
+      {
+        types: [{
+          name: 'calendar',
+          component: CalendarTypeComponent
+          // wrappers: ['form-field'],
+        }]
+      }
+    ),
     BrowserAnimationsModule,
     FormlyMaterialModule,
     MatToolbarModule,
@@ -123,7 +141,8 @@ import { MaefComponent } from './maef/maef.component';
     MatTabsModule,
     MatStepperModule,
     MatChipsModule,
-    MatGridListModule
+    MatGridListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
