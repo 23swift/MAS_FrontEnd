@@ -25,6 +25,7 @@ import { AoCheckingComponent } from './ao-checking/ao-checking.component'
 import { AwrFormComponent } from './forms/awr-form/awr-form.component';
 import { RequestFormComponent } from './forms/request-form/request-form.component';
 import { DocumentCheckListComponent } from './document-check-list/document-check-list.component';
+import { DocumentCheckListFormComponent } from './forms/document-check-list-form/document-check-list-form.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -48,7 +49,7 @@ const routes: Routes = [
       { path: '', component: BranchListAttachmentComponent, outlet: "branchOIF" },
       { path: 'OIF/:id?', component: OcularInspectionFormComponent, outlet: "branchOIF" },
       { path: '', component: DocumentCheckListComponent, outlet: 'documentCheckList' },
-      { path: 'dcl/:id', component: DocumentCheckListComponent, outlet: 'documentCheckList' }
+      { path: 'dcl/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' }
     ]
   },
   { path: 'newAffSum', component: NewAffiliationSumComponent },
