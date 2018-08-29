@@ -67,7 +67,8 @@
         <ng-template matStepLabel>
             <span class="mat-subheading-1">Attach Required Documents</span>
         </ng-template>
-        <app-document-check-list></app-document-check-list>
+        <router-outlet name="documentCheckList"></router-outlet>
+
         <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
             <mat-icon color="primary">navigate_next</mat-icon>
         </button>

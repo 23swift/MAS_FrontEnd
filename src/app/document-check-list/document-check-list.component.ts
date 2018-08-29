@@ -19,6 +19,6 @@ export class DocumentCheckListComponent implements OnInit {
     this.displayedColumns = this._service.GetTableFields();
   }
   GetItem(id) {
-    console.log(id);
+    this._router.navigateByUrl(`dcl/${id}`);
   }
 }

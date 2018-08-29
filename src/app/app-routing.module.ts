@@ -45,14 +45,10 @@ const routes: Routes = [
       { path: '', component: BranchListComponent },
       { path: 'branch/:mode/:id', component: BranchComponent },
       { path: 'branch/:mode', component: BranchComponent },
-      {
-        path: '', component: BranchListAttachmentComponent,
-        outlet: "branchOIF"
-      },
-      {
-        path: 'OIF/:id', component: OcularInspectionFormComponent,
-        outlet: "branchOIF"
-      }
+      { path: '', component: BranchListAttachmentComponent, outlet: "branchOIF" },
+      { path: 'OIF/:id?', component: OcularInspectionFormComponent, outlet: "branchOIF" },
+      { path: '', component: DocumentCheckListComponent, outlet: 'documentCheckList' },
+      { path: 'dcl/:id', component: DocumentCheckListComponent, outlet: 'documentCheckList' }
     ]
   },
   { path: 'newAffSum', component: NewAffiliationSumComponent },
@@ -65,7 +61,7 @@ const routes: Routes = [
   { path: 'awr', component: AwrFormComponent },
   { path: 'requestForm', component: RequestFormComponent },
   { path: 'dcl', component: DocumentCheckListComponent },
-  {path: 'branchlist', component: BranchListComponent}
+  { path: 'branchlist', component: BranchListComponent }
 ];
 
 @NgModule({

@@ -54,6 +54,7 @@ import { MaefFieldsComponent } from './maef-fields/maef-fields.component';
 import { AwrFormComponent } from './forms/awr-form/awr-form.component';
 import { RequestFormComponent } from './forms/request-form/request-form.component';
 import { MaefComponent } from './maef/maef.component';
+import { DocumentCheckListFormComponent } from './forms/document-check-list-form/document-check-list-form.component';
 
 
 @NgModule({
@@ -88,7 +89,8 @@ import { MaefComponent } from './maef/maef.component';
     MaefFieldsComponent,
     AwrFormComponent,
     RequestFormComponent,
-    MaefComponent
+    MaefComponent,
+    DocumentCheckListFormComponent
   ],
   imports: [
     BrowserModule,
