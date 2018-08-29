@@ -1,7 +1,7 @@
-import { Component, OnInit,Input } from '@angular/core';
-import {FormGroup} from '@angular/forms';
+import { Component, OnInit, Input } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
-import{BranchService} from '../services/branch.service';
+import { BranchService } from '../services/branch.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 @Component({
   selector: 'app-branch',
@@ -13,35 +13,36 @@ export class BranchAffiliationComponent implements OnInit {
   model: any = {};
   options: FormlyFormOptions = {};
   fields: FormlyFieldConfig[];
-  title :string='Branch Affiliation';
-  subTitle:string='';
-  mode:string;
-executeFunction: Function;
-private _branchService:BranchService;
+  title: string = 'Branch Affiliation';
+  subTitle: string = '';
+  mode: string;
+  executeFunction: Function;
+  private _branchService: BranchService;
   // @Input() mode: string;
-  constructor( private branchService:BranchService,private route: ActivatedRoute,
+  constructor(private branchService: BranchService, private route: ActivatedRoute,
     private router: Router) {
-      this._branchService=branchService;
-      this.getFields();
-   }
+    this._branchService = branchService;
+    this.getFields();
+  }
 
   ngOnInit() {
 
     this.mode = this.route.snapshot.paramMap.get('mode');
     this.selectMode();
-   
+
   }
 
-  private selectMode(){
+  private selectMode() {
     switch (this.mode) {
       case 'create':
-        this.subTitle="Create";
-        this.executeFunction=this.create;
-        
+        this.subTitle = 'Create';
+        this.executeFunction = this.create;
+
         break;
       case 'update':
-        this.subTitle="Update";
-        this.executeFunction=this.update;
+        this.subTitle = 'Update';
+        this.executeFunction = this.update;
+        break;
       default:
         break;
     }
@@ -56,7 +57,7 @@ private _branchService:BranchService;
   }
 
   private getFields() {
-    this.fields=this._branchService.getBranchFields();
+    this.fields = this._branchService.getBranchFields();
   }
 
 }

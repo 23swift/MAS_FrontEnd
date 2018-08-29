@@ -11,14 +11,23 @@ import { DocumentCheckListService, DocumentDisplayInfo } from './document-check-
 export class DocumentCheckListComponent implements OnInit {
   documentCheckList: DocumentDisplayInfo;
   displayedColumns: string[];
+  private _subs: any;
+  mode: string;
   dataSource;
   constructor(private _route: ActivatedRoute, private _router: Router, private _service: DocumentCheckListService) { }
 
   ngOnInit() {
     this.dataSource = this._service.Get();
     this.displayedColumns = this._service.GetTableFields();
+    this._subs = this._route.params.subscribe(params => {
+      this.mode = params['mode'];
+      console.log(this.mode);
+    });
   }
   GetItem(id) {
-    this._router.navigateByUrl(`dcl/${id}`);
+    this._router.navigateByUrl(`/naStep/${this.mode}/(documentCheckList:dcl/${this.mode}/${id})`);
+  }
+  AddDocument() {
+    this._router.navigateByUrl(`/naStep/${this.mode}/(documentCheckList:dcl/${this.mode}/0)`);
   }
 }

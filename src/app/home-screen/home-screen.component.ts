@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-screen.component.css']
 })
 export class HomeScreenComponent implements OnInit {
-  mode='create';
-  status="done";
+  mode = 'create';
+  status = 'done';
   constructor() { }
 
   ngOnInit() {

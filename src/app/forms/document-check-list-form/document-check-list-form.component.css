@@ -1,0 +1,8 @@
+.docs-form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.docs-form-container>* {
+    width: 100%;
+}

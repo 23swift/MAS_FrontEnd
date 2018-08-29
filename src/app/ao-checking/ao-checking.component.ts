@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ao-checking.component.css']
 })
 export class AoCheckingComponent implements OnInit {
-title:string='New Affiliation';
-subTitle:string='Account Officer Checking';
+  title: string = 'New Affiliation';
+  subTitle: string = 'Account Officer Checking';
   constructor() { }
 
   ngOnInit() {

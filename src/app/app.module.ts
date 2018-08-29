@@ -22,7 +22,7 @@ import { NewAffiliationComponent } from './new-affiliation/new-affiliation.compo
 import { PosRequestComponent } from './pos-request/pos-request.component';
 import {
   MatDatepickerModule, MatInputModule, MatNativeDateModule, MatTableModule,
-  MatTabsModule, MatChipsModule, MatGridListModule
+  MatTabsModule, MatChipsModule, MatGridListModule, MatOptionModule, MatSelectModule, MatFormFieldModule
 } from '@angular/material';
 import { MatStepperModule } from '@angular/material/stepper';
 import { CalendarTypeComponent } from './calendar-type/calendar-type.component';
@@ -138,7 +138,10 @@ import { DocumentCheckListFormComponent } from './forms/document-check-list-form
     MatStepperModule,
     MatChipsModule,
     MatGridListModule,
-    HttpClientModule
+    HttpClientModule,
+    MatOptionModule,
+    MatSelectModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

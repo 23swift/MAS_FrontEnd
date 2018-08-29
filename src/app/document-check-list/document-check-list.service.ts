@@ -9,8 +9,8 @@ export interface DocumentDisplayInfo {
 }
 
 const TEST_DATA: DocumentDisplayInfo[] = [
-  { Id: 1, DocumentName: 'BDO\'s Merchant Information Sheet (MIS)', Remarks: 'The file is complete', DateSubmitted: '08/29/2018', FileUpload: '' },
-  { Id: 2, DocumentName: 'BDO\'s Ocular Inspection Form (OIF)', Remarks: 'The file is complete', DateSubmitted: '08/29/2018', FileUpload: '' }
+  { Id: 1, DocumentName: 'BDO\'s Merchant Information Sheet (MIS)', Remarks: 'Marked as submitted but no file is attached.', DateSubmitted: '08/29/2018', FileUpload: '' },
+  { Id: 2, DocumentName: 'BDO\'s Ocular Inspection Form (OIF)', Remarks: 'Marked as submitted but no file is attached.', DateSubmitted: '08/29/2018', FileUpload: '' }
 ];
 
 @Injectable()
