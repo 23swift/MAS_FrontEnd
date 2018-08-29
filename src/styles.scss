@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-// @import'~@angular/material/prebuilt-themes/indigo-pink.css';
-@import'app/customTheme/customTheme';
-html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    ;
-}
-
-.display-flex {
-    max-width: 100%;
-    /*margin:auto;*/
-}
-
-@media (min-width: 900px) {
-=======
     // @import'~@angular/material/prebuilt-themes/indigo-pink.css';
     @import'app/customTheme/customTheme';
     html,
@@ -26,9 +8,8 @@ body {
         ;
     }
     
->>>>>>> c1fa04e83b78647491bc6b083991332b5ee59ba1
     .display-flex {
-        max-width: 1400px;
+        max-width: 100%;
         /*margin:auto;*/
     }
     
