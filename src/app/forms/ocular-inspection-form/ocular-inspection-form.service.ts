@@ -52,64 +52,58 @@ export class OcularInspectionFormService {
                     className: 'flex-1',
                 },
                 {
-                    fieldGroupClassName: 'display-flex',
-                    fieldGroup: [
-                        {
-                            template: "<span class='mat-subheading-1'> Outskirt </span>"
-                        },
-                        {
-                            key: 'outskirtYes',
-                            type: 'checkbox',
-                            templateOptions: {
-                                label: 'Yes'
-                            }
-                        },
-                        {
-                            key: 'outskirtNo',
-                            type: 'checkbox',
-                            templateOptions: {
-                                label: 'No'
-                            }
-                        },
-                    ]
+                    key: 'outskirt',
+                    type: 'radio',
+                    templateOptions: {
+                        label: 'Outskirt',
+                        options: [
+                            { value: 'true', label: 'Yes' },
+                            { value: 'false', label: 'No' }
+                        ]
+                    }
                 },
             ]
         },
         {
-            key: 'contactPerson',
-            type: 'input',
-            className: 'flex-1',
-            templateOptions: {
-                required: true,
-                label: 'Administrator (Contact Person)'
-            }
-        },
-        {
-            key: 'position',
-            type: 'input',
-            className: 'flex-1',
-            templateOptions: {
-                required: true,
-                label: 'Position'
-            }
-        },
-        {
-            key: 'phoneNo',
-            type: 'input',
-            className: 'flex-1',
-            templateOptions: {
-                required: true,
-                label: 'Branch / Outlet Phone Number'
-            }
-        },
-        {
-            key: 'mobileNo',
-            type: 'input',
-            className: 'flex-1',
-            templateOptions: {
-                required: true,
-                label: 'Mobile Number'
-            }
+            fieldGroupClassName: 'display-flex',
+            fieldGroup: [
+                {
+                    key: 'contactPerson',
+                    type: 'input',
+                    className: 'flex-1',
+                    templateOptions: {
+                        required: true,
+                        label: 'Administrator (Contact Person)'
+                    }
+                },
+                {
+                    key: 'position',
+                    type: 'input',
+                    className: 'flex-1',
+                    templateOptions: {
+                        required: true,
+                        label: 'Position'
+                    }
+                },
+                {
+                    key: 'phoneNo',
+                    type: 'input',
+                    className: 'flex-1',
+                    templateOptions: {
+                        required: true,
+                        label: 'Branch / Outlet Phone Number'
+                    }
+                },
+                {
+                    key: 'mobileNo',
+                    type: 'input',
+                    className: 'flex-1',
+                    templateOptions: {
+                        required: true,
+                        label: 'Mobile Number'
+                    }
+                },
+            ]
         },
         {
             fieldGroupClassName: 'display-flex',
@@ -151,7 +145,12 @@ export class OcularInspectionFormService {
                         required: true,
                         label: 'Business Hours'
                     }
-                },
+                }
+            ]
+        },
+        {
+            fieldGroupClassName: 'display-flex',
+            fieldGroup: [
                 {
                     key: 'noOfFulltimeEmployees',
                     type: 'input',
@@ -177,18 +176,22 @@ export class OcularInspectionFormService {
             ]
         },
         {
+            className: 'section-label',
+            template: '<span class="mat-headline mat-subheading-1">Business Premise</span><hr />'
+        },
+        {
             fieldGroupClassName: 'display-flex',
             fieldGroup: [
                 {
+                    className: "flex-1",
                     key: 'premiseStatus',
-                    type: 'select',
-                    className: 'flex-1',
+                    type: 'radio',
                     templateOptions: {
-                        required: true,
                         label: 'Premise Status',
-                        labelProp: 'Description',
-                        valueProp: 'PremiseStatus_Id',
-                        options: []
+                        options: [
+                            { value: 'OWNED', label: 'OWNED' },
+                            { value: 'RENTED', label: 'RENTED / LEASED' }
+                        ]
                     }
                 },
                 {
@@ -219,7 +222,12 @@ export class OcularInspectionFormService {
                         valueProp: 'Location_Id',
                         options: []
                     }
-                },
+                }
+            ]
+        },
+        {
+            fieldGroupClassName: 'display-flex',
+            fieldGroup: [
                 {
                     key: 'businessSignage',
                     type: 'input',
@@ -228,12 +236,7 @@ export class OcularInspectionFormService {
                         required: true,
                         label: 'Business Signage'
                     }
-                }
-            ]
-        },
-        {
-            fieldGroupClassName: 'display-flex',
-            fieldGroup: [
+                },
                 {
                     key: 'typeOfPremise',
                     type: 'select',
@@ -247,15 +250,12 @@ export class OcularInspectionFormService {
                     }
                 },
                 {
-                    key: 'interiorAppearance',
-                    type: 'select',
+                    key: 'floorArea',
+                    type: 'input',
                     className: 'flex-1',
                     templateOptions: {
                         required: true,
-                        label: 'Interior Appearance',
-                        labelProp: 'Description',
-                        valueProp: 'InteriorAppearance_Id',
-                        options: []
+                        label: 'Floor Area in Sqm. (Please Specify)'
                     }
                 }
             ]
@@ -264,63 +264,75 @@ export class OcularInspectionFormService {
             fieldGroupClassName: 'display-flex',
             fieldGroup: [
                 {
+                    className: 'flex-1',
+                    key: 'interiorAppearance',
+                    type: 'radio',
+                    templateOptions: {
+                        label: 'Interior Appearance',
+                        options: [
+                            { value: 'true', label: 'Yes' },
+                            { value: 'false', label: 'No' }
+                        ]
+                    }
+                },
+                {
+                    className: 'flex-1',
                     key: 'exteriorAppearance',
-                    type: 'select',
-                    className: 'flex-1',
+                    type: 'radio',
                     templateOptions: {
-                        required: true,
                         label: 'Exterior Appearance',
-                        labelProp: 'Description',
-                        valueProp: 'ExteriorAppearance_Id',
-                        options: []
+                        options: [
+                            { value: 'true', label: 'Yes' },
+                            { value: 'false', label: 'No' }
+                        ]
                     }
                 },
                 {
+                    className: 'flex-1',
                     key: 'stocksInventory',
-                    type: 'select',
-                    className: 'flex-1',
+                    type: 'radio',
                     templateOptions: {
-                        required: true,
-                        label: 'Stocks/Inventory',
-                        labelProp: 'Description',
-                        valueProp: 'StocksInventory_Id',
-                        options: []
+                        label: 'Stocks / Inventory',
+                        options: [
+                            { value: 'true', label: 'Yes' },
+                            { value: 'false', label: 'No' }
+                        ]
                     }
                 },
                 {
-                    key: 'equipment',
-                    type: 'select',
                     className: 'flex-1',
+                    key: 'equipment',
+                    type: 'radio',
                     templateOptions: {
-                        required: true,
                         label: 'Equipment',
-                        labelProp: 'Description',
-                        valueProp: 'Equipment_Id',
-                        options: []
+                        options: [
+                            { value: 'true', label: 'Yes' },
+                            { value: 'false', label: 'No' }
+                        ]
                     }
-                }]
+                },
+
+                {
+                    className: 'flex-1',
+                    key: 'withHighCardTraffic',
+                    type: 'radio',
+                    templateOptions: {
+                        label: 'With High Card Traffic?',
+                        options: [
+                            { value: 'true', label: 'Yes' },
+                            { value: 'false', label: 'No' }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            className: 'section-label',
+            template: '<span class="mat-headline mat-subheading-1">Neighborhood</span><hr />'
         },
         {
             fieldGroupClassName: 'display-flex',
             fieldGroup: [
-                {
-                    key: 'floorArea',
-                    type: 'input',
-                    className: 'flex-1',
-                    templateOptions: {
-                        required: true,
-                        label: 'Floor Area in Sqm. (Please Specify)'
-                    }
-                },
-                {
-                    key: 'withHighCardTraffic',
-                    type: 'checkbox',
-                    className: 'flex-1',
-                    templateOptions: {
-                        required: true,
-                        label: 'With High Card Traffic'
-                    }
-                },
                 {
                     key: 'surroundingEstablishment',
                     type: 'input',
@@ -329,7 +341,16 @@ export class OcularInspectionFormService {
                         required: true,
                         label: 'Surrounding Establishments Namely'
                     }
-                },
+                }
+            ]
+        },
+        {
+            className: 'section-label',
+            template: '<span class="mat-headline mat-subheading-1">MOTO (Mandatory For MOTO Facility)</span><hr />'
+        },
+        {
+            fieldGroupClassName: 'display-flex',
+            fieldGroup: [
                 {
                     key: 'otherMarketingChannelSource',
                     type: 'input',
@@ -337,12 +358,7 @@ export class OcularInspectionFormService {
                     templateOptions: {
                         label: 'Other Marketing / Channel Source'
                     }
-                }
-            ]
-        },
-        {
-            fieldGroupClassName: 'display-flex',
-            fieldGroup: [
+                },
                 {
                     key: 'averageNoOfTransactionMonth',
                     type: 'input',
@@ -353,9 +369,13 @@ export class OcularInspectionFormService {
                         pd: 'number',
                         label: 'Average No. of Transaction/Month'
                     }
-                }]
+                }
+            ]
         },
-
+        {
+            className: 'section-label',
+            template: '<span class="mat-headline mat-subheading-1">For Event Purposes Only (Mandatory for Event Facility)</span><hr />'
+        },
         {
             fieldGroupClassName: 'display-flex',
             fieldGroup: [
@@ -368,7 +388,7 @@ export class OcularInspectionFormService {
                     }
                 },
                 {
-                    key: 'nameOfVenue',
+                    key: 'venue',
                     type: 'input',
                     className: 'flex-1',
                     templateOptions: {
@@ -380,18 +400,19 @@ export class OcularInspectionFormService {
                     type: 'select',
                     className: 'flex-1',
                     templateOptions: {
-                        label: 'Type of Event',
+                        label: 'Type Of Event',
                         labelProp: 'Description',
                         valueProp: 'TypeOfEvent_Id',
                         options: []
                     }
-                }]
+                }
+            ]
         },
         {
             fieldGroupClassName: 'display-flex',
             fieldGroup: [
                 {
-                    key: 'noOfBuyers',
+                    key: 'expectedNoOfBuyers',
                     type: 'input',
                     className: 'flex-1',
                     templateOptions: {
@@ -415,22 +436,22 @@ export class OcularInspectionFormService {
                     templateOptions: {
                         label: 'Price Range of Products/Services'
                     }
-                },
-                {
-                    key: 'noOfParticipant',
-                    type: 'input',
-                    className: 'flex-1',
-                    templateOptions: {
-                        pattern: '^\\d+$',
-                        pd: 'number',
-                        label: 'Expected No. of Participant'
-                    }
                 }
             ]
         },
         {
             fieldGroupClassName: 'display-flex',
             fieldGroup: [
+                {
+                    key: 'expectedNoOfParticipants',
+                    type: 'input',
+                    className: 'flex-1',
+                    templateOptions: {
+                        pattern: '^\\d+$',
+                        pd: 'number',
+                        label: 'Expected No. of Participants'
+                    }
+                },
                 {
                     key: 'averageRegistration',
                     type: 'input',
@@ -450,6 +471,10 @@ export class OcularInspectionFormService {
                     }
                 }
             ]
+        },
+        {
+            className: 'section-label',
+            template: '<span class="mat-headline mat-subheading-1">Information on Last Event Held (Mandatory For Event Facility)</span><hr />'
         },
         {
             fieldGroupClassName: 'display-flex',
@@ -500,7 +525,7 @@ export class OcularInspectionFormService {
         },
         {
             className: 'section-label',
-            template: '<hr />'
+            template: '<span class="mat-headline mat-subheading-1">Overall Findings</span><hr />'
         },
         {
             fieldGroupClassName: 'display-flex',
@@ -550,7 +575,12 @@ export class OcularInspectionFormService {
                         required: true,
                         label: 'Informants Name'
                     }
-                },
+                }
+            ]
+        },
+        {
+            fieldGroupClassName: 'display-flex',
+            fieldGroup: [
                 {
                     key: 'informantsPosition',
                     type: 'input',
@@ -595,7 +625,7 @@ export class OcularInspectionFormService {
                         required: true,
                         label: 'Date Reviewed'
                     }
-                },
+                }
             ]
         }
     ];
