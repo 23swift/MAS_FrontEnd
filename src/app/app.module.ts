@@ -46,7 +46,7 @@ import { AoCheckerComponent } from './ao-checker/ao-checker.component';
 import { AoCheckerDashboardComponent } from './ao-checker-dashboard/ao-checker-dashboard.component';
 import { AoCheckingComponent } from './ao-checking/ao-checking.component';
 import { RequestHeaderComponent } from './request-header/request-header.component';
-
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -113,7 +113,8 @@ import { RequestHeaderComponent } from './request-header/request-header.componen
     MatTabsModule,
     MatStepperModule,
     MatChipsModule,
-    MatGridListModule
+    MatGridListModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

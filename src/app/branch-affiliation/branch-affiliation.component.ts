@@ -4,7 +4,7 @@ import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
 import{BranchService} from '../services/branch.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 @Component({
-  selector: 'app-branch',
+  selector: 'app-branch-affiliaton',
   templateUrl: './branch-affiliation.component.html',
   styleUrls: ['./branch-affiliation.component.css']
 })

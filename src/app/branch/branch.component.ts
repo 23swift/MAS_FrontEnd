@@ -16,8 +16,9 @@ export class BranchComponent extends AppBaseComponent implements OnInit {
   options: FormlyFormOptions = {};
   fields: FormlyFieldConfig[];
   title :string='Branch Affiliation';
-  subTitle:string='';
+  subTitle:string='test';
   mode:string;
+  backUrl:string;
   private _branchService:BranchService;
   constructor( private branchService:BranchService,public route: ActivatedRoute,
     public router: Router) {
@@ -31,10 +32,15 @@ export class BranchComponent extends AppBaseComponent implements OnInit {
     // this.baseCreateFunction=this.create;
     // this.baseUpdateFunction=this.update;
    
+    this.route.parent.url.subscribe((urlPath) => {
+      
+      this.backUrl = urlPath.join().replace(',','/');
+  })
+   
     this.initialize();
   }
   public create(){
-    alert('Create branch');
+        alert('Create branch');
   }
 
   public update(){alert('Update Branch');
@@ -42,7 +48,9 @@ export class BranchComponent extends AppBaseComponent implements OnInit {
 }
   
   public cancel(){  
-    this.router.navigateByUrl('/naStep/create');
+    this.router.navigateByUrl(this.backUrl);
+    
+    
   }
  
 

@@ -129,6 +129,7 @@ body {
 .main-container {
     // padding: 7px;
     font-size: 14px;
+    margin: 3px;
 }
 
 // .mat-drawer-container {
@@ -155,3 +156,8 @@ body {
 .mat-input-element:disabled {
     color: #0d47a1;
 }
+
+.mat-tab-label, .mat-tab-link {
+    color:#f3960e !important;
+}
+   

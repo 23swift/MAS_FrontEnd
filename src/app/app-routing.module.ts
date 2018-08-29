@@ -31,12 +31,32 @@ const routes: Routes = [
 {path:'naStep/:mode', component:NewAffiliationStepComponent,
     children: [
       // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
-      {path:'', component:BranchListComponent},
-      {path:'branch/:mode/:id', component:BranchComponent},
-      {path:'branch/:mode', component:BranchComponent},
-      {path:'', component:BranchListAttachmentComponent,
+      {path:'', component:BranchListComponent,
+        //data: { mode: '[{ outlets: {branch: ["branch/update/",1] } }]' },
+        outlet: "branch"
+      },
+      {path:'branchList/:mode', component:BranchListComponent,
+        // data: { detailsRoute: '[{ outlets: {branch: ["branch/update/",1] } }]' },
+         outlet: "branch"
+      },
+      {path:'branch/:mode/:id', component:BranchComponent,
+       outlet: "branch"
+          
+      },
+      {path:'branch/:mode', component:BranchComponent,
+        outlet: "branch"
+      },
+      
+      {path:'', component:BranchListComponent,
+         data: { detailsRoute: 'branch/update/' },
          outlet: "branchOIF"
       },
+      {path:'', component:BranchListComponent,
+         data: { detailsRoute: 'branch/update/' },
+         outlet: "branchPOS"
+      },
+
+      
       {path:'OIF/:id', component:OcularInspectionFormComponent,
          outlet: "branchOIF"
       }
@@ -49,7 +69,33 @@ const routes: Routes = [
 {path:'home', component:HomeScreenComponent},
 {path:'aoDashboard', component:AoCheckerDashboardComponent},
 {path:'aoCheck', component:AoCheckerComponent},
-{path:'aoChecking', component:AoCheckingComponent},
+{path:'aoChecking', component:AoCheckingComponent,
+    children: [
+      // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
+      {path:'', component:BranchListComponent,
+        // data: { detailsRoute: '[{ outlets: {branch: ["branch/update/",1] } }]' },
+        outlet: "branch"
+      },
+      {path:'branch/:mode/:id', component:BranchComponent,
+      outlet: "branch"
+          
+      },
+      {path:'branch/:mode', component:BranchComponent,
+        outlet: "branch"
+      },
+      
+      {path:'', component:BranchListAttachmentComponent,
+        data: { detailsRoute: 'branch/update/' },
+        outlet: "branchOIF"
+      },
+      {path:'OIF/:id', component:OcularInspectionFormComponent,
+        outlet: "branchOIF"
+      }
+
+      
+    ]
+
+},
 
 
 
