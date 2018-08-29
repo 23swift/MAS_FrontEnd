@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // @import'~@angular/material/prebuilt-themes/indigo-pink.css';
 @import'app/customTheme/customTheme';
 html,
@@ -15,18 +14,6 @@ body {
 }
 
 @media (min-width: 900px) {
-=======
-    // @import'~@angular/material/prebuilt-themes/indigo-pink.css';
-    @import'app/customTheme/customTheme';
-    html,
-    body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        ;
-    }
-    
->>>>>>> c1fa04e83b78647491bc6b083991332b5ee59ba1
     .display-flex {
         max-width: 100%;
         /*max-width: 1400px;
@@ -182,3 +169,4 @@ body {
     .mat-step-header .mat-step-label.mat-step-label-active {
         color: #2c66ff;
     }
+}
