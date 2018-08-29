@@ -32,7 +32,7 @@
 
         <!-- <app-branch-list></app-branch-list> -->
 
-        <router-outlet></router-outlet>
+        <router-outlet name="branch"></router-outlet>
 
         <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
             <mat-icon color="primary">navigate_next</mat-icon>
@@ -56,7 +56,8 @@
             <span class="mat-subheading-1">Create POS Request for Branches</span>
         </ng-template>
 
-        <app-branch-list></app-branch-list>
+        <!-- <app-branch-list></app-branch-list> -->
+        <router-outlet name="branchPOS"></router-outlet>
 
         <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
             <mat-icon color="primary">navigate_next</mat-icon>

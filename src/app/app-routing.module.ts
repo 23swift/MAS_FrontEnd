@@ -59,6 +59,58 @@ const routes: Routes = [
   },
   { path: 'newAffSum', component: NewAffiliationSumComponent },
   { path: 'home', component: HomeScreenComponent },
+
+
+  { path: 'oif', component: OcularInspectionFormComponent },
+
+
+  { path: 'oifForm', component: OcularInspectionFormComponent },
+
+  { path: 'aoDashboard', component: AoCheckerDashboardComponent },
+  { path: 'aoCheck', component: AoCheckerComponent },
+  {
+    path: 'aoChecking', component: AoCheckingComponent,
+    children: [
+      // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
+      {
+        path: '', component: BranchListComponent,
+        // data: { detailsRoute: '[{ outlets: {branch: ["branch/update/",1] } }]' },
+        outlet: 'branch'
+      },
+      {
+        path: 'branch/:mode/:id', component: BranchComponent,
+        outlet: 'branch'
+
+      },
+      {
+        path: 'branch/:mode', component: BranchComponent,
+        outlet: 'branch'
+      },
+
+      {
+        path: '', component: BranchListAttachmentComponent,
+        data: { detailsRoute: 'branch/update/' },
+        outlet: 'branchOIF'
+      },
+      {
+        path: 'OIF/:id', component: OcularInspectionFormComponent,
+        outlet: 'branchOIF'
+      }
+
+
+    ]
+
+  },
+
+  { path: 'awr', component: AwrFormComponent },
+  { path: 'requestForm', component: RequestFormComponent },
+  { path: 'posForm', component: PosFormComponent },
+
+
+
+
+  { path: 'newAffSum', component: NewAffiliationSumComponent },
+  { path: 'home', component: HomeScreenComponent },
   { path: 'oif', component: OcularInspectionFormComponent },
   { path: 'oifForm', component: OcularInspectionFormComponent },
   { path: 'aoDashboard', component: AoCheckerDashboardComponent },

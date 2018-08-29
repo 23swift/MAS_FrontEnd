@@ -65,7 +65,7 @@ public initialize() {
     alert('updated');
   }
 
-  public cancel(){
+  public cancel(backUrl:string){
     alert('Please override cancel function');
   }
 

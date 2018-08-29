@@ -46,7 +46,7 @@ import { NewAffiliationSumComponent } from './new-affiliation-sum/new-affiliatio
 import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
 
 
-//import { PosFormComponent } from './pos-form/pos-form.component';
+// import { PosFormComponent } from './pos-form/pos-form.component';
 
 
 import { PosFormComponent } from './forms/pos-form/pos-form.component';
@@ -56,6 +56,7 @@ import { AoCheckerComponent } from './ao-checker/ao-checker.component';
 import { AoCheckerDashboardComponent } from './dashboard/ao-checker-dashboard/ao-checker-dashboard.component';
 import { AoCheckingComponent } from './ao-checking/ao-checking.component';
 import { RequestHeaderComponent } from './request-header/request-header.component';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { MaefFieldsComponent } from './maef-fields/maef-fields.component';
 import { AwrFormComponent } from './forms/awr-form/awr-form.component';
 import { RequestFormComponent } from './forms/request-form/request-form.component';
@@ -89,9 +90,6 @@ import { DocumentCheckListFormComponent } from './forms/document-check-list-form
     NewAffiliationSumComponent,
     CustomerProfileComponent,
     PosFormComponent,
-
-    
-
     BranchListAttachmentComponent,
     AoCheckerComponent,
     AoCheckerDashboardComponent,
@@ -141,7 +139,8 @@ import { DocumentCheckListFormComponent } from './forms/document-check-list-form
     HttpClientModule,
     MatOptionModule,
     MatSelectModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
