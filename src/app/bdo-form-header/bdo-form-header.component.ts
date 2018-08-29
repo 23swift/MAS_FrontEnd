@@ -17,11 +17,10 @@ export class BdoFormHeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    if(this.mode=='approval'){
-
+    if(this.mode == 'approval'){
       this.showApprovalOptions=true;
     }
-    if(this.mode != 'create'){
+    if(!this.mode.match(/create/) && !this.mode.match(/approval/)){
       this.showRequestFlowOptions=true;
     }
   }

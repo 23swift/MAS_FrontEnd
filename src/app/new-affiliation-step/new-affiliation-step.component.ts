@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder,FormGroup,Validators} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { MatStepper } from '@angular/material';
-import { ActivatedRoute,Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-affiliation-step',
@@ -12,31 +12,29 @@ import { ActivatedRoute,Router } from '@angular/router';
 })
 export class NewAffiliationStepComponent implements OnInit {
   isLinear = false;
-	isOptional= false;
+  isOptional = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   title = 'New Affiliation';
-   subTitle = 'Create';
-   mode='create';
-   status="done";
+  subTitle = 'Create';
+  mode = 'create';
+  status = "done";
   //  completed:boolean=false;
-  constructor(private _formBuilder: FormBuilder,private route: ActivatedRoute,
-  private router:Router
+  constructor(private _formBuilder: FormBuilder, private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit() {
-
-    this.isOptional= true;
-  	this.firstFormGroup = this._formBuilder.group({
+    this.isOptional = true;
+    this.firstFormGroup = this._formBuilder.group({
       firstCtrl: ['', Validators.required]
     });
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required]
     });
-
     //  this.router.navigate([{outlets: {primary: 'branch/create' ,branchOIF: ''}}]);
   }
-  public completed(stepper: MatStepper){
+  public completed(stepper: MatStepper) {
     stepper.selected.completed = true;
     stepper.next();
     return true;
