@@ -9,24 +9,16 @@
         <mat-icon>done_outline</mat-icon>
     </ng-template> -->
     <mat-step [completed]="false">
-
         <ng-template matStepLabel>
-
-            <span class="mat-subheading-1">
-            
-                Create Customer Profile</span>
-
+            <span class="mat-subheading-1">Create Customer Profile</span>
         </ng-template>
         <!-- <mat-step-header state="done">Complete</mat-step-header> -->
-        <span class="mat-headline">
-          Customer Profile
-        </span>
+        <span class="mat-headline">Customer Profile</span>
         <app-customer-profile [displayMode]="false"></app-customer-profile>
 
         <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
             <mat-icon color="primary">navigate_next</mat-icon>
         </button>
-
         <!-- <div fxLayout="row wrap" fxLayoutAlign="end center" fxLayoutGap="3px">
             <button mat-mini-fab (click)="doneWithCustomer(stepper);">
                 <mat-icon>check</mat-icon>
@@ -35,9 +27,7 @@
     </mat-step>
     <mat-step [completed]="false">
         <ng-template matStepLabel>
-            <span class="mat-subheading-1">
-                    
-                Add Branches</span>
+            <span class="mat-subheading-1">Add Branches</span>
         </ng-template>
 
         <!-- <app-branch-list></app-branch-list> -->
@@ -51,9 +41,7 @@
     </mat-step>
     <mat-step [completed]="false">
         <ng-template matStepLabel>
-            <span class="mat-subheading-1">
-                        
-                    Attach Occular Inspection Form to Branches</span>
+            <span class="mat-subheading-1">Attach Occular Inspection Form to Branches</span>
         </ng-template>
         <router-outlet name="branchOIF"></router-outlet>
         <!-- <app-branch-list></app-branch-list> -->
@@ -65,9 +53,7 @@
     </mat-step>
     <mat-step [completed]="false">
         <ng-template matStepLabel>
-            <span class="mat-subheading-1">
-                            
-                        Create POS Request for Branches</span>
+            <span class="mat-subheading-1">Create POS Request for Branches</span>
         </ng-template>
 
         <app-branch-list></app-branch-list>
@@ -79,9 +65,7 @@
     </mat-step>
     <mat-step [completed]="false">
         <ng-template matStepLabel>
-            <span class="mat-subheading-1">
-                            
-                        Attach Required Documents</span>
+            <span class="mat-subheading-1">Attach Required Documents</span>
         </ng-template>
         <app-document-check-list></app-document-check-list>
         <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
