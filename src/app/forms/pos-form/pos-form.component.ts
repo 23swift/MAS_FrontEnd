@@ -10,15 +10,20 @@ import { PosFormService } from './pos-form.service';
 @Component({
   selector: 'app-pos-form',
   templateUrl: './pos-form.component.html',
-  styleUrls: ['./pos-form.component.css']
+  styleUrls: ['./pos-form.component.css'],
+  providers: [PosFormService]
 })
 export class PosFormComponent extends AppBaseComponent implements OnInit {
 
   constructor(private posFormService: PosFormService,
     public route: ActivatedRoute,
-    public router: Router) { 
+    public router: Router) 
+    { 
       super(route,router);
-      this.fields = posFormService.getPosFields();
+      
+      var user: string = 'test'
+      
+      this.fields = posFormService.getPosFields(user);
     }
 
   ngOnInit() {

@@ -44,13 +44,7 @@ import { OcularInspectionFormComponent } from './forms/ocular-inspection-form/oc
 import { DocumentCheckListComponent } from './document-check-list/document-check-list.component';
 import { NewAffiliationSumComponent } from './new-affiliation-sum/new-affiliation-sum.component';
 import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
-
-
-// import { PosFormComponent } from './pos-form/pos-form.component';
-
-
 import { PosFormComponent } from './forms/pos-form/pos-form.component';
-
 import { BranchListAttachmentComponent } from './branch-list-attachment/branch-list-attachment.component';
 import { AoCheckerComponent } from './ao-checker/ao-checker.component';
 import { AoCheckerDashboardComponent } from './dashboard/ao-checker-dashboard/ao-checker-dashboard.component';
@@ -61,7 +55,6 @@ import { MaefFieldsComponent } from './maef-fields/maef-fields.component';
 import { AwrFormComponent } from './forms/awr-form/awr-form.component';
 import { RequestFormComponent } from './forms/request-form/request-form.component';
 import { MaefComponent } from './maef/maef.component';
-
 import { DocumentCheckListFormComponent } from './forms/document-check-list-form/document-check-list-form.component';
 
 

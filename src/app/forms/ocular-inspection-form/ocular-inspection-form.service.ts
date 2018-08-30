@@ -20,8 +20,9 @@ export class OcularInspectionFormService {
             type: 'input',
             className: 'flex-1',
             templateOptions: {
-                label: 'DBA (Branch / Trade Name)',
-                maxLength: 22
+                label: 'DBA (Branch / Trade Name)'
+            },
+            expressionProperties: {
             }
         },
         {
@@ -34,21 +35,35 @@ export class OcularInspectionFormService {
                     key: 'DBAoutletAddress1',
                     type: 'input',
                     className: 'flex-1',
+                    templateOptions: {
+                        placeholder: 'Address 1'
+                    }
+
                 },
                 {
                     key: 'DBAoutletAddress2',
                     type: 'input',
                     className: 'flex-1',
+                    templateOptions: {
+                        placeholder: 'Address 2'
+                    }
                 },
                 {
                     key: 'DBAoutletAddress3',
                     type: 'input',
                     className: 'flex-1',
+                    templateOptions: {
+                        placeholder: 'Address 3'
+                    }
                 },
                 {
                     key: 'DBAoutletAddress4',
                     type: 'input',
                     className: 'flex-1',
+                    templateOptions: {
+                        placeholder: 'Address 4'
+                    }
+
                 },
                 {
                     key: 'outskirt',
@@ -57,7 +72,7 @@ export class OcularInspectionFormService {
                         label: 'Outskirt',
                         options: [
                             { value: 'true', label: 'Yes' },
-                            { value: 'false', label: 'No' }
+                            { value: 'false', label: 'No' },
                         ]
                     }
                 },
@@ -266,6 +281,7 @@ export class OcularInspectionFormService {
                     className: 'flex-1',
                     key: 'interiorAppearance',
                     type: 'radio',
+                    defaultValue: 'true',
                     templateOptions: {
                         label: 'Interior Appearance',
                         options: [
@@ -278,6 +294,7 @@ export class OcularInspectionFormService {
                     className: 'flex-1',
                     key: 'exteriorAppearance',
                     type: 'radio',
+                    defaultValue: 'true',
                     templateOptions: {
                         label: 'Exterior Appearance',
                         options: [
@@ -290,6 +307,7 @@ export class OcularInspectionFormService {
                     className: 'flex-1',
                     key: 'stocksInventory',
                     type: 'radio',
+                    defaultValue: 'true',
                     templateOptions: {
                         label: 'Stocks / Inventory',
                         options: [
@@ -302,6 +320,7 @@ export class OcularInspectionFormService {
                     className: 'flex-1',
                     key: 'equipment',
                     type: 'radio',
+                    defaultValue: 'true',
                     templateOptions: {
                         label: 'Equipment',
                         options: [
@@ -310,11 +329,11 @@ export class OcularInspectionFormService {
                         ]
                     }
                 },
-
                 {
                     className: 'flex-1',
                     key: 'withHighCardTraffic',
                     type: 'radio',
+                    defaultValue: 'true',
                     templateOptions: {
                         label: 'With High Card Traffic?',
                         options: [
@@ -555,15 +574,18 @@ export class OcularInspectionFormService {
                     }
                 },
                 {
+                    
                     key: 'overAllRating',
-                    type: 'select',
+                    type: 'radio',
                     className: 'flex-1',
+                    defaultValue: 'true',
                     templateOptions: {
                         required: true,
-                        label: 'Over All Rating',
-                        labelProp: 'OverAllRating_Id',
-                        valueProp: 'Description',
-                        options: []
+                        label: 'OverAll Rating',
+                        options: [
+                            { value: 'acceptable', label: 'ACCEPTABLE' },
+                            { value: 'notacceptable', label: 'NOT ACCEPTABLE' }
+                        ]
                     }
                 },
                 {
