@@ -12,8 +12,7 @@ export class OcularInspectionFormService {
             type: 'input',
             className: 'flex-1',
             templateOptions: {
-                label: 'Merchant Legal Name',
-                disabled: true
+                label: 'Merchant Legal Name'
             }
         },
         {
@@ -22,7 +21,7 @@ export class OcularInspectionFormService {
             className: 'flex-1',
             templateOptions: {
                 label: 'DBA (Branch / Trade Name)',
-                disabled: true
+                maxLength: 22
             }
         },
         {
