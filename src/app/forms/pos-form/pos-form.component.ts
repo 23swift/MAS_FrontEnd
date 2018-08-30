@@ -17,14 +17,13 @@ export class PosFormComponent extends AppBaseComponent implements OnInit {
 
   constructor(private posFormService: PosFormService,
     public route: ActivatedRoute,
-    public router: Router) 
-    { 
-      super(route,router);
-      
-      var user: string = 'test'
-      
-      this.fields = posFormService.getPosFields(user);
-    }
+    public router: Router) {
+    super(route, router);
+
+    var user: string = 'test';
+
+    this.fields = posFormService.getPosFields(user);
+  }
 
   ngOnInit() {
   }

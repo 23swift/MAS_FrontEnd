@@ -25,7 +25,7 @@ export class DocumentCheckListFormComponent implements OnInit {
       fileUpload: new FormControl('')
     });
     this.mode = this._route.snapshot.params['docMode'];
-    this.documentList = this._service.Get();
+    this.documentList = this._service.GetDocumentList();
   }
 
   OnSubmit() {

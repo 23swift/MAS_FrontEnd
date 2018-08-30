@@ -7,7 +7,7 @@ import { AwrFormService } from './awr-form.service';
   selector: 'app-awr-form',
   templateUrl: './awr-form.component.html',
   styleUrls: ['./awr-form.component.css'],
-  providers: [ AwrFormService ]
+  providers: [AwrFormService]
 })
 export class AwrFormComponent implements OnInit {
   @Input() requestId?: number;
@@ -21,20 +21,20 @@ export class AwrFormComponent implements OnInit {
     this.form = new FormGroup({});
     this.fields = this.awrService.GetFormlyFields();
   }
-  
+
   Cancel() {
-    console.log("You clicked Cancel()!")
+    console.log('You clicked Cancel()!');
   }
 
-  Get() {}
+  Get() { }
 
-  GetById() {}
+  GetById() { }
 
   Save() {
-    console.log("You clicked Save()!")
+    console.log('You clicked Save()!');
   }
 
-  Submit() {}
-  
-  Update() {}
+  Submit() { }
+
+  Update() { }
 }

@@ -7,7 +7,7 @@ import { FormlyFieldConfig } from '@ngx-formly/core';
   selector: 'app-request-form',
   templateUrl: './request-form.component.html',
   styleUrls: ['./request-form.component.css'],
-  providers: [ RequestFormService ]
+  providers: [RequestFormService]
 })
 export class RequestFormComponent implements OnInit {
   form = new FormGroup({});
@@ -17,7 +17,7 @@ export class RequestFormComponent implements OnInit {
       {
         className: 'flex-1',
         key: 'rtNo',
-        type:'input',
+        type: 'input',
         expressionProperties: {
           'templateOptions.disabled': 'true'
         },
@@ -44,7 +44,7 @@ export class RequestFormComponent implements OnInit {
       {
         className: 'flex-1',
         key: 'status',
-        type:'input',
+        type: 'input',
         expressionProperties: {
           'templateOptions.disabled': 'true'
         },
@@ -67,13 +67,13 @@ export class RequestFormComponent implements OnInit {
   }, {
     fieldGroupClassName: 'display-flex',
     template: '<h1 class="mat-display-1">Business Information</h1>'
-  } ,{
+  }, {
     fieldGroupClassName: 'display-flex',
     fieldGroup: [
       {
         className: 'flex-1',
         key: 'businessName',
-        type:'input',
+        type: 'input',
         templateOptions: {
           label: "Business Name"
         }
@@ -109,7 +109,7 @@ export class RequestFormComponent implements OnInit {
       {
         className: 'flex-1',
         key: 'secDtiRegDate',
-        type:'calendar',
+        type: 'calendar',
         templateOptions: {
           label: "SEC DTI Registration Date"
         }
@@ -126,9 +126,9 @@ export class RequestFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  Cancel() {}
-  Get() {}
-  GetById() {}
-  Save() {}
-  Update() {}
+  Cancel() { }
+  Get() { }
+  GetById() { }
+  Save() { }
+  Update() { }
 }

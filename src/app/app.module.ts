@@ -6,7 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyMaterialModule } from '@ngx-formly/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatToolbarModule, MatTooltipModule } from '@angular/material';
+import { MatToolbarModule, MatTooltipModule, MatCheckboxModule, MatRadioModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -65,6 +65,8 @@ import { MqrDashboardComponent } from './dashboard/mqr-dashboard/mqr-dashboard.c
 import { MdcsUserDashboardComponent } from './dashboard/mdcs-user-dashboard/mdcs-user-dashboard.component';
 import { PsServicingDashboardComponent } from './dashboard/ps-servicing-dashboard/ps-servicing-dashboard.component';
 import { MdmUserDashboardComponent } from './dashboard/mdm-user-dashboard/mdm-user-dashboard.component';
+import { MidComponent } from './mid/mid.component';
+import { MidFormComponent } from './forms/mid-form/mid-form.component';
 
 
 
@@ -111,6 +113,8 @@ import { MdmUserDashboardComponent } from './dashboard/mdm-user-dashboard/mdm-us
     MdcsUserDashboardComponent,
     PsServicingDashboardComponent,
     MdmUserDashboardComponent,
+    MidComponent,
+    MidFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -152,7 +156,9 @@ import { MdmUserDashboardComponent } from './dashboard/mdm-user-dashboard/mdm-us
     MatSelectModule,
     MatFormFieldModule,
     MatButtonToggleModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatCheckboxModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

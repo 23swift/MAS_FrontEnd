@@ -9,7 +9,6 @@ import { DocumentCheckListService, DocumentDisplayInfo } from './document-check-
   providers: [DocumentCheckListService]
 })
 export class DocumentCheckListComponent implements OnInit {
-  documentCheckList: DocumentDisplayInfo;
   displayedColumns: string[];
   mode: string;
   dataSource;
