@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-screen.component.css']
 })
 export class HomeScreenComponent implements OnInit {
-  mode = 'create';
+  mode = '';
   status = 'done';
   constructor() { }
 

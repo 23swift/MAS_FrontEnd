@@ -11,15 +11,15 @@ export class ExtentionComponent extends AppBaseComponent implements OnInit {
 
   constructor(public route: ActivatedRoute,
     public router: Router) {
-    super(route,router);
-   }
+    super(route, router);
+  }
 
   ngOnInit() {
     this.initialize();
-    this.title='Extention Class';
+    this.title = 'Extention Class';
     // this.subTitle='Create'
 
-    
+
   }
 
 }

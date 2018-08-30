@@ -30,6 +30,14 @@ import { PosFormComponent } from './forms/pos-form/pos-form.component';
 import { DocumentCheckListComponent } from './document-check-list/document-check-list.component';
 import { DocumentCheckListFormComponent } from './forms/document-check-list-form/document-check-list-form.component';
 import { AoCheckerDashboardComponent } from './dashboard/ao-checker-dashboard/ao-checker-dashboard.component';
+import { AoEncoderDashboardComponent } from './dashboard/ao-encoder-dashboard/ao-encoder-dashboard.component';
+import { ApproverDashboardComponent } from './dashboard/approver-dashboard/approver-dashboard.component';
+import { MauEncoderDashboardComponent } from './dashboard/mau-encoder-dashboard/mau-encoder-dashboard.component';
+import { MauOfficerDashboardComponent } from './dashboard/mau-officer-dashboard/mau-officer-dashboard.component';
+import { MdcsUserDashboardComponent } from './dashboard/mdcs-user-dashboard/mdcs-user-dashboard.component';
+import { MdmUserDashboardComponent } from './dashboard/mdm-user-dashboard/mdm-user-dashboard.component';
+import { MqrDashboardComponent } from './dashboard/mqr-dashboard/mqr-dashboard.component';
+import { PsServicingDashboardComponent } from './dashboard/ps-servicing-dashboard/ps-servicing-dashboard.component';
 
 
 const routes: Routes = [
@@ -48,11 +56,13 @@ const routes: Routes = [
     path: 'naStep/:mode', component: NewAffiliationStepComponent,
     children: [
       // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
-      { path: '', component: BranchListComponent },
-      { path: 'branch/:mode/:id', component: BranchComponent },
-      { path: 'branch/:mode', component: BranchComponent },
+      { path: '', component: BranchListComponent, outlet: 'branch' },
+      { path: 'branch/:mode/:id', component: BranchComponent, outlet: 'branch' },
+      { path: 'branch/:mode', component: BranchComponent, outlet: 'branch' },
       { path: '', component: BranchListAttachmentComponent, outlet: 'branchOIF' },
       { path: 'OIF/:id?', component: OcularInspectionFormComponent, outlet: 'branchOIF' },
+      { path: '', component: PosFormComponent, outlet: 'branchPOS' },
+      { path: 'pos/:id?', component: PosFormComponent, outlet: 'branchPOS' },
       { path: '', component: DocumentCheckListComponent, outlet: 'documentCheckList' },
       { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' }
     ]
@@ -67,7 +77,6 @@ const routes: Routes = [
   { path: 'oifForm', component: OcularInspectionFormComponent },
 
   { path: 'aoDashboard', component: AoCheckerDashboardComponent },
-  { path: 'aoCheck', component: AoCheckerComponent },
   {
     path: 'aoChecking', component: AoCheckingComponent,
     children: [
@@ -105,16 +114,36 @@ const routes: Routes = [
   { path: 'awr', component: AwrFormComponent },
   { path: 'requestForm', component: RequestFormComponent },
   { path: 'posForm', component: PosFormComponent },
-
-
-
-
   { path: 'newAffSum', component: NewAffiliationSumComponent },
   { path: 'home', component: HomeScreenComponent },
   { path: 'oif', component: OcularInspectionFormComponent },
   { path: 'oifForm', component: OcularInspectionFormComponent },
-  { path: 'aoDashboard', component: AoCheckerDashboardComponent },
-  { path: 'aoCheck', component: AoCheckerComponent },
+  ////////////// DASHBOARD ///////////////////
+  { path: 'aoCheckerDashboard', component: AoCheckerDashboardComponent },
+  { path: 'aoEncoderDashboard', component: AoEncoderDashboardComponent },
+  { path: 'apprDashboard', component: ApproverDashboardComponent },
+  { path: 'mauEncoderDashboard', component: MauEncoderDashboardComponent },
+  { path: 'mauOfficerDashboard', component: MauOfficerDashboardComponent },
+  { path: 'mdcsUserDashboard', component: MdcsUserDashboardComponent },
+  { path: 'mdmUserDashboard', component: MdmUserDashboardComponent },
+  { path: 'mqrDashboard', component: MqrDashboardComponent },
+  { path: 'pssDashboard', component: PsServicingDashboardComponent },
+  ///////////////////////////////////////////
+  {
+    path: 'aoCheck', component: AoCheckerComponent,
+    children: [
+      // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
+      { path: '', component: BranchListComponent, outlet: 'branch' },
+      { path: 'branch/:mode/:id', component: BranchComponent, outlet: 'branch' },
+      { path: 'branch/:mode', component: BranchComponent, outlet: 'branch' },
+      { path: '', component: BranchListAttachmentComponent, outlet: 'branchOIF' },
+      { path: 'OIF/:id?', component: OcularInspectionFormComponent, outlet: 'branchOIF' },
+      { path: '', component: PosFormComponent, outlet: 'branchPOS' },
+      { path: 'pos/:id?', component: PosFormComponent, outlet: 'branchPOS' },
+      { path: '', component: DocumentCheckListComponent, outlet: 'documentCheckList' },
+      { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' }
+    ]
+  },
   { path: 'aoChecking', component: AoCheckingComponent },
   { path: 'posForm', component: PosFormComponent },
   { path: 'newAffSum', component: NewAffiliationSumComponent },

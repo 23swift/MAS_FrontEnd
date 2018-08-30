@@ -22,7 +22,7 @@ import { NewAffiliationComponent } from './new-affiliation/new-affiliation.compo
 import { PosRequestComponent } from './pos-request/pos-request.component';
 import {
   MatDatepickerModule, MatInputModule, MatNativeDateModule, MatTableModule,
-  MatTabsModule, MatChipsModule, MatGridListModule, MatOptionModule, MatSelectModule, MatFormFieldModule
+  MatTabsModule, MatChipsModule, MatGridListModule, MatOptionModule, MatSelectModule, MatFormFieldModule, MatSnackBarModule
 } from '@angular/material';
 import { MatStepperModule } from '@angular/material/stepper';
 import { CalendarTypeComponent } from './calendar-type/calendar-type.component';
@@ -63,6 +63,15 @@ import { RequestFormComponent } from './forms/request-form/request-form.componen
 import { MaefComponent } from './maef/maef.component';
 
 import { DocumentCheckListFormComponent } from './forms/document-check-list-form/document-check-list-form.component';
+import { AoEncoderDashboardComponent } from './dashboard/ao-encoder-dashboard/ao-encoder-dashboard.component';
+import { MauCheckerDashboardComponent } from './dashboard/mau-checker-dashboard/mau-checker-dashboard.component';
+import { MauEncoderDashboardComponent } from './dashboard/mau-encoder-dashboard/mau-encoder-dashboard.component';
+import { MauOfficerDashboardComponent } from './dashboard/mau-officer-dashboard/mau-officer-dashboard.component';
+import { ApproverDashboardComponent } from './dashboard/approver-dashboard/approver-dashboard.component';
+import { MqrDashboardComponent } from './dashboard/mqr-dashboard/mqr-dashboard.component';
+import { MdcsUserDashboardComponent } from './dashboard/mdcs-user-dashboard/mdcs-user-dashboard.component';
+import { PsServicingDashboardComponent } from './dashboard/ps-servicing-dashboard/ps-servicing-dashboard.component';
+import { MdmUserDashboardComponent } from './dashboard/mdm-user-dashboard/mdm-user-dashboard.component';
 
 
 
@@ -99,7 +108,16 @@ import { DocumentCheckListFormComponent } from './forms/document-check-list-form
     AwrFormComponent,
     RequestFormComponent,
     MaefComponent,
-    DocumentCheckListFormComponent
+    DocumentCheckListFormComponent,
+    AoEncoderDashboardComponent,
+    MauCheckerDashboardComponent,
+    MauEncoderDashboardComponent,
+    MauOfficerDashboardComponent,
+    ApproverDashboardComponent,
+    MqrDashboardComponent,
+    MdcsUserDashboardComponent,
+    PsServicingDashboardComponent,
+    MdmUserDashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -140,7 +158,8 @@ import { DocumentCheckListFormComponent } from './forms/document-check-list-form
     MatOptionModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
