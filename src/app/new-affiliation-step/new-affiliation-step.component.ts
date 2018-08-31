@@ -21,7 +21,7 @@ export class NewAffiliationStepComponent implements OnInit {
   status = 'done';
   //  completed:boolean=false;
   constructor(private _formBuilder: FormBuilder, private route: ActivatedRoute,
-    private router: Router, private _snackBar: MatSnackBar
+    private _router: Router, private _snackBar: MatSnackBar
   ) { }
 
   ngOnInit() {
@@ -47,7 +47,7 @@ export class NewAffiliationStepComponent implements OnInit {
     });
 
     snackBarSub.afterDismissed().subscribe(() => {
-      this.router.navigateByUrl('/');
+      this._router.navigateByUrl('/');
     });
   }
 }
