@@ -25,12 +25,12 @@ export class AoCheckerComponent implements OnInit {
   ngOnInit() {
     this.mode = this.route.snapshot.params['mode'];
     this.isOptional = true;
-    this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required]
-    });
-    this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required]
-    });
+    // this.firstFormGroup = this._formBuilder.group({
+    //   firstCtrl: ['', Validators.required]
+    // });
+    // this.secondFormGroup = this._formBuilder.group({
+    //   secondCtrl: ['', Validators.required]
+    // });
   }
 
   public completed(stepper: MatStepper) {

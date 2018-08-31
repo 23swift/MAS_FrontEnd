@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IfStmt } from '@angular/compiler';
 import { Router, Route, ActivatedRoute } from '@angular/router';
+import { supportsWebAnimations } from '@angular/animations/browser/src/render/web_animations/web_animations_driver';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-bdo-form-header',
@@ -14,8 +16,9 @@ export class BdoFormHeaderComponent implements OnInit {
   @Input() mode: string;
   @Input() text: string;
   @Input() sub_text: string;
+  @Input() submit: Function;
 
-  constructor(private _route: ActivatedRoute, private _router: Router) {}
+  constructor(private _route: ActivatedRoute, private _router: Router, private _snackBar: MatSnackBar) {}
 
   ngOnInit() {
     this.showApprovalOptions = false;
