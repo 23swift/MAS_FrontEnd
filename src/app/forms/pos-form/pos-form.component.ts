@@ -21,9 +21,9 @@ export class PosFormComponent extends AppBaseComponent implements OnInit {
     { 
       super(route,router);
       
-      var user: string = 'test'
+      var userGroup: string = 'test'
       
-      this.fields = posFormService.getPosFields(user);
+      this.fields = posFormService.getPosFields(userGroup);
     }
 
   ngOnInit() {
