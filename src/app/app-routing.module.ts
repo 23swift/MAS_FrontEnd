@@ -85,7 +85,6 @@ const routes: Routes = [
       // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
       {
         path: '', component: BranchListComponent,
-        // data: { detailsRoute: '[{ outlets: {branch: ["branch/update/",1] } }]' },
         outlet: 'branch'
       },
       {
