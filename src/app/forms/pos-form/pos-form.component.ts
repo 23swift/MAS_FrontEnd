@@ -21,7 +21,7 @@ export class PosFormComponent extends AppBaseComponent implements OnInit {
     { 
       super(route,router);
       
-      var userGroup: string = 'test'
+      var userGroup: string = 'ao'
       
       this.fields = posFormService.getPosFields(userGroup);
     }

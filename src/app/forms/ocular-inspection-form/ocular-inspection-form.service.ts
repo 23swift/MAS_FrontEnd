@@ -7,14 +7,14 @@ import { Observable, of } from 'rxjs';
 })
 export class OcularInspectionFormService {
     fields: FormlyFieldConfig[] = [
-        {
-            key: 'merchantLegalName',
-            type: 'input',
-            className: 'flex-1',
-            templateOptions: {
-                label: 'Merchant Legal Name'
-            }
-        },
+        // {
+        //     key: 'merchantLegalName',
+        //     type: 'input',
+        //     className: 'flex-1',
+        //     templateOptions: {
+        //         label: 'Merchant Legal Name'
+        //     }
+        // },
         {
             key: 'DBATradeName',
             type: 'input',
@@ -550,18 +550,26 @@ export class OcularInspectionFormService {
             fieldGroup: [
                 {
                     key: 'adverseFindings',
-                    type: 'input',
+                    type: 'radio',
                     className: 'flex-1',
                     templateOptions: {
-                        label: 'Adverse Findings'
+                        label: 'Adverse Findings',
+                        options: [
+                            {value: 'true', label: 'Yes'},
+                            {value: 'false', label: 'No'}
+                        ]
                     }
                 },
                 {
                     key: 'incompleteReportDueTo',
-                    type: 'checkbox',
+                    type: 'radio',
                     className: 'flex-1',
                     templateOptions: {
-                        label: 'Incomplete Report Due To'
+                        label: 'Incomplete Report Due To',
+                        options: [
+                            {value: 'true', label: 'Yes'},
+                            {value: 'false', label: 'No'}
+                        ]
                     }
                 },
                 {
