@@ -47,7 +47,10 @@ export class MaefService {
         templateOptions: {
           label: 'Type Of Affiliation',
           options: [
-            { label: '', value: '1' }
+            { label: 'Card Present (Dial-Up)', value: '1' },
+            { label: 'Card Present (GPRS)', value: '1' },
+            { label: 'Card Present (Event)', value: '1' },
+            { label: 'Card Not Present (CNP)', value: '1' }
           ]
         },
       },
@@ -66,23 +69,44 @@ export class MaefService {
       ]
     },
 
+//
+{
+  fieldGroupClassName: 'display-flex',
+  fieldGroup: [
+
+    {
+      key: 'monitorCodeCorrect',
+      type: 'radio',
+      templateOptions: {
+        label: 'Is Monitor Code Correct?',
+        required: true,
+        options: [
+          { value: true, label: 'Yes' },
+          { value: false, label: 'No' }
+        ],
+      },
+    },
+
+    {
+      className: 'flex-1',
+      type: 'input',
+      key: 'monitorCodeCorrectRemarks',
+      expressionProperties: {
+
+      },
+      templateOptions: {
+        label: 'Remarks',
+        placeholder: 'Remarks'
+      }
+    }
+
+  ]
+},
+//
+    
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
-
-        {
-          key: 'monitorCodeCorrect',
-          type: 'radio',
-          templateOptions: {
-            label: 'Is Monitor Code Correct?',
-            required: true,
-            options: [
-              { value: true, label: 'Yes' },
-              { value: false, label: 'No' }
-            ],
-          },
-
-        },
 
         {
           key: 'withSimulInstall',
@@ -162,7 +186,9 @@ export class MaefService {
         type: 'input',
         key: 'debitMerchNumber',
         expressionProperties: {
-
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['withSimulDebit'];
+          }
         },
         templateOptions: {
           label: 'Debit Merchant Number',
@@ -174,7 +200,9 @@ export class MaefService {
         type: 'input',
         key: 'debitStoreId',
         expressionProperties: {
-
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['withSimulDebit'];
+          }
         },
         templateOptions: {
           label: 'Debit Store ID',
@@ -208,14 +236,15 @@ export class MaefService {
 
         {
           className: 'flex-1',
-          type: 'input',
+          type: 'textarea',
           key: 'bnpNfisWithAdRemarks',
           expressionProperties: {
 
           },
           templateOptions: {
             label: 'Remarks',
-            placeholder: 'Remarks'
+            placeholder: 'Remarks',
+            maxLength: 500,
           }
         }
 
@@ -242,14 +271,15 @@ export class MaefService {
 
         {
           className: 'flex-1',
-          type: 'input',
+          type: 'textarea',
           key: 'nldsWithAdRemarks',
           expressionProperties: {
 
           },
           templateOptions: {
             label: 'Remarks',
-            placeholder: 'Remarks'
+            placeholder: 'Remarks',
+            maxLength: 500,
           }
         }
 
@@ -276,14 +306,15 @@ export class MaefService {
 
         {
           className: 'flex-1',
-          type: 'input',
+          type: 'textarea',
           key: 'pepOfacWithAdRemarks',
           expressionProperties: {
 
           },
           templateOptions: {
             label: 'Remarks',
-            placeholder: 'Remarks'
+            placeholder: 'Remarks',
+            maxLength: 500,
           }
         }
 
@@ -310,14 +341,15 @@ export class MaefService {
 
         {
           className: 'flex-1',
-          type: 'input',
+          type: 'textarea',
           key: 'matchWithAdRemarks',
           expressionProperties: {
 
           },
           templateOptions: {
             label: 'Remarks',
-            placeholder: 'Remarks'
+            placeholder: 'Remarks',
+            maxLength: 500,
           }
         }
 
@@ -344,14 +376,15 @@ export class MaefService {
 
         {
           className: 'flex-1',
-          type: 'input',
+          type: 'textarea',
           key: 'vtmsWithAdRemarks',
           expressionProperties: {
 
           },
           templateOptions: {
             label: 'Remarks',
-            placeholder: 'Remarks'
+            placeholder: 'Remarks',
+            maxLength: 500,
           }
         }
 
@@ -378,14 +411,15 @@ export class MaefService {
 
         {
           className: 'flex-1',
-          type: 'input',
+          type: 'textarea',
           key: 'tmrsWithAdRemarks',
           expressionProperties: {
 
           },
           templateOptions: {
             label: 'Remarks',
-            placeholder: 'Remarks'
+            placeholder: 'Remarks',
+            maxLength: 500
           }
         }
 
@@ -412,14 +446,15 @@ export class MaefService {
 
         {
           className: 'flex-1',
-          type: 'input',
+          type: 'textarea',
           key: 'fraudWithAdRemarks',
           expressionProperties: {
 
           },
           templateOptions: {
             label: 'Remarks',
-            placeholder: 'Remarks'
+            placeholder: 'Remarks',
+            maxLength: 500
           }
         }
 
@@ -446,14 +481,15 @@ export class MaefService {
 
         {
           className: 'flex-1',
-          type: 'input',
+          type: 'textarea',
           key: 'prevDeclinedWithAdRemarks',
           expressionProperties: {
 
           },
           templateOptions: {
             label: 'Remarks',
-            placeholder: 'Remarks'
+            placeholder: 'Remarks',
+            maxLength: 500
           }
         }
 
@@ -481,9 +517,13 @@ export class MaefService {
         {
           key: 'amlaClass',
           type: 'radio',
+          expressionProperties: {
+            'templateOptions.required': (model: any, formState: any) => {
+              return model['amlaYes'];
+            }
+          },
           templateOptions: {
             label: 'If Yes, Please Select Classification:',
-            required: true,
             options: [
               { value: '1', label: 'High Risk Business' },
               { value: '2', label: 'PEP' }
@@ -497,7 +537,9 @@ export class MaefService {
           type: 'input',
           key: 'nameOfPep',
           expressionProperties: {
-              
+            'templateOptions.required': (model: any, formState: any) => {
+              return model['amlaClass'] == '2';   
+            }
           },
           templateOptions: {
               label: 'Specify Name/ Relationship Of PEP:',
@@ -529,9 +571,13 @@ export class MaefService {
         {
           key: 'rptClass',
           type: 'radio',
+          expressionProperties: {
+            'templateOptions.required': (model: any, formState: any) => {
+              return model['rptYes'];
+            }
+          },
           templateOptions: {
             label: 'If Yes, Please Select Classification:',
-            required: true,
             options: [
               { value: '1', label: 'Subsidiary' },
               { value: '2', label: 'Affiliates' },
@@ -547,7 +593,9 @@ export class MaefService {
           type: 'input',
           key: 'nameOfRp',
           expressionProperties: {
-              
+            'templateOptions.required': (model: any, formState: any) => {
+              return model['rptClass'] == '3';
+            }             
           },
           templateOptions: {
               label: 'Specify Name/ Relationship Of RP:',
@@ -571,7 +619,9 @@ export class MaefService {
           type: 'input',
           key: 'psv',
           expressionProperties: {
-              
+            'templateOptions.required': (model: any, formState: any) => {
+              return model['largeAccYes'] == false;
+            }
           },
           templateOptions: {
               label: 'PSV',
@@ -647,10 +697,7 @@ export class MaefService {
     },
 
 
-    
-    {
-      template: '<span class="mat-subheading-1">Other Considerations</span>',
-    },
+
 
     {
       fieldGroupClassName: 'display-flex',
@@ -685,6 +732,11 @@ export class MaefService {
       },
 
       ]
+    },
+
+    
+    {
+      template: '<span class="mat-subheading-1">Other Considerations</span>',
     },
 
     {
@@ -742,7 +794,7 @@ export class MaefService {
         },
 
       {
-        key: 'cusNoCorrectYes',
+        key: 'cusNoCorrectYes',//not yet
         type: 'radio',
         templateOptions: {
           label: 'BDO Pay Rating?',
@@ -764,6 +816,7 @@ export class MaefService {
       fieldGroup: [
 
       {
+        className: 'flex-1',
         key: 'dbaAddCorrectYes',
         type: 'radio',
         templateOptions: {
@@ -778,7 +831,7 @@ export class MaefService {
       },
 
       {
-        className: 'flex-1',
+        className: 'flex-3',
         type: 'input',
         key: 'dbaAddCorrectRemarks',
         expressionProperties: {
@@ -798,6 +851,7 @@ export class MaefService {
       fieldGroup: [
 
       {
+        className: 'flex-1',
         key: 'mccCorrectYes',
         type: 'radio',
         templateOptions: {
@@ -812,7 +866,7 @@ export class MaefService {
       },
 
       {
-        className: 'flex-1',
+        className: 'flex-3',
         type: 'input',
         key: 'mccCorrectRemarks',
         expressionProperties: {
@@ -832,6 +886,7 @@ export class MaefService {
       fieldGroup: [
 
       {
+        className: 'flex-1',
         key: 'withDccIntesYes',
         type: 'radio',
         templateOptions: {
@@ -846,15 +901,18 @@ export class MaefService {
       },
 
       {
-        className: 'flex-1',
+        className: 'flex-3',
         type: 'input',
         key: 'withDccIntesRemarks',
         expressionProperties: {
-            
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['withDccIntesYes'];
+          }           
         },
         templateOptions: {
             label: 'Remarks',
-            placeholder: 'Remarks'
+            placeholder: 'Remarks',
+            maxLength: 4
         }
     },
 
@@ -866,6 +924,7 @@ export class MaefService {
       fieldGroup: [
 
       {
+        className: 'flex-1',
         key: 'mdrsCorrectYes',
         type: 'radio',
         templateOptions: {
@@ -880,7 +939,7 @@ export class MaefService {
       },
 
       {
-        className: 'flex-1',
+        className: 'flex-3',
         type: 'input',
         key: 'mdrsCorrectRemarks',
         expressionProperties: {
@@ -900,6 +959,7 @@ export class MaefService {
       fieldGroup: [
 
       {
+        className: 'flex-1',
         key: 'cardPlansCorrect',
         type: 'radio',
         templateOptions: {
@@ -914,7 +974,7 @@ export class MaefService {
       },
 
       {
-        className: 'flex-1',
+        className: 'flex-3',
         type: 'input',
         key: 'cardPlansCorrectRemarks',
         expressionProperties: {
@@ -934,6 +994,7 @@ export class MaefService {
       fieldGroup: [
 
       {
+        className: 'flex-1',
         key: 'merchGroupCorrect',
         type: 'radio',
         templateOptions: {
@@ -949,7 +1010,7 @@ export class MaefService {
       },
 
       {
-        className: 'flex-1',
+        className: 'flex-3',
         type: 'input',
         key: 'merchGroupCorrectRemarks',
         expressionProperties: {
@@ -969,6 +1030,7 @@ export class MaefService {
       fieldGroup: [
 
       {
+        className: 'flex-1',
         key: 'merchMpPromoGrpYes',
         type: 'radio',
         templateOptions: {
@@ -984,7 +1046,7 @@ export class MaefService {
       },
 
       {
-        className: 'flex-1',
+        className: 'flex-3',
         type: 'input',
         key: 'merchMpPromoGrpRemarks',
         expressionProperties: {
@@ -1004,6 +1066,7 @@ export class MaefService {
       fieldGroup: [
 
       {
+        className: 'flex-1',
         key: 'defMpPromoYes',
         type: 'radio',
         templateOptions: {
@@ -1019,7 +1082,7 @@ export class MaefService {
       },
 
       {
-        className: 'flex-1',
+        className: 'flex-3',
         type: 'input',
         key: 'defMpPromoRemarks',
         expressionProperties: {
@@ -1039,6 +1102,7 @@ export class MaefService {
       fieldGroup: [
 
       {
+        className: 'flex-1',
         key: 'mcIdCorrectYes',
         type: 'radio',
         templateOptions: {
@@ -1054,7 +1118,7 @@ export class MaefService {
       },
 
       {
-        className: 'flex-1',
+        className: 'flex-3',
         type: 'input',
         key: 'mcIdCorrectRemarks',
         expressionProperties: {
@@ -1062,7 +1126,8 @@ export class MaefService {
         },
         templateOptions: {
             label: 'Remarks',
-            placeholder: 'Remarks'
+            placeholder: 'Remarks',
+            maxLength: 6
         }
     },
 
@@ -1075,6 +1140,7 @@ export class MaefService {
       fieldGroup: [
 
       {
+        className: 'flex-1',
         key: 'bdoCreditFacCorrect',
         type: 'radio',
         templateOptions: {
@@ -1090,7 +1156,7 @@ export class MaefService {
       },
 
       {
-        className: 'flex-1',
+        className: 'flex-3',
         type: 'input',
         key: 'bdoCreditFacCorrectRemarks',
         expressionProperties: {
@@ -1098,7 +1164,8 @@ export class MaefService {
         },
         templateOptions: {
             label: 'Remarks',
-            placeholder: 'Remarks'
+            placeholder: 'Remarks',
+            maxLength: 20
         }
     },
 
@@ -1110,11 +1177,16 @@ export class MaefService {
       fieldGroup: [
 
       {
+        className: 'flex-1',
         key: 'bdoCreditFacCLass',
         type: 'radio',
+        expressionProperties: {
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['bdoCreditFacCorrect'];
+          }
+        },
         templateOptions: {
           label: 'BDO Settlement CA/SA Classification For Credit Facility?',
-          required: true,
           options: [
             { value: '1', label: 'Personal' },
             { value: '2', label: 'Non-Personal' },
@@ -1125,6 +1197,7 @@ export class MaefService {
       },
 
       {
+        className: 'flex-1',
         key: 'bdoDebitFacCorrect',
         type: 'radio',
         templateOptions: {
@@ -1148,7 +1221,8 @@ export class MaefService {
         },
         templateOptions: {
             label: 'Remarks',
-            placeholder: 'Remarks'
+            placeholder: 'Remarks',
+            maxLength: 20
         }
     },
 
@@ -1160,21 +1234,27 @@ export class MaefService {
       fieldGroup: [
 
       {
+        className: 'flex-1',
         key: 'bdoDebitFacCLass',
         type: 'radio',
+        expressionProperties: {
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['bdoDebitFacCorrect'];
+          }
+        },
         templateOptions: {
           label: 'BDO Settlement CA/SA Classification For Debit Facility?',
-          required: true,
           options: [
             { value: '1', label: 'Personal' },
             { value: '2', label: 'Non-Personal' },
-            { value: '3', label: 'Third Party' },
+            { value: '3', label: 'Third Party' }
           ],
         },
 
       },
 
       {
+        className: 'flex-1',
         key: 'tinCorrect',
         type: 'radio',
         templateOptions: {
@@ -1197,7 +1277,8 @@ export class MaefService {
         },
         templateOptions: {
             label: 'Remarks',
-            placeholder: 'Remarks'
+            placeholder: 'Remarks',
+            maxLength: 15,
         }
     },
 
@@ -1227,11 +1308,14 @@ export class MaefService {
         type: 'input',
         key: 'taxExemptRemarks',
         expressionProperties: {
-            
+          'templateOptions.disabled': (model: any, formState: any) => {
+            return !model['taxExemptYes'];
+          }
         },
         templateOptions: {
             label: 'Remarks',
-            placeholder: 'Remarks'
+            placeholder: 'Remarks',
+            maxLength: 20
         }
     },
 
@@ -1267,7 +1351,7 @@ export class MaefService {
             
         },
         templateOptions: {
-          label: 'Date From',
+          label: 'Date To',
         placeholder: 'Date To'
         }
     }, 
@@ -1276,12 +1360,13 @@ export class MaefService {
       type: 'input',
       key: 'taxExemptCertIssuedBy',
       expressionProperties: {
-          
+        'templateOptions.required': (model: any, formState: any) => {
+          return model['taxExemptYes'];
+        }
       },
       templateOptions: {
           label: 'Tax Exempt Certificate Issued By',
-          placeholder:'Tax Exempt Certificate Issued By',
-          required: true
+          placeholder:'Tax Exempt Certificate Issued By'
       },
   },
       {
@@ -1289,7 +1374,9 @@ export class MaefService {
           type: 'input',
           key: 'taxExemptClass',
           expressionProperties: {
-              
+            'templateOptions.required': (model: any, formState: any) => {
+              return model['taxExemptYes'];
+            }   
           },
           templateOptions: {
               label: 'Tax Exempt Classification',
@@ -1307,6 +1394,7 @@ export class MaefService {
       fieldGroup: [
 
       {
+        className: 'flex-1',
         key: 'regBusNumCorrect',
         type: 'radio',
         templateOptions: {
@@ -1329,16 +1417,17 @@ export class MaefService {
         },
         templateOptions: {
             label: 'Remarks',
-            placeholder: 'Remarks'
+            placeholder: 'Remarks',
+            maxLength: 11,
         }
     },
 
     {
+      className: 'flex-1',
       key: 'dtiRegDateCorrect',
       type: 'radio',
       templateOptions: {
         label: 'Is Sec/DTI Registration Date Correct?',
-        required: true,
         options: [
           { value: true, label: 'Yes' },
           { value: false, label: 'No' }
@@ -1370,6 +1459,7 @@ export class MaefService {
       fieldGroup: [
 
       {
+        className: 'flex-1',
         key: 'imprinterNumCorrect',
         type: 'radio',
         templateOptions: {
@@ -1392,16 +1482,19 @@ export class MaefService {
         },
         templateOptions: {
             label: 'Remarks',
-            placeholder: 'Remarks'
+            placeholder: 'Remarks',
+            maxLength: 10
         }
     },
 
     {
+      className: 'flex-1',
       key: 'imprinterDcCorrect',
       type: 'radio',
       templateOptions: {
         label: 'Is Imprinter DC(Top Corporation) Correct?',
         required: true,
+        maxLength: 13,
         options: [
           { value: true, label: 'Yes' },
           { value: false, label: 'No' }
@@ -1433,6 +1526,7 @@ export class MaefService {
       fieldGroup: [
 
       {
+        className: 'flex-1',
         key: 'imprinterOthersCorrect',
         type: 'radio',
         templateOptions: {
@@ -1455,11 +1549,13 @@ export class MaefService {
         },
         templateOptions: {
             label: 'Remarks',
-            placeholder: 'Remarks'
+            placeholder: 'Remarks',
+            maxLength: 12
         }
     },
 
     {
+      className: 'flex-1',
       key: 'signVerifiedYes',
       type: 'radio',
       templateOptions: {
@@ -1481,11 +1577,11 @@ export class MaefService {
       fieldGroup: [
 
       {
+        className: 'flex-1',
         key: 'namePrincipalCorrect',
         type: 'radio',
         templateOptions: {
           label: 'Is Name Of Principal Owner Correct?',
-          required: true,
           options: [
             { value: true, label: 'Yes' },
             { value: false, label: 'No' }
@@ -1503,11 +1599,13 @@ export class MaefService {
         },
         templateOptions: {
             label: 'Remarks',
-            placeholder: 'Remarks'
+            placeholder: 'Remarks',
+            maxLength: 50
         }
     },
 
     {
+      className: 'flex-1',
       key: 'nameSignatoryCorrect',
       type: 'radio',
       templateOptions: {
@@ -1530,7 +1628,8 @@ export class MaefService {
       },
       templateOptions: {
           label: 'Remarks',
-          placeholder: 'Remarks'
+          placeholder: 'Remarks',
+          maxLength: 50
       }
   },
   {
@@ -1578,7 +1677,8 @@ export class MaefService {
           },
           templateOptions: {
               label: 'Remarks',
-              placeholder: 'Remarks'
+              placeholder: 'Remarks',
+              maxLength: 120
           }
       },
       ]
@@ -1604,7 +1704,8 @@ export class MaefService {
           },
           templateOptions: {
               label: 'Remarks',
-              placeholder: 'Remarks'
+              placeholder: 'Remarks',
+              maxLength: 500,
           }
       },
       ]
@@ -1630,7 +1731,8 @@ export class MaefService {
           },
           templateOptions: {
               label: 'Remarks',
-              placeholder: 'Remarks'
+              placeholder: 'Remarks',
+              maxLength: 500
           }
       },
       ]
@@ -1656,7 +1758,8 @@ export class MaefService {
           },
           templateOptions: {
               label: 'Remarks',
-              placeholder: 'Remarks'
+              placeholder: 'Remarks',
+              maxLength: 120
           }
       },
       ]
@@ -1677,7 +1780,8 @@ export class MaefService {
           },
           templateOptions: {
               label: 'MID Capping',
-              placeholder:'MID Capping'
+              placeholder:'MID Capping',
+              maxLength: 13
           },
       },
           {
@@ -1689,7 +1793,8 @@ export class MaefService {
               },
               templateOptions: {
                   label: 'Pay Delay Days',
-                  placeholder: 'Pay Delay Days'
+                  placeholder: 'Pay Delay Days',
+                  maxLength: 2
               }
           },
           {
@@ -1701,7 +1806,8 @@ export class MaefService {
               },
               templateOptions: {
                   label: 'Holdout Amount',
-                  placeholder: 'Holdout Amount'
+                  placeholder: 'Holdout Amount',
+                  maxLength: 19
               }
           },
       ]
@@ -1711,14 +1817,15 @@ export class MaefService {
             fieldGroupClassName: 'display-flex',
             fieldGroup: [{
                 className: 'flex-1',
-                type: 'input',
+                type: 'textarea',
                 key: 'otherRemarks',
                 expressionProperties: {
                     
                 },
                 templateOptions: {
                     label: 'Other Remarks',
-                    placeholder:'Other Remarks'
+                    placeholder:'Other Remarks',
+                    maxLength: 2000
                 },
             },
                 {

@@ -65,8 +65,8 @@ import { MqrDashboardComponent } from './dashboard/mqr-dashboard/mqr-dashboard.c
 import { MdcsUserDashboardComponent } from './dashboard/mdcs-user-dashboard/mdcs-user-dashboard.component';
 import { PsServicingDashboardComponent } from './dashboard/ps-servicing-dashboard/ps-servicing-dashboard.component';
 import { MdmUserDashboardComponent } from './dashboard/mdm-user-dashboard/mdm-user-dashboard.component';
-import { MidComponent } from './mid/mid.component';
-import { MidFormComponent } from './forms/mid-form/mid-form.component';
+//import { MidComponent } from './mid/mid.component';
+//import { MidFormComponent } from './forms/mid-form/mid-form.component';
 
 
 
@@ -113,8 +113,8 @@ import { MidFormComponent } from './forms/mid-form/mid-form.component';
     MdcsUserDashboardComponent,
     PsServicingDashboardComponent,
     MdmUserDashboardComponent,
-    MidComponent,
-    MidFormComponent,
+    //MidComponent,
+    //MidFormComponent,
   ],
   imports: [
     BrowserModule,

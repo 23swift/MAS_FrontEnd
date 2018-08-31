@@ -38,8 +38,8 @@ import { MdcsUserDashboardComponent } from './dashboard/mdcs-user-dashboard/mdcs
 import { MdmUserDashboardComponent } from './dashboard/mdm-user-dashboard/mdm-user-dashboard.component';
 import { MqrDashboardComponent } from './dashboard/mqr-dashboard/mqr-dashboard.component';
 import { PsServicingDashboardComponent } from './dashboard/ps-servicing-dashboard/ps-servicing-dashboard.component';
-import { MidFormComponent } from './forms/mid-form/mid-form.component';
-import { MidComponent } from './mid/mid.component';
+//import { MidFormComponent } from './forms/mid-form/mid-form.component';
+//import { MidComponent } from './mid/mid.component';
 
 
 const routes: Routes = [
@@ -156,8 +156,8 @@ const routes: Routes = [
   { path: 'requestForm', component: RequestFormComponent },
   { path: 'dcl', component: DocumentCheckListComponent },
   { path: 'branchlist', component: BranchListComponent },
-  { path: 'midForm', component: MidFormComponent},
-  { path: 'mid', component: MidComponent }
+  //{ path: 'midForm', component: MidFormComponent},
+  //{ path: 'mid', component: MidComponent }
 ];
 
 @NgModule({
