@@ -12,7 +12,7 @@ export class AwrFormService {
         {
           className: 'flex-1',
           key: 'legalName',
-          type:'input',
+          type: 'input',
           expressionProperties: {
             'templateOptions.disabled': 'true'
           },
@@ -47,7 +47,7 @@ export class AwrFormService {
         {
           className: 'flex-1',
           key: 'isMdrRelated',
-          type:'checkbox',
+          type: 'checkbox',
           templateOptions: {
             label: "MDR Related"
           }
@@ -86,7 +86,7 @@ export class AwrFormService {
         {
           className: 'flex-1',
           key: 'isMdrRelated',
-          type:'checkbox',
+          type: 'checkbox',
           templateOptions: {
             label: "MDR Related"
           }
@@ -125,7 +125,7 @@ export class AwrFormService {
         {
           className: 'flex-3',
           key: 'isIncompleteMerchantAgreement',
-          type:'checkbox',
+          type: 'checkbox',
           templateOptions: {
             label: "Incomplete / Incorrect Details in Merchant Agreement"
           }
@@ -164,7 +164,7 @@ export class AwrFormService {
         {
           className: 'flex-1',
           key: 'isIncompleteOif',
-          type:'checkbox',
+          type: 'checkbox',
           templateOptions: {
             label: "Incomplete Details in OIF"
           }
@@ -203,7 +203,7 @@ export class AwrFormService {
         {
           className: 'flex-1',
           key: 'isIncompleteCorporatePapers',
-          type:'checkbox',
+          type: 'checkbox',
           templateOptions: {
             label: "Incomplete Corporate Papers"
           }
@@ -242,7 +242,7 @@ export class AwrFormService {
         {
           className: 'flex-1',
           key: 'isIncompletePhotos',
-          type:'checkbox',
+          type: 'checkbox',
           templateOptions: {
             label: "Incomplete Photos"
           }
@@ -281,7 +281,7 @@ export class AwrFormService {
         {
           className: 'flex-1',
           key: 'isNoProofDbaName',
-          type:'checkbox',
+          type: 'checkbox',
           templateOptions: {
             label: "No Proof of DBA Name"
           }
@@ -320,7 +320,7 @@ export class AwrFormService {
         {
           className: 'flex-1',
           key: 'isUnclearDocument',
-          type:'checkbox',
+          type: 'checkbox',
           templateOptions: {
             label: "Unclear Document"
           }
@@ -359,7 +359,7 @@ export class AwrFormService {
         {
           className: 'flex-2',
           key: 'isComparedWithOriginal',
-          type:'checkbox',
+          type: 'checkbox',
           templateOptions: {
             label: "Document Without \"Compared with Original Copy\" Stamp"
           }
@@ -398,7 +398,7 @@ export class AwrFormService {
         {
           className: 'flex-1',
           key: 'isInformationMatching',
-          type:'checkbox',
+          type: 'checkbox',
           templateOptions: {
             label: "Information Matching"
           }
@@ -415,7 +415,7 @@ export class AwrFormService {
         {
           className: 'flex-1',
           key: 'isMismatchSfccMdr',
-          type:'checkbox',
+          type: 'checkbox',
           templateOptions: {
             label: "Mismatch SFCC vs MDR in MIS"
           }
@@ -454,7 +454,7 @@ export class AwrFormService {
         {
           className: 'flex-1',
           key: 'noBuhApprovalOn',
-          type:'checkbox',
+          type: 'checkbox',
           templateOptions: {
             label: "No BUH Approval On"
           }
@@ -476,7 +476,7 @@ export class AwrFormService {
         {
           className: 'flex-1',
           key: 'isGprsTerminal',
-          type:'checkbox',
+          type: 'checkbox',
           templateOptions: {
             label: "GPRS Terminal"
           }
@@ -513,7 +513,7 @@ export class AwrFormService {
         {
           className: 'flex-1',
           key: 'isInvalidCasa',
-          type:'checkbox',
+          type: 'checkbox',
           templateOptions: {
             label: "Invalid CASA / Third Party"
           }
@@ -552,7 +552,7 @@ export class AwrFormService {
         {
           className: 'flex-1',
           key: 'noHoldoutDeposit',
-          type:'checkbox',
+          type: 'checkbox',
           templateOptions: {
             label: "No Holdout Deposit in ICBS"
           }
@@ -591,7 +591,7 @@ export class AwrFormService {
         {
           className: 'flex-1',
           key: 'isNotes',
-          type:'checkbox',
+          type: 'checkbox',
           templateOptions: {
             label: "Notes / Remarks"
           }
@@ -731,14 +731,14 @@ export class AwrFormService {
   ];
 
   constructor(private http: HttpClient) { }
-  
-  Get() {}
-  GetById() {}
+
+  Get() { }
+  GetById() { }
 
   GetFormlyFields() {
     return this.fields;
   }
 
-  Save() {}
-  Update() {}
+  Save() { }
+  Update() { }
 }

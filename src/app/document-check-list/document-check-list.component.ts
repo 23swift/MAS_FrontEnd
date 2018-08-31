@@ -9,9 +9,7 @@ import { DocumentCheckListService, DocumentDisplayInfo } from './document-check-
   providers: [DocumentCheckListService]
 })
 export class DocumentCheckListComponent implements OnInit {
-  documentCheckList: DocumentDisplayInfo;
   displayedColumns: string[];
-  private _subs: any;
   mode: string;
   dataSource;
   constructor(private _route: ActivatedRoute, private _router: Router, private _service: DocumentCheckListService) { }
@@ -19,15 +17,12 @@ export class DocumentCheckListComponent implements OnInit {
   ngOnInit() {
     this.dataSource = this._service.Get();
     this.displayedColumns = this._service.GetTableFields();
-    this._subs = this._route.params.subscribe(params => {
-      this.mode = params['mode'];
-      console.log(this.mode);
-    });
+    this.mode = this._route.snapshot.params['mode'];
   }
   GetItem(id) {
-    this._router.navigateByUrl(`/naStep/${this.mode}/(documentCheckList:dcl/${this.mode}/${id})`);
+    this._router.navigateByUrl(`${this._router.url}/(documentCheckList:dcl/${this.mode}/${id})`);
   }
   AddDocument() {
-    this._router.navigateByUrl(`/naStep/${this.mode}/(documentCheckList:dcl/${this.mode}/0)`);
+    this._router.navigateByUrl(`${this._router.url}/(documentCheckList:dcl/${this.mode}/0)`);
   }
 }

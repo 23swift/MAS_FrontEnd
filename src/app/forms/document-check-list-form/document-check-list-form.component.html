@@ -1,6 +1,10 @@
-<form ngSubmit="onSubmit()" [formGroup]="documentForm" class="docs-form-container">
+<form (ngSubmit)="OnSubmit()" [formGroup]="documentForm" class="docs-form-container">
     <mat-form-field>
-        <input matInput placeholder="Document Name" formControlName="documentName">
+        <mat-select aria-placeholder="Document Name" formControlName="documentName">
+            <mat-option *ngFor="let docs of documentList" [value]="docs.Id">
+                {{ docs.Description }}
+            </mat-option>
+        </mat-select>
     </mat-form-field>
     <mat-form-field>
         <input matInput placeholder="Remarks" formControlName="remarks">
@@ -30,7 +34,7 @@
     </button>
     <input id="fileToUpload" type="file" style="display:none;" formControlName="fileUpload"> -->
     <div fxLayout="row wrap" fxLayoutAlign="end center" fxLayoutGap="3px">
-        <button type="submit" color="primary" (click)="OnSubmit()" mat-raised-button>Save </button>
+        <button type="submit" color="primary" mat-raised-button>Save </button>
         <button type="cancel" color="accent" (click)="Cancel()" mat-raised-button>Cancel</button>
     </div>
 </form>

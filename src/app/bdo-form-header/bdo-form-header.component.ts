@@ -1,28 +1,39 @@
-import { Component, OnInit ,Input} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { IfStmt } from '@angular/compiler';
+import { Router, Route, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-bdo-form-header',
   templateUrl: './bdo-form-header.component.html',
-  styleUrls: ['./bdo-form-header.component.css'],
-  inputs: ['text','sub_text']
+  styleUrls: ['./bdo-form-header.component.css']
 })
 export class BdoFormHeaderComponent implements OnInit {
-  showApprovalOptions=false;
-  showRequestFlowOptions=false;
-  @Input() mode:string;
-  constructor() { 
+  showApprovalOptions: boolean;
+  showRequestFlowOptions: boolean;
+  showCreateOptions: boolean;
+  @Input() mode: string;
+  @Input() text: string;
+  @Input() sub_text: string;
 
-    
-  }
+  constructor(private _route: ActivatedRoute, private _router: Router) {}
 
   ngOnInit() {
-    if(this.mode == 'approval'){
-      this.showApprovalOptions=true;
-    }
-    if(!this.mode.match(/create/) && !this.mode.match(/approval/)){
-      this.showRequestFlowOptions=true;
+    this.showApprovalOptions = false;
+    this.showRequestFlowOptions = false;
+    this.showCreateOptions = false;
+
+    this.mode = this.mode ? this.mode : 'create';
+
+    if (this._router.url !== '/home') {
+      if (this.mode === 'approval') {
+        this.showApprovalOptions = true;
+      }
+      if (this.mode.match(/update/i) || this.mode.match(/approval/)) {
+        this.showRequestFlowOptions = true;
+      }
+      if (this.mode.match(/create/i)) {
+        this.showCreateOptions = true;
+      }
     }
   }
-
 }
