@@ -24,9 +24,9 @@
 
 
             <button *ngIf="showRequestFlowOptions" mat-mini-fab style="font-size: 12px;" matTooltip="Return Request"><mat-icon  class="request-mat-icon">subdirectory_arrow_left</mat-icon></button>
-            <button *ngIf="showRequestFlowOptions" mat-mini-fab matTooltip="Submit Request"><mat-icon  class="request-mat-icon">arrow_forward</mat-icon></button>
+            <button *ngIf="showRequestFlowOptions" (click)="submit()" mat-mini-fab matTooltip="Submit Request"><mat-icon  class="request-mat-icon">arrow_forward</mat-icon></button>
             <!-- BUTTON FOR CREATION -->
-            <button *ngIf="showCreateOptions" mat-mini-fab matTooltip="Submit Request"><mat-icon  class="request-mat-icon">arrow_forward</mat-icon></button>
+            <button *ngIf="showCreateOptions" (click)="submit()" mat-mini-fab matTooltip="Submit Request"><mat-icon  class="request-mat-icon">arrow_forward</mat-icon></button>
 
 
             <!-- 	<button mat-button color="primary" matTooltip="Approve Request" ><mat-icon  class="request-mat-icon">done</mat-icon>Approve</button>

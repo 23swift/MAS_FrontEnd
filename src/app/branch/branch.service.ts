@@ -13,19 +13,7 @@ export class BranchService {
 
 {
   fieldGroupClassName: 'display-flex',
-  fieldGroup: [{
-      className: 'flex-1',
-      type: 'input',
-      key: 'businessName',
-      expressionProperties: {
-          
-      },
-      templateOptions: {
-          label: 'Business / Legal Name',
-          placeholder:'Business / Legal Name',
-          required: true
-      },
-  },
+  fieldGroup: [
       {
           className: 'flex-1',
           type: 'input',
@@ -775,14 +763,17 @@ export class BranchService {
 },
 
 {
+  template: '<span class="mat-subheading-1">With Installed Electronic Cash Register?*</span>',
+},
+
+{
   fieldGroupClassName: 'display-flex',
   fieldGroup: [
     {
       key: 'withInstalledECR',
-      className: 'flex-2',
+      className: 'flex-1',
       type: 'radio',
       templateOptions: {
-        label: 'With Installed Electronic Cash Register?',
         required: true,
         options: [
           { value: true, label: 'Yes' },
@@ -792,7 +783,7 @@ export class BranchService {
 
     },
 {
-  className: 'flex-1',
+  className: 'flex-6',
   type: 'input',
   key: 'serviceProvider',
   expressionProperties: {
@@ -808,16 +799,19 @@ export class BranchService {
 ]
 },
 
+{
+  template: '<span class="mat-subheading-1">If No, Please Select If For Installation (Yes or No) ?*</span>',
+},
 
 {
   fieldGroupClassName: 'display-flex',
   fieldGroup: [
     {
       key: 'ifNoForInstallation',
-      className: 'flex-2',
+      className: 'flex-1',
       type: 'radio',
       templateOptions: {
-        label: 'If No, Please Select If For Installation (Yes or No) ?',
+        label: '',
         required: true,
         options: [
           { value: true, label: 'Yes' },
@@ -828,15 +822,20 @@ export class BranchService {
     },
   ]
 },
+
+{
+  template: '<span class="mat-subheading-1">If With Installed ECR, Do You Store Card Data By Swiping The Card To Your ECR Or Similar Equipment Other Than The BDO-ISSUED POS Terminal?*</span>',
+},
+
   {
     fieldGroupClassName: 'display-flex',
     fieldGroup: [
       {
         key: 'withECRSwiping',
-        className: 'flex-2',
+        className: 'flex-1',
         type: 'radio',
         templateOptions: {
-          label: 'If With Installed ECR, Do You Store Card Data By Swiping The Card To Your ECR Or Similar Equipment Other Than The BDO-ISSUED POS Terminal?',
+          label: '',
           required: true,
           options: [
             { value: true, label: 'Yes' },
@@ -846,7 +845,7 @@ export class BranchService {
   
       },
     {
-      className: 'flex-1',
+      className: 'flex-6',
       type: 'input',
       key: 'ifYesCardholder1',
       expressionProperties: {
@@ -861,16 +860,17 @@ export class BranchService {
     }
     ]
   },
-
+  {
+    template: '<span class="mat-subheading-1">If For Installation, Will You Store Card Data By Swiping The Card To Your ECR Or Similar Equipment Other Than The BDO-Issued POS Terminal?*</span>',
+  },
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
           key: 'forInstallationSwiping',
-          className: 'flex-2',
+          className: 'flex-1',
           type: 'radio',
           templateOptions: {
-            label: 'If For Installation, Will You Store Card Data By Swiping The Card To Your ECR Or Similar Equipment Other Than The BDO-Issued POS Terminal?',
             required: true,
             options: [
               { value: true, label: 'Yes' },
@@ -880,7 +880,7 @@ export class BranchService {
     
         },
       {
-        className: 'flex-1',
+        className: 'flex-6',
         type: 'input',
         key: 'ifYesCardholder2',
         expressionProperties: {
@@ -973,11 +973,6 @@ export class BranchService {
       ]
     },    
 
-
-    {
-      template: '<span class="mat-subheading-1">Purpose Of Request</span>',
-      },
-    
       {
         fieldGroupClassName: 'display-flex',
         fieldGroup: [
@@ -1654,19 +1649,7 @@ ao: FormlyFieldConfig[] = [
 
   {
     fieldGroupClassName: 'display-flex',
-    fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'businessName',
-        expressionProperties: {
-            
-        },
-        templateOptions: {
-            label: 'Business / Legal Name',
-            placeholder:'Business / Legal Name',
-            required: true
-        },
-    },
+    fieldGroup: [
         {
             className: 'flex-1',
             type: 'input',
@@ -2445,6 +2428,10 @@ ao: FormlyFieldConfig[] = [
   },
   
   {
+    template: '<span class="mat-subheading-1">With Installed Electronic Cash Register?*</span>',
+  },
+
+  {
     fieldGroupClassName: 'display-flex',
     fieldGroup: [
       {
@@ -2452,7 +2439,6 @@ ao: FormlyFieldConfig[] = [
         className: 'flex-1',
         type: 'radio',
         templateOptions: {
-          label: 'With Installed Electronic Cash Register?',
           disabled: true,
           options: [
             { value: true, label: 'Yes' },
@@ -2462,7 +2448,7 @@ ao: FormlyFieldConfig[] = [
   
       },
   {
-    className: 'flex-1',
+    className: 'flex-6',
     type: 'input',
     key: 'serviceProvider',
     expressionProperties: {
@@ -2478,7 +2464,10 @@ ao: FormlyFieldConfig[] = [
   },
   ]
   },
-  
+ 
+  {
+    template: '<span class="mat-subheading-1">If No, Please Select If For Installation (Yes or No) ?*</span>',
+  },
   
   {
     fieldGroupClassName: 'display-flex',
@@ -2488,7 +2477,6 @@ ao: FormlyFieldConfig[] = [
         className: 'flex-1',
         type: 'radio',
         templateOptions: {
-          label: 'If No, Please Select If For Installation (Yes or No) ?',
           disabled: true,
           options: [
             { value: true, label: 'Yes' },
@@ -2499,6 +2487,9 @@ ao: FormlyFieldConfig[] = [
       },
     ]
   },
+  {
+    template: '<span class="mat-subheading-1">If With Installed ECR, Do You Store Card Data By Swiping The Card To Your ECR Or Similar Equipment Other Than The BDO-ISSUED POS Terminal?*</span>',
+  },
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
@@ -2507,7 +2498,6 @@ ao: FormlyFieldConfig[] = [
           className: 'flex-1',
           type: 'radio',
           templateOptions: {
-            label: 'If With Installed ECR, Do You Store Card Data By Swiping The Card To Your ECR Or Similar Equipment Other Than The BDO-ISSUED POS Terminal?',
             disabled: true,
             options: [
               { value: true, label: 'Yes' },
@@ -2517,7 +2507,7 @@ ao: FormlyFieldConfig[] = [
     
         },
       {
-        className: 'flex-1',
+        className: 'flex-6',
         type: 'input',
         key: 'ifYesCardholder1',
         expressionProperties: {
@@ -2533,7 +2523,9 @@ ao: FormlyFieldConfig[] = [
       }
       ]
     },
-  
+    {
+      template: '<span class="mat-subheading-1">If For Installation, Will You Store Card Data By Swiping The Card To Your ECR Or Similar Equipment Other Than The BDO-Issued POS Terminal?*</span>',
+    },  
       {
         fieldGroupClassName: 'display-flex',
         fieldGroup: [
@@ -2542,7 +2534,6 @@ ao: FormlyFieldConfig[] = [
             className: 'flex-1',
             type: 'radio',
             templateOptions: {
-              label: 'If For Installation, Will You Store Card Data By Swiping The Card To Your ECR Or Similar Equipment Other Than The BDO-Issued POS Terminal?',
               disabled: true,
               options: [
                 { value: true, label: 'Yes' },
@@ -2552,7 +2543,7 @@ ao: FormlyFieldConfig[] = [
       
           },
         {
-          className: 'flex-1',
+          className: 'flex-6',
           type: 'input',
           key: 'ifYesCardholder2',
           expressionProperties: {
@@ -2648,11 +2639,6 @@ ao: FormlyFieldConfig[] = [
              }
         ]
       },    
-  
-  
-      {
-        template: '<span class="mat-subheading-1">Purpose Of Request</span>',
-        },
       
         {
           fieldGroupClassName: 'display-flex',
@@ -3117,19 +3103,7 @@ mmu: FormlyFieldConfig[] = [
 
   {
     fieldGroupClassName: 'display-flex',
-    fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'businessName',
-        expressionProperties: {
-            
-        },
-        templateOptions: {
-            label: 'Business / Legal Name',
-            placeholder:'Business / Legal Name',
-            disabled: true
-        },
-    },
+    fieldGroup: [
         {
             className: 'flex-1',
             type: 'input',
@@ -3881,6 +3855,9 @@ mmu: FormlyFieldConfig[] = [
   {
     template: '<span class="mat-headline">Storage Of Cardholder Information</span>',
   },
+  {
+    template: '<span class="mat-subheading-1">With Installed Electronic Cash Register?*</span>',
+  },
   
   {
     fieldGroupClassName: 'display-flex',
@@ -3890,7 +3867,6 @@ mmu: FormlyFieldConfig[] = [
         className: 'flex-1',
         type: 'radio',
         templateOptions: {
-          label: 'With Installed Electronic Cash Register?',
           required: true,
           options: [
             { value: true, label: 'Yes' },
@@ -3900,7 +3876,7 @@ mmu: FormlyFieldConfig[] = [
   
       },
   {
-    className: 'flex-1',
+    className: 'flex-6',
     type: 'input',
     key: 'serviceProvider',
     expressionProperties: {
@@ -3916,7 +3892,9 @@ mmu: FormlyFieldConfig[] = [
   ]
   },
   
-  
+  {
+    template: '<span class="mat-subheading-1">If No, Please Select If For Installation (Yes or No) ?*</span>',
+  },
   {
     fieldGroupClassName: 'display-flex',
     fieldGroup: [
@@ -3925,7 +3903,6 @@ mmu: FormlyFieldConfig[] = [
         className: 'flex-1',
         type: 'radio',
         templateOptions: {
-          label: 'If No, Please Select If For Installation (Yes or No) ?',
           required: true,
           options: [
             { value: true, label: 'Yes' },
@@ -3936,6 +3913,9 @@ mmu: FormlyFieldConfig[] = [
       },
     ]
   },
+  {
+    template: '<span class="mat-subheading-1">If With Installed ECR, Do You Store Card Data By Swiping The Card To Your ECR Or Similar Equipment Other Than The BDO-ISSUED POS Terminal?*</span>',
+  },
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
@@ -3944,7 +3924,6 @@ mmu: FormlyFieldConfig[] = [
           className: 'flex-1',
           type: 'radio',
           templateOptions: {
-            label: 'If With Installed ECR, Do You Store Card Data By Swiping The Card To Your ECR Or Similar Equipment Other Than The BDO-ISSUED POS Terminal?',
             required: true,
             options: [
               { value: true, label: 'Yes' },
@@ -3954,7 +3933,7 @@ mmu: FormlyFieldConfig[] = [
     
         },
       {
-        className: 'flex-1',
+        className: 'flex-6',
         type: 'input',
         key: 'ifYesCardholder1',
         expressionProperties: {
@@ -3969,7 +3948,9 @@ mmu: FormlyFieldConfig[] = [
       }
       ]
     },
-  
+    {
+      template: '<span class="mat-subheading-1">If For Installation, Will You Store Card Data By Swiping The Card To Your ECR Or Similar Equipment Other Than The BDO-Issued POS Terminal?*</span>',
+    },  
       {
         fieldGroupClassName: 'display-flex',
         fieldGroup: [
@@ -3978,7 +3959,6 @@ mmu: FormlyFieldConfig[] = [
             className: 'flex-1',
             type: 'radio',
             templateOptions: {
-              label: 'If For Installation, Will You Store Card Data By Swiping The Card To Your ECR Or Similar Equipment Other Than The BDO-Issued POS Terminal?',
               required: true,
               options: [
                 { value: true, label: 'Yes' },
@@ -3988,7 +3968,7 @@ mmu: FormlyFieldConfig[] = [
       
           },
         {
-          className: 'flex-1',
+          className: 'flex-6',
           type: 'input',
           key: 'ifYesCardholder2',
           expressionProperties: {
@@ -4083,11 +4063,7 @@ mmu: FormlyFieldConfig[] = [
              }
         ]
       },    
-  
-  
-      {
-        template: '<span class="mat-subheading-1">Purpose Of Request</span>',
-        },
+
       
         {
           fieldGroupClassName: 'display-flex',

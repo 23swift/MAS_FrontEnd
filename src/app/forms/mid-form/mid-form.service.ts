@@ -1,0 +1,156 @@
+import { Injectable } from '@angular/core';
+
+@Injectable()
+export class MidFormService {
+  constructor() { }
+  // Get(): Object[] {
+  //   return [
+  //     { Id: 1, Currency: 'PHP', MonitorCode: 'OTC', MerchantGroupCode: 'DM01 - Diners' },
+  //     { Id: 2, Currency: 'PHP', MonitorCode: 'Installment Reg', MerchantGroupCode: 'MerchGrp24' }
+  //   ];
+  // }
+
+  GetMonitorCodeList() {
+    return [
+      { Id: 1, Description: 'OTC' },
+      { Id: 2, Description: 'Installment Reg' }
+    ];
+  }
+
+  GetCurrency() {
+    return [
+      { Id: 1, Description: 'PHP' },
+      { Id: 2, Description: 'USD' }
+    ];
+  }
+
+  GetMerchantGroupCode() {
+    return [
+      { Id: 1, Description: 'DM01 - Diners' },
+      { Id: 2, Description: 'MerchGrp24' }
+    ];
+  }
+
+  GetSfrStraightList() {
+    return [
+      { Id: 1, Description: 'SFR1' },
+      { Id: 2, Description: 'SFR2' }
+    ];
+  }
+
+  GetFormlyFields() {
+    return [
+      {
+        fieldGroupClassName: 'display-flex',
+        fieldGroup: [
+          {
+            className: 'flex-1',
+            key: 'monitorCode',
+            type: 'select',
+            templateOptions: {
+              label: 'Monitor Code',
+              required: true,
+              options: [
+                { value: 1, label: 'OTC' },
+                { value: 2, label: 'Installment Reg' }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        fieldGroupClassName: 'display-flex',
+        fieldGroup: [
+          {
+            className: 'flex-1',
+            key: 'currencyPhp',
+            type: 'checkbox',
+            templateOptions: {
+              label: 'PHP',
+            }
+          },
+          {
+            className: 'flex-4',
+            key: 'currencyPhp',
+            type: 'checkbox',
+            templateOptions: {
+              label: 'USD',
+            }
+          },
+          {
+            className: 'flex-1',
+            key: 'majorPurchase',
+            type: 'checkbox',
+            templateOptions: {
+              label: 'Major Purchase'
+            }
+          },
+          {
+            className: 'flex-1',
+            key: 'offUs',
+            type: 'checkbox',
+            templateOptions: {
+              label: 'Off US'
+            }
+          }
+        ]
+      },
+      {
+        fieldGroupClassName: 'display-flex',
+        fieldGroup: [
+          {
+            className: 'flex-1',
+            key: 'sfcStraight',
+            type: 'select',
+            expressionProperties: {
+              'templateOptions.disabled': (model: any, formState: any) => {
+                if (model['majorPurchase']) {
+                  model['sfcStraight'] = undefined;
+                }
+                return model['majorPurchase'];
+              },
+              'templateOptions.required': (model: any, formState: any) => {
+                return !model['majorPurchase'];
+              }
+            },
+            templateOptions: {
+              label: 'Service Fee Contract (Straight)',
+              options: [
+                { value: 1, label: 'SFR1' },
+                { value: 2, label: 'SFR2' }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        fieldGroupClassName: 'display-flex',
+        fieldGroup: [
+          {
+            className: 'flex-1',
+            key: 'merchantGroupCode',
+            type: 'select',
+            expressionProperties: {
+              'templateOptions.disabled': (model: any, formState: any) => {
+                if (!model['majorPurchase']) {
+                  model['merchantGroupCode'] = undefined;
+                }
+                return !model['majorPurchase'];
+              },
+              'templateOptions.required': (model: any, formState: any) => {
+                return model['majorPurchase'];
+              }
+            },
+            templateOptions: {
+              label: 'Merchant Group Code (Installment)',
+              options: [
+                { value: 1, label: 'DM01 - Diners' },
+                { value: 2, label: 'MerchGrp24' }
+              ]
+            }
+          }
+        ]
+      }
+    ];
+  }
+}
