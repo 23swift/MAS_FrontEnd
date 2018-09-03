@@ -65,8 +65,11 @@ import { MqrDashboardComponent } from './dashboard/mqr-dashboard/mqr-dashboard.c
 import { MdcsUserDashboardComponent } from './dashboard/mdcs-user-dashboard/mdcs-user-dashboard.component';
 import { PsServicingDashboardComponent } from './dashboard/ps-servicing-dashboard/ps-servicing-dashboard.component';
 import { MdmUserDashboardComponent } from './dashboard/mdm-user-dashboard/mdm-user-dashboard.component';
+import { MerchantAffiliationMaintenanceComponent } from './merchant-affiliation-maintenance/merchant-affiliation-maintenance.component';
+import { RequestApprovalComponent } from './request-approval/request-approval.component';
+import { BranchInfoComponent } from './branch-info/branch-info.component';
 //import { MidComponent } from './mid/mid.component';
-//import { MidFormComponent } from './forms/mid-form/mid-form.component';
+import { MidFormComponent } from './forms/mid-form/mid-form.component';
 
 
 
@@ -113,8 +116,11 @@ import { MdmUserDashboardComponent } from './dashboard/mdm-user-dashboard/mdm-us
     MdcsUserDashboardComponent,
     PsServicingDashboardComponent,
     MdmUserDashboardComponent,
+    MerchantAffiliationMaintenanceComponent,
+    RequestApprovalComponent,
+    BranchInfoComponent,
     //MidComponent,
-    //MidFormComponent,
+    MidFormComponent,
   ],
   imports: [
     BrowserModule,

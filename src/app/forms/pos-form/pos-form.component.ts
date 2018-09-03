@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -14,7 +14,7 @@ import { PosFormService } from './pos-form.service';
   providers: [PosFormService]
 })
 export class PosFormComponent extends AppBaseComponent implements OnInit {
-
+  @Input()displayMode:boolean=false;
   constructor(private posFormService: PosFormService,
     public route: ActivatedRoute,
     public router: Router) 

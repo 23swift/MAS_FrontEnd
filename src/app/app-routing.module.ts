@@ -38,7 +38,10 @@ import { MdcsUserDashboardComponent } from './dashboard/mdcs-user-dashboard/mdcs
 import { MdmUserDashboardComponent } from './dashboard/mdm-user-dashboard/mdm-user-dashboard.component';
 import { MqrDashboardComponent } from './dashboard/mqr-dashboard/mqr-dashboard.component';
 import { PsServicingDashboardComponent } from './dashboard/ps-servicing-dashboard/ps-servicing-dashboard.component';
-//import { MidFormComponent } from './forms/mid-form/mid-form.component';
+import { MerchantAffiliationMaintenanceComponent } from './merchant-affiliation-maintenance/merchant-affiliation-maintenance.component';
+import { RequestApprovalComponent } from './request-approval/request-approval.component';
+import { BranchInfoComponent } from './branch-info/branch-info.component';
+import { MidFormComponent } from './forms/mid-form/mid-form.component';
 //import { MidComponent } from './mid/mid.component';
 
 
@@ -51,9 +54,19 @@ const routes: Routes = [
   { path: 'additionalFacility', component: AdditionalFacilityComponent },
   { path: 'fileMaintenance', component: FileMaintenanceComponent },
   { path: 'ext/:mode', component: ExtentionComponent },
+  //maef ->
   { path: 'maef', component: MaefComponent },
+  { path: 'merchaffmain', component: MerchantAffiliationMaintenanceComponent},
+  //maef <-
+  //request approval ->
+  { path: 'reqapprover', component: RequestApprovalComponent},
+  //request approval <-
+  // branch <-
   // {path:'branch/:mode/:id', component:BranchComponent},
   { path: 'branch/:mode', component: BranchComponent },
+  { path: 'branchinfo', component: BranchInfoComponent },
+  { path: 'branchOIF', component: OcularInspectionFormComponent},
+  // branch -->
   {
     path: 'naStep/:mode', component: NewAffiliationStepComponent,
     children: [
@@ -155,7 +168,7 @@ const routes: Routes = [
   { path: 'requestForm', component: RequestFormComponent },
   { path: 'dcl', component: DocumentCheckListComponent },
   { path: 'branchlist', component: BranchListComponent },
-  //{ path: 'midForm', component: MidFormComponent},
+  { path: 'midForm', component: MidFormComponent},
   //{ path: 'mid', component: MidComponent }
 ];
 
