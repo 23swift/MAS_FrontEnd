@@ -65,6 +65,7 @@ import { MqrDashboardComponent } from './dashboard/mqr-dashboard/mqr-dashboard.c
 import { MdcsUserDashboardComponent } from './dashboard/mdcs-user-dashboard/mdcs-user-dashboard.component';
 import { PsServicingDashboardComponent } from './dashboard/ps-servicing-dashboard/ps-servicing-dashboard.component';
 import { MdmUserDashboardComponent } from './dashboard/mdm-user-dashboard/mdm-user-dashboard.component';
+import { BranchListAttachmentPOSComponent } from './branch-list-attachment-pos/branch-list-attachment-pos.component';
 import { MidComponent } from './mid/mid.component';
 import { MidFormComponent } from './forms/mid-form/mid-form.component';
 import { RemarksModalComponent } from './modal/remarks-modal/remarks-modal.component';
@@ -114,6 +115,7 @@ import { RemarksModalComponent } from './modal/remarks-modal/remarks-modal.compo
     MdcsUserDashboardComponent,
     PsServicingDashboardComponent,
     MdmUserDashboardComponent,
+    BranchListAttachmentPOSComponent,
     MidComponent,
     MidFormComponent,
     RemarksModalComponent,
