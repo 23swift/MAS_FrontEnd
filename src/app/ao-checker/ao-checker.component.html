@@ -1,40 +1,56 @@
 <app-bdo-form-header [text]="title" [sub_text]="subTitle" [mode]="mode"></app-bdo-form-header>
 <app-request-header></app-request-header>
-<span class="mat-headline">Please follow the steps:</span>
+<!-- <span class="mat-headline">Please follow the steps:</span> -->
 <mat-vertical-stepper [linear]="true" #stepper>
-    <mat-step [completed]="true">
+    <mat-step [completed]="false">
         <ng-template matStepLabel>
-            <span class="mat-subheading-1">Create Customer Profile</span>
+            <span class="mat-subheading-1">Customer Profile</span>
         </ng-template>
         <span class="mat-headline">Customer Profile</span>
         <app-customer-profile [displayMode]="false"></app-customer-profile>
+
+        <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
+                <mat-icon color="primary">navigate_next</mat-icon>
+            </button>
     </mat-step>
-    <mat-step [completed]="true">
+    <mat-step [completed]="false">
         <ng-template matStepLabel>
-            <span class="mat-subheading-1">Add Branches</span>
+            <span class="mat-subheading-1">Branches</span>
         </ng-template>
         <router-outlet name="branch"></router-outlet>
+        <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
+                <mat-icon color="primary">navigate_next</mat-icon>
+            </button>
     </mat-step>
-    <mat-step [completed]="true">
+    <mat-step [completed]="false">
         <ng-template matStepLabel>
-            <span class="mat-subheading-1">Attach Occular Inspection Form to Branches</span>
+            <span class="mat-subheading-1">Occular Inspection Form to Branches</span>
         </ng-template>
         <router-outlet name="branchOIF"></router-outlet>
+        <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
+                <mat-icon color="primary">navigate_next</mat-icon>
+            </button>
     </mat-step>
-    <mat-step [completed]="true">
+    <mat-step [completed]="false">
         <ng-template matStepLabel>
-            <span class="mat-subheading-1">Create POS Request for Branches</span>
+            <span class="mat-subheading-1">POS Request for Branches</span>
         </ng-template>
         <!-- <app-branch-list></app-branch-list> -->
         <router-outlet name="branchPOS"></router-outlet>
+        <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
+                <mat-icon color="primary">navigate_next</mat-icon>
+            </button>
     </mat-step>
-    <mat-step [completed]="true">
+    <mat-step [completed]="false">
         <ng-template matStepLabel>
-            <span class="mat-subheading-1">Attach Required Documents</span>
+            <span class="mat-subheading-1">Required Documents</span>
         </ng-template>
         <router-outlet name="documentCheckList"></router-outlet>
+        <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
+                <mat-icon color="primary">navigate_next</mat-icon>
+            </button>
     </mat-step>
-    <mat-step [completed]="true" state="done">
+    <mat-step [completed]="false" state="done">
         <ng-template matStepLabel>
             <span class="mat-subheading-1">Done!</span>
         </ng-template>

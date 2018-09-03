@@ -23,10 +23,10 @@
             </div>
 
 
-            <button *ngIf="showRequestFlowOptions" mat-mini-fab style="font-size: 12px;" matTooltip="Return Request"><mat-icon  class="request-mat-icon">subdirectory_arrow_left</mat-icon></button>
-            <button *ngIf="showRequestFlowOptions" (click)="submit()" mat-mini-fab matTooltip="Submit Request"><mat-icon  class="request-mat-icon">arrow_forward</mat-icon></button>
+            <button *ngIf="showRequestFlowOptions" mat-button matTooltip="Return Request"><mat-icon  class="request-mat-icon">subdirectory_arrow_left</mat-icon> Return Request</button>
+            <button *ngIf="showRequestFlowOptions" (click)="submit()" mat-button matTooltip="Submit Request"><mat-icon  class="request-mat-icon">arrow_forward</mat-icon> Submit Request</button>
             <!-- BUTTON FOR CREATION -->
-            <button *ngIf="showCreateOptions" (click)="submit()" mat-mini-fab matTooltip="Submit Request"><mat-icon  class="request-mat-icon">arrow_forward</mat-icon></button>
+            <button *ngIf="showCreateOptions" (click)="submit()" mat-button matTooltip="Submit Request"><mat-icon  class="request-mat-icon">arrow_forward</mat-icon> Submit Request</button>
 
 
             <!-- 	<button mat-button color="primary" matTooltip="Approve Request" ><mat-icon  class="request-mat-icon">done</mat-icon>Approve</button>
@@ -37,7 +37,7 @@
     </mat-toolbar>
 
     <!-- <div>
-        <button fxFlex fxShow=”true” fxHide.lg=”true” mat-mini-fab [matMenuTriggerFor]="requestMenu">
+        <button fxFlex fxShow=”true” fxHide.lg=”true” mat-button [matMenuTriggerFor]="requestMenu">
   			<mat-icon color="primary">menu</mat-icon>
   	</button>
 

@@ -30,7 +30,7 @@ export class OcularInspectionFormComponent extends AppBaseComponent implements O
   ngOnInit() {
 
   }
-  
+
   public cancel() {
     this.router.navigateByUrl('/');
   }
