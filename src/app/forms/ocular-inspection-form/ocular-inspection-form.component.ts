@@ -16,14 +16,14 @@ export class OcularInspectionFormComponent extends AppBaseComponent implements O
   //   model: any = {};
   //   options: FormlyFormOptions = {};
   //   fields:FormlyFieldConfig[];
-  title: string = 'Pos Request';
+  title: string = 'OIF Form';
   //  subTitle:string;
   //  mode:string; 
-  constructor(private ocularInspectionFormService: OcularInspectionFormService,
-    public route: ActivatedRoute,
-    public router: Router) {
-    super(route, router);
-    this.fields = ocularInspectionFormService.getOIFFields();
+  constructor(private _ocularInspectionFormService: OcularInspectionFormService,
+    private _route: ActivatedRoute,
+    private _router: Router) {
+    super(_route, _router);
+    this.fields = _ocularInspectionFormService.getOIFFields();
 
   }
 
@@ -32,7 +32,8 @@ export class OcularInspectionFormComponent extends AppBaseComponent implements O
   }
   
   public cancel() {
-    this.router.navigateByUrl('/');
+    const parentRoute = this._router.url.split('/(')[0];
+    this._router.navigateByUrl(`${parentRoute}`);
   }
 
 }

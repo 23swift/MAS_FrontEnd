@@ -46,7 +46,12 @@ export class PosFormService {
             label: "Requestor's Contact Number / Cellphone Number",
             disabled: true
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'select',
@@ -64,12 +69,7 @@ export class PosFormService {
             label: 'Account Officer / Handler',
             disabled: true
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'select',
@@ -78,7 +78,12 @@ export class PosFormService {
             label: 'Business Type Of Account (AP / RM / HO)',
             disabled: true
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -106,7 +111,12 @@ export class PosFormService {
             label: "Approved By (Business Unit Head)",
             disabled: true
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -124,12 +134,7 @@ export class PosFormService {
             label: "Merchant's DBA Name",
             disabled: true
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'input',
@@ -138,7 +143,13 @@ export class PosFormService {
             label: "Merchant's Name on Signage",
             disabled: true
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
+        ,
         {
           className: 'flex-1',
           type: 'input',
@@ -168,7 +179,12 @@ export class PosFormService {
             ],
             disabled: true
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -177,12 +193,7 @@ export class PosFormService {
             label: "Merchant Category Code (MCC)",
             disabled: true
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'input',
@@ -200,7 +211,12 @@ export class PosFormService {
             label: "Contact Person",
             disabled: true
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -212,7 +228,7 @@ export class PosFormService {
         },
         {
           className: 'flex-1',
-          type: 'input',
+          type: 'select',
           key: 'terminalBrand',
           templateOptions: {
             label: "Terminal Brand",
@@ -221,7 +237,7 @@ export class PosFormService {
         },
         {
           className: 'flex-1',
-          type: 'input',
+          type: 'select',
           key: 'terminalType',
           templateOptions: {
             label: "Terminal Type",
@@ -235,7 +251,7 @@ export class PosFormService {
       fieldGroup: [
         {
           className: 'flex-1',
-          type: 'input',
+          type: 'select',
           key: 'terminalModelRequested',
           templateOptions: {
             label: "Terminal Model Requested",
@@ -259,7 +275,12 @@ export class PosFormService {
             label: "Number of Printed Slips",
             disabled: true
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -277,12 +298,7 @@ export class PosFormService {
             label: "Telco Provider (for Dial-up)",
             disabled: true
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'input',
@@ -291,7 +307,12 @@ export class PosFormService {
             label: "Sim Type (for GPRS)",
             disabled: true
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'calendar',
@@ -319,6 +340,11 @@ export class PosFormService {
             disabled: true
           }
         },
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -327,12 +353,7 @@ export class PosFormService {
             label: "Reason For Permanent GPRS Installation",
             disabled: true
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'input',
@@ -354,6 +375,11 @@ export class PosFormService {
             disabled: true
           }
         },
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'select',
@@ -364,7 +390,6 @@ export class PosFormService {
           }
         },
         {
-
           key: 'hotelSetupFacility',
           type: 'radio',
           templateOptions: {
@@ -387,7 +412,7 @@ export class PosFormService {
             ],
             disabled: true
           }
-        }
+        },
       ]
     },
     {
@@ -420,6 +445,11 @@ export class PosFormService {
             disabled: true
           }
         },
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -437,12 +467,7 @@ export class PosFormService {
             label: "Credit Straight MID-AMEX (If with VMJ)",
             disabled: true
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'input',
@@ -451,66 +476,72 @@ export class PosFormService {
             label: "DINERS MID",
             disabled: true
           }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'cupAcceptorId',
-          templateOptions: {
-            label: "CUP Acceptor ID",
-            disabled: true
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'merchantLoyalty',
-          templateOptions: {
-            label: "Merchant Loyalty",
-            disabled: true
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'merchantLoyalty',
-          templateOptions: {
-            label: "Merchant Prepaid",
-            disabled: true
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'creditStraightMidVmjaOffUs',
-          templateOptions: {
-            label: "Credit Straight MID-VMJA (off-us)",
-            disabled: true
-          }
         }
       ]
     },
     {
       fieldGroupClassName: 'display-flex',
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'input',
+        key: 'cupAcceptorId',
+        templateOptions: {
+          label: "CUP Acceptor ID",
+          disabled: true
+        }
+      },
+      {
+        className: 'flex-1',
+        type: 'input',
+        key: 'merchantLoyalty',
+        templateOptions: {
+          label: "Merchant Loyalty",
+          disabled: true
+        }
+      },
+      {
+        className: 'flex-1',
+        type: 'input',
+        key: 'merchantLoyalty',
+        templateOptions: {
+          label: "Merchant Prepaid",
+          disabled: true
+        }
+      },]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'input',
+        key: 'creditStraightMidVmjaOffUs',
+        templateOptions: {
+          label: "Credit Straight MID-VMJA (off-us)",
+          disabled: true
+        }
+      },
+      {
+        className: 'flex-1',
+        type: 'input',
+        key: 'creditStraightMidVmjOffUs',
+        templateOptions: {
+          label: "Credit Straight MID-VMJ (off-us)",
+          disabled: true
+        }
+      },
+      {
+        className: 'flex-1',
+        type: 'input',
+        key: 'creditStraightMidAmexOffUs',
+        templateOptions: {
+          label: "Credit Straight MID-AMEX (If with VMJ) (off-us)",
+          disabled: true
+        }
+      },]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
       fieldGroup: [
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'creditStraightMidVmjOffUs',
-          templateOptions: {
-            label: "Credit Straight MID-VMJ (off-us)",
-            disabled: true
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'creditStraightMidAmexOffUs',
-          templateOptions: {
-            label: "Credit Straight MID-AMEX (If with VMJ) (off-us)",
-            disabled: true
-          }
-        },
         {
           className: 'flex-1',
           type: 'input',
@@ -569,7 +600,12 @@ export class PosFormService {
             label: "Regular Installment MID-VMJA/VMJAC",
             disabled: true
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -587,12 +623,7 @@ export class PosFormService {
             label: "Regular Installment MID-AMEX (If with VMJ)",
             disabled: true
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'input',
@@ -601,7 +632,12 @@ export class PosFormService {
             label: "Zero Installment MID-VMJA/VMJAC",
             disabled: true
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -628,7 +664,12 @@ export class PosFormService {
             label: "Regular BNPL Installment MID-VMJA/VMJAC",
             disabled: true
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -637,12 +678,7 @@ export class PosFormService {
             label: "Zero BNPL Installment MID-VMJA/VMJAC",
             disabled: true
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'input',
@@ -660,7 +696,12 @@ export class PosFormService {
             label: "DCC MARK UP",
             disabled: true
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -719,7 +760,12 @@ export class PosFormService {
             label: "BDO Pay Mobile – Business Group (If applicable)",
             disabled: true
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -737,12 +783,7 @@ export class PosFormService {
             label: "BDO Pay Mobile – Merchant Portal Nominated Username",
             disabled: true
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'input',
@@ -751,7 +792,12 @@ export class PosFormService {
             label: "BDO Pay Mobile – Internet Connection",
             disabled: true
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -790,7 +836,6 @@ export class PosFormService {
       key: 'natureOfRequest',
       templateOptions: {
         label: 'Nature Of Request',
-
       }
     },
     {
@@ -802,7 +847,6 @@ export class PosFormService {
           key: 'requestorsName',
           templateOptions: {
             label: "Requestor's Name",
-
           }
         },
         {
@@ -822,7 +866,12 @@ export class PosFormService {
             label: "Requestor's Contact Number / Cellphone Number",
 
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'select',
@@ -840,12 +889,7 @@ export class PosFormService {
             label: 'Account Officer / Handler',
 
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'select',
@@ -854,7 +898,12 @@ export class PosFormService {
             label: 'Business Type Of Account (AP / RM / HO)',
 
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'select',
@@ -881,7 +930,12 @@ export class PosFormService {
             label: "Approved By (Business Unit Head)",
 
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -899,12 +953,7 @@ export class PosFormService {
             label: "Merchant's DBA Name",
 
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'input',
@@ -913,7 +962,12 @@ export class PosFormService {
             label: "Merchant's Name on Signage",
 
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -941,9 +995,13 @@ export class PosFormService {
               { value: 'true', label: 'Yes' },
               { value: 'false', label: 'No' }
             ],
-
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -952,12 +1010,7 @@ export class PosFormService {
             label: "Merchant Category Code (MCC)",
 
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'input',
@@ -975,7 +1028,12 @@ export class PosFormService {
             label: "Contact Person",
 
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -987,7 +1045,7 @@ export class PosFormService {
         },
         {
           className: 'flex-1',
-          type: 'input',
+          type: 'select',
           key: 'terminalBrand',
           templateOptions: {
             label: "Terminal Brand",
@@ -996,7 +1054,7 @@ export class PosFormService {
         },
         {
           className: 'flex-1',
-          type: 'input',
+          type: 'select',
           key: 'terminalType',
           templateOptions: {
             label: "Terminal Type",
@@ -1034,7 +1092,12 @@ export class PosFormService {
             label: "Number of Printed Slips",
 
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -1052,12 +1115,7 @@ export class PosFormService {
             label: "Telco Provider (for Dial-up)",
 
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'input',
@@ -1066,7 +1124,12 @@ export class PosFormService {
             label: "Sim Type (for GPRS)",
 
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'calendar',
@@ -1093,7 +1156,12 @@ export class PosFormService {
             label: "Required Pull Out Date For Temporary POS Terminals",
 
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -1102,12 +1170,7 @@ export class PosFormService {
             label: "Reason For Permanent GPRS Installation",
 
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'input',
@@ -1128,7 +1191,12 @@ export class PosFormService {
             ],
 
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'select',
@@ -1194,7 +1262,12 @@ export class PosFormService {
             label: "Credit Straight MID-VMJA/VMJAC",
 
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -1212,22 +1285,7 @@ export class PosFormService {
             label: "Credit Straight MID-AMEX (If with VMJ)",
 
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        // {
-        //   className: 'flex-1',
-        //   type: 'input',
-        //   key: 'dinersMID',
-        //   templateOptions: {
-        //     disabled: true,
-        //     label: "DINERS MID",
-
-        //   }
-        // },
+        },
         {
           className: 'flex-1',
           type: 'input',
@@ -1237,6 +1295,11 @@ export class PosFormService {
 
           }
         },
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -1255,96 +1318,6 @@ export class PosFormService {
 
           }
         },
-        // {
-        //   className: 'flex-1',
-        //   type: 'input',
-        //   key: 'creditStraightMidVmjaOffUs',
-        //   templateOptions: {
-        //     disabled: true,
-        //     label: "Credit Straight MID-VMJA (off-us)",
-
-        //   }
-        // }
-      ]
-    },
-    // {
-    //   fieldGroupClassName: 'display-flex',
-    //   fieldGroup: [
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'creditStraightMidVmjOffUs',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Credit Straight MID-VMJ (off-us)",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'creditStraightMidAmexOffUs',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Credit Straight MID-AMEX (If with VMJ) (off-us)",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'creditStraightMidVmjaUsd',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Credit Straight MID-VMJA (USD)",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'creditStraightMidVmjUsd',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Credit Straight MID-VMJ (USD)",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'creditStraightMidAmexUsd',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Credit Straight MID-AMEX (If with VMJ) (USD)",
-
-    //       }
-    //     }
-    //   ]
-    // },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        // {
-        //   className: 'flex-1',
-        //   type: 'input',
-        //   key: 'smEcardMID',
-        //   templateOptions: {
-        //     disabled: true,
-        //     label: "SM E-Card MID",
-
-        //   }
-        // },
-        // {
-        //   className: 'flex-1',
-        //   type: 'input',
-        //   key: 'smPartnerPlusMID',
-        //   templateOptions: {
-        //     disabled: true,
-        //     label: "SM Partner Plus MID",
-
-        //   }
-        // },
         {
           className: 'flex-1',
           type: 'input',
@@ -1353,7 +1326,12 @@ export class PosFormService {
             label: "Regular Installment MID-VMJA/VMJAC",
 
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -1371,12 +1349,7 @@ export class PosFormService {
             label: "Regular Installment MID-AMEX (If with VMJ)",
 
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'input',
@@ -1385,7 +1358,12 @@ export class PosFormService {
             label: "Zero Installment MID-VMJA/VMJAC",
 
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -1412,7 +1390,12 @@ export class PosFormService {
             label: "Regular BNPL Installment MID-VMJA/VMJAC",
 
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -1421,12 +1404,7 @@ export class PosFormService {
             label: "Zero BNPL Installment MID-VMJA/VMJAC",
 
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'input',
@@ -1444,52 +1422,12 @@ export class PosFormService {
             label: "DCC MARK UP",
 
           }
-        },
-        // {
-        //   className: 'flex-1',
-        //   type: 'input',
-        //   key: 'dateTimeEndorsedPaymentSolutionsOperations',
-        //   templateOptions: {
-        //     disabled: true,
-        //     label: "Date and Time Endorsed to Payment Solutions Operations",
-
-        //   }
-        // },
-        // {
-        //   className: 'flex-1',
-        //   type: 'input',
-        //   key: 'emailSubject',
-        //   templateOptions: {
-        //     disabled: true,
-        //     label: "Email Subject",
-
-        //   }
-        // },
-        // {
-        //   className: 'flex-1',
-        //   type: 'input',
-        //   key: 'dateTimeAssignedPSProfiling',
-        //   templateOptions: {
-        //     disabled: true,
-        //     label: "Date and Time Assigned to PS Profiling",
-
-        //   }
-        // }
+        }
       ]
     },
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
-        // {
-        //   className: 'flex-1',
-        //   type: 'input',
-        //   key: 'creditStraightTID',
-        //   templateOptions: {
-        //     disabled: true,
-        //     label: "Credit Straight TID (new)",
-
-        //   }
-        // },
         {
           className: 'flex-1',
           type: 'input',
@@ -1516,7 +1454,12 @@ export class PosFormService {
             label: "BDO Pay Mobile – Merchant Portal User's Email Address",
 
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -1525,12 +1468,7 @@ export class PosFormService {
             label: "BDO Pay Mobile – Merchant Portal Nominated Username",
 
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'input',
@@ -1548,7 +1486,12 @@ export class PosFormService {
             label: "BDO Pay Mobile – Internet Provider",
 
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -1572,446 +1515,9 @@ export class PosFormService {
   ]
 
   mmuFields: FormlyFieldConfig[] = [
-    // {
-    //   className: 'flex-1',
-    //   type: 'select',
-    //   key: 'natureOfRequest',
-    //   templateOptions: {
-    //     disabled: true,
-    //     label: 'Nature Of Request',
-
-    //   }
-    // },
-    // {
-    //   fieldGroupClassName: 'display-flex',
-    //   fieldGroup: [
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'requestorsName',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Requestor's Name",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'requestorsBusinessUnit',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Requestor's Business Unit",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'requestorsContactNumber',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Requestor's Contact Number / Cellphone Number",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'select',
-    //       key: 'area',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: 'Business Unit / Area (where POS will be charged)',
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'select',
-    //       key: 'accountOfficerHandler',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: 'Account Officer / Handler',
-
-    //       }
-    //     }
-    //   ]
-    // },
-    // {
-    //   fieldGroupClassName: 'display-flex',
-    //   fieldGroup: [
-    //     {
-    //       className: 'flex-1',
-    //       type: 'select',
-    //       key: 'businessTypeOfAccount',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: 'Business Type Of Account (AP / RM / HO)',
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'select',
-    //       key: 'businessUnitAO',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Business Unit (AO's Business Unit)",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'segment',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Segment",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'approvedBy',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Approved By (Business Unit Head)",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'merchantLegalName',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Merchant's Legal Name",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'merchantDBAName',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Merchant's DBA Name",
-
-    //       }
-    //     }
-    //   ]
-    // },
-    // {
-    //   fieldGroupClassName: 'display-flex',
-    //   fieldGroup: [
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'merchantNameOnSignage',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Merchant's Name on Signage",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'merchantDBAAddress',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Merchant's DBA Address",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'merchantDBACity',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Merchant's DBA City",
-
-    //       }
-    //     },
-    //     {
-    //       key: 'contactlessMerchant',
-    //       type: 'radio',
-    //       templateOptions: {
-    //         label: 'Contactless Merchant?',
-    //         disabled: true,
-    //         options: [
-    //           { value: 'true', label: 'Yes' },
-    //           { value: 'false', label: 'No' }
-    //         ],
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'merchantCategoryCode',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Merchant Category Code (MCC)",
-
-    //       }
-    //     }
-    //   ]
-    // },
-    // {
-    //   fieldGroupClassName: 'display-flex',
-    //   fieldGroup: [
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'nsp',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "NSP",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'contactPerson',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Contact Person",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'contactNumber',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Contact Number",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'terminalBrand',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Terminal Brand",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'terminalType',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Terminal Type",
-
-    //       }
-    //     }
-    //   ]
-    // },
-    // {
-    //   fieldGroupClassName: 'display-flex',
-    //   fieldGroup: [
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'terminalModelRequested',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Terminal Model Requested",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'numberOfTerminalsRequested',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Number of Terminal/s Requested",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'numberOfPrintedSlips',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Number of Printed Slips",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'reasonForThreeSlipsPrinting',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Reason For 3 Slips Printing",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'telcoProvider',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Telco Provider (for Dial-up)",
-
-    //       }
-    //     }
-    //   ]
-    // },
-    // {
-    //   fieldGroupClassName: 'display-flex',
-    //   fieldGroup: [
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'simType',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Sim Type (for GPRS)",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'calendar',
-    //       key: 'requiredDateAndTimeOfDispatch',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Required Date And Time Of Dispatch",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'select',
-    //       key: 'installationTeam',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Installation Team",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'calendar',
-    //       key: 'requiredPullOutDateForTempPOSTerminals',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Required Pull Out Date For Temporary POS Terminals",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'reasonForPermanentGPRSInstallation',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Reason For Permanent GPRS Installation",
-
-    //       }
-    //     }
-    //   ]
-    // },
-    // {
-    //   fieldGroupClassName: 'display-flex',
-    //   fieldGroup: [
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'otherRequiredProfilingFacility',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Other Required Profiling Facility (tip adjust, binver, BDO Pay, etc)",
-
-    //       }
-    //     },
-    //     {
-    //       key: 'tipAdjust',
-    //       type: 'radio',
-    //       templateOptions: {
-    //         label: 'TIP ADJUST',
-    //         disabled: true,
-    //         options: [
-    //           { value: 'true', label: 'Yes' },
-    //           { value: 'false', label: 'No' }
-    //         ],
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'select',
-    //       key: 'mustSettle',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Must Settle (No. Of Days Required)",
-
-    //       }
-    //     },
-    //     {
-
-    //       key: 'hotelSetupFacility',
-    //       type: 'radio',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: 'HOTEL SET-UP FACILITY (PRE-AUTH, OFF-LINE)?',
-    //         options: [
-    //           { value: 'true', label: 'Yes' },
-    //           { value: 'false', label: 'No' }
-    //         ],
-
-    //       }
-    //     },
-    //     {
-    //       key: 'manualKeyInFacility',
-    //       type: 'radio',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: 'MANUAL KEY-IN FACILITY?',
-    //         options: [
-    //           { value: 'true', label: 'Yes' },
-    //           { value: 'false', label: 'No' }
-    //         ],
-    //       }
-    //     }
-    //   ]
-    // },
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
-        // {
-        //   className: 'flex-1',
-        //   type: 'input',
-        //   key: 'remarksSpecialInstructions',
-        //   templateOptions: {
-        //     disabled: true,
-        //     label: "Remarks / Special Instructions (Dispatch-Related Only)",
-
-        //   }
-        // },
-        // {
-        //   className: 'flex-1',
-        //   type: 'calendar',
-        //   key: 'dateAndTimeEndorsedToMAU',
-        //   templateOptions: {
-        //     disabled: true,
-        //     label: "Date and Time Endorsed To MAU",
-
-        //   }
-        // },
         {
           className: 'flex-1',
           type: 'input',
@@ -2062,26 +1568,6 @@ export class PosFormService {
 
           }
         },
-        // {
-        //   className: 'flex-1',
-        //   type: 'input',
-        //   key: 'merchantLoyalty',
-        //   templateOptions: {
-        //     disabled: true,
-        //     label: "Merchant Loyalty",
-
-        //   }
-        // },
-        // {
-        //   className: 'flex-1',
-        //   type: 'input',
-        //   key: 'merchantLoyalty',
-        //   templateOptions: {
-        //     disabled: true,
-        //     label: "Merchant Prepaid",
-
-        //   }
-        // },
         {
           className: 'flex-1',
           type: 'input',
@@ -2122,7 +1608,12 @@ export class PosFormService {
             label: "Credit Straight MID-VMJA (USD)",
 
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -2140,12 +1631,7 @@ export class PosFormService {
             label: "Credit Straight MID-AMEX (If with VMJ) (USD)",
 
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'input',
@@ -2154,7 +1640,12 @@ export class PosFormService {
             label: "SM E-Card MID",
 
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -2181,7 +1672,12 @@ export class PosFormService {
             label: "Regular Installment MID-VMJ",
 
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -2190,12 +1686,7 @@ export class PosFormService {
             label: "Regular Installment MID-AMEX (If with VMJ)",
 
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'input',
@@ -2213,7 +1704,12 @@ export class PosFormService {
             label: "Zero Installment MID-VMJ",
 
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -2255,16 +1751,6 @@ export class PosFormService {
 
           }
         },
-        // {
-        //   className: 'flex-1',
-        //   type: 'input',
-        //   key: 'dccMarkup',
-        //   templateOptions: {
-        //     disabled: true,
-        //     label: "DCC MARK UP",
-
-        //   }
-        // },
         {
           className: 'flex-1',
           type: 'input',
@@ -2274,128 +1760,8 @@ export class PosFormService {
 
           }
         },
-        // {
-        //   className: 'flex-1',
-        //   type: 'input',
-        //   key: 'emailSubject',
-        //   templateOptions: {
-        //     disabled: true,
-        //     label: "Email Subject",
-
-        //   }
-        // },
-        // {
-        //   className: 'flex-1',
-        //   type: 'input',
-        //   key: 'dateTimeAssignedPSProfiling',
-        //   templateOptions: {
-        //     disabled: true,
-        //     label: "Date and Time Assigned to PS Profiling",
-
-        //   }
-        // }
       ]
     },
-    // {
-    //   fieldGroupClassName: 'display-flex',
-    //   fieldGroup: [
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'creditStraightTID',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "Credit Straight TID (new)",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'bdoPayMobileNumberOfTerminals',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "BDO Pay Mobile – Number of Terminals (Count)",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'bdoPayMobileBusinessGroup',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "BDO Pay Mobile – Business Group (If applicable)",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'bdoPayMobileMerchantPortalUserEmailAddress',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "BDO Pay Mobile – Merchant Portal User's Email Address",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'bdoPayMobileMerchantPortalNominatedUsername',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "BDO Pay Mobile – Merchant Portal Nominated Username",
-
-    //       }
-    //     }
-    //   ]
-    // },
-    // {
-    //   fieldGroupClassName: 'display-flex',
-    //   fieldGroup: [
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'bdoPayMobileInternetConnection',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "BDO Pay Mobile – Internet Connection",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'bdoPayMobileInternetProvider',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "BDO Pay Mobile – Internet Provider",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'bdoPayMobileReferenceField',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "BDO Pay Mobile – Reference Field",
-
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'bdoPayMobileRfName',
-    //       templateOptions: {
-    //         disabled: true,
-    //         label: "BDO Pay Mobile – If RF is Customized, pls Include RF Name (Max 10 Characters)",
-
-    //       }
-    //     }
-    //   ]
-    // }
   ]
 
   psServicingFields: FormlyFieldConfig[] = [

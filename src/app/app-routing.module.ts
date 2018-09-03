@@ -38,6 +38,7 @@ import { MdcsUserDashboardComponent } from './dashboard/mdcs-user-dashboard/mdcs
 import { MdmUserDashboardComponent } from './dashboard/mdm-user-dashboard/mdm-user-dashboard.component';
 import { MqrDashboardComponent } from './dashboard/mqr-dashboard/mqr-dashboard.component';
 import { PsServicingDashboardComponent } from './dashboard/ps-servicing-dashboard/ps-servicing-dashboard.component';
+import { BranchListAttachmentPOSComponent } from './branch-list-attachment-pos/branch-list-attachment-pos.component';
 //import { MidFormComponent } from './forms/mid-form/mid-form.component';
 //import { MidComponent } from './mid/mid.component';
 
@@ -63,21 +64,16 @@ const routes: Routes = [
       { path: 'branch/:mode', component: BranchComponent, outlet: 'branch' },
       { path: '', component: BranchListAttachmentComponent, outlet: 'branchOIF' },
       { path: 'OIF/:id?', component: OcularInspectionFormComponent, outlet: 'branchOIF' },
-      { path: '', component: PosFormComponent, outlet: 'branchPOS' },
-      { path: 'pos/:id?', component: PosFormComponent, outlet: 'branchPOS' },
+      { path: '', component: BranchListAttachmentPOSComponent, outlet: 'branchPOS' },
+      { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOS' },
       { path: '', component: DocumentCheckListComponent, outlet: 'documentCheckList' },
       { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' }
     ]
   },
   { path: 'newAffSum', component: NewAffiliationSumComponent },
   { path: 'home', component: HomeScreenComponent },
-
-
   { path: 'oif', component: OcularInspectionFormComponent },
-
-
   { path: 'oifForm', component: OcularInspectionFormComponent },
-
   { path: 'aoDashboard', component: AoCheckerDashboardComponent },
   {
     path: 'aoChecking', component: AoCheckingComponent,
@@ -96,7 +92,6 @@ const routes: Routes = [
         path: 'branch/:mode', component: BranchComponent,
         outlet: 'branch'
       },
-
       {
         path: '', component: BranchListAttachmentComponent,
         data: { detailsRoute: 'branch/update/' },
@@ -105,11 +100,8 @@ const routes: Routes = [
       {
         path: 'OIF/:id', component: OcularInspectionFormComponent,
         outlet: 'branchOIF'
-      }
-
-
+      },
     ]
-
   },
 
   { path: 'awr', component: AwrFormComponent },
@@ -139,8 +131,8 @@ const routes: Routes = [
       { path: 'branch/:mode', component: BranchComponent, outlet: 'branch' },
       { path: '', component: BranchListAttachmentComponent, outlet: 'branchOIF' },
       { path: 'OIF/:id?', component: OcularInspectionFormComponent, outlet: 'branchOIF' },
-      { path: '', component: PosFormComponent, outlet: 'branchPOS' },
-      { path: 'pos/:id?', component: PosFormComponent, outlet: 'branchPOS' },
+      { path: '', component: BranchListAttachmentPOSComponent, outlet: 'branchPOS' },
+      { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOS' },
       { path: '', component: DocumentCheckListComponent, outlet: 'documentCheckList' },
       { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' }
     ]
