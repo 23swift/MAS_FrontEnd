@@ -41,6 +41,8 @@ import { PsServicingDashboardComponent } from './dashboard/ps-servicing-dashboar
 import { BranchListAttachmentPOSComponent } from './branch-list-attachment-pos/branch-list-attachment-pos.component';
 //import { MidFormComponent } from './forms/mid-form/mid-form.component';
 //import { MidComponent } from './mid/mid.component';
+import { MidFormComponent } from './forms/mid-form/mid-form.component';
+import { MidComponent } from './mid/mid.component';
 
 
 const routes: Routes = [
@@ -60,14 +62,24 @@ const routes: Routes = [
     children: [
       // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
       { path: '', component: BranchListComponent, outlet: 'branch' },
-      { path: 'branch/:mode/:id', component: BranchComponent, outlet: 'branch' },
-      { path: 'branch/:mode', component: BranchComponent, outlet: 'branch' },
+      {
+        path: 'branch/:mode/:id', component: BranchComponent, outlet: 'branch', children: [
+          { path: '', component: MidComponent, outlet: 'mid' },
+          { path: 'mid', component: MidFormComponent, outlet: 'mid' }
+        ]
+      },
+      {
+        path: 'branch/:mode', component: BranchComponent, outlet: 'branch', children: [
+          { path: '', component: MidComponent, outlet: 'mid' },
+          { path: 'mid', component: MidFormComponent, outlet: 'mid' }
+        ]
+      },
       { path: '', component: BranchListAttachmentComponent, outlet: 'branchOIF' },
       { path: 'OIF/:id?', component: OcularInspectionFormComponent, outlet: 'branchOIF' },
       { path: '', component: BranchListAttachmentPOSComponent, outlet: 'branchPOS' },
       { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOS' },
       { path: '', component: DocumentCheckListComponent, outlet: 'documentCheckList' },
-      { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' }
+      { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
     ]
   },
   { path: 'newAffSum', component: NewAffiliationSumComponent },
@@ -81,6 +93,7 @@ const routes: Routes = [
       // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
       {
         path: '', component: BranchListComponent,
+        // data: { detailsRoute: '[{ outlets: {branch: ["branch/update/",1] } }]' },
         outlet: 'branch'
       },
       {
@@ -123,7 +136,7 @@ const routes: Routes = [
   { path: 'pssDashboard', component: PsServicingDashboardComponent },
   ///////////////////////////////////////////
   {
-    path: 'aoCheck', component: AoCheckerComponent,
+    path: 'aoChecker', component: AoCheckerComponent,
     children: [
       // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
       { path: '', component: BranchListComponent, outlet: 'branch' },
@@ -147,8 +160,8 @@ const routes: Routes = [
   { path: 'requestForm', component: RequestFormComponent },
   { path: 'dcl', component: DocumentCheckListComponent },
   { path: 'branchlist', component: BranchListComponent },
-  //{ path: 'midForm', component: MidFormComponent},
-  //{ path: 'mid', component: MidComponent }
+  { path: 'midForm', component: MidFormComponent },
+  { path: 'mid', component: MidComponent }
 ];
 
 @NgModule({

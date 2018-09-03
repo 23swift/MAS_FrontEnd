@@ -25,7 +25,7 @@ export class PosFormComponent extends AppBaseComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+
   public cancel() {
     const parentRoute = this._router.url.split('/(')[0];
     this._router.navigateByUrl(`${parentRoute}`);

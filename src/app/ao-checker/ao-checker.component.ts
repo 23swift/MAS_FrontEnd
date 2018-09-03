@@ -14,7 +14,7 @@ export class AoCheckerComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   title = 'New Affiliation';
-  subTitle = 'Update';
+  subTitle = 'FOR AO CHECKING';
   mode: string;
   status = 'done';
 
@@ -23,7 +23,8 @@ export class AoCheckerComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.mode = this.route.snapshot.params['mode'];
+    // this.mode = this.route.snapshot.params['mode'];
+    this.mode = 'update';
     this.isOptional = true;
     // this.firstFormGroup = this._formBuilder.group({
     //   firstCtrl: ['', Validators.required]
