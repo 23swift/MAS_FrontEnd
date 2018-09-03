@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
 import { OcularInspectionFormService } from './ocular-inspection-form.service';
@@ -12,6 +12,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   styleUrls: ['./ocular-inspection-form.component.css']
 })
 export class OcularInspectionFormComponent extends AppBaseComponent implements OnInit {
+  @Input()displayMode:boolean=false;
   //  form = new FormGroup({});
   //   model: any = {};
   //   options: FormlyFormOptions = {};
