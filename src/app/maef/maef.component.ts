@@ -11,6 +11,7 @@ import { AppBaseComponent } from '../app-base/app-base.component';
   styleUrls: ['./maef.component.css']
 })
 export class MaefComponent extends AppBaseComponent implements OnInit {
+  @Input()displayMode:boolean=false;
   form = new FormGroup({});
   model: any = {};
   options: FormlyFormOptions = {};
@@ -27,7 +28,7 @@ export class MaefComponent extends AppBaseComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.title = 'Branch';
+    this.title = 'MAEF';
     // this.baseCreateFunction=this.create;
     // this.baseUpdateFunction=this.update;
 

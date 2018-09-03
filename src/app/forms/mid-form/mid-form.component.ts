@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MidFormService } from './mid-form.service';
 import { FormlyFieldConfig } from '@ngx-formly/core';
+import { AppBaseComponent } from '../../../app/app-base/app-base.component';
 
 @Component({
   selector: 'app-mid-form',
@@ -10,12 +11,16 @@ import { FormlyFieldConfig } from '@ngx-formly/core';
   styleUrls: ['./mid-form.component.css'],
   providers: [MidFormService]
 })
-export class MidFormComponent implements OnInit {
+export class MidFormComponent extends AppBaseComponent implements OnInit {
+  @Input()displayMode:boolean=false;
   model: Object;
   form: FormGroup;
   fields: FormlyFieldConfig[];
 
-  constructor(private _route: ActivatedRoute, private _router: Router, private _service: MidFormService) { }
+  constructor(private _route: ActivatedRoute, private _router: Router, private _service: MidFormService) {
+    super(_route,_router);
+
+   }
 
   ngOnInit() {
     this.form = new FormGroup({});
