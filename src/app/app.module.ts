@@ -6,7 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyMaterialModule } from '@ngx-formly/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatToolbarModule, MatTooltipModule, MatCheckboxModule, MatRadioModule } from '@angular/material';
+import { MatToolbarModule, MatTooltipModule, MatCheckboxModule, MatRadioModule, MatDialogModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -65,11 +65,18 @@ import { MqrDashboardComponent } from './dashboard/mqr-dashboard/mqr-dashboard.c
 import { MdcsUserDashboardComponent } from './dashboard/mdcs-user-dashboard/mdcs-user-dashboard.component';
 import { PsServicingDashboardComponent } from './dashboard/ps-servicing-dashboard/ps-servicing-dashboard.component';
 import { MdmUserDashboardComponent } from './dashboard/mdm-user-dashboard/mdm-user-dashboard.component';
+
 import { MerchantAffiliationMaintenanceComponent } from './merchant-affiliation-maintenance/merchant-affiliation-maintenance.component';
 import { RequestApprovalComponent } from './request-approval/request-approval.component';
 import { BranchInfoComponent } from './branch-info/branch-info.component';
 //import { MidComponent } from './mid/mid.component';
+//import { MidFormComponent } from './forms/mid-form/mid-form.component';
+
+import { BranchListAttachmentPOSComponent } from './branch-list-attachment-pos/branch-list-attachment-pos.component';
+import { MidComponent } from './mid/mid.component';
 import { MidFormComponent } from './forms/mid-form/mid-form.component';
+import { RemarksModalComponent } from './modal/remarks-modal/remarks-modal.component';
+
 
 
 
@@ -116,11 +123,18 @@ import { MidFormComponent } from './forms/mid-form/mid-form.component';
     MdcsUserDashboardComponent,
     PsServicingDashboardComponent,
     MdmUserDashboardComponent,
+<<<<<<< HEAD
     MerchantAffiliationMaintenanceComponent,
     RequestApprovalComponent,
     BranchInfoComponent,
     //MidComponent,
     MidFormComponent,
+=======
+    BranchListAttachmentPOSComponent,
+    MidComponent,
+    MidFormComponent,
+    RemarksModalComponent,
+>>>>>>> 3e0feb10e8bbac0a907c8c2a1ef654551f1eab0e
   ],
   imports: [
     BrowserModule,
@@ -146,6 +160,7 @@ import { MidFormComponent } from './forms/mid-form/mid-form.component';
     MatSidenavModule,
     MatExpansionModule,
     MatDividerModule,
+    MatDialogModule,
     MatListModule,
     MatDatepickerModule,
     MatInputModule,
@@ -166,6 +181,7 @@ import { MidFormComponent } from './forms/mid-form/mid-form.component';
     MatCheckboxModule,
     MatRadioModule
   ],
+  entryComponents: [RemarksModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

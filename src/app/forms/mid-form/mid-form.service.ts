@@ -150,6 +150,58 @@ export class MidFormService {
             }
           }
         ]
+      },
+      {
+        fieldGroupClassName: 'display-flex',
+        fieldGroup: [
+          {
+            className: 'flex-1',
+            key: 'merchantMpPromotionGroup',
+            type: 'select',
+            defaultValue: 1,
+            templateOptions: {
+              label: 'Merchant MP Promotions Group',
+              required: true,
+              options: [
+                { value: 1, label: 'BNPL Flagship'},
+                { value: 2, label: 'Installament Reg'}
+              ]
+            }
+          }
+        ]
+      },
+      {
+        fieldGroupClassName: 'display-flex',
+        fieldGroup: [
+          {
+            className: 'flex-1',
+            key: 'defaultMpPromotion',
+            type: 'select',
+            defaultValue: 1,
+            templateOptions: {
+              label: 'Default MP Promotion',
+              required: true,
+              options: [
+                { value: 1, label: 'BNPL Flagship'},
+                { value: 2, label: 'Installament Reg'}
+              ]
+            }
+          }
+        ]
+      },
+      {
+        fieldGroupClassName: 'display-flex',
+        fieldGroup: [
+          {
+            className: 'flex-1',
+            key: 'dccMarkupRate',
+            type: 'input',
+            defaultValue: 1,
+            templateOptions: {
+              label: 'DCC Mark-up Rate'
+            }
+          }
+        ]
       }
     ];
   }

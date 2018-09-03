@@ -24,9 +24,9 @@ export class AoCheckerDashboardComponent implements OnInit {
     this.displayedColumns = this._service.GetTableFields();
     this.dataSource = this._service.Get();
 
-    this.mode = 'create';
-    this.title = 'New Affiliation';
-    this.subTitle = 'Ao Checking';
+    this.mode = '';
+    this.title = '';
+    this.subTitle = '';
   }
 
   private GetItem(Id) {

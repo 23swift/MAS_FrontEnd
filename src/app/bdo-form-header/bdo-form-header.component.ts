@@ -2,7 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { IfStmt } from '@angular/compiler';
 import { Router, Route, ActivatedRoute } from '@angular/router';
 import { supportsWebAnimations } from '@angular/animations/browser/src/render/web_animations/web_animations_driver';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar, MatDialog } from '@angular/material';
+import { RemarksModalComponent } from '../modal/remarks-modal/remarks-modal.component';
 
 @Component({
   selector: 'app-bdo-form-header',
@@ -16,9 +17,9 @@ export class BdoFormHeaderComponent implements OnInit {
   @Input() mode: string;
   @Input() text: string;
   @Input() sub_text: string;
-  @Input() submit: Function;
+  @Input() Submit: Function;
 
-  constructor(private _route: ActivatedRoute, private _router: Router, private _snackBar: MatSnackBar) {}
+  constructor(private _route: ActivatedRoute, private _router: Router, private _snackBar: MatSnackBar, private _dialog: MatDialog) {}
 
   ngOnInit() {
     this.showApprovalOptions = false;
@@ -38,5 +39,11 @@ export class BdoFormHeaderComponent implements OnInit {
         this.showCreateOptions = true;
       }
     }
+  }
+
+  Return(): void {
+    this._dialog.open(RemarksModalComponent, {
+      width: '500px'
+    });
   }
 }

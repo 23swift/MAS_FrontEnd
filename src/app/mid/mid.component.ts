@@ -19,6 +19,6 @@ export class MidComponent implements OnInit {
     this.displayedColumns = this._service.GetTableFields();
   }
   AddMid() {
-    this._router.navigateByUrl('/midForm');
+    // this._router.navigateByUrl('/midForm');
   }
 }

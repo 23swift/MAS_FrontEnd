@@ -14,23 +14,23 @@ import { PosFormService } from './pos-form.service';
   providers: [PosFormService]
 })
 export class PosFormComponent extends AppBaseComponent implements OnInit {
+
+  userGroup: string;
   @Input()displayMode:boolean=false;
-  constructor(private posFormService: PosFormService,
-    public route: ActivatedRoute,
-    public router: Router) 
+  constructor(private _posFormService: PosFormService,private _route: ActivatedRoute,private _router: Router) 
+
     { 
-      super(route,router);
-      
-      var userGroup: string = 'test'
-      
-      this.fields = posFormService.getPosFields(userGroup);
+      super(_route,_router);
+      this.userGroup = 'ao';
+      this.fields = _posFormService.getPosFields(this.userGroup);
     }
 
   ngOnInit() {
   }
 
   public cancel() {
-    this.router.navigateByUrl('/')
+    const parentRoute = this._router.url.split('/(')[0];
+    this._router.navigateByUrl(`${parentRoute}`);
   }
 
 }
