@@ -69,6 +69,7 @@ import { BranchListAttachmentPOSComponent } from './branch-list-attachment-pos/b
 import { MidComponent } from './mid/mid.component';
 import { MidFormComponent } from './forms/mid-form/mid-form.component';
 import { RemarksModalComponent } from './modal/remarks-modal/remarks-modal.component';
+import { MauEncoderComponent } from './mau-encoder/mau-encoder.component';
 
 
 
@@ -119,6 +120,7 @@ import { RemarksModalComponent } from './modal/remarks-modal/remarks-modal.compo
     MidComponent,
     MidFormComponent,
     RemarksModalComponent,
+    MauEncoderComponent,
   ],
   imports: [
     BrowserModule,

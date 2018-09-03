@@ -39,10 +39,9 @@ import { MdmUserDashboardComponent } from './dashboard/mdm-user-dashboard/mdm-us
 import { MqrDashboardComponent } from './dashboard/mqr-dashboard/mqr-dashboard.component';
 import { PsServicingDashboardComponent } from './dashboard/ps-servicing-dashboard/ps-servicing-dashboard.component';
 import { BranchListAttachmentPOSComponent } from './branch-list-attachment-pos/branch-list-attachment-pos.component';
-//import { MidFormComponent } from './forms/mid-form/mid-form.component';
-//import { MidComponent } from './mid/mid.component';
 import { MidFormComponent } from './forms/mid-form/mid-form.component';
 import { MidComponent } from './mid/mid.component';
+import { MauEncoderComponent } from './mau-encoder/mau-encoder.component';
 
 
 const routes: Routes = [
@@ -140,14 +139,49 @@ const routes: Routes = [
     children: [
       // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
       { path: '', component: BranchListComponent, outlet: 'branch' },
-      { path: 'branch/:mode/:id', component: BranchComponent, outlet: 'branch' },
-      { path: 'branch/:mode', component: BranchComponent, outlet: 'branch' },
+      {
+        path: 'branch/:mode/:id', component: BranchComponent, outlet: 'branch', children: [
+          { path: '', component: MidComponent, outlet: 'mid' },
+          { path: 'mid', component: MidFormComponent, outlet: 'mid' }
+        ]
+      },
+      {
+        path: 'branch/:mode', component: BranchComponent, outlet: 'branch', children: [
+          { path: '', component: MidComponent, outlet: 'mid' },
+          { path: 'mid', component: MidFormComponent, outlet: 'mid' }
+        ]
+      },
       { path: '', component: BranchListAttachmentComponent, outlet: 'branchOIF' },
       { path: 'OIF/:id?', component: OcularInspectionFormComponent, outlet: 'branchOIF' },
       { path: '', component: BranchListAttachmentPOSComponent, outlet: 'branchPOS' },
       { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOS' },
       { path: '', component: DocumentCheckListComponent, outlet: 'documentCheckList' },
-      { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' }
+      { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
+    ]
+  },
+  {
+    path: 'mauEncoder', component: MauEncoderComponent,
+    children: [
+      // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
+      { path: '', component: BranchListComponent, outlet: 'branch' },
+      {
+        path: 'branch/:mode/:id', component: BranchComponent, outlet: 'branch', children: [
+          { path: '', component: MidComponent, outlet: 'mid' },
+          { path: 'mid', component: MidFormComponent, outlet: 'mid' }
+        ]
+      },
+      {
+        path: 'branch/:mode', component: BranchComponent, outlet: 'branch', children: [
+          { path: '', component: MidComponent, outlet: 'mid' },
+          { path: 'mid', component: MidFormComponent, outlet: 'mid' }
+        ]
+      },
+      { path: '', component: BranchListAttachmentComponent, outlet: 'branchOIF' },
+      { path: 'OIF/:id?', component: OcularInspectionFormComponent, outlet: 'branchOIF' },
+      { path: '', component: BranchListAttachmentPOSComponent, outlet: 'branchPOS' },
+      { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOS' },
+      { path: '', component: DocumentCheckListComponent, outlet: 'documentCheckList' },
+      { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
     ]
   },
   { path: 'aoChecking', component: AoCheckingComponent },
