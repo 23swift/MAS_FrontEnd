@@ -23,10 +23,10 @@
             </div>
 
 
-            <button *ngIf="showRequestFlowOptions" mat-button matTooltip="Return Request"><mat-icon  class="request-mat-icon">subdirectory_arrow_left</mat-icon> Return Request</button>
-            <button *ngIf="showRequestFlowOptions" (click)="submit()" mat-button matTooltip="Submit Request"><mat-icon  class="request-mat-icon">arrow_forward</mat-icon> Submit Request</button>
+            <button *ngIf="showRequestFlowOptions" (click)="Return()" mat-button matTooltip="Return Request"><mat-icon  class="request-mat-icon">subdirectory_arrow_left</mat-icon> Return Request</button>
+            <button *ngIf="showRequestFlowOptions" (click)="Submit()" mat-button matTooltip="Submit Request"><mat-icon  class="request-mat-icon">arrow_forward</mat-icon> Submit Request</button>
             <!-- BUTTON FOR CREATION -->
-            <button *ngIf="showCreateOptions" (click)="submit()" mat-button matTooltip="Submit Request"><mat-icon  class="request-mat-icon">arrow_forward</mat-icon> Submit Request</button>
+            <button *ngIf="showCreateOptions" (click)="Submit()" mat-button matTooltip="Submit Request"><mat-icon  class="request-mat-icon">arrow_forward</mat-icon> Submit Request</button>
 
 
             <!-- 	<button mat-button color="primary" matTooltip="Approve Request" ><mat-icon  class="request-mat-icon">done</mat-icon>Approve</button>

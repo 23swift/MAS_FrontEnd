@@ -6,7 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyMaterialModule } from '@ngx-formly/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatToolbarModule, MatTooltipModule, MatCheckboxModule, MatRadioModule } from '@angular/material';
+import { MatToolbarModule, MatTooltipModule, MatCheckboxModule, MatRadioModule, MatDialogModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -67,6 +67,7 @@ import { PsServicingDashboardComponent } from './dashboard/ps-servicing-dashboar
 import { MdmUserDashboardComponent } from './dashboard/mdm-user-dashboard/mdm-user-dashboard.component';
 import { MidComponent } from './mid/mid.component';
 import { MidFormComponent } from './forms/mid-form/mid-form.component';
+import { RemarksModalComponent } from './modal/remarks-modal/remarks-modal.component';
 
 
 
@@ -115,6 +116,7 @@ import { MidFormComponent } from './forms/mid-form/mid-form.component';
     MdmUserDashboardComponent,
     MidComponent,
     MidFormComponent,
+    RemarksModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -140,6 +142,7 @@ import { MidFormComponent } from './forms/mid-form/mid-form.component';
     MatSidenavModule,
     MatExpansionModule,
     MatDividerModule,
+    MatDialogModule,
     MatListModule,
     MatDatepickerModule,
     MatInputModule,
@@ -160,6 +163,7 @@ import { MidFormComponent } from './forms/mid-form/mid-form.component';
     MatCheckboxModule,
     MatRadioModule
   ],
+  entryComponents: [RemarksModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
