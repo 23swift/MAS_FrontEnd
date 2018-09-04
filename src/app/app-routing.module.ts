@@ -7,9 +7,11 @@ import { BranchAffiliationComponent } from './branch-affiliation/branch-affiliat
 import { AdditionalFacilityComponent } from './additional-facility/additional-facility.component';
 import { FileMaintenanceComponent } from './file-maintenance/file-maintenance.component';
 import { ExtentionComponent } from './extention/extention.component';
-import { BranchComponent } from './branch/branch.component';
+//import { BranchComponent } from './branch/branch.component';
+import { BranchFormComponent } from './forms/branch-form/branch-form.component'
 import { NewAffiliationStepComponent } from './new-affiliation-step/new-affiliation-step.component';
-import { MaefComponent } from './maef/maef.component';
+//import { MaefComponent } from './maef/maef.component';
+import { MaefFormComponent } from './forms/maef-form/maef-form.component';
 
 
 // import {ServiceFeeContractComponent} from './ServiceFeeContract/service-fee-contract/service-fee-contract.component'
@@ -58,10 +60,10 @@ const routes: Routes = [
   { path: 'additionalFacility', component: AdditionalFacilityComponent },
   { path: 'fileMaintenance', component: FileMaintenanceComponent },
   { path: 'ext/:mode', component: ExtentionComponent },
-  { path: 'maef', component: MaefComponent },
-  { path: 'merchaffmain', component: MerchantAffiliationMaintenanceComponent},
+  { path: 'maef', component: MaefFormComponent },
+  { path: 'merchaffmain/:mode/:id', component: MerchantAffiliationMaintenanceComponent},
   { path: 'reqapprover', component: RequestApprovalComponent},
-  { path: 'branch/:mode', component: BranchComponent },
+  { path: 'branch/:mode', component: BranchFormComponent },
   { path: 'branchinfo', component: BranchInfoComponent },
   { path: 'branchOIF', component: OcularInspectionFormComponent},
   {
@@ -70,13 +72,13 @@ const routes: Routes = [
       // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
       { path: '', component: BranchListComponent, outlet: 'branch' },
       {
-        path: 'branch/:mode/:id', component: BranchComponent, outlet: 'branch', children: [
+        path: 'branch/:mode/:id', component: BranchFormComponent, outlet: 'branch', children: [
           { path: '', component: MidComponent, outlet: 'mid' },
           { path: 'mid', component: MidFormComponent, outlet: 'mid' }
         ]
       },
       {
-        path: 'branch/:mode', component: BranchComponent, outlet: 'branch', children: [
+        path: 'branch/:mode', component: BranchFormComponent, outlet: 'branch', children: [
           { path: '', component: MidComponent, outlet: 'mid' },
           { path: 'mid', component: MidFormComponent, outlet: 'mid' }
         ]
@@ -104,12 +106,12 @@ const routes: Routes = [
         outlet: 'branch'
       },
       {
-        path: 'branch/:mode/:id', component: BranchComponent,
+        path: 'branch/:mode/:id', component: BranchFormComponent,
         outlet: 'branch'
 
       },
       {
-        path: 'branch/:mode', component: BranchComponent,
+        path: 'branch/:mode', component: BranchFormComponent,
         outlet: 'branch'
       },
       {
@@ -148,13 +150,13 @@ const routes: Routes = [
       // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
       { path: '', component: BranchListComponent, outlet: 'branch' },
       {
-        path: 'branch/:mode/:id', component: BranchComponent, outlet: 'branch', children: [
+        path: 'branch/:mode/:id', component: BranchFormComponent, outlet: 'branch', children: [
           { path: '', component: MidComponent, outlet: 'mid' },
           { path: 'mid', component: MidFormComponent, outlet: 'mid' }
         ]
       },
       {
-        path: 'branch/:mode', component: BranchComponent, outlet: 'branch', children: [
+        path: 'branch/:mode', component: BranchFormComponent, outlet: 'branch', children: [
           { path: '', component: MidComponent, outlet: 'mid' },
           { path: 'mid', component: MidFormComponent, outlet: 'mid' }
         ]
@@ -173,13 +175,13 @@ const routes: Routes = [
       // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
       { path: '', component: BranchListComponent, outlet: 'branch' },
       {
-        path: 'branch/:mode/:id', component: BranchComponent, outlet: 'branch', children: [
+        path: 'branch/:mode/:id', component: BranchFormComponent, outlet: 'branch', children: [
           { path: '', component: MidComponent, outlet: 'mid' },
           { path: 'mid', component: MidFormComponent, outlet: 'mid' }
         ]
       },
       {
-        path: 'branch/:mode', component: BranchComponent, outlet: 'branch', children: [
+        path: 'branch/:mode', component: BranchFormComponent, outlet: 'branch', children: [
           { path: '', component: MidComponent, outlet: 'mid' },
           { path: 'mid', component: MidFormComponent, outlet: 'mid' }
         ]

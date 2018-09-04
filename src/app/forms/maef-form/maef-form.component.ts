@@ -1,16 +1,17 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
-import { MaefService } from './maef.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { AppBaseComponent } from '../app-base/app-base.component';
+import { AppBaseComponent } from '../../app-base/app-base.component';
+import { MaefFormService } from '../maef-form/maef-form.service';
+
 
 @Component({
-  selector: 'app-maef',
-  templateUrl: './maef.component.html',
-  styleUrls: ['./maef.component.css']
+  selector: 'app-maef-form',
+  templateUrl: './maef-form.component.html',
+  styleUrls: ['./maef-form.component.css']
 })
-export class MaefComponent extends AppBaseComponent implements OnInit {
+export class MaefFormComponent extends AppBaseComponent implements OnInit {
   @Input()displayMode:boolean=false;
   form = new FormGroup({});
   model: any = {};
@@ -19,13 +20,14 @@ export class MaefComponent extends AppBaseComponent implements OnInit {
   title: string = 'MAEF';
   subTitle: string = '';
   mode: string;
-  private _maefService: MaefService;
-  constructor(private maefService: MaefService, public route: ActivatedRoute,
-    public router: Router) {
-    super(route, router);
-    this._maefService = maefService;
-    this.getFields();
-  }
+  private _maefFormService: MaefFormService;
+
+  constructor(private maefFormService: MaefFormService, public route: ActivatedRoute,
+    public router: Router) { 
+      super(route, router);
+      this._maefFormService = maefFormService;
+      this.getFields();
+    }
 
   ngOnInit() {
     this.title = 'MAEF';
@@ -50,7 +52,9 @@ export class MaefComponent extends AppBaseComponent implements OnInit {
 
 
   public getFields() {
-    this.fields = this._maefService.getMaefFields();
+    this.fields = this._maefFormService.getMaefFields();
   }
+
+
 
 }

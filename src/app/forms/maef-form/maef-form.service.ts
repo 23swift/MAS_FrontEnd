@@ -4,7 +4,7 @@ import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
 @Injectable({
   providedIn: 'root'
 })
-export class MaefService {
+export class MaefFormService {
   fields: FormlyFieldConfig[] = [
     {
       fieldGroupClassName: 'display-flex',
