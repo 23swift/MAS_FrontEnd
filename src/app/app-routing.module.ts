@@ -68,7 +68,7 @@ const routes: Routes = [
   { path: 'fileMaintenance', component: FileMaintenanceComponent },
   { path: 'ext/:mode', component: ExtentionComponent },
   { path: 'maef', component: MaefFormComponent },
-  { path: 'merchaffmain/:mode/:id', component: MerchantAffiliationMaintenanceComponent },
+  { path: 'merchaffmain/:mode/:id?', component: MerchantAffiliationMaintenanceComponent },
   { path: 'reqapprover', component: RequestApprovalComponent },
   { path: 'branch/:mode', component: BranchFormComponent },
   { path: 'branchinfo', component: BranchInfoComponent },
