@@ -17,7 +17,7 @@ export class BdoFormHeaderComponent implements OnInit {
   @Input() mode: string;
   @Input() text: string;
   @Input() sub_text: string;
-  @Input() Submit: Function;
+  @Input() submit: Function;
 
   constructor(private _route: ActivatedRoute, private _router: Router, private _snackBar: MatSnackBar, private _dialog: MatDialog) {}
 
@@ -41,7 +41,7 @@ export class BdoFormHeaderComponent implements OnInit {
     }
   }
 
-  Return(): void {
+  return(): void {
     this._dialog.open(RemarksModalComponent, {
       width: '500px'
     });
