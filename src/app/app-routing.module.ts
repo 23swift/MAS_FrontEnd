@@ -7,9 +7,9 @@ import { BranchAffiliationComponent } from './branch-affiliation/branch-affiliat
 import { AdditionalFacilityComponent } from './additional-facility/additional-facility.component';
 import { FileMaintenanceComponent } from './file-maintenance/file-maintenance.component';
 import { ExtentionComponent } from './extention/extention.component';
-import { BranchComponent } from './branch/branch.component';
+import { BranchFormComponent } from './forms/branch-form/branch-form.component';
 import { NewAffiliationStepComponent } from './new-affiliation-step/new-affiliation-step.component';
-import { MaefComponent } from './maef/maef.component';
+import { MaefFormComponent } from './forms/maef-form/maef-form.component';
 
 
 // import {ServiceFeeContractComponent} from './ServiceFeeContract/service-fee-contract/service-fee-contract.component'
@@ -47,6 +47,9 @@ import { BranchListAttachmentPOSComponent } from './branch-list-attachment-pos/b
 import { MidFormComponent } from './forms/mid-form/mid-form.component';
 import { MidComponent } from './mid/mid.component';
 import { MauEncoderComponent } from './mau-encoder/mau-encoder.component';
+import { MauCheckerComponent } from './mau-checker/mau-checker.component';
+import { MdmUserComponent } from './mdm-user/mdm-user.component';
+import { MdcsUserComponent } from './mdcs-user/mdcs-user.component';
 
 
 const routes: Routes = [
@@ -64,25 +67,25 @@ const routes: Routes = [
   { path: 'additionalFacility', component: AdditionalFacilityComponent },
   { path: 'fileMaintenance', component: FileMaintenanceComponent },
   { path: 'ext/:mode', component: ExtentionComponent },
-  { path: 'maef', component: MaefComponent },
-  { path: 'merchaffmain', component: MerchantAffiliationMaintenanceComponent},
-  { path: 'reqapprover', component: RequestApprovalComponent},
-  { path: 'branch/:mode', component: BranchComponent },
+  { path: 'maef', component: MaefFormComponent },
+  { path: 'merchaffmain/:mode/:id', component: MerchantAffiliationMaintenanceComponent },
+  { path: 'reqapprover', component: RequestApprovalComponent },
+  { path: 'branch/:mode', component: BranchFormComponent },
   { path: 'branchinfo', component: BranchInfoComponent },
-  { path: 'branchOIF', component: OcularInspectionFormComponent},
+  { path: 'branchOIF', component: OcularInspectionFormComponent },
   {
     path: 'naStep/:mode', component: NewAffiliationStepComponent,
     children: [
       // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
       { path: '', component: BranchListComponent, outlet: 'branch' },
       {
-        path: 'branch/:mode/:id', component: BranchComponent, outlet: 'branch', children: [
+        path: 'branch/:mode/:id', component: BranchFormComponent, outlet: 'branch', children: [
           { path: '', component: MidComponent, outlet: 'mid' },
           { path: 'mid', component: MidFormComponent, outlet: 'mid' }
         ]
       },
       {
-        path: 'branch/:mode', component: BranchComponent, outlet: 'branch', children: [
+        path: 'branch/:mode', component: BranchFormComponent, outlet: 'branch', children: [
           { path: '', component: MidComponent, outlet: 'mid' },
           { path: 'mid', component: MidFormComponent, outlet: 'mid' }
         ]
@@ -110,12 +113,12 @@ const routes: Routes = [
         outlet: 'branch'
       },
       {
-        path: 'branch/:mode/:id', component: BranchComponent,
+        path: 'branch/:mode/:id', component: BranchFormComponent,
         outlet: 'branch'
 
       },
       {
-        path: 'branch/:mode', component: BranchComponent,
+        path: 'branch/:mode', component: BranchFormComponent,
         outlet: 'branch'
       },
       {
@@ -151,16 +154,15 @@ const routes: Routes = [
   {
     path: 'aoChecker', component: AoCheckerComponent,
     children: [
-      // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
       { path: '', component: BranchListComponent, outlet: 'branch' },
       {
-        path: 'branch/:mode/:id', component: BranchComponent, outlet: 'branch', children: [
+        path: 'branch/:mode/:id', component: BranchFormComponent, outlet: 'branch', children: [
           { path: '', component: MidComponent, outlet: 'mid' },
           { path: 'mid', component: MidFormComponent, outlet: 'mid' }
         ]
       },
       {
-        path: 'branch/:mode', component: BranchComponent, outlet: 'branch', children: [
+        path: 'branch/:mode', component: BranchFormComponent, outlet: 'branch', children: [
           { path: '', component: MidComponent, outlet: 'mid' },
           { path: 'mid', component: MidFormComponent, outlet: 'mid' }
         ]
@@ -179,13 +181,13 @@ const routes: Routes = [
       // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
       { path: '', component: BranchListComponent, outlet: 'branch' },
       {
-        path: 'branch/:mode/:id', component: BranchComponent, outlet: 'branch', children: [
+        path: 'branch/:mode/:id', component: BranchFormComponent, outlet: 'branch', children: [
           { path: '', component: MidComponent, outlet: 'mid' },
           { path: 'mid', component: MidFormComponent, outlet: 'mid' }
         ]
       },
       {
-        path: 'branch/:mode', component: BranchComponent, outlet: 'branch', children: [
+        path: 'branch/:mode', component: BranchFormComponent, outlet: 'branch', children: [
           { path: '', component: MidComponent, outlet: 'mid' },
           { path: 'mid', component: MidFormComponent, outlet: 'mid' }
         ]
@@ -198,6 +200,33 @@ const routes: Routes = [
       { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
     ]
   },
+  {
+    path: 'mauChecker', component: MauCheckerComponent,
+    children: [
+      // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
+      { path: '', component: BranchListComponent, outlet: 'branch' },
+      {
+        path: 'branch/:mode/:id', component: BranchFormComponent, outlet: 'branch', children: [
+          { path: '', component: MidComponent, outlet: 'mid' },
+          { path: 'mid', component: MidFormComponent, outlet: 'mid' }
+        ]
+      },
+      {
+        path: 'branch/:mode', component: BranchFormComponent, outlet: 'branch', children: [
+          { path: '', component: MidComponent, outlet: 'mid' },
+          { path: 'mid', component: MidFormComponent, outlet: 'mid' }
+        ]
+      },
+      { path: '', component: BranchListAttachmentComponent, outlet: 'branchOIF' },
+      { path: 'OIF/:id?', component: OcularInspectionFormComponent, outlet: 'branchOIF' },
+      { path: '', component: BranchListAttachmentPOSComponent, outlet: 'branchPOS' },
+      { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOS' },
+      { path: '', component: DocumentCheckListComponent, outlet: 'documentCheckList' },
+      { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
+    ]
+  },
+  { path: 'mdcsUser', component: MdcsUserComponent },
+  { path: 'mdmUser', component: MdmUserComponent },
   { path: 'aoChecking', component: AoCheckingComponent },
   { path: 'posForm', component: PosFormComponent },
   { path: 'newAffSum', component: NewAffiliationSumComponent },

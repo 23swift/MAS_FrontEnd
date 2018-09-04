@@ -10,6 +10,7 @@ import { AppBaseComponent } from '../app-base/app-base.component';
 export class MerchantAffiliationMaintenanceComponent extends AppBaseComponent implements OnInit {
   title: string = 'Merchant Affiliation & Maintenance Pre-screening and Evaluation';
   @Input()displayMode:boolean=false;
+  subTitle: string = '';
   constructor(public route: ActivatedRoute,
     public router: Router) { 
       super(route, router);

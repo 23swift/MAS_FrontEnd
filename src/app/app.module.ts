@@ -37,7 +37,6 @@ import { AdditionalFacilityComponent } from './additional-facility/additional-fa
 import { FileMaintenanceComponent } from './file-maintenance/file-maintenance.component';
 import { AppBaseComponent } from './app-base/app-base.component';
 import { ExtentionComponent } from './extention/extention.component';
-import { BranchComponent } from './branch/branch.component';
 import { NewAffiliationStepComponent } from './new-affiliation-step/new-affiliation-step.component';
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { OcularInspectionFormComponent } from './forms/ocular-inspection-form/ocular-inspection-form.component';
@@ -54,7 +53,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { MaefFieldsComponent } from './maef-fields/maef-fields.component';
 import { AwrFormComponent } from './forms/awr-form/awr-form.component';
 import { RequestFormComponent } from './forms/request-form/request-form.component';
-import { MaefComponent } from './maef/maef.component';
+
 import { DocumentCheckListFormComponent } from './forms/document-check-list-form/document-check-list-form.component';
 import { AoEncoderDashboardComponent } from './dashboard/ao-encoder-dashboard/ao-encoder-dashboard.component';
 import { MauCheckerDashboardComponent } from './dashboard/mau-checker-dashboard/mau-checker-dashboard.component';
@@ -76,6 +75,15 @@ import { MidFormComponent } from './forms/mid-form/mid-form.component';
 import { RemarksModalComponent } from './modal/remarks-modal/remarks-modal.component';
 import { MauEncoderComponent } from './mau-encoder/mau-encoder.component';
 
+import { BranchFormComponent } from './forms/branch-form/branch-form.component';
+import { MaefFormComponent } from './forms/maef-form/maef-form.component';
+
+import { MauCheckerComponent } from './mau-checker/mau-checker.component';
+import { MdcsUserComponent } from './mdcs-user/mdcs-user.component';
+import { PsServicingComponent } from './ps-servicing/ps-servicing.component';
+import { MdmUserComponent } from './mdm-user/mdm-user.component';
+
+
 
 
 
@@ -95,7 +103,6 @@ import { MauEncoderComponent } from './mau-encoder/mau-encoder.component';
     FileMaintenanceComponent,
     AppBaseComponent,
     ExtentionComponent,
-    BranchComponent,
     NewAffiliationStepComponent,
     HomeScreenComponent,
     OcularInspectionFormComponent,
@@ -111,7 +118,6 @@ import { MauEncoderComponent } from './mau-encoder/mau-encoder.component';
     MaefFieldsComponent,
     AwrFormComponent,
     RequestFormComponent,
-    MaefComponent,
     DocumentCheckListFormComponent,
     AoEncoderDashboardComponent,
     MauCheckerDashboardComponent,
@@ -130,7 +136,14 @@ import { MauEncoderComponent } from './mau-encoder/mau-encoder.component';
     MidComponent,
     MidFormComponent,
     RemarksModalComponent,
-    MauEncoderComponent
+    MauEncoderComponent,
+    BranchFormComponent,
+    MaefFormComponent,
+    MauCheckerComponent,
+    MdcsUserComponent,
+    PsServicingComponent,
+    MdmUserComponent
+
   ],
   imports: [
     BrowserModule,
