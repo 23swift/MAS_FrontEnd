@@ -54,7 +54,13 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'na/:mode', component: NewAffiliationComponent },
   { path: 'pos/:mode', component: PosRequestComponent },
-  { path: 'posStep', component: PosRequestStepperComponent },
+  {
+    path: 'posStep/:mode', component: PosRequestStepperComponent,
+    children: [
+      { path: '', component: BranchListAttachmentPOSComponent, outlet: 'branchPOS' },
+      { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOS' },
+    ]
+  },
   { path: 'ba/:mode', component: BranchAffiliationComponent },
   { path: 'additionalFacility', component: AdditionalFacilityComponent },
   { path: 'fileMaintenance', component: FileMaintenanceComponent },

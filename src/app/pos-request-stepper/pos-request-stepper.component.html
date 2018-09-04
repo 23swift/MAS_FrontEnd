@@ -5,24 +5,32 @@
 
         <ng-template matStepLabel>
             <span class="mat-subheading-1">
-            Fill out POS Request form
-                </span>
+                Select Branch
+            </span>
         </ng-template>
         <span class="mat-headline">
             POS Request Details
-          </span>
-        <app-pos-request></app-pos-request>
+        </span>
+        <router-outlet name="branchPOS"></router-outlet>
+            <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
+                <mat-icon color="primary">navigate_next</mat-icon>
+            </button>
+            <!-- <app-pos-request></app-pos-request> -->
     </mat-step>
     <mat-step>
 
         <ng-template matStepLabel>
             <span class="mat-subheading-1">
-            Add MID Request
-        </span>
+                Add MID Request
+            </span>
         </ng-template>
         <app-mid-request></app-mid-request>
+        <br />
+        <!-- <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
+            <mat-icon color="primary">navigate_next</mat-icon>
+        </button> -->
     </mat-step>
-    <mat-step state="done">
+    <!-- <mat-step state="done">
         <ng-template matStepLabel>
 
             <span class="mat-subheading-1">Done!</span>
@@ -31,9 +39,9 @@
 
         <span class="mat-subheading-1">You are now done. Would you like to submit the Request?</span>
         <div xLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="3px">
-            <button mat-stroked-button matStepperPrevious color="primary">Yes</button>
+            <button mat-stroked-button matStepperPrevious color="primary" (click)="Submit()">Yes</button>
             <button mat-stroked-button (click)="stepper.reset()" color="accent">No</button>
 
         </div>
-    </mat-step>
+    </mat-step> -->
 </mat-vertical-stepper>

@@ -36,8 +36,15 @@
         <ng-container matColumnDef="Operation">
             <th mat-header-cell *matHeaderCellDef></th>
             <td mat-cell *matCellDef="let element">
-                <a (click)="GetItem(element.Id)" mat-mini-fab color="primary">
+                <!-- <a (click)="GetItem(element.Id)" mat-mini-fab color="primary">
                     <mat-icon style="color:white;">edit</mat-icon>
+                </a> -->
+                <a (click)="GetItem(element.Id)" mat-mini-fab class="assign-icon-color">
+                    <mat-icon style="color:white;" title="Assign To">face</mat-icon> 
+                </a>
+                &nbsp;&nbsp;
+                <a (click)="GetItem(element.Id)" mat-mini-fab class="ownrequest-icon-color">
+                    <mat-icon style="color:white;" title="Own Request">touch_app</mat-icon> 
                 </a>
             </td>
         </ng-container>
