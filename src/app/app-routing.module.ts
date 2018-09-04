@@ -48,6 +48,8 @@ import { MidFormComponent } from './forms/mid-form/mid-form.component';
 import { MidComponent } from './mid/mid.component';
 import { MauEncoderComponent } from './mau-encoder/mau-encoder.component';
 import { MauCheckerComponent } from './mau-checker/mau-checker.component';
+import { MdmUserComponent } from './mdm-user/mdm-user.component';
+import { MdcsUserComponent } from './mdcs-user/mdcs-user.component';
 
 
 const routes: Routes = [
@@ -223,6 +225,8 @@ const routes: Routes = [
       { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
     ]
   },
+  { path: 'mdcsUser', component: MdcsUserComponent },
+  { path: 'mdmUser', component: MdmUserComponent },
   { path: 'aoChecking', component: AoCheckingComponent },
   { path: 'posForm', component: PosFormComponent },
   { path: 'newAffSum', component: NewAffiliationSumComponent },
