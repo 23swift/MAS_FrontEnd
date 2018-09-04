@@ -7,7 +7,7 @@ import { BranchAffiliationComponent } from './branch-affiliation/branch-affiliat
 import { AdditionalFacilityComponent } from './additional-facility/additional-facility.component';
 import { FileMaintenanceComponent } from './file-maintenance/file-maintenance.component';
 import { ExtentionComponent } from './extention/extention.component';
-import { BranchFormComponent } from './forms/branch-form/branch-form.component'
+import { BranchFormComponent } from './forms/branch-form/branch-form.component';
 import { NewAffiliationStepComponent } from './new-affiliation-step/new-affiliation-step.component';
 import { MaefFormComponent } from './forms/maef-form/maef-form.component';
 
@@ -68,8 +68,8 @@ const routes: Routes = [
   { path: 'fileMaintenance', component: FileMaintenanceComponent },
   { path: 'ext/:mode', component: ExtentionComponent },
   { path: 'maef', component: MaefFormComponent },
-  { path: 'merchaffmain/:mode/:id', component: MerchantAffiliationMaintenanceComponent},
-  { path: 'reqapprover', component: RequestApprovalComponent},
+  { path: 'merchaffmain/:mode/:id', component: MerchantAffiliationMaintenanceComponent },
+  { path: 'reqapprover', component: RequestApprovalComponent },
   { path: 'branch/:mode', component: BranchFormComponent },
   { path: 'branchinfo', component: BranchInfoComponent },
   { path: 'branchOIF', component: OcularInspectionFormComponent },
