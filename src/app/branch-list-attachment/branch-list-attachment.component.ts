@@ -19,11 +19,10 @@ const ELEMENT_DATA: BranchDisplayInfo[] = [
   styleUrls: ['./branch-list-attachment.component.css']
 })
 export class BranchListAttachmentComponent implements OnInit {
-
+ 
   displayedColumns: string[] = ['BranchName', 'BranchCode', 'DBAName', 'Attachment'];
   dataSource = ELEMENT_DATA;
  
-  // @Input() mode:string;
   constructor(
     public route: ActivatedRoute,
     public router: Router
@@ -31,6 +30,7 @@ export class BranchListAttachmentComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
   }
   private getItem(Id){
     // this.router.navigateByUrl('OIF/'+Id);
