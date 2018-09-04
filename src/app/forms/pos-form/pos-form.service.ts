@@ -1765,7 +1765,38 @@ export class PosFormService {
   ]
 
   psServicingFields: FormlyFieldConfig[] = [
-
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'emailSubject',
+          templateOptions: {
+            label: "Email Subject",
+            disabled: true
+          }
+        },
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'dateTimeAssignedPSProfiling',
+          templateOptions: {
+            label: "Date and Time Assigned to PS Profiling",
+            disabled: true
+          }
+        },
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'creditStraightTID',
+          templateOptions: {
+            label: "Credit Straight TID (new)",
+            disabled: true
+          }
+        },
+      ]
+    }
   ]
 
   constructor() { }

@@ -7,10 +7,8 @@ import { BranchAffiliationComponent } from './branch-affiliation/branch-affiliat
 import { AdditionalFacilityComponent } from './additional-facility/additional-facility.component';
 import { FileMaintenanceComponent } from './file-maintenance/file-maintenance.component';
 import { ExtentionComponent } from './extention/extention.component';
-//import { BranchComponent } from './branch/branch.component';
 import { BranchFormComponent } from './forms/branch-form/branch-form.component'
 import { NewAffiliationStepComponent } from './new-affiliation-step/new-affiliation-step.component';
-//import { MaefComponent } from './maef/maef.component';
 import { MaefFormComponent } from './forms/maef-form/maef-form.component';
 
 
@@ -49,13 +47,20 @@ import { BranchListAttachmentPOSComponent } from './branch-list-attachment-pos/b
 import { MidFormComponent } from './forms/mid-form/mid-form.component';
 import { MidComponent } from './mid/mid.component';
 import { MauEncoderComponent } from './mau-encoder/mau-encoder.component';
+import { MauCheckerComponent } from './mau-checker/mau-checker.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'na/:mode', component: NewAffiliationComponent },
   { path: 'pos/:mode', component: PosRequestComponent },
-  { path: 'posStep', component: PosRequestStepperComponent },
+  {
+    path: 'posStep/:mode', component: PosRequestStepperComponent,
+    children: [
+      { path: '', component: BranchListAttachmentPOSComponent, outlet: 'branchPOS' },
+      { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOS' },
+    ]
+  },
   { path: 'ba/:mode', component: BranchAffiliationComponent },
   { path: 'additionalFacility', component: AdditionalFacilityComponent },
   { path: 'fileMaintenance', component: FileMaintenanceComponent },
@@ -65,7 +70,7 @@ const routes: Routes = [
   { path: 'reqapprover', component: RequestApprovalComponent},
   { path: 'branch/:mode', component: BranchFormComponent },
   { path: 'branchinfo', component: BranchInfoComponent },
-  { path: 'branchOIF', component: OcularInspectionFormComponent},
+  { path: 'branchOIF', component: OcularInspectionFormComponent },
   {
     path: 'naStep/:mode', component: NewAffiliationStepComponent,
     children: [
@@ -147,7 +152,6 @@ const routes: Routes = [
   {
     path: 'aoChecker', component: AoCheckerComponent,
     children: [
-      // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
       { path: '', component: BranchListComponent, outlet: 'branch' },
       {
         path: 'branch/:mode/:id', component: BranchFormComponent, outlet: 'branch', children: [
@@ -171,6 +175,31 @@ const routes: Routes = [
   },
   {
     path: 'mauEncoder', component: MauEncoderComponent,
+    children: [
+      // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
+      { path: '', component: BranchListComponent, outlet: 'branch' },
+      {
+        path: 'branch/:mode/:id', component: BranchFormComponent, outlet: 'branch', children: [
+          { path: '', component: MidComponent, outlet: 'mid' },
+          { path: 'mid', component: MidFormComponent, outlet: 'mid' }
+        ]
+      },
+      {
+        path: 'branch/:mode', component: BranchFormComponent, outlet: 'branch', children: [
+          { path: '', component: MidComponent, outlet: 'mid' },
+          { path: 'mid', component: MidFormComponent, outlet: 'mid' }
+        ]
+      },
+      { path: '', component: BranchListAttachmentComponent, outlet: 'branchOIF' },
+      { path: 'OIF/:id?', component: OcularInspectionFormComponent, outlet: 'branchOIF' },
+      { path: '', component: BranchListAttachmentPOSComponent, outlet: 'branchPOS' },
+      { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOS' },
+      { path: '', component: DocumentCheckListComponent, outlet: 'documentCheckList' },
+      { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
+    ]
+  },
+  {
+    path: 'mauChecker', component: MauCheckerComponent,
     children: [
       // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
       { path: '', component: BranchListComponent, outlet: 'branch' },

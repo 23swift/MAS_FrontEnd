@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatSnackBar } from '@angular/material';
+import { MatStepper } from '@angular/material';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -17,7 +20,8 @@ export class PosRequestStepperComponent implements OnInit {
   subTitle = '';
   mode = 'create';
   status = 'done';
-  constructor(private _formBuilder: FormBuilder) { }
+  constructor(private _formBuilder: FormBuilder, private route: ActivatedRoute,
+    private _router: Router, private _snackBar: MatSnackBar) { }
 
   ngOnInit() {
     this.isOptional = true;
@@ -27,6 +31,22 @@ export class PosRequestStepperComponent implements OnInit {
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required]
     });
+  }
+
+  Submit() {
+    const snackBarSub = this._snackBar.open('POS Request', 'Submitted!', {
+      duration: 2000
+    });
+
+    snackBarSub.afterDismissed().subscribe(() => {
+      this._router.navigateByUrl('/');
+    });
+  }
+
+  public completed(stepper: MatStepper) {
+    stepper.selected.completed = true;
+    stepper.next();
+    return true;
   }
 
 }

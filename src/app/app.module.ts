@@ -74,8 +74,15 @@ import { MidComponent } from './mid/mid.component';
 import { MidFormComponent } from './forms/mid-form/mid-form.component';
 import { RemarksModalComponent } from './modal/remarks-modal/remarks-modal.component';
 import { MauEncoderComponent } from './mau-encoder/mau-encoder.component';
+
 import { BranchFormComponent } from './forms/branch-form/branch-form.component';
 import { MaefFormComponent } from './forms/maef-form/maef-form.component';
+
+import { MauCheckerComponent } from './mau-checker/mau-checker.component';
+import { MdcsUserComponent } from './mdcs-user/mdcs-user.component';
+import { PsServicingComponent } from './ps-servicing/ps-servicing.component';
+import { MdmUserComponent } from './mdm-user/mdm-user.component';
+
 
 
 
@@ -131,7 +138,12 @@ import { MaefFormComponent } from './forms/maef-form/maef-form.component';
     RemarksModalComponent,
     MauEncoderComponent,
     BranchFormComponent,
-    MaefFormComponent
+    MaefFormComponent,
+    MauCheckerComponent,
+    MdcsUserComponent,
+    PsServicingComponent,
+    MdmUserComponent
+
   ],
   imports: [
     BrowserModule,
