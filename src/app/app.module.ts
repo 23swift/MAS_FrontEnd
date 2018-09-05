@@ -82,6 +82,7 @@ import { MauCheckerComponent } from './mau-checker/mau-checker.component';
 import { MdcsUserComponent } from './mdcs-user/mdcs-user.component';
 import { PsServicingComponent } from './ps-servicing/ps-servicing.component';
 import { MdmUserComponent } from './mdm-user/mdm-user.component';
+import { AoListModalComponent } from './modal/ao-list-modal/ao-list-modal.component';
 
 
 
@@ -142,7 +143,8 @@ import { MdmUserComponent } from './mdm-user/mdm-user.component';
     MauCheckerComponent,
     MdcsUserComponent,
     PsServicingComponent,
-    MdmUserComponent
+    MdmUserComponent,
+    AoListModalComponent
 
   ],
   imports: [
@@ -190,7 +192,7 @@ import { MdmUserComponent } from './mdm-user/mdm-user.component';
     MatCheckboxModule,
     MatRadioModule
   ],
-  entryComponents: [RemarksModalComponent],
+  entryComponents: [RemarksModalComponent,AoListModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

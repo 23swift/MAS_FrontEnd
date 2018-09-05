@@ -1,0 +1,35 @@
+<div class="aoList-container">
+  <div style="padding-bottom: 10px">
+    <mat-card-title>
+      <a mat-mini-fab color="primary">
+        <mat-icon style="color:white;" title="Assign To">face</mat-icon>
+      </a>
+      <b> Assign / Re-Assign Request </b>
+    </mat-card-title>
+  </div>
+  <div class="mat-card-subtitle" style="padding-bottom: 20px">
+    Tracking # : {{passedData.trackingNo}}
+  </div>
+  <div class="mat-card-content">
+    <div class="mat-expansion-panel-header" style="padding-bottom: 20px">
+      <i>Currently Assigned To : </i>
+      <b> {{aoSelectedName}} </b>
+    </div>
+    <div class="mat-expansion-panel-header" style="padding-bottom: 10px">
+      <i>Assign / Re-Assign Request To : </i>
+    </div>
+
+    <mat-form-field class="width: 100%">
+      <mat-select placeholder="Select AO From List..." name="aoSelectList" [(value)]="aoSelectedName">
+        <mat-option *ngFor="let item of dataSource" [value]="item.Name">
+          {{item.Name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </div>
+  <div style="text-align: right">
+    <button style="margin-top:3px" mat-flat-button color="primary" (click)="Submit()">Submit</button>
+    <button style="margin-top:3px" mat-flat-button color="accent" (click)="Cancel()">Cancel</button>
+  </div>
+</div>
