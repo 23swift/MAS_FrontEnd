@@ -7,7 +7,7 @@ import { BranchAffiliationComponent } from './branch-affiliation/branch-affiliat
 import { AdditionalFacilityComponent } from './additional-facility/additional-facility.component';
 import { FileMaintenanceComponent } from './file-maintenance/file-maintenance.component';
 import { ExtentionComponent } from './extention/extention.component';
-import { BranchFormComponent } from './forms/branch-form/branch-form.component'
+import { BranchFormComponent } from './forms/branch-form/branch-form.component';
 import { NewAffiliationStepComponent } from './new-affiliation-step/new-affiliation-step.component';
 import { MaefFormComponent } from './forms/maef-form/maef-form.component';
 
@@ -48,6 +48,9 @@ import { MidFormComponent } from './forms/mid-form/mid-form.component';
 import { MidComponent } from './mid/mid.component';
 import { MauEncoderComponent } from './mau-encoder/mau-encoder.component';
 import { MauCheckerComponent } from './mau-checker/mau-checker.component';
+import { MdmUserComponent } from './mdm-user/mdm-user.component';
+import { MdcsUserComponent } from './mdcs-user/mdcs-user.component';
+import { HistoryModalComponent } from './modal/history-modal/history-modal.component';
 
 
 const routes: Routes = [
@@ -179,23 +182,13 @@ const routes: Routes = [
       // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
       { path: '', component: BranchListComponent, outlet: 'branch' },
       {
-        path: 'branch/:mode/:id', component: BranchFormComponent, outlet: 'branch', children: [
-          { path: '', component: MidComponent, outlet: 'mid' },
-          { path: 'mid', component: MidFormComponent, outlet: 'mid' }
-        ]
+        path: 'branch/:mode/:id', component: BranchFormComponent, outlet: 'branch'
       },
       {
-        path: 'branch/:mode', component: BranchFormComponent, outlet: 'branch', children: [
-          { path: '', component: MidComponent, outlet: 'mid' },
-          { path: 'mid', component: MidFormComponent, outlet: 'mid' }
-        ]
+        path: 'branch/:mode', component: BranchFormComponent, outlet: 'branch'
       },
-      { path: '', component: BranchListAttachmentComponent, outlet: 'branchOIF' },
-      { path: 'OIF/:id?', component: OcularInspectionFormComponent, outlet: 'branchOIF' },
       { path: '', component: BranchListAttachmentPOSComponent, outlet: 'branchPOS' },
       { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOS' },
-      { path: '', component: DocumentCheckListComponent, outlet: 'documentCheckList' },
-      { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
     ]
   },
   {
@@ -223,6 +216,8 @@ const routes: Routes = [
       { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
     ]
   },
+  { path: 'mdcsUser', component: MdcsUserComponent },
+  { path: 'mdmUser', component: MdmUserComponent },
   { path: 'aoChecking', component: AoCheckingComponent },
   { path: 'posForm', component: PosFormComponent },
   { path: 'newAffSum', component: NewAffiliationSumComponent },
@@ -234,7 +229,8 @@ const routes: Routes = [
   { path: 'dcl', component: DocumentCheckListComponent },
   { path: 'branchlist', component: BranchListComponent },
   { path: 'midForm', component: MidFormComponent },
-  { path: 'mid', component: MidComponent }
+  { path: 'mid', component: MidComponent },
+  { path: 'historyModal', component: HistoryModalComponent }
 ];
 
 @NgModule({

@@ -82,7 +82,11 @@ import { MauCheckerComponent } from './mau-checker/mau-checker.component';
 import { MdcsUserComponent } from './mdcs-user/mdcs-user.component';
 import { PsServicingComponent } from './ps-servicing/ps-servicing.component';
 import { MdmUserComponent } from './mdm-user/mdm-user.component';
+
 import { AlertMessageComponent } from './alert-message/alert-message.component';
+
+import { HistoryModalComponent } from './modal/history-modal/history-modal.component';
+
 
 
 
@@ -144,7 +148,11 @@ import { AlertMessageComponent } from './alert-message/alert-message.component';
     MdcsUserComponent,
     PsServicingComponent,
     MdmUserComponent,
+<<<<<<< HEAD
     AlertMessageComponent
+=======
+    HistoryModalComponent
+>>>>>>> 53f350656578884b4131a1eed54bd86aa02a543e
 
   ],
   imports: [
@@ -192,7 +200,7 @@ import { AlertMessageComponent } from './alert-message/alert-message.component';
     MatCheckboxModule,
     MatRadioModule
   ],
-  entryComponents: [RemarksModalComponent],
+  entryComponents: [RemarksModalComponent, HistoryModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

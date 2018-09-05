@@ -3087,6 +3087,6 @@ export class BranchFormService {
   constructor() { }
   getBranchFields(): FormlyFieldConfig[]{
 
-		return this.main;
+		return this.mmu;
 }
 }
