@@ -40,12 +40,16 @@ export class MauOfficerDashboardComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(data => {
+      if (data) {
         this._snackBar.open('Successfully Assigned To : ', data,
-        {
-          duration: 2000
-        });
-    });
+          {
+            duration: 2000
+          });
+      }
+      else {
 
+      }
+    });
   }
 
 

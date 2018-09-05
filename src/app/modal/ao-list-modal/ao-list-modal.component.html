@@ -4,7 +4,7 @@
       <a mat-mini-fab color="primary">
         <mat-icon style="color:white;" title="Assign To">face</mat-icon>
       </a>
-      <b> Assign / Re-Assign Request </b>
+      <b class="mat-headline"> Assign / Re-Assign Request </b>
     </mat-card-title>
   </div>
   <div class="mat-card-subtitle" style="padding-bottom: 20px">
@@ -19,12 +19,15 @@
       <i>Assign / Re-Assign Request To : </i>
     </div>
 
-    <mat-form-field class="width: 100%">
-      <mat-select placeholder="Select AO From List..." name="aoSelectList" [(value)]="aoSelectedName">
-        <mat-option *ngFor="let item of dataSource" [value]="item.Name">
-          {{item.Name}}
-        </mat-option>
-      </mat-select>
+    <mat-form-field>
+      <div style="width: 250px">
+        <mat-select placeholder="Select AO From List..." name="aoSelectList" [(value)]="aoSelectedName">
+          <mat-option *ngFor="let item of dataSource" [value]="item.Name">
+            {{item.Name}}
+          </mat-option>
+        </mat-select>
+      </div>
+
     </mat-form-field>
 
   </div>
