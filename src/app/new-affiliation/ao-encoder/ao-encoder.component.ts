@@ -6,11 +6,11 @@ import { MatStepper } from '@angular/material';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-new-affiliation-step',
-  templateUrl: './new-affiliation-step.component.html',
-  styleUrls: ['./new-affiliation-step.component.css']
+  selector: 'app-ao-encoder-step',
+  templateUrl: './ao-encoder.component.html',
+  styleUrls: ['./ao-encoder.component.css']
 })
-export class NewAffiliationStepComponent implements OnInit {
+export class AoEncoderComponent implements OnInit {
   isLinear = false;
   isOptional = false;
   firstFormGroup: FormGroup;

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { NewAffiliationComponent } from './new-affiliation/new-affiliation.component';
 import { PosRequestComponent } from './pos-request/pos-request.component';
 import { PosRequestStepperComponent } from './pos-request-stepper/pos-request-stepper.component';
 import { BranchAffiliationComponent } from './branch-affiliation/branch-affiliation.component';
@@ -8,24 +7,17 @@ import { AdditionalFacilityComponent } from './additional-facility/additional-fa
 import { FileMaintenanceComponent } from './file-maintenance/file-maintenance.component';
 import { ExtentionComponent } from './extention/extention.component';
 import { BranchFormComponent } from './forms/branch-form/branch-form.component';
-import { NewAffiliationStepComponent } from './new-affiliation-step/new-affiliation-step.component';
+import { AoEncoderComponent } from './new-affiliation/ao-encoder/ao-encoder.component';
 import { MaefFormComponent } from './forms/maef-form/maef-form.component';
-
-
-// import {ServiceFeeContractComponent} from './ServiceFeeContract/service-fee-contract/service-fee-contract.component'
-// import {ServiceFeeContractListComponent} from './ServiceFeeContract/service-fee-contract-list/service-fee-contract-list.component'
-// import {ServiceFeeContractFormComponent} from './ServiceFeeContract/service-fee-contract-form/service-fee-contract-form.component'
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { BranchListComponent } from './branch-list/branch-list.component';
 import { NewAffiliationSumComponent } from './new-affiliation-sum/new-affiliation-sum.component';
 import { OcularInspectionFormComponent } from './forms/ocular-inspection-form/ocular-inspection-form.component';
 import { BranchListAttachmentComponent } from './branch-list-attachment/branch-list-attachment.component';
-// import { AoCheckerDashboardComponent  } from "./ao-checker-dashboard/ao-checker-dashboard.component";
-import { AoCheckerComponent } from './ao-checker/ao-checker.component';
+import { AoCheckerComponent } from './new-affiliation/ao-checker/ao-checker.component';
 import { AoCheckingComponent } from './ao-checking/ao-checking.component';
 import { AwrFormComponent } from './forms/awr-form/awr-form.component';
 import { RequestFormComponent } from './forms/request-form/request-form.component';
-
 import { PosFormComponent } from './forms/pos-form/pos-form.component';
 import { DocumentCheckListComponent } from './document-check-list/document-check-list.component';
 import { DocumentCheckListFormComponent } from './forms/document-check-list-form/document-check-list-form.component';
@@ -38,24 +30,21 @@ import { MdcsUserDashboardComponent } from './dashboard/mdcs-user-dashboard/mdcs
 import { MdmUserDashboardComponent } from './dashboard/mdm-user-dashboard/mdm-user-dashboard.component';
 import { MqrDashboardComponent } from './dashboard/mqr-dashboard/mqr-dashboard.component';
 import { PsServicingDashboardComponent } from './dashboard/ps-servicing-dashboard/ps-servicing-dashboard.component';
-
-import { MerchantAffiliationMaintenanceComponent } from './merchant-affiliation-maintenance/merchant-affiliation-maintenance.component';
-import { RequestApprovalComponent } from './request-approval/request-approval.component';
+import { MauOfficer } from './new-affiliation/mau-officer/mau-officer.component';
+import { ApproverComponent } from './new-affiliation/approver/approver.component';
 import { BranchInfoComponent } from './branch-info/branch-info.component';
-
 import { BranchListAttachmentPOSComponent } from './branch-list-attachment-pos/branch-list-attachment-pos.component';
 import { MidFormComponent } from './forms/mid-form/mid-form.component';
 import { MidComponent } from './mid/mid.component';
-import { MauEncoderComponent } from './mau-encoder/mau-encoder.component';
-import { MauCheckerComponent } from './mau-checker/mau-checker.component';
-import { MdmUserComponent } from './mdm-user/mdm-user.component';
-import { MdcsUserComponent } from './mdcs-user/mdcs-user.component';
+import { MauEncoderComponent } from './new-affiliation/mau-encoder/mau-encoder.component';
+import { MauCheckerComponent } from './new-affiliation/mau-checker/mau-checker.component';
+import { MdmUserComponent } from './new-affiliation/mdm-user/mdm-user.component';
+import { MdcsUserComponent } from './new-affiliation/mdcs-user/mdcs-user.component';
 import { HistoryModalComponent } from './modal/history-modal/history-modal.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'na/:mode', component: NewAffiliationComponent },
   { path: 'pos/:mode', component: PosRequestComponent },
   {
     path: 'posStep/:mode', component: PosRequestStepperComponent,
@@ -69,13 +58,12 @@ const routes: Routes = [
   { path: 'fileMaintenance', component: FileMaintenanceComponent },
   { path: 'ext/:mode', component: ExtentionComponent },
   { path: 'maef', component: MaefFormComponent },
-  { path: 'merchaffmain/:mode/:id', component: MerchantAffiliationMaintenanceComponent },
-  { path: 'reqapprover', component: RequestApprovalComponent },
+  { path: 'reqapprover', component: ApproverComponent },
   { path: 'branch/:mode', component: BranchFormComponent },
   { path: 'branchinfo', component: BranchInfoComponent },
   { path: 'branchOIF', component: OcularInspectionFormComponent },
   {
-    path: 'naStep/:mode', component: NewAffiliationStepComponent,
+    path: 'na/aoEncoder/:mode', component: AoEncoderComponent,
     children: [
       // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
       { path: '', component: BranchListComponent, outlet: 'branch' },
@@ -154,7 +142,7 @@ const routes: Routes = [
   { path: 'pssDashboard', component: PsServicingDashboardComponent },
   ///////////////////////////////////////////
   {
-    path: 'aoChecker', component: AoCheckerComponent,
+    path: 'na/aoChecker', component: AoCheckerComponent,
     children: [
       { path: '', component: BranchListComponent, outlet: 'branch' },
       {
@@ -179,7 +167,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'mauEncoder', component: MauEncoderComponent,
+    path: 'na/mauEncoder', component: MauEncoderComponent,
     children: [
       { path: '', component: BranchListComponent, outlet: 'branch' },
       { path: 'branch/:mode/:id', component: BranchFormComponent, outlet: 'branch' },
@@ -187,15 +175,16 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'mauChecker', component: MauCheckerComponent,
+    path: 'na/mauChecker', component: MauCheckerComponent,
     children: [
       { path: '', component: BranchListComponent, outlet: 'branch' },
       { path: 'branch/:mode/:id', component: BranchFormComponent, outlet: 'branch' },
       { path: 'branch/:mode', component: BranchFormComponent, outlet: 'branch' }
     ]
   },
-  { path: 'mdcsUser', component: MdcsUserComponent },
-  { path: 'mdmUser', component: MdmUserComponent },
+  { path: 'na/mauOfficer/:mode/:id', component: MauOfficer },
+  { path: 'na/mdcsUser', component: MdcsUserComponent },
+  { path: 'na/mdmUser', component: MdmUserComponent },
   { path: 'aoChecking', component: AoCheckingComponent },
   { path: 'posForm', component: PosFormComponent },
   { path: 'newAffSum', component: NewAffiliationSumComponent },

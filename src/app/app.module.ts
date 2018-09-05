@@ -18,7 +18,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
-import { NewAffiliationComponent } from './new-affiliation/new-affiliation.component';
 import { PosRequestComponent } from './pos-request/pos-request.component';
 import {
   MatDatepickerModule, MatInputModule, MatNativeDateModule, MatTableModule,
@@ -37,7 +36,7 @@ import { AdditionalFacilityComponent } from './additional-facility/additional-fa
 import { FileMaintenanceComponent } from './file-maintenance/file-maintenance.component';
 import { AppBaseComponent } from './app-base/app-base.component';
 import { ExtentionComponent } from './extention/extention.component';
-import { NewAffiliationStepComponent } from './new-affiliation-step/new-affiliation-step.component';
+import { AoEncoderComponent } from './new-affiliation/ao-encoder/ao-encoder.component';
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { OcularInspectionFormComponent } from './forms/ocular-inspection-form/ocular-inspection-form.component';
 import { DocumentCheckListComponent } from './document-check-list/document-check-list.component';
@@ -45,11 +44,11 @@ import { NewAffiliationSumComponent } from './new-affiliation-sum/new-affiliatio
 import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
 import { PosFormComponent } from './forms/pos-form/pos-form.component';
 import { BranchListAttachmentComponent } from './branch-list-attachment/branch-list-attachment.component';
-import { AoCheckerComponent } from './ao-checker/ao-checker.component';
+import { AoCheckerComponent } from './new-affiliation/ao-checker/ao-checker.component';
 import { AoCheckerDashboardComponent } from './dashboard/ao-checker-dashboard/ao-checker-dashboard.component';
 import { AoCheckingComponent } from './ao-checking/ao-checking.component';
 import { RequestHeaderComponent } from './request-header/request-header.component';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MaefFieldsComponent } from './maef-fields/maef-fields.component';
 import { AwrFormComponent } from './forms/awr-form/awr-form.component';
 import { RequestFormComponent } from './forms/request-form/request-form.component';
@@ -65,23 +64,23 @@ import { MdcsUserDashboardComponent } from './dashboard/mdcs-user-dashboard/mdcs
 import { PsServicingDashboardComponent } from './dashboard/ps-servicing-dashboard/ps-servicing-dashboard.component';
 import { MdmUserDashboardComponent } from './dashboard/mdm-user-dashboard/mdm-user-dashboard.component';
 
-import { MerchantAffiliationMaintenanceComponent } from './merchant-affiliation-maintenance/merchant-affiliation-maintenance.component';
-import { RequestApprovalComponent } from './request-approval/request-approval.component';
+import { MauOfficer } from './new-affiliation/mau-officer/mau-officer.component';
+import { ApproverComponent } from './new-affiliation/approver/approver.component';
 import { BranchInfoComponent } from './branch-info/branch-info.component';
 
 import { BranchListAttachmentPOSComponent } from './branch-list-attachment-pos/branch-list-attachment-pos.component';
 import { MidComponent } from './mid/mid.component';
 import { MidFormComponent } from './forms/mid-form/mid-form.component';
 import { RemarksModalComponent } from './modal/remarks-modal/remarks-modal.component';
-import { MauEncoderComponent } from './mau-encoder/mau-encoder.component';
+import { MauEncoderComponent } from './new-affiliation/mau-encoder/mau-encoder.component';
 
 import { BranchFormComponent } from './forms/branch-form/branch-form.component';
 import { MaefFormComponent } from './forms/maef-form/maef-form.component';
 
-import { MauCheckerComponent } from './mau-checker/mau-checker.component';
-import { MdcsUserComponent } from './mdcs-user/mdcs-user.component';
+import { MauCheckerComponent } from './new-affiliation/mau-checker/mau-checker.component';
+import { MdcsUserComponent } from './new-affiliation/mdcs-user/mdcs-user.component';
 import { PsServicingComponent } from './ps-servicing/ps-servicing.component';
-import { MdmUserComponent } from './mdm-user/mdm-user.component';
+import { MdmUserComponent } from './new-affiliation/mdm-user/mdm-user.component';
 import { AoListModalComponent } from './modal/ao-list-modal/ao-list-modal.component';
 
 import { AlertMessageComponent } from './alert-message/alert-message.component';
@@ -96,7 +95,6 @@ import { HistoryModalComponent } from './modal/history-modal/history-modal.compo
 @NgModule({
   declarations: [
     AppComponent,
-    NewAffiliationComponent,
     PosRequestComponent,
     CalendarTypeComponent,
     BdoFormHeaderComponent,
@@ -109,7 +107,7 @@ import { HistoryModalComponent } from './modal/history-modal/history-modal.compo
     FileMaintenanceComponent,
     AppBaseComponent,
     ExtentionComponent,
-    NewAffiliationStepComponent,
+    AoEncoderComponent,
     HomeScreenComponent,
     OcularInspectionFormComponent,
     DocumentCheckListComponent,
@@ -134,8 +132,8 @@ import { HistoryModalComponent } from './modal/history-modal/history-modal.compo
     MdcsUserDashboardComponent,
     PsServicingDashboardComponent,
     MdmUserDashboardComponent,
-    MerchantAffiliationMaintenanceComponent,
-    RequestApprovalComponent,
+    MauOfficer,
+    ApproverComponent,
     BranchInfoComponent,
     MidFormComponent,
     BranchListAttachmentPOSComponent,
@@ -199,7 +197,7 @@ import { HistoryModalComponent } from './modal/history-modal/history-modal.compo
     MatCheckboxModule,
     MatRadioModule
   ],
-  entryComponents: [RemarksModalComponent, HistoryModalComponent,AoListModalComponent],
+  entryComponents: [RemarksModalComponent, HistoryModalComponent, AoListModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
