@@ -148,11 +148,8 @@ import { HistoryModalComponent } from './modal/history-modal/history-modal.compo
     MdcsUserComponent,
     PsServicingComponent,
     MdmUserComponent,
-<<<<<<< HEAD
-    AlertMessageComponent
-=======
+    AlertMessageComponent,
     HistoryModalComponent
->>>>>>> 53f350656578884b4131a1eed54bd86aa02a543e
 
   ],
   imports: [
