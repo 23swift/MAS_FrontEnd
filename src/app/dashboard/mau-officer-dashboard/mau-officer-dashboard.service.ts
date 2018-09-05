@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { DashboardData } from '../../temp/dashboardData/dashboard-data';
+import { AoListData } from "../../temp/aoListData/ao-list-data";
 
 @Injectable()
 export class MauOfficerDashboardService {
@@ -16,4 +17,5 @@ export class MauOfficerDashboardService {
   GetTableFields() {
     return this._dashboard.Fields;
   }
+
 }
