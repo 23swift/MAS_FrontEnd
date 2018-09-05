@@ -17,7 +17,7 @@ export class AwrFormService {
             'templateOptions.disabled': 'true'
           },
           templateOptions: {
-            label: "Legal Name"
+            label: 'Legal Name'
           }
         },
         {
@@ -28,7 +28,7 @@ export class AwrFormService {
             'templateOptions.disabled': 'true'
           },
           templateOptions: {
-            label: "DBA Name"
+            label: 'DBA Name'
           }
         },
         {
@@ -36,7 +36,7 @@ export class AwrFormService {
           type: 'input',
           key: 'dbaAddress',
           templateOptions: {
-            label: "DBA Address"
+            label: 'DBA Address'
           }
         }
       ]
@@ -49,7 +49,7 @@ export class AwrFormService {
           key: 'isMdrRelated',
           type: 'checkbox',
           templateOptions: {
-            label: "MDR Related"
+            label: 'MDR Related'
           }
         },
         {
@@ -57,7 +57,7 @@ export class AwrFormService {
           type: 'input',
           key: 'mdrRelatedDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         },
@@ -66,7 +66,7 @@ export class AwrFormService {
           type: 'checkbox',
           key: 'isIncompleteDetails',
           templateOptions: {
-            label: "Type of Affiliation"
+            label: 'Type of Affiliation'
           }
         },
         {
@@ -74,7 +74,7 @@ export class AwrFormService {
           type: 'input',
           key: 'incompleteDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         }
@@ -88,7 +88,7 @@ export class AwrFormService {
           key: 'isMdrRelated',
           type: 'checkbox',
           templateOptions: {
-            label: "MDR Related"
+            label: 'MDR Related'
           }
         },
         {
@@ -96,7 +96,7 @@ export class AwrFormService {
           type: 'input',
           key: 'mdrRelatedDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         },
@@ -105,7 +105,7 @@ export class AwrFormService {
           type: 'checkbox',
           key: 'isIncompleteDetails',
           templateOptions: {
-            label: "Incomplete Details in Merchant Info Sheet"
+            label: 'Incomplete Details in Merchant Info Sheet'
           }
         },
         {
@@ -113,7 +113,7 @@ export class AwrFormService {
           type: 'input',
           key: 'incompleteDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         }
@@ -127,7 +127,7 @@ export class AwrFormService {
           key: 'isIncompleteMerchantAgreement',
           type: 'checkbox',
           templateOptions: {
-            label: "Incomplete / Incorrect Details in Merchant Agreement"
+            label: 'Incomplete / Incorrect Details in Merchant Agreement'
           }
         },
         {
@@ -135,7 +135,7 @@ export class AwrFormService {
           type: 'input',
           key: 'incompleteMerchantAgreementDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         },
@@ -144,7 +144,7 @@ export class AwrFormService {
           type: 'checkbox',
           key: 'isIncompleteSecretaryCertificate',
           templateOptions: {
-            label: "Is Incomplete Details in Secretary Certificate"
+            label: 'Is Incomplete Details in Secretary Certificate'
           }
         },
         {
@@ -152,7 +152,7 @@ export class AwrFormService {
           type: 'input',
           key: 'incompleteSecretaryCertificateDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         }
@@ -166,7 +166,7 @@ export class AwrFormService {
           key: 'isIncompleteOif',
           type: 'checkbox',
           templateOptions: {
-            label: "Incomplete Details in OIF"
+            label: 'Incomplete Details in OIF'
           }
         },
         {
@@ -174,7 +174,7 @@ export class AwrFormService {
           type: 'input',
           key: 'incompleteOifDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         },
@@ -183,7 +183,7 @@ export class AwrFormService {
           type: 'checkbox',
           key: 'isIncompleteBusinessDocuments',
           templateOptions: {
-            label: "Incomplete Details in Other Business Documents"
+            label: 'Incomplete Details in Other Business Documents'
           }
         },
         {
@@ -191,7 +191,7 @@ export class AwrFormService {
           type: 'input',
           key: 'incompleteBusinessDocumentsDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         }
@@ -205,7 +205,7 @@ export class AwrFormService {
           key: 'isIncompleteCorporatePapers',
           type: 'checkbox',
           templateOptions: {
-            label: "Incomplete Corporate Papers"
+            label: 'Incomplete Corporate Papers'
           }
         },
         {
@@ -213,7 +213,7 @@ export class AwrFormService {
           type: 'input',
           key: 'incompleteCorporatePapersDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         },
@@ -222,7 +222,7 @@ export class AwrFormService {
           type: 'checkbox',
           key: 'isIncompleteId',
           templateOptions: {
-            label: "Incomplete ID of Signatory"
+            label: 'Incomplete ID of Signatory'
           }
         },
         {
@@ -230,7 +230,7 @@ export class AwrFormService {
           type: 'input',
           key: 'incompleteIdDtails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         }
@@ -244,7 +244,7 @@ export class AwrFormService {
           key: 'isIncompletePhotos',
           type: 'checkbox',
           templateOptions: {
-            label: "Incomplete Photos"
+            label: 'Incomplete Photos'
           }
         },
         {
@@ -252,7 +252,7 @@ export class AwrFormService {
           type: 'input',
           key: 'incompletePhotosDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         },
@@ -261,7 +261,7 @@ export class AwrFormService {
           type: 'checkbox',
           key: 'isIncompleteDocument',
           templateOptions: {
-            label: "Incomplete Document"
+            label: 'Incomplete Document'
           }
         },
         {
@@ -269,7 +269,7 @@ export class AwrFormService {
           type: 'input',
           key: 'incompleteDocumentDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         }
@@ -283,7 +283,7 @@ export class AwrFormService {
           key: 'isNoProofDbaName',
           type: 'checkbox',
           templateOptions: {
-            label: "No Proof of DBA Name"
+            label: 'No Proof of DBA Name'
           }
         },
         {
@@ -291,7 +291,7 @@ export class AwrFormService {
           type: 'input',
           key: 'noProofDbaNameDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         },
@@ -300,7 +300,7 @@ export class AwrFormService {
           type: 'checkbox',
           key: 'noProofDbaAddress',
           templateOptions: {
-            label: "No Proof of DBA Address"
+            label: 'No Proof of DBA Address'
           }
         },
         {
@@ -308,7 +308,7 @@ export class AwrFormService {
           type: 'input',
           key: 'noProofDbaAddressDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         }
@@ -322,7 +322,7 @@ export class AwrFormService {
           key: 'isUnclearDocument',
           type: 'checkbox',
           templateOptions: {
-            label: "Unclear Document"
+            label: 'Unclear Document'
           }
         },
         {
@@ -330,7 +330,7 @@ export class AwrFormService {
           type: 'input',
           key: 'unclearDocumentDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         },
@@ -339,7 +339,7 @@ export class AwrFormService {
           type: 'checkbox',
           key: 'isExpiredDocument',
           templateOptions: {
-            label: "Expired Document"
+            label: 'Expired Document'
           }
         },
         {
@@ -347,7 +347,7 @@ export class AwrFormService {
           type: 'input',
           key: 'expiredDocumentDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         }
@@ -361,7 +361,7 @@ export class AwrFormService {
           key: 'isComparedWithOriginal',
           type: 'checkbox',
           templateOptions: {
-            label: "Document Without \"Compared with Original Copy\" Stamp"
+            label: 'Document Without \'Compared with Original Copy\' Stamp'
           }
         },
         {
@@ -369,7 +369,7 @@ export class AwrFormService {
           type: 'input',
           key: 'comparedWithOriginalDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         },
@@ -378,7 +378,7 @@ export class AwrFormService {
           type: 'checkbox',
           key: 'isSignatureMatched',
           templateOptions: {
-            label: "Signature Matching"
+            label: 'Signature Matching'
           }
         },
         {
@@ -386,7 +386,7 @@ export class AwrFormService {
           type: 'input',
           key: 'signatureMatchedDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         }
@@ -400,7 +400,7 @@ export class AwrFormService {
           key: 'isInformationMatching',
           type: 'checkbox',
           templateOptions: {
-            label: "Information Matching"
+            label: 'Information Matching'
           }
         },
         {
@@ -408,7 +408,7 @@ export class AwrFormService {
           type: 'input',
           key: 'informationMatchingDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         },
@@ -417,7 +417,7 @@ export class AwrFormService {
           key: 'isMismatchSfccMdr',
           type: 'checkbox',
           templateOptions: {
-            label: "Mismatch SFCC vs MDR in MIS"
+            label: 'Mismatch SFCC vs MDR in MIS'
           }
         },
         {
@@ -425,7 +425,7 @@ export class AwrFormService {
           type: 'input',
           key: 'mismatchSfccMdrDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         }
@@ -439,7 +439,7 @@ export class AwrFormService {
           type: 'checkbox',
           key: 'noPosFormInSharedFolder',
           templateOptions: {
-            label: "No POS Form in Shared Folder"
+            label: 'No POS Form in Shared Folder'
           }
         },
         {
@@ -447,7 +447,7 @@ export class AwrFormService {
           type: 'input',
           key: 'noPosFormInSharedFolderDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         },
@@ -456,7 +456,7 @@ export class AwrFormService {
           key: 'noBuhApprovalOn',
           type: 'checkbox',
           templateOptions: {
-            label: "No BUH Approval On"
+            label: 'No BUH Approval On'
           }
         },
         {
@@ -464,7 +464,7 @@ export class AwrFormService {
           type: 'input',
           key: 'noBuhApprovalOnDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         }
@@ -478,7 +478,7 @@ export class AwrFormService {
           key: 'isGprsTerminal',
           type: 'checkbox',
           templateOptions: {
-            label: "GPRS Terminal"
+            label: 'GPRS Terminal'
           }
         },
         {
@@ -486,7 +486,7 @@ export class AwrFormService {
           type: 'checkbox',
           key: 'noDebitFacility',
           templateOptions: {
-            label: "No Debit Facility"
+            label: 'No Debit Facility'
           }
         },
         {
@@ -494,7 +494,7 @@ export class AwrFormService {
           type: 'checkbox',
           key: 'zeroPayDelay',
           templateOptions: {
-            label: "Zero (0) Pay Delay"
+            label: 'Zero (0) Pay Delay'
           }
         },
         {
@@ -502,7 +502,7 @@ export class AwrFormService {
           type: 'checkbox',
           key: 'newContactDetails',
           templateOptions: {
-            label: "New Contact Details"
+            label: 'New Contact Details'
           }
         }
       ]
@@ -515,7 +515,7 @@ export class AwrFormService {
           key: 'isInvalidCasa',
           type: 'checkbox',
           templateOptions: {
-            label: "Invalid CASA / Third Party"
+            label: 'Invalid CASA / Third Party'
           }
         },
         {
@@ -523,7 +523,7 @@ export class AwrFormService {
           type: 'input',
           key: 'invalidCasaDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         },
@@ -532,7 +532,7 @@ export class AwrFormService {
           type: 'checkbox',
           key: 'isSettlementOfOutstandingBalance',
           templateOptions: {
-            label: "Settlement of Outstanding Balance / Past Due"
+            label: 'Settlement of Outstanding Balance / Past Due'
           }
         },
         {
@@ -540,7 +540,7 @@ export class AwrFormService {
           type: 'input',
           key: 'settlementOfOutstandingBalanceDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         }
@@ -554,7 +554,7 @@ export class AwrFormService {
           key: 'noHoldoutDeposit',
           type: 'checkbox',
           templateOptions: {
-            label: "No Holdout Deposit in ICBS"
+            label: 'No Holdout Deposit in ICBS'
           }
         },
         {
@@ -562,7 +562,7 @@ export class AwrFormService {
           type: 'input',
           key: 'noHoldoutDepositDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         },
@@ -571,7 +571,7 @@ export class AwrFormService {
           type: 'checkbox',
           key: 'isEcrSp',
           templateOptions: {
-            label: "ECR SP Details (Not Included in Visa Whitelist / Incomplete SP Info) Details"
+            label: 'ECR SP Details (Not Included in Visa Whitelist / Incomplete SP Info) Details'
           }
         },
         {
@@ -579,7 +579,7 @@ export class AwrFormService {
           type: 'input',
           key: 'ecrSpDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         }
@@ -593,7 +593,7 @@ export class AwrFormService {
           key: 'isNotes',
           type: 'checkbox',
           templateOptions: {
-            label: "Notes / Remarks"
+            label: 'Notes / Remarks'
           }
         },
         {
@@ -601,7 +601,7 @@ export class AwrFormService {
           type: 'input',
           key: 'notesDetails',
           templateOptions: {
-            label: "Details",
+            label: 'Details',
             maxLength: 500
           }
         },
@@ -610,7 +610,7 @@ export class AwrFormService {
           type: 'checkbox',
           key: 'isReturned',
           templateOptions: {
-            label: "Returned"
+            label: 'Returned'
           }
         },
         {
@@ -618,7 +618,7 @@ export class AwrFormService {
           type: 'checkbox',
           key: 'isNotReturned',
           templateOptions: {
-            label: "Not Returned"
+            label: 'Not Returned'
           }
         }
       ]

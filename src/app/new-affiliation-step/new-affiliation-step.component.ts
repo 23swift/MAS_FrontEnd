@@ -19,8 +19,6 @@ export class NewAffiliationStepComponent implements OnInit {
   subTitle = 'Create';
   mode: string;
   status = 'done';
-  //branchPOS: string;
-  //branchOIF: string;
   //  completed:boolean=false;
   constructor(private _formBuilder: FormBuilder, private route: ActivatedRoute,
     private _router: Router, private _snackBar: MatSnackBar
@@ -35,14 +33,21 @@ export class NewAffiliationStepComponent implements OnInit {
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required]
     });
-    //  this.router.navigate([{outlets: {primary: 'branch/create' ,branchOIF: ''}}]);
-    //this.branchOIF = "branchOIF";
-    //this.branchPOS = "branchPOS";
   }
+
   public completed(stepper: MatStepper) {
+    this.clearUrl();
+
     stepper.selected.completed = true;
     stepper.next();
     return true;
+  }
+
+  clearUrl() {
+    const parentRoute = this._router.url.split('/(')[0];
+    if (parentRoute) {
+      this._router.navigateByUrl(`${parentRoute}`);
+    }
   }
 
   Submit() {

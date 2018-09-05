@@ -31,9 +31,17 @@ export class MauCheckerComponent implements OnInit {
   }
 
   public completed(stepper: MatStepper) {
+    this.clearUrl();
     stepper.selected.completed = true;
     stepper.next();
     return true;
+  }
+
+  clearUrl() {
+    const parentRoute = this._router.url.split('/(')[0];
+    if (parentRoute) {
+      this._router.navigateByUrl(`${parentRoute}`);
+    }
   }
 
   submit() {

@@ -18,8 +18,8 @@ export class AoCheckerComponent implements OnInit {
   mode: string;
   status = 'done';
 
-  constructor(private _formBuilder: FormBuilder, private route: ActivatedRoute,
-    private router: Router, private _snackBar: MatSnackBar
+  constructor(private _formBuilder: FormBuilder, private _route: ActivatedRoute,
+    private _router: Router, private _snackBar: MatSnackBar
   ) { }
 
   ngOnInit() {
@@ -35,9 +35,17 @@ export class AoCheckerComponent implements OnInit {
   }
 
   public completed(stepper: MatStepper) {
+    this.clearUrl();
     stepper.selected.completed = true;
     stepper.next();
     return true;
+  }
+
+  clearUrl() {
+    const parentRoute = this._router.url.split('/(')[0];
+    if (parentRoute) {
+      this._router.navigateByUrl(`${parentRoute}`);
+    }
   }
 
   Submit() {
@@ -46,7 +54,7 @@ export class AoCheckerComponent implements OnInit {
     });
 
     snackBarSub.afterDismissed().subscribe(() => {
-      this.router.navigateByUrl('/');
+      this._router.navigateByUrl('/');
     });
   }
 

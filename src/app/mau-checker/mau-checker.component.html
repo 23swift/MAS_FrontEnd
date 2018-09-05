@@ -2,36 +2,15 @@
 <app-request-header></app-request-header>
 <!-- <span class="mat-headline">Please follow the steps:</span> -->
 <mat-divider></mat-divider>
-<div class="mat-title color-orange">Customer Profile</div>
+<div class="mat-title color-orange m-left-5px">Customer Profile</div>
 <app-customer-profile [displayMode]="false" readOnly="true"></app-customer-profile>
 <mat-divider></mat-divider>
 <mat-vertical-stepper [linear]="true" #stepper class="m-top-20px">
-  <!-- <mat-step [completed]="false">
-    <ng-template matStepLabel>
-      <span class="mat-subheading-1">Customer Profile</span>
-    </ng-template>
-    <span class="mat-headline">Customer Profile</span>
-    <app-customer-profile [displayMode]="false" readOnly="true"></app-customer-profile>
-
-    <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
-      <mat-icon color="primary">navigate_next</mat-icon>
-    </button>
-  </mat-step> -->
   <mat-step [completed]="false">
     <ng-template matStepLabel>
       <span class="mat-subheading-1">Branches</span>
     </ng-template>
     <router-outlet name="branch"></router-outlet>
-    <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
-      <mat-icon color="primary">navigate_next</mat-icon>
-    </button>
-  </mat-step>
-  <mat-step [completed]="false">
-    <ng-template matStepLabel>
-      <span class="mat-subheading-1">POS Request for Branches</span>
-    </ng-template>
-    <!-- <app-branch-list></app-branch-list> -->
-    <router-outlet name="branchPOS"></router-outlet>
     <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
       <mat-icon color="primary">navigate_next</mat-icon>
     </button>

@@ -1,4 +1,4 @@
-<div class="flex-branch-list-header">
+<div class="flex-branch-list-header"  *ngIf="form !== 'POS'">
     <span class="mat-headline">MID Details</span>
     <a [routerLink]="[{ outlets: {mid: ['mid'] } }]" mat-mini-fab>
         <mat-icon>playlist_add</mat-icon>
@@ -19,7 +19,7 @@
             <th mat-header-cell *matHeaderCellDef> Merchant Group Code </th>
             <td mat-cell *matCellDef="let element"> {{element.MerchantGroupCode}} </td>
         </ng-container>
-        <ng-container matColumnDef="Action">
+        <ng-container matColumnDef="Action" *ngIf="form !== 'POS'">
             <th mat-header-cell *matHeaderCellDef></th>
             <td mat-cell *matCellDef="let element">
                 <a (click)="GetItem(element.Id)" mat-mini-fab color="primary">

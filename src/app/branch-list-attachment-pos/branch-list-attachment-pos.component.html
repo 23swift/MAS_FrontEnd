@@ -19,7 +19,7 @@
             <th mat-header-cell *matHeaderCellDef>
             </th>
             <td mat-cell *matCellDef="let element">
-                <a [routerLink]="[{ outlets: {branchPOS: ['POS',1] } }]" mat-icon-button>
+                <a [routerLink]="[{ outlets: {branchPOS: ['POS',1], mid: ['MID', 'POS']} }]" mat-icon-button>
                     <mat-icon color="primary">attachment</mat-icon>
                 </a>
             </td>

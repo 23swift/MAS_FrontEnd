@@ -35,8 +35,9 @@
         <ng-template matStepLabel>
             <span class="mat-subheading-1">POS Request for Branches</span>
         </ng-template>
-        <!-- <app-branch-list></app-branch-list> -->
         <router-outlet name="branchPOS"></router-outlet>
+        <div style="margin-top: 20px;"></div>
+        <router-outlet name="mid"></router-outlet>
         <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
                 <mat-icon color="primary">navigate_next</mat-icon>
             </button>
