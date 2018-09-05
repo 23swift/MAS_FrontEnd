@@ -62,6 +62,9 @@ export class MidFormService {
         fieldGroupClassName: 'display-flex',
         fieldGroup: [
           {
+            template: '<div class="mat-form-field-infix"><div class="flex-1 mat-subheading-1"><label>Currency:</label></div></div>'
+          },
+          {
             className: 'flex-1',
             key: 'currencyPhp',
             type: 'checkbox',
