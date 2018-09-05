@@ -13,6 +13,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class CustomerProfileComponent extends AppBaseComponent implements OnInit {
   //Properties
   @Input() displayMode: boolean = false;
+  @Input() readOnly?: boolean;
   model: CutomerProfile;
   title = 'New Affiliation';
 
@@ -38,8 +39,9 @@ export class CustomerProfileComponent extends AppBaseComponent implements OnInit
     this.model.businessName = 'Bench';
     this.model.dtiRegDate = new Date();
     this.model.ownership = 1;
-      // apply expressionProperty for disabled based on formState to all fields
-      if(this.displayMode == true) {
+    this.readOnly = this.readOnly ? true : false;
+    // apply expressionProperty for disabled based on formState to all fields
+    if (this.displayMode == true) {
       this.disableFields();
     } else {
       this.enableFields();

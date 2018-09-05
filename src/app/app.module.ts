@@ -84,6 +84,11 @@ import { PsServicingComponent } from './ps-servicing/ps-servicing.component';
 import { MdmUserComponent } from './mdm-user/mdm-user.component';
 import { AoListModalComponent } from './modal/ao-list-modal/ao-list-modal.component';
 
+import { AlertMessageComponent } from './alert-message/alert-message.component';
+
+import { HistoryModalComponent } from './modal/history-modal/history-modal.component';
+
+
 
 
 
@@ -144,7 +149,9 @@ import { AoListModalComponent } from './modal/ao-list-modal/ao-list-modal.compon
     MdcsUserComponent,
     PsServicingComponent,
     MdmUserComponent,
-    AoListModalComponent
+    AoListModalComponent,
+    AlertMessageComponent,
+    HistoryModalComponent
 
   ],
   imports: [
@@ -192,7 +199,7 @@ import { AoListModalComponent } from './modal/ao-list-modal/ao-list-modal.compon
     MatCheckboxModule,
     MatRadioModule
   ],
-  entryComponents: [RemarksModalComponent,AoListModalComponent],
+  entryComponents: [RemarksModalComponent, HistoryModalComponent,AoListModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
