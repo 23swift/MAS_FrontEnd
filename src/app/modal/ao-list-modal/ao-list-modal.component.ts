@@ -27,7 +27,7 @@ export class AoListModalComponent implements OnInit {
     this.aoSelectedName = this.aoSelectedName;
   }
 
-  Cancel(): void {
+  Cancel() {
     this._matDialogRef.close();
   }
 
