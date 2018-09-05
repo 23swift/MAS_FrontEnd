@@ -82,6 +82,7 @@ import { MauCheckerComponent } from './mau-checker/mau-checker.component';
 import { MdcsUserComponent } from './mdcs-user/mdcs-user.component';
 import { PsServicingComponent } from './ps-servicing/ps-servicing.component';
 import { MdmUserComponent } from './mdm-user/mdm-user.component';
+import { AlertMessageComponent } from './alert-message/alert-message.component';
 
 
 
@@ -142,7 +143,8 @@ import { MdmUserComponent } from './mdm-user/mdm-user.component';
     MauCheckerComponent,
     MdcsUserComponent,
     PsServicingComponent,
-    MdmUserComponent
+    MdmUserComponent,
+    AlertMessageComponent
 
   ],
   imports: [
