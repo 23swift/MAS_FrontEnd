@@ -198,7 +198,11 @@ const routes: Routes = [
 
   ////////////////////// Data Management start-> /////////////////////////
   { path: 'dm/ao', component: AoMaintenanceComponent },
+  { path: 'dm/ao/:mode', component: AoMaintenanceFormComponent },
+  { path: 'dm/ao/:mode/:id', component: AoMaintenanceFormComponent },
   { path: 'dm/bu', component: BuMaintenanceComponent },
+  { path: 'dm/bu/:mode', component: BuMaintenanceFormComponent },
+  { path: 'dm/bu/:mode/:id', component: BuMaintenanceFormComponent },
   /////////////////////  <-end  Data Management  /////////////////////////
 
 

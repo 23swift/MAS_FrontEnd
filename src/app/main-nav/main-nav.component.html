@@ -69,10 +69,10 @@
             <button mat-icon-button [matMenuTriggerFor]="admin"><mat-icon>settings</mat-icon></button>
             <mat-menu #admin="matMenu">
                     <a mat-menu-item>Parameter Maintenance</a>
-                    <a routerLink="dm/ao/create" mat-menu-item>AO Maintenance</a>    
+                    <a routerLink="dm/ao" mat-menu-item>AO Maintenance</a>    
                     <a routerLink="/serviceFeeContract" mat-menu-item>Service Fee Contract</a>
                     <a mat-menu-item [matMenuTriggerFor]="docu">Document Checklist</a>
-                    <a routerLink="dm/bu/create" mat-menu-item>BU Maintenance</a> 
+                    <a routerLink="dm/bu" mat-menu-item>BU Maintenance</a> 
                     <a mat-menu-item>Default MID Maintenance</a>     
             </mat-menu>
             <mat-menu #docu="matMenu">
