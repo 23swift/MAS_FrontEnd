@@ -1,3 +1,4 @@
+import { AoMaintenanceFormComponent } from './forms/ao-maintenance-form/ao-maintenance-form.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PosRequestComponent } from './pos-request/pos-request.component';
@@ -41,6 +42,10 @@ import { MauCheckerComponent } from './new-affiliation/mau-checker/mau-checker.c
 import { MdmUserComponent } from './new-affiliation/mdm-user/mdm-user.component';
 import { MdcsUserComponent } from './new-affiliation/mdcs-user/mdcs-user.component';
 import { HistoryModalComponent } from './modal/history-modal/history-modal.component';
+
+import { BuMaintenanceComponent } from './data-management/bu-maintenance/bu-maintenance.component';
+import { BuMaintenanceFormComponent } from './forms/bu-maintenance-form/bu-maintenance-form.component';
+import { AoMaintenanceComponent } from './data-management/ao-maintenance/ao-maintenance.component';
 
 
 const routes: Routes = [
@@ -197,7 +202,11 @@ const routes: Routes = [
   { path: 'branchlist', component: BranchListComponent },
   { path: 'midForm', component: MidFormComponent },
   { path: 'mid', component: MidComponent },
-  { path: 'historyModal', component: HistoryModalComponent }
+  { path: 'historyModal', component: HistoryModalComponent },
+  { path: 'bu', component: BuMaintenanceComponent },
+  { path: 'bus', component: BuMaintenanceFormComponent },
+  { path: 'ao', component: AoMaintenanceComponent },
+  { path: 'aof', component: AoMaintenanceFormComponent}
 ];
 
 @NgModule({

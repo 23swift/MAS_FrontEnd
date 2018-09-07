@@ -86,6 +86,10 @@ import { AoListModalComponent } from './modal/ao-list-modal/ao-list-modal.compon
 import { AlertMessageComponent } from './alert-message/alert-message.component';
 
 import { HistoryModalComponent } from './modal/history-modal/history-modal.component';
+import { BuMaintenanceComponent } from './data-management/bu-maintenance/bu-maintenance.component';
+import { BuMaintenanceFormComponent } from './forms/bu-maintenance-form/bu-maintenance-form.component';
+import { AoMaintenanceComponent } from './data-management/ao-maintenance/ao-maintenance.component';
+import { AoMaintenanceFormComponent } from './forms/ao-maintenance-form/ao-maintenance-form.component';
 
 
 
@@ -149,7 +153,11 @@ import { HistoryModalComponent } from './modal/history-modal/history-modal.compo
     MdmUserComponent,
     AoListModalComponent,
     AlertMessageComponent,
-    HistoryModalComponent
+    HistoryModalComponent,
+    BuMaintenanceComponent,
+    BuMaintenanceFormComponent,
+    AoMaintenanceComponent,
+    AoMaintenanceFormComponent
 
   ],
   imports: [
