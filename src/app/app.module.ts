@@ -158,7 +158,6 @@ import { AoMaintenanceFormComponent } from './forms/ao-maintenance-form/ao-maint
     AoListModalComponent,
     AlertMessageComponent,
     HistoryModalComponent,
-<<<<<<< HEAD
     ParameterMaintenanceComponent,
     ParameterMaintenanceFormComponent,
     ParameterMaintenanceListComponent,
@@ -166,13 +165,11 @@ import { AoMaintenanceFormComponent } from './forms/ao-maintenance-form/ao-maint
     DocumentChecklistMaintenanceFormComponent,
     DocumentChecklistMaintenanceListComponent,
     DocumentCheckListComponent,
-=======
     BuMaintenanceComponent,
     BuMaintenanceFormComponent,
     AoMaintenanceComponent,
-    AoMaintenanceFormComponent
+    AoMaintenanceFormComponent,
 
->>>>>>> 61ccf50618c28762e7544e8526d8b0320ef64d83
   ],
   imports: [
     BrowserModule,
