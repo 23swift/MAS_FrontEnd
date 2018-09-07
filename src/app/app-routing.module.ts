@@ -41,6 +41,8 @@ import { MauCheckerComponent } from './new-affiliation/mau-checker/mau-checker.c
 import { MdmUserComponent } from './new-affiliation/mdm-user/mdm-user.component';
 import { MdcsUserComponent } from './new-affiliation/mdcs-user/mdcs-user.component';
 import { HistoryModalComponent } from './modal/history-modal/history-modal.component';
+import { ParameterMaintenanceComponent } from './administration/parameter-maintenance/parameter-maintenance/parameter-maintenance.component';
+import { DocumentChecklistMaintenanceComponent } from './administration/document-checklist/document-checklist-maintenance/document-checklist-maintenance/document-checklist-maintenance.component';
 
 
 const routes: Routes = [
@@ -197,7 +199,9 @@ const routes: Routes = [
   { path: 'branchlist', component: BranchListComponent },
   { path: 'midForm', component: MidFormComponent },
   { path: 'mid', component: MidComponent },
-  { path: 'historyModal', component: HistoryModalComponent }
+  { path: 'historyModal', component: HistoryModalComponent },
+  { path: 'paramMaintenance', component: ParameterMaintenanceComponent},
+  { path: 'dclMaintenance', component: DocumentChecklistMaintenanceComponent},
 ];
 
 @NgModule({

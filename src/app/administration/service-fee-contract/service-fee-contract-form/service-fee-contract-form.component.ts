@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
 import { ServiceFeeContractFormService } from './service-fee-contract-form.service';
-import { AppBaseComponent } from '../../app-base/app-base.component';
+import { AppBaseComponent } from '../../../app-base/app-base.component';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({

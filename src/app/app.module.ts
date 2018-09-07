@@ -6,7 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyMaterialModule } from '@ngx-formly/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatToolbarModule, MatTooltipModule, MatCheckboxModule, MatRadioModule, MatDialogModule } from '@angular/material';
+import { MatToolbarModule, MatTooltipModule, MatCheckboxModule, MatRadioModule, MatDialogModule, MatPaginator, MatPaginatorModule, MatSortModule, MatSortHeader } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -39,7 +39,6 @@ import { ExtentionComponent } from './extention/extention.component';
 import { AoEncoderComponent } from './new-affiliation/ao-encoder/ao-encoder.component';
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { OcularInspectionFormComponent } from './forms/ocular-inspection-form/ocular-inspection-form.component';
-import { DocumentCheckListComponent } from './document-check-list/document-check-list.component';
 import { NewAffiliationSumComponent } from './new-affiliation-sum/new-affiliation-sum.component';
 import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
 import { PosFormComponent } from './forms/pos-form/pos-form.component';
@@ -52,7 +51,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MaefFieldsComponent } from './maef-fields/maef-fields.component';
 import { AwrFormComponent } from './forms/awr-form/awr-form.component';
 import { RequestFormComponent } from './forms/request-form/request-form.component';
-
+import { DocumentCheckListComponent } from './document-check-list/document-check-list.component';
 import { DocumentCheckListFormComponent } from './forms/document-check-list-form/document-check-list-form.component';
 import { AoEncoderDashboardComponent } from './dashboard/ao-encoder-dashboard/ao-encoder-dashboard.component';
 import { MauCheckerDashboardComponent } from './dashboard/mau-checker-dashboard/mau-checker-dashboard.component';
@@ -86,11 +85,12 @@ import { AoListModalComponent } from './modal/ao-list-modal/ao-list-modal.compon
 import { AlertMessageComponent } from './alert-message/alert-message.component';
 
 import { HistoryModalComponent } from './modal/history-modal/history-modal.component';
-
-
-
-
-
+import { ParameterMaintenanceComponent } from './administration/parameter-maintenance/parameter-maintenance/parameter-maintenance.component';
+import { ParameterMaintenanceFormComponent } from './administration/parameter-maintenance/parameter-maintenance-form/parameter-maintenance-form.component';
+import { ParameterMaintenanceListComponent } from './administration/parameter-maintenance/parameter-maintenance-list/parameter-maintenance-list.component';
+import { DocumentChecklistMaintenanceComponent } from './administration/document-checklist/document-checklist-maintenance/document-checklist-maintenance/document-checklist-maintenance.component';
+import { DocumentChecklistMaintenanceFormComponent } from './administration/document-checklist/document-checklist-maintenance/document-checklist-maintenance-form/document-checklist-maintenance-form.component';
+import { DocumentChecklistMaintenanceListComponent } from './administration/document-checklist/document-checklist-maintenance/document-checklist-maintenance-list/document-checklist-maintenance-list.component';
 
 @NgModule({
   declarations: [
@@ -110,7 +110,6 @@ import { HistoryModalComponent } from './modal/history-modal/history-modal.compo
     AoEncoderComponent,
     HomeScreenComponent,
     OcularInspectionFormComponent,
-    DocumentCheckListComponent,
     NewAffiliationSumComponent,
     CustomerProfileComponent,
     PosFormComponent,
@@ -149,8 +148,14 @@ import { HistoryModalComponent } from './modal/history-modal/history-modal.compo
     MdmUserComponent,
     AoListModalComponent,
     AlertMessageComponent,
-    HistoryModalComponent
-
+    HistoryModalComponent,
+    ParameterMaintenanceComponent,
+    ParameterMaintenanceFormComponent,
+    ParameterMaintenanceListComponent,
+    DocumentChecklistMaintenanceComponent,
+    DocumentChecklistMaintenanceFormComponent,
+    DocumentChecklistMaintenanceListComponent,
+    DocumentCheckListComponent,
   ],
   imports: [
     BrowserModule,
@@ -195,7 +200,9 @@ import { HistoryModalComponent } from './modal/history-modal/history-modal.compo
     MatButtonToggleModule,
     MatSnackBarModule,
     MatCheckboxModule,
-    MatRadioModule
+    MatRadioModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   entryComponents: [RemarksModalComponent, HistoryModalComponent, AoListModalComponent],
   providers: [],
