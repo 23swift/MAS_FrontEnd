@@ -197,8 +197,8 @@ const routes: Routes = [
   { path: 'oif', component: OcularInspectionFormComponent },
 
   ////////////////////// Data Management start-> /////////////////////////
-  { path: 'dm/ao/:mode', component: AoMaintenanceComponent },
-  { path: 'dm/bu/:mode', component: BuMaintenanceComponent },
+  { path: 'dm/ao', component: AoMaintenanceComponent },
+  { path: 'dm/bu', component: BuMaintenanceComponent },
   /////////////////////  <-end  Data Management  /////////////////////////
 
 

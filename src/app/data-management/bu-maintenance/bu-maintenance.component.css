@@ -5,3 +5,7 @@ table {
 .addbtn {
     float: right;
 }
+
+.deletebtn {
+    background-color: red !important;
+}
