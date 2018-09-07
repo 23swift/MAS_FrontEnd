@@ -195,6 +195,13 @@ const routes: Routes = [
   { path: 'newAffSum', component: NewAffiliationSumComponent },
   { path: 'home', component: HomeScreenComponent },
   { path: 'oif', component: OcularInspectionFormComponent },
+
+  ////////////////////// Data Management start-> /////////////////////////
+  { path: 'dm/ao/:mode', component: AoMaintenanceComponent },
+  { path: 'dm/bu/:mode', component: BuMaintenanceComponent },
+  /////////////////////  <-end  Data Management  /////////////////////////
+
+
   ///////////////////// FOR TESTING PURPOSES ///////////////////////
   { path: 'awr', component: AwrFormComponent },
   { path: 'requestForm', component: RequestFormComponent },
