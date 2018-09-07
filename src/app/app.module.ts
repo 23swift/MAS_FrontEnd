@@ -86,6 +86,7 @@ import { AoListModalComponent } from './modal/ao-list-modal/ao-list-modal.compon
 import { AlertMessageComponent } from './alert-message/alert-message.component';
 
 import { HistoryModalComponent } from './modal/history-modal/history-modal.component';
+import { MidFormModalComponent } from './modal/mid-form-modal/mid-form-modal.component';
 
 
 
@@ -149,7 +150,8 @@ import { HistoryModalComponent } from './modal/history-modal/history-modal.compo
     MdmUserComponent,
     AoListModalComponent,
     AlertMessageComponent,
-    HistoryModalComponent
+    HistoryModalComponent,
+    MidFormModalComponent
 
   ],
   imports: [
@@ -197,7 +199,7 @@ import { HistoryModalComponent } from './modal/history-modal/history-modal.compo
     MatCheckboxModule,
     MatRadioModule
   ],
-  entryComponents: [RemarksModalComponent, HistoryModalComponent, AoListModalComponent],
+  entryComponents: [RemarksModalComponent, HistoryModalComponent, AoListModalComponent, MidFormModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
