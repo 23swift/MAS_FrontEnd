@@ -91,6 +91,15 @@ import { ParameterMaintenanceListComponent } from './administration/parameter-ma
 import { DocumentChecklistMaintenanceComponent } from './administration/document-checklist/document-checklist-maintenance/document-checklist-maintenance/document-checklist-maintenance.component';
 import { DocumentChecklistMaintenanceFormComponent } from './administration/document-checklist/document-checklist-maintenance/document-checklist-maintenance-form/document-checklist-maintenance-form.component';
 import { DocumentChecklistMaintenanceListComponent } from './administration/document-checklist/document-checklist-maintenance/document-checklist-maintenance-list/document-checklist-maintenance-list.component';
+import { BuMaintenanceComponent } from './data-management/bu-maintenance/bu-maintenance.component';
+import { BuMaintenanceFormComponent } from './forms/bu-maintenance-form/bu-maintenance-form.component';
+import { AoMaintenanceComponent } from './data-management/ao-maintenance/ao-maintenance.component';
+import { AoMaintenanceFormComponent } from './forms/ao-maintenance-form/ao-maintenance-form.component';
+
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -149,6 +158,7 @@ import { DocumentChecklistMaintenanceListComponent } from './administration/docu
     AoListModalComponent,
     AlertMessageComponent,
     HistoryModalComponent,
+<<<<<<< HEAD
     ParameterMaintenanceComponent,
     ParameterMaintenanceFormComponent,
     ParameterMaintenanceListComponent,
@@ -156,6 +166,13 @@ import { DocumentChecklistMaintenanceListComponent } from './administration/docu
     DocumentChecklistMaintenanceFormComponent,
     DocumentChecklistMaintenanceListComponent,
     DocumentCheckListComponent,
+=======
+    BuMaintenanceComponent,
+    BuMaintenanceFormComponent,
+    AoMaintenanceComponent,
+    AoMaintenanceFormComponent
+
+>>>>>>> 61ccf50618c28762e7544e8526d8b0320ef64d83
   ],
   imports: [
     BrowserModule,

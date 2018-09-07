@@ -1,3 +1,4 @@
+import { AoMaintenanceFormComponent } from './forms/ao-maintenance-form/ao-maintenance-form.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PosRequestComponent } from './pos-request/pos-request.component';
@@ -43,6 +44,10 @@ import { MdcsUserComponent } from './new-affiliation/mdcs-user/mdcs-user.compone
 import { HistoryModalComponent } from './modal/history-modal/history-modal.component';
 import { ParameterMaintenanceComponent } from './administration/parameter-maintenance/parameter-maintenance/parameter-maintenance.component';
 import { DocumentChecklistMaintenanceComponent } from './administration/document-checklist/document-checklist-maintenance/document-checklist-maintenance/document-checklist-maintenance.component';
+
+import { BuMaintenanceComponent } from './data-management/bu-maintenance/bu-maintenance.component';
+import { BuMaintenanceFormComponent } from './forms/bu-maintenance-form/bu-maintenance-form.component';
+import { AoMaintenanceComponent } from './data-management/ao-maintenance/ao-maintenance.component';
 
 
 const routes: Routes = [
@@ -192,6 +197,17 @@ const routes: Routes = [
   { path: 'newAffSum', component: NewAffiliationSumComponent },
   { path: 'home', component: HomeScreenComponent },
   { path: 'oif', component: OcularInspectionFormComponent },
+
+  ////////////////////// Data Management start-> /////////////////////////
+  { path: 'dm/ao', component: AoMaintenanceComponent },
+  { path: 'dm/ao/:mode', component: AoMaintenanceFormComponent },
+  { path: 'dm/ao/:mode/:id', component: AoMaintenanceFormComponent },
+  { path: 'dm/bu', component: BuMaintenanceComponent },
+  { path: 'dm/bu/:mode', component: BuMaintenanceFormComponent },
+  { path: 'dm/bu/:mode/:id', component: BuMaintenanceFormComponent },
+  /////////////////////  <-end  Data Management  /////////////////////////
+
+
   ///////////////////// FOR TESTING PURPOSES ///////////////////////
   { path: 'awr', component: AwrFormComponent },
   { path: 'requestForm', component: RequestFormComponent },
@@ -202,6 +218,10 @@ const routes: Routes = [
   { path: 'historyModal', component: HistoryModalComponent },
   { path: 'paramMaintenance', component: ParameterMaintenanceComponent},
   { path: 'dclMaintenance', component: DocumentChecklistMaintenanceComponent},
+  { path: 'bu', component: BuMaintenanceComponent },
+  { path: 'bus', component: BuMaintenanceFormComponent },
+  { path: 'ao', component: AoMaintenanceComponent },
+  { path: 'aof', component: AoMaintenanceFormComponent}
 ];
 
 @NgModule({
