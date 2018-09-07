@@ -1,7 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IdocumentListData } from "../../../../temp/interface/idocument-list-data";
-import { MatPaginator, MatTableDataSource,MatSort } from '@angular/material';
 import { DocumentChecklistMaintenanceService } from './document-checklist-maintenance.service';
+import { MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
+import { MatDialogRef, MatDialog, MatSnackBar } from '../../../../../../node_modules/@angular/material';
+import { DocumentChecklistMaintenanceFormComponent } from "../document-checklist-maintenance-form/document-checklist-maintenance-form.component";
+
 
 @Component({
   selector: 'app-document-checklist-maintenance-list',
@@ -16,7 +19,9 @@ export class DocumentChecklistMaintenanceListComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
 
 
-  constructor(private _service: DocumentChecklistMaintenanceService) { }
+  constructor(private _service: DocumentChecklistMaintenanceService,
+    private _dialog: MatDialog,
+    private _matSnackBar: MatSnackBar) { }
 
   ngOnInit() {
     this.displayedColumns = this._service.Get().Fields;
@@ -25,12 +30,28 @@ export class DocumentChecklistMaintenanceListComponent implements OnInit {
   }
 
   applySearch(filterValue: string) {
-    
+
     this.dataSource.filter = filterValue.trim().toLowerCase();
 
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
   }
+
+  openDialog(Id) {
+    const dialogRef = this._dialog.open(DocumentChecklistMaintenanceFormComponent, {
+      width: '600px',
+      height: '200px',
+      data: { Id: Id }
+    });
+
+    dialogRef.afterClosed().subscribe(data => {
+      if (data) {
+        this._matSnackBar.open('Created Document:', data, { duration: 2000 });
+      }
+    });
+  }
+
+
 
 }

@@ -6,7 +6,7 @@
     <mat-form-field class="flex-1">
       <input matInput (keyup)="applySearch($event.target.value)" placeholder="Search Document">
     </mat-form-field>
-    <a [routerLink]="[{ outlets: {dclMaintenanceForm: ['dclMaintenanceForm','create'] } }]" mat-mini-fab matTooltip="Add Document">
+    <a (click)="openDialog()" mat-mini-fab matTooltip="Add Document">
       <mat-icon>playlist_add</mat-icon>
     </a>
   </div>

@@ -218,7 +218,7 @@ import { AoMaintenanceFormComponent } from './forms/ao-maintenance-form/ao-maint
     MatPaginatorModule,
     MatSortModule,
   ],
-  entryComponents: [RemarksModalComponent, HistoryModalComponent, AoListModalComponent],
+  entryComponents: [RemarksModalComponent, HistoryModalComponent, AoListModalComponent,DocumentChecklistMaintenanceFormComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
