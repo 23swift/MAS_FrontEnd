@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder,FormGroup,Validators} from '@angular/forms';
-import { AppBaseComponent } from '../../../app-base/app-base.component';
-import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-service-fee-contract',
@@ -10,16 +7,17 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class ServiceFeeContractComponent implements OnInit {
 
-  title = 'Service Fee Contract';
-   subTitle = 'Create';
-   mode='create';
-   status="done";
-  constructor(public route: ActivatedRoute,public router: Router) { 
-    //super(route,router);
-  }
+  title: string;
+  subTitle: string;
+  mode: string;
+  
+  constructor() { }
 
   ngOnInit() {
-    //this.initialize();
+    this.title = 'Service Fee Contract';
+    this.subTitle = 'Manage Service Fee Contract';
+    this.mode = ' ';    
   }
+
 
 }

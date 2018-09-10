@@ -49,6 +49,8 @@ import { DocumentChecklistMaintenanceComponent } from './administration/document
 import { BuMaintenanceComponent } from './data-management/bu-maintenance/bu-maintenance.component';
 import { BuMaintenanceFormComponent } from './forms/bu-maintenance-form/bu-maintenance-form.component';
 import { AoMaintenanceComponent } from './data-management/ao-maintenance/ao-maintenance.component';
+import { ServiceFeeContractComponent } from './administration/service-fee-contract/service-fee-contract/service-fee-contract.component';
+import { ServiceFeeContractFormComponent } from './administration/service-fee-contract/service-fee-contract-form/service-fee-contract-form.component';
 
 
 const routes: Routes = [
@@ -218,7 +220,9 @@ const routes: Routes = [
   { path: 'bu', component: BuMaintenanceComponent },
   { path: 'bus', component: BuMaintenanceFormComponent },
   { path: 'ao', component: AoMaintenanceComponent },
-  { path: 'aof', component: AoMaintenanceFormComponent}
+  { path: 'aof', component: AoMaintenanceFormComponent},
+  { path: 'sfcc', component: ServiceFeeContractComponent},
+
 ];
 
 @NgModule({

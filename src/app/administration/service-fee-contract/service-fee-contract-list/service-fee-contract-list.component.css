@@ -1,13 +1,30 @@
 table {
     width: 100%;
     background-color: #fafafa;
+    /* height: 650px; */
+    /*overflow: auto;*/
 }
 
-.flex-ServiceFeeRate-list-header {
+.flex-sfcc-list-header {
     display: flex;
     flex-direction: row;
     /* border:4px blue solid; */
     justify-content: space-between;
+}
+
+.flex-sfcc-list-footer {
+    display: flex;
+    flex-direction: row;
+    /* border:4px blue solid; */
+    justify-content: space-between;
+}
+
+.assign-icon-color {
+    background-color: #ff9800 
+}
+
+.ownrequest-icon-color {
+    background-color: red
 }
 
 .mat-subheading-1 {
@@ -16,4 +33,8 @@ table {
 
 .mat-subheading-1 {
     color: #0d47a1;
+}
+
+.mat-headline {
+    font-size: 18px;
 }

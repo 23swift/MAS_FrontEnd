@@ -16,7 +16,7 @@ export class DocumentChecklistMaintenanceFormComponent implements OnInit {
   form = new FormGroup({});
   model: any = {};
   options: FormlyFormOptions = {};
-  title: string = 'OIF Form';
+  title: string = 'Document Checklist Maintenance Form';
   subTitle: string;
   mode: string;
   fields: FormlyFieldConfig[];
@@ -25,7 +25,7 @@ export class DocumentChecklistMaintenanceFormComponent implements OnInit {
               private _matDialogRef: MatDialogRef<DocumentChecklistMaintenanceFormComponent>) {
     this.fields = _service.getDocumentListFields();
   }
-
+  
   ngOnInit() {
   }
 

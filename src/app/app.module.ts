@@ -97,6 +97,9 @@ import { BuMaintenanceComponent } from './data-management/bu-maintenance/bu-main
 import { BuMaintenanceFormComponent } from './forms/bu-maintenance-form/bu-maintenance-form.component';
 import { AoMaintenanceComponent } from './data-management/ao-maintenance/ao-maintenance.component';
 import { AoMaintenanceFormComponent } from './forms/ao-maintenance-form/ao-maintenance-form.component';
+import { ServiceFeeContractComponent } from './administration/service-fee-contract/service-fee-contract/service-fee-contract.component';
+import { ServiceFeeContractFormComponent } from './administration/service-fee-contract/service-fee-contract-form/service-fee-contract-form.component';
+import { ServiceFeeContractListComponent } from './administration/service-fee-contract/service-fee-contract-list/service-fee-contract-list.component';
 
 
 
@@ -172,7 +175,9 @@ import { AoMaintenanceFormComponent } from './forms/ao-maintenance-form/ao-maint
     BuMaintenanceFormComponent,
     AoMaintenanceComponent,
     AoMaintenanceFormComponent,
-
+    ServiceFeeContractComponent,
+    ServiceFeeContractFormComponent,
+    ServiceFeeContractListComponent
   ],
   imports: [
     BrowserModule,
@@ -220,9 +225,10 @@ import { AoMaintenanceFormComponent } from './forms/ao-maintenance-form/ao-maint
     MatRadioModule,
     MatPaginatorModule,
     MatSortModule,
+    MatCheckboxModule
   ],
   entryComponents: [RemarksModalComponent, HistoryModalComponent, AoListModalComponent,
-    MidFormModalComponent, DocumentChecklistMaintenanceFormComponent],
+    MidFormModalComponent, DocumentChecklistMaintenanceFormComponent, ServiceFeeContractFormComponent ],
   providers: [],
   bootstrap: [AppComponent]
 })
