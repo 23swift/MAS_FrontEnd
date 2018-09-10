@@ -134,7 +134,7 @@ export class MaefFormService {
       ]
     },
     {
-      template: '<span class="mat-subheading-1">Credit Checking</span>',
+      template: '<span class="mat-headline">Credit Checking</span>',
     },
 
     {
@@ -528,7 +528,7 @@ export class MaefFormService {
     },
 
     {
-      template: '<span class="mat-subheading-1">Terms Of Acceptance</span>',
+      template: '<span class="mat-headline">Terms Of Acceptance</span>',
     },
 
     {
@@ -629,7 +629,7 @@ export class MaefFormService {
     },
      
     {
-      template: '<span class="mat-subheading-1">Other Checking</span>',
+      template: '<span class="mat-headline">Other Checking</span>',
     },
 
 
@@ -866,7 +866,7 @@ export class MaefFormService {
       ]
     }, 
     {
-      template: '<span class="mat-subheading-1">Decision</span>',
+      template: '<span class="mat-headline">Decision</span>',
     },
     {
       fieldGroupClassName: 'display-flex',
