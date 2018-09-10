@@ -22,7 +22,8 @@ export class BranchFormService {
           templateOptions: {
             label: 'DBA Name(DBA/Trade Name)',
             placeholder: 'DBA Name(DBA/Trade Name)',
-            required: true
+            required: true,
+            maxLength: 22
           }
         }
       ]
@@ -39,7 +40,8 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Registered Business Number',
-          placeholder: 'Registered Business Number'
+          placeholder: 'Registered Business Number',
+          maxLength: 11
         },
       },
       {
@@ -51,7 +53,8 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Administrator(Contact Person)',
-          placeholder: 'Administrator(Contact Person)'
+          placeholder: 'Administrator(Contact Person)',
+          maxLength: 30
         }
       }
       ]
@@ -69,6 +72,7 @@ export class BranchFormService {
         templateOptions: {
           label: 'DBA(Branch/Outlet Address )',
           placeholder: 'DBA(Branch/Outlet Address )',
+          maxLength: 30,
           required: true
         },
       },
@@ -85,6 +89,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 30
         },
       },
       ]
@@ -100,6 +105,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 30
         },
       },
       ]
@@ -115,6 +121,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 30
         },
       },
       ]
@@ -182,7 +189,8 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Branch/Outlet Phone Number',
-          placeholder: 'Branch/Outlet Phone Number'
+          placeholder: 'Branch/Outlet Phone Number',
+          maxLength: 20
         },
       },
       {
@@ -195,12 +203,13 @@ export class BranchFormService {
         templateOptions: {
           label: 'Mobile Number',
           placeholder: 'Mobile Number',
-          required: true
+          required: true,
+          maxLength: 15
         }
       }
       ]
     },
-
+// ++  can accomodate 5 emails
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [{
@@ -216,7 +225,7 @@ export class BranchFormService {
           required: true
         },
       },
-      {
+      {  // ++ mandatory if ecom tpp master merchant erps emoto
         className: 'flex-1',
         type: 'input',
         key: 'branchWebsite',
@@ -266,6 +275,7 @@ export class BranchFormService {
           templateOptions: {
             label: 'Settle Account Number (For Crediting Payment)',
             placeholder: 'Settle Account Number (For Crediting Payment)',
+            maxLength: 20,
             disabled: true
           }
         },
@@ -273,6 +283,7 @@ export class BranchFormService {
           type: 'select',
           key: 'taxCode',
           templateOptions: {
+            required: true,
             label: 'Tax Code',
             options: [
               { label: 'With Tax', value: '1' },
@@ -403,7 +414,8 @@ export class BranchFormService {
         templateOptions: {
           label: 'Name of Company Signatory/ies',
           placeholder: 'Name of Company Signatory/ies',
-          required: true
+          required: true,
+          maxLength: 50
         },
       },
       ]
@@ -419,6 +431,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -434,6 +447,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -449,6 +463,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -464,6 +479,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -479,6 +495,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -494,6 +511,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -509,6 +527,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -524,6 +543,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -539,6 +559,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -554,6 +575,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -569,6 +591,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -584,6 +607,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -599,6 +623,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -614,6 +639,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -630,7 +656,8 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Special Mailing Address',
-          placeholder: 'Special Mailing Address'
+          placeholder: 'Special Mailing Address',
+          maxLength: 30
         },
       },
       ]
@@ -646,6 +673,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 30
         },
       },
       ]
@@ -661,6 +689,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 30
         },
       },
       ]
@@ -676,6 +705,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 30
         },
       },
       ]
@@ -686,12 +716,12 @@ export class BranchFormService {
       fieldGroup: [{
         className: 'flex-1',
         type: 'select',
-        key: 'companyCity',
+        key: 'specialMailingCity',
         expressionProperties: {
 
         },
         templateOptions: {
-          label: 'City',
+          label: 'Special Mailing Address City',
           options: [
             { label: 'PASIG', value: '1' },
             { label: 'MAKATI CITY', value: '2' },
@@ -707,12 +737,12 @@ export class BranchFormService {
       {
         className: 'flex-1',
         type: 'select',
-        key: 'companyZipCode',
+        key: 'specialMailingZipCode',
         expressionProperties: {
 
         },
         templateOptions: {
-          label: 'ZipCode',
+          label: 'Special Mailing Address ZipCode',
           options: [
             { label: '0400', value: '1' },
             { label: '0401', value: '2' },
@@ -750,7 +780,8 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Name of Acquirer',
-          placeholder: 'Name of Acquirer'
+          placeholder: 'Name of Acquirer',
+          maxLength: 50
         }
       }
       ]
@@ -853,7 +884,8 @@ export class BranchFormService {
           },
           templateOptions: {
             label: 'If Yes, Please Indicate The Cardholder Data Stored',
-            placeholder: 'If Yes, Please Indicate The Cardholder Data Stored'
+            placeholder: 'If Yes, Please Indicate The Cardholder Data Stored',
+            maxLength: 50
           }
         }
       ]
@@ -888,9 +920,123 @@ export class BranchFormService {
           },
           templateOptions: {
             label: 'If Yes, Please Indicate The Cardholder Data To Be Stored',
-            placeholder: 'If Yes, Please Indicate The Cardholder Data To Be Stored'
+            placeholder: 'If Yes, Please Indicate The Cardholder Data To Be Stored',
+            maxLength: 50
           }
         }
+      ]    ///// +++
+    },
+
+    {
+      template: '<span class="mat-headline">Debit Facility Instructions</span>',
+    },
+
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'input',
+        key: 'settlementAccNoForDebit',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Settlement Account Number for Debit Facility(If CTA)',
+          placeholder: 'Settlement Account Number for Debit Facility(If CTA)',
+          maxLength: 20
+        }
+      },
+      {
+        className: 'flex-1',
+        type: 'input',
+        key: 'payeesName',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Payees Name(if check payment)',
+          placeholder: 'Payees Name(if check payment)',
+          maxLength: 50
+        }
+      }
+      ]
+    },
+
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'input',
+        key: 'emailAddressForReportDist',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Email Address For Report Distribution',
+          placeholder: 'Email Address For Report Distribution',
+          maxLength: 250
+        }
+      },
+      {
+        className: 'flex-1',
+        type: 'input',
+        key: 'mailingAddressForPaymentDel',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Mailing Address for Payment Delivery and Other Reports',
+          placeholder: 'Mailing Address for Payment Delivery and Other Reports',
+          maxLength: 150
+        }
+      }
+      ]
+    },
+
+    {
+      template: '<span class="mat-headline">Cash Agad Facility Instructions</span>',
+    },
+
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'input',
+        key: 'nameAuthorizedSoaRecip',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Name of Authorized SOA Recipient',
+          placeholder: 'Name of Authorized SOA Recipient',
+          maxLength: 120
+        }
+      },
+      {
+        className: 'flex-1',
+        type: 'input',
+        key: 'SoaEmailAddress',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Email Address',
+          placeholder: 'Email Address',
+          maxLength: 250
+        }
+      },
+      {
+        key: 'reportDistribution',
+        type: 'radio',
+        templateOptions: {
+          label: 'Report Distribution?',
+          options: [
+            { value: '1', label: 'Per Company' },
+            { value: '2', label: "Per Company's Branch" }
+          ],
+        },
+
+      },
       ]
     },
 
@@ -938,8 +1084,9 @@ export class BranchFormService {
       },
       ]
     },
+  
     {
-      template: '<span class="mat-headline">Debit TID Details</span>',
+      template: '<span class="mat-headline">Other Details</span>',
     },
 
     {
@@ -947,27 +1094,28 @@ export class BranchFormService {
       fieldGroup: [{
         className: 'flex-1',
         type: 'input',
-        key: 'noOfDKE',
+        key: 'noOfDebitTidReq',
         expressionProperties: {
 
         },
         templateOptions: {
-          label: 'No. of "DKE" Debit TID Requested',
-          placeholder: 'No. of "DKE" Debit TID Requested'
+          label: 'No. of Debit TID Request for this outlet',
+          placeholder: 'No. of Debit TID Request for this outlet'
         },
       },
       {
-        className: 'flex-1',
-        type: 'input',
-        key: 'noOf3DES',
-        expressionProperties: {
-
-        },
+        key: 'typeDebitTidReq',
+        type: 'radio',
         templateOptions: {
-          label: 'No. Of "3DES" Debit TID Requested',
-          placeholder: 'No. Of "3DES" Debit TID Requested'
-        }
-      }
+          label: 'Type of Debit TID Request?',
+          required: true,
+          options: [
+            { value: '1', label: 'ATM/DEBIT' },
+            { value: '2', label: 'Cash Agad' }
+          ],
+        },
+
+      },
       ]
     },
 
@@ -975,122 +1123,26 @@ export class BranchFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-          key: 'purposeOfRequest',
-          type: 'radio',
-          templateOptions: {
-            label: 'Purpose Of Request?',
-            required: true,
-            options: [
-              { value: '1', label: 'ATM/DEBIT' },
-              { value: '2', label: 'Cash Agad' }
-            ],
-          },
-
-        },
-        {
           className: 'flex-1',  //decimal format   //conditional mandatory
           type: 'input',
-          key: 'Merchant Debit Rate For Debit Cards',
+          key: 'merchDiscountRateDebitCrd',
           expressionProperties: {
 
           },
           templateOptions: {
             type: 'number',
-            label: 'Merchant Debit Rate For Debit Cards',
-            placeholder: 'Merchant Debit Rate For Debit Cards',
+            label: 'Merchant Discount Rate For Debit Cards',
+            placeholder: 'Merchant Discount Rate For Debit Cards',
             pattern: '^\\d\\.\\d{2}$|^\\d\\.\\d{4}$'
           }
         }
       ]
     },
 
-    /*{
-      template: '<span class="mat-subheading-1">Report Per Branch</span>',
-      }, */
 
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [  //conditional mandatory
-        {
-          key: 'reportPerBranch',
-          type: 'radio',
-          defaultValue: true,
-          templateOptions: {
-            label: 'Report Per Branch?',
-            required: true,
-            options: [
-              { value: true, label: 'Yes' },
-              { value: false, label: 'No' }
-            ],
-          },
-
-        },
-        {
-          className: 'flex-1', //conditional mandatory
-          type: 'select',
-          key: 'sendBdo030114',
-          expressionProperties: {
-
-          },
-          templateOptions: { //conditional mandatory
-            label: 'SendBdo030114',
-            options: [
-              { label: 'Email', value: '1' },
-              { label: 'Print', value: '2' },
-              { label: 'SFTP', value: '3' }
-            ]
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'sftpPath',
-          expressionProperties: {
-            'templateOptions.required': (model: any, formState: any) => {
-              return model['sendBdo030114'] == '3';
-            }
-          },
-          templateOptions: {
-            label: 'SFTP Path',
-            placeholder: 'SFTP Path'
-          }
-        }
-      ]
-    },
-
-    /*   {
-         template: '<span class="mat-subheading-1">Generate Payment File</span>',
-         }, */
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [  //conditional mandatory
-        {
-          key: 'generatePaymentFile',
-          type: 'radio',
-          defaultValue: false,
-          templateOptions: {
-            label: 'Generate Payment File?',
-            required: true,
-            options: [
-              { value: true, label: 'Yes' },
-              { value: false, label: 'No' }
-            ],
-          },
-
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'customerNumber',
-          expressionProperties: {
-
-          },
-          templateOptions: {
-            label: 'Customer Number',
-            placeholder: 'Customer Number'
-          }
-        },
         {
           className: 'flex-1', //dropdown
           type: 'select',
@@ -1108,6 +1160,21 @@ export class BranchFormService {
               { label: '5425-Apparel Industry', value: '5' }
             ]
           }
+        },
+        {
+          className: 'flex-1',  //decimal format   //conditional mandatory
+          type: 'input',
+          key: 'INTES Code for Diners',
+          expressionProperties: {
+
+          },
+          templateOptions: {
+            type: 'number',
+            label: 'INTES Code for Diners',
+            placeholder: 'INTES Code for Diners',
+            pattern: '^\\d\\.\\d{2}$|^\\d\\.\\d{4}$',
+            maxLength: 4
+          }
         }
       ]
     },
@@ -1120,44 +1187,6 @@ export class BranchFormService {
       fieldGroupClassName: 'display-flex', //conditional mandatory
       fieldGroup: [
         {
-          key: 'computeForMonthlyCWT',
-          type: 'radio',
-          defaultValue: false,
-          templateOptions: {
-            label: 'Compute for Monthly CWT?',
-            required: true,
-            options: [
-              { value: true, label: 'Yes' },
-              { value: false, label: 'No' }
-            ],
-          },
-
-        },
-        {
-          className: 'flex-1', //dropdown
-          type: 'select',
-          key: 'cardPLans',
-          defaultValue: '1',
-          expressionProperties: {
-
-          },
-          templateOptions: {
-            label: 'Card Plans/Styles',
-            options: [
-              { label: 'MCVCJCACCC-1', value: '1' },
-              { label: 'JC-2', value: '2' },
-              { label: 'AC-3', value: '3' },
-              { label: 'PC-4', value: '4' },
-              { label: 'VC-5', value: '5' },
-              { label: 'MC-6', value: '6' },
-              { label: 'CC-7', value: '7' },
-              { label: 'DINERS-8', value: '8' }
-
-            ]
-          }
-        },
-
-        {
           className: 'flex-1', // not yet
           type: 'input',
           key: 'tppOnly',
@@ -1165,8 +1194,9 @@ export class BranchFormService {
 
           },
           templateOptions: {
-            label: 'Should Be Corrected, From BDM or Agent (AE Code) To Fee Account(TPP Only)',
-            placeholder: 'Should Be Corrected, From BDM or Agent (AE Code) To Fee Account(TPP Only)'
+            label: 'To Fee Account(TPP Only)',
+            placeholder: '(TPP Only)',
+            maxLength: 20
           }
         }
 
@@ -1180,20 +1210,6 @@ export class BranchFormService {
     {
       fieldGroupClassName: 'display-flex', //conditional mandatory
       fieldGroup: [
-        {
-          key: 'settlementPerBranch',
-          type: 'radio',
-          defaultValue: true,
-          templateOptions: {
-            label: 'Settlement Per Branch?',
-            required: true,
-            options: [
-              { value: true, label: 'Yes' },
-              { value: false, label: 'No' }
-            ],
-          },
-
-        },
         {
           className: 'flex-1',//not yet
           type: 'select',
@@ -1213,14 +1229,16 @@ export class BranchFormService {
         },
         {
           className: 'flex-1',
-          type: 'input',
+          type: 'select',
           key: 'strategicMerchant',
           expressionProperties: {
 
           },
           templateOptions: {
             label: 'Strategic Merchant',
-            placeholder: 'Strategic Merchant'
+            options: [
+              { label: '1', value: '1'}
+            ]
           },
         }
       ]
@@ -1251,7 +1269,8 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'MC Assigned Id',
-          placeholder: 'MC Assigned Id'
+          placeholder: 'MC Assigned Id',
+          maxLength: 6
         }
       },
       {
@@ -1284,7 +1303,8 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Imprinter Name',
-          placeholder: 'Imprinter Name'
+          placeholder: 'Imprinter Name',
+          maxLength: 30
         }
       },
       {
@@ -1296,7 +1316,8 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Imprinter Number(Sales Slip Handling)',
-          placeholder: 'Imprinter Number(Sales Slip Handling)'
+          placeholder: 'Imprinter Number(Sales Slip Handling)',
+          maxLength: 10
         }
       },
       {
@@ -1308,7 +1329,8 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Imprinter AMEX (MID Capping)',
-          placeholder: 'Imprinter AMEX (MID Capping)'
+          placeholder: 'Imprinter AMEX (MID Capping)',
+          maxLength: 13
         }
       }
       ]
@@ -1326,7 +1348,8 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Imprinter DC (Top Corporation/Ecom)',
-          placeholder: 'Imprinter DC (Top Corporation/Ecom)'
+          placeholder: 'Imprinter DC (Top Corporation/Ecom)',
+          maxLength: 13
         }
       },
       {
@@ -1338,7 +1361,8 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Imprinter JCB',
-          placeholder: 'Imprinter JCB'
+          placeholder: 'Imprinter JCB',
+          maxLength: 13
         }
       },
       {
@@ -1350,13 +1374,14 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Imprinter Others(Class Code)',
-          placeholder: 'Imprinter Others(Class Code)'
+          placeholder: 'Imprinter Others(Class Code)',
+          maxLength: 12
         }
       },
       ]
     },
 
-    {
+    { // numeric
       fieldGroupClassName: 'display-flex',
       fieldGroup: [{
         className: 'flex-1',
@@ -1367,7 +1392,8 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Total Number Of Manual Imprinters',
-          placeholder: 'Total Number Of Manual Imprinters'
+          placeholder: 'Total Number Of Manual Imprinters',
+          maxLength: 2
         }
       },
       {
@@ -1379,10 +1405,11 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Hold-out Account Number',
-          placeholder: 'Hold-out Account Number'
+          placeholder: 'Hold-out Account Number',
+          maxLength: 20
         }
       },
-      {
+      { //numeric
         className: 'flex-1',
         type: 'input',
         key: 'holdOutAmount',
@@ -1391,13 +1418,14 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Hold-out Amount',
-          placeholder: 'Hold-out Amount'
+          placeholder: 'Hold-out Amount',
+          maxLength: 19
         }
       }
       ]
     },
 
-    {
+    { //numeric
       fieldGroupClassName: 'display-flex',
       fieldGroup: [{
         className: 'flex-1',
@@ -1408,7 +1436,8 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Pay Delay Days',
-          placeholder: 'Pay Delay Days'
+          placeholder: 'Pay Delay Days',
+          maxLength: 2
         }
       },
       {
@@ -1425,220 +1454,6 @@ export class BranchFormService {
       }
       ]
     },
-    /*  hiwalay na component
-                 {
-                   template: '<span class="mat-headline">Credit MID Details</span>',
-                 },
-   
-                 {
-                   fieldGroupClassName: 'display-flex',
-                   fieldGroup: [{
-                     className: 'flex-1', 
-                     type: 'select',
-                     key: 'creditMidDetailsCurrency',
-                     defaultValue: '1',
-                     expressionProperties: {
-                         
-                     },
-                     templateOptions: { 
-                     label: 'Currency',
-                     required: true,
-                     options:[
-                       { label:'Philippine Pesos', value:'1' }
-                     ]
-                     }      
-                   },
-                   {
-                     className: 'flex-1',
-                     type: 'select',
-                     key: 'monitorCode',
-                     defaultValue: '1',
-                     expressionProperties: {
-                         
-                     },
-                     templateOptions: { 
-                     label: 'Monitor Code',
-                     required: true,
-                     options:[
-                       { label:'OTC', value:'1'}
-                     ]
-                     }      
-                   },
-                   {
-                     type: 'checkbox',
-                     key: 'majorPurchase',
-                     defaultValue: true,
-                     templateOptions: {
-                       label: 'Major Purchase'
-                     },
-                   },
-                   {
-                     type: 'checkbox',
-                     key: 'offUs',
-                     templateOptions: {
-                       label: 'Off-Us'
-                     },
-                   },
-                 ]
-               },
-   
-               {
-                 fieldGroupClassName: 'display-flex',
-                 fieldGroup: [{
-                   className: 'flex-1', 
-                   type: 'select',
-                   key: 'serviceFeeContract',
-                   expressionProperties: {
-                       
-                   },
-                   templateOptions: { 
-                   label: 'Service Fee Contract',
-                   options:[
-                     { label:'', value:'1'}
-                   ]
-                   }      
-                 },
-                 {
-                   className: 'flex-1',
-                   type: 'select',
-                   key: 'merchantGroupCode',
-                   expressionProperties: {
-                       
-                   },
-                   templateOptions: { 
-                   label: 'Merchant Group Code',
-                   options:[
-                     { label:'', value:'1' }
-                   ]
-                   }      
-                 },
-                 {
-                   className: 'flex-1',
-                   type: 'select',
-                   key: 'merchantMpPromotionsGroup',
-                   expressionProperties: {
-                       
-                   },
-                   templateOptions: { 
-                   label: 'Merchant MP Promotions Group',
-                   options:[
-                     { label:'', value:'1' }
-                   ]
-                   }      
-                 }              
-               ]
-             },
-   
-             {
-               fieldGroupClassName: 'display-flex',
-               fieldGroup: [{
-                 className: 'flex-1', 
-                 type: 'select',
-                 key: 'defaultMpPromotion',
-                 expressionProperties: {
-                     
-                 },
-                 templateOptions: { 
-                 label: 'Default MP Promotion',
-                 options:[
-                   { label:' ', value:'1'}
-                 ]
-                 }      
-               },
-               {
-                 className: 'flex-1',
-                 type: 'input',
-                 key: 'dccMarkupRate',
-                 expressionProperties: {
-                     
-                 },
-                 templateOptions: { 
-                 label: 'DCC Mark-Up Rate',
-                 placeholder: 'DCC Mark-Up Rate'
-                 }      
-               }
-             ]
-           },
-   */
-
-    /*   {
-         
-         fieldGroupClassName: 'display-flex',
-         fieldGroup: [
-           {
-             className: 'flex-1',
-             type: 'input',
-             key: 'branchName',
-             templateOptions: {
-               label: 'Branch Namexx',
-               placeholder:'Branch Name'
-             },
-           },
-           {
-             className: 'flex-1',
-             type: 'input',
-             key: 'branchCode',
-             templateOptions: {
-               label: 'Branch Code',
-             },
-             expressionProperties: { 
-             },
-           },
-         ],
-       },
-       {
-         template: '<span class="mat-subheading-1">Address:</span>',
-       },
-       {
-         fieldGroupClassName: 'display-flex',
-         fieldGroup: [
-           {
-             className: 'flex-1',
-             type: 'input',
-             key: 'street',
-             templateOptions: {
-               label: 'Street',
-             },
-           },
-           {
-             className: 'flex-1',
-             type: 'input',
-             key: 'cityName',
-             templateOptions: {
-               label: 'City',
-             },
-           },
-           {
-             className: 'flex-1',
-             type: 'input',
-             key: 'zip',
-             templateOptions: {
-               type: 'number',
-               label: 'Zip',
-               max: 99999,
-               min: 0,
-               pattern: '\\d{5}',
-             },
-           },
-         ],
-       }, */
-    /*{
-      template: '<hr />',
-    },*/
-    /*   {
-         type: 'input',
-         key: 'remarks',
-         templateOptions: {
-           label: 'Remarks'
-         },
-       },
-       {
-         type: 'checkbox',
-         key: 'otherToo',
-         templateOptions: {
-           label: 'Other Checkbox'
-         },
-       }, */
   ];
   //#endregion  
 
@@ -1658,28 +1473,41 @@ export class BranchFormService {
           templateOptions: {
             label: 'DBA Name(DBA/Trade Name)',
             placeholder: 'DBA Name(DBA/Trade Name)',
-            required: true
+            required: true,
+            maxLength: 22
           }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'adminContactPerson',
-          expressionProperties: {
-
-          },
-          templateOptions: {
-            label: 'Administrator(Contact Person)',
-            placeholder: 'Administrator(Contact Person)'
-          }
-        },
+        }
       ]
     },
 
     {
       fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'input',
+        key: 'registeredBusinessNumber',
+        expressionProperties: {
 
+        },
+        templateOptions: {
+          label: 'Registered Business Number',
+          placeholder: 'Registered Business Number',
+          maxLength: 11
+        },
+      },
+      {
+        className: 'flex-1',
+        type: 'input',
+        key: 'adminContactPerson',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Administrator(Contact Person)',
+          placeholder: 'Administrator(Contact Person)',
+          maxLength: 30
+        }
+      }
       ]
     },
 
@@ -1695,6 +1523,7 @@ export class BranchFormService {
         templateOptions: {
           label: 'DBA(Branch/Outlet Address )',
           placeholder: 'DBA(Branch/Outlet Address )',
+          maxLength: 30,
           required: true
         },
       },
@@ -1711,6 +1540,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 30
         },
       },
       ]
@@ -1726,6 +1556,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 30
         },
       },
       ]
@@ -1741,6 +1572,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 30
         },
       },
       ]
@@ -1749,62 +1581,7 @@ export class BranchFormService {
     //dropdown  mandatory
     {
       fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'select',
-        key: 'dbaCity',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          label: 'DBA City',
-          required: true,
-          options: [
-            { label: 'PASIG', value: '1' },
-            { label: 'MAKATI CITY', value: '2' },
-            { label: 'MANDALUYONG', value: '3' },
-            { label: 'PASAY CITY', value: '4' },
-            { label: 'SAN JUAN', value: '5' },
-            { label: 'VALENZUELA', value: '6' },
-            { label: 'QUEZON CITY', value: '7' },
-            { label: 'MANILA', value: '8' }
-          ],
-        },
-      },
-
-      ]
-    },
-
-    {
-      template: '<span class="mat-headline">Debit TID Details</span>',
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'noOfDKE',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          label: 'No. of "DKE" Debit TID Requested',
-          placeholder: 'No. of "DKE" Debit TID Requested'
-        },
-      },
-      {
-        className: 'flex-1',
-        type: 'input',
-        key: 'noOf3DES',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          label: 'No. Of "3DES" Debit TID Requested',
-          placeholder: 'No. Of "3DES" Debit TID Requested'
-        }
-      }
+      fieldGroup: [
       ]
     },
 
@@ -1812,122 +1589,114 @@ export class BranchFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-          key: 'purposeOfRequest',
-          type: 'radio',
+          className: 'flex-1',
+          type: 'select',
+          key: 'dbaCity',
+          expressionProperties: {
+  
+          },
           templateOptions: {
-            label: 'Purpose Of Request?',
+            label: 'DBA City',
             required: true,
             options: [
-              { value: '1', label: 'ATM/DEBIT' },
-              { value: '2', label: 'Cash Agad' }
+              { label: 'PASIG', value: '1' },
+              { label: 'MAKATI CITY', value: '2' },
+              { label: 'MANDALUYONG', value: '3' },
+              { label: 'PASAY CITY', value: '4' },
+              { label: 'SAN JUAN', value: '5' },
+              { label: 'VALENZUELA', value: '6' },
+              { label: 'QUEZON CITY', value: '7' },
+              { label: 'MANILA', value: '8' }
             ],
           },
+        },
+        {
+        className: 'flex-1',
+        type: 'input',
+        key: 'branchPhoneNumber',
+        expressionProperties: {
 
         },
+        templateOptions: {
+          label: 'Branch/Outlet Phone Number',
+          placeholder: 'Branch/Outlet Phone Number',
+          maxLength: 20
+        },
+      },
+      {
+        className: 'flex-1',
+        type: 'input',
+        key: 'branchMobileNumber',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Mobile Number',
+          placeholder: 'Mobile Number',
+          required: true,
+          maxLength: 15
+        }
+      }
+      ]
+    }, 
+    {
+      template: '<span class="mat-headline">Other Details</span>',
+    },
+
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'input',
+        key: 'noOfDebitTidReq',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'No. of Debit TID Request for this outlet',
+          placeholder: 'No. of Debit TID Request for this outlet'
+        },
+      },
+      {
+        key: 'typeDebitTidReq',
+        type: 'radio',
+        templateOptions: {
+          label: 'Type of Debit TID Request?',
+          required: true,
+          options: [
+            { value: '1', label: 'ATM/DEBIT' },
+            { value: '2', label: 'Cash Agad' }
+          ],
+        },
+
+      },
+      ]
+    },
+
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',  //decimal format   //conditional mandatory
           type: 'input',
-          key: 'Merchant Debit Rate For Debit Cards',
+          key: 'merchDiscountRateDebitCrd',
           expressionProperties: {
 
           },
           templateOptions: {
             type: 'number',
-            label: 'Merchant Debit Rate For Debit Cards',
-            placeholder: 'Merchant Debit Rate For Debit Cards',
+            label: 'Merchant Discount Rate For Debit Cards',
+            placeholder: 'Merchant Discount Rate For Debit Cards',
             pattern: '^\\d\\.\\d{2}$|^\\d\\.\\d{4}$'
           }
         }
       ]
     },
 
-    /*{
-      template: '<span class="mat-subheading-1">Report Per Branch</span>',
-      }, */
 
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [  //conditional mandatory
-        {
-          key: 'reportPerBranch',
-          type: 'radio',
-          defaultValue: true,
-          templateOptions: {
-            label: 'Report Per Branch?',
-            required: true,
-            options: [
-              { value: true, label: 'Yes' },
-              { value: false, label: 'No' }
-            ],
-          },
-
-        },
-        {
-          className: 'flex-1', //conditional mandatory
-          type: 'select',
-          key: 'sendBdo030114',
-          expressionProperties: {
-
-          },
-          templateOptions: { //conditional mandatory
-            label: 'SendBdo030114',
-            options: [
-              { label: 'Email', value: '1' },
-              { label: 'Print', value: '2' },
-              { label: 'SFTP', value: '3' }
-            ]
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'sftpPath',
-          expressionProperties: {
-            'templateOptions.required': (model: any, formState: any) => {
-              return model['sendBdo030114'] == '3';
-            }
-          },
-          templateOptions: {
-            label: 'SFTP Path',
-            placeholder: 'SFTP Path'
-          }
-        }
-      ]
-    },
-
-    /*   {
-         template: '<span class="mat-subheading-1">Generate Payment File</span>',
-         }, */
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [  //conditional mandatory
-        {
-          key: 'generatePaymentFile',
-          type: 'radio',
-          defaultValue: false,
-          templateOptions: {
-            label: 'Generate Payment File?',
-            required: true,
-            options: [
-              { value: true, label: 'Yes' },
-              { value: false, label: 'No' }
-            ],
-          },
-
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'customerNumber',
-          expressionProperties: {
-
-          },
-          templateOptions: {
-            label: 'Customer Number',
-            placeholder: 'Customer Number'
-          }
-        },
         {
           className: 'flex-1', //dropdown
           type: 'select',
@@ -1945,6 +1714,21 @@ export class BranchFormService {
               { label: '5425-Apparel Industry', value: '5' }
             ]
           }
+        },
+        {
+          className: 'flex-1',  //decimal format   //conditional mandatory
+          type: 'input',
+          key: 'INTES Code for Diners',
+          expressionProperties: {
+
+          },
+          templateOptions: {
+            type: 'number',
+            label: 'INTES Code for Diners',
+            placeholder: 'INTES Code for Diners',
+            pattern: '^\\d\\.\\d{2}$|^\\d\\.\\d{4}$',
+            maxLength: 4
+          }
         }
       ]
     },
@@ -1957,44 +1741,6 @@ export class BranchFormService {
       fieldGroupClassName: 'display-flex', //conditional mandatory
       fieldGroup: [
         {
-          key: 'computeForMonthlyCWT',
-          type: 'radio',
-          defaultValue: false,
-          templateOptions: {
-            label: 'Compute for Monthly CWT?',
-            required: true,
-            options: [
-              { value: true, label: 'Yes' },
-              { value: false, label: 'No' }
-            ],
-          },
-
-        },
-        {
-          className: 'flex-1', //dropdown
-          type: 'select',
-          key: 'cardPLans',
-          defaultValue: '1',
-          expressionProperties: {
-
-          },
-          templateOptions: {
-            label: 'Card Plans/Styles',
-            options: [
-              { label: 'MCVCJCACCC-1', value: '1' },
-              { label: 'JC-2', value: '2' },
-              { label: 'AC-3', value: '3' },
-              { label: 'PC-4', value: '4' },
-              { label: 'VC-5', value: '5' },
-              { label: 'MC-6', value: '6' },
-              { label: 'CC-7', value: '7' },
-              { label: 'DINERS-8', value: '8' }
-
-            ]
-          }
-        },
-
-        {
           className: 'flex-1', // not yet
           type: 'input',
           key: 'tppOnly',
@@ -2002,8 +1748,9 @@ export class BranchFormService {
 
           },
           templateOptions: {
-            label: 'Should Be Corrected, From BDM or Agent (AE Code) To Fee Account(TPP Only)',
-            placeholder: 'Should Be Corrected, From BDM or Agent (AE Code) To Fee Account(TPP Only)'
+            label: 'To Fee Account(TPP Only)',
+            placeholder: '(TPP Only)',
+            maxLength: 20
           }
         }
 
@@ -2017,20 +1764,6 @@ export class BranchFormService {
     {
       fieldGroupClassName: 'display-flex', //conditional mandatory
       fieldGroup: [
-        {
-          key: 'settlementPerBranch',
-          type: 'radio',
-          defaultValue: true,
-          templateOptions: {
-            label: 'Settlement Per Branch?',
-            required: true,
-            options: [
-              { value: true, label: 'Yes' },
-              { value: false, label: 'No' }
-            ],
-          },
-
-        },
         {
           className: 'flex-1',//not yet
           type: 'select',
@@ -2050,14 +1783,16 @@ export class BranchFormService {
         },
         {
           className: 'flex-1',
-          type: 'input',
+          type: 'select',
           key: 'strategicMerchant',
           expressionProperties: {
 
           },
           templateOptions: {
             label: 'Strategic Merchant',
-            placeholder: 'Strategic Merchant'
+            options: [
+              { label: '1', value: '1'}
+            ]
           },
         }
       ]
@@ -2088,7 +1823,8 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'MC Assigned Id',
-          placeholder: 'MC Assigned Id'
+          placeholder: 'MC Assigned Id',
+          maxLength: 6
         }
       },
       {
@@ -2121,7 +1857,8 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Imprinter Name',
-          placeholder: 'Imprinter Name'
+          placeholder: 'Imprinter Name',
+          maxLength: 30
         }
       },
       {
@@ -2133,7 +1870,8 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Imprinter Number(Sales Slip Handling)',
-          placeholder: 'Imprinter Number(Sales Slip Handling)'
+          placeholder: 'Imprinter Number(Sales Slip Handling)',
+          maxLength: 10
         }
       },
       {
@@ -2145,7 +1883,8 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Imprinter AMEX (MID Capping)',
-          placeholder: 'Imprinter AMEX (MID Capping)'
+          placeholder: 'Imprinter AMEX (MID Capping)',
+          maxLength: 13
         }
       }
       ]
@@ -2163,7 +1902,8 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Imprinter DC (Top Corporation/Ecom)',
-          placeholder: 'Imprinter DC (Top Corporation/Ecom)'
+          placeholder: 'Imprinter DC (Top Corporation/Ecom)',
+          maxLength: 13
         }
       },
       {
@@ -2175,7 +1915,8 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Imprinter JCB',
-          placeholder: 'Imprinter JCB'
+          placeholder: 'Imprinter JCB',
+          maxLength: 13
         }
       },
       {
@@ -2187,13 +1928,14 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Imprinter Others(Class Code)',
-          placeholder: 'Imprinter Others(Class Code)'
+          placeholder: 'Imprinter Others(Class Code)',
+          maxLength: 12
         }
       },
       ]
     },
 
-    {
+    { // numeric
       fieldGroupClassName: 'display-flex',
       fieldGroup: [{
         className: 'flex-1',
@@ -2204,7 +1946,8 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Total Number Of Manual Imprinters',
-          placeholder: 'Total Number Of Manual Imprinters'
+          placeholder: 'Total Number Of Manual Imprinters',
+          maxLength: 2
         }
       },
       {
@@ -2216,10 +1959,11 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Hold-out Account Number',
-          placeholder: 'Hold-out Account Number'
+          placeholder: 'Hold-out Account Number',
+          maxLength: 20
         }
       },
-      {
+      { //numeric
         className: 'flex-1',
         type: 'input',
         key: 'holdOutAmount',
@@ -2228,13 +1972,14 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Hold-out Amount',
-          placeholder: 'Hold-out Amount'
+          placeholder: 'Hold-out Amount',
+          maxLength: 19
         }
       }
       ]
     },
 
-    {
+    { //numeric
       fieldGroupClassName: 'display-flex',
       fieldGroup: [{
         className: 'flex-1',
@@ -2245,7 +1990,8 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Pay Delay Days',
-          placeholder: 'Pay Delay Days'
+          placeholder: 'Pay Delay Days',
+          maxLength: 2
         }
       },
       {
@@ -2262,7 +2008,6 @@ export class BranchFormService {
       }
       ]
     },
-
   ];
   //#endregion 
 
@@ -3087,6 +2832,6 @@ export class BranchFormService {
   constructor() { }
   getBranchFields(): FormlyFieldConfig[] {
 
-    return this.mmu;
+    return this.ao;
   }
 }
