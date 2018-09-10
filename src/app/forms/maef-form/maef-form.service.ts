@@ -40,75 +40,54 @@ export class MaefFormService {
       fieldGroup: [{
         className: 'flex-1',
         type: 'select',
-        key: 'typeOfAff',
+        key: 'typeOfReqMID',
         expressionProperties: {
 
         },
         templateOptions: {
-          label: 'Type Of Affiliation',
+          label: 'Type Of Requested MID',
           options: [
-            { label: 'Card Present (Dial-Up)', value: '1' },
-            { label: 'Card Present (GPRS)', value: '1' },
-            { label: 'Card Present (Event)', value: '1' },
-            { label: 'Card Not Present (CNP)', value: '1' }
+            { label: 'OTC', value: '1' },
+            { label: 'GPRS/MOB', value: '2' },
+            { label: 'EVENT', value: '3' },
+            { label: 'POS RENTAL', value: '4' },
+            { label: 'BDO PAY', value: '5' },
+            { label: 'QR', value: '6' },
+            { label: 'CNP', value: '7' },
           ]
         },
       },
       {
         className: 'flex-1',
-        type: 'input',
-        key: 'cnpType',
+        type: 'select',
+        key: 'typeOfCnp',
         expressionProperties: {
 
         },
         templateOptions: {
-          label: 'If CNP, Indicate The Type:',
-          placeholder: 'If CNP, Indicate The Type:'
-        }
-      }
+          label: 'Type Of CNP',
+          options: [
+            { label: 'ECOM', value: '1' },
+            { label: 'MOTO', value: '2' },
+            { label: 'RPS', value: '3' },
+            { label: 'TPP', value: '4' },
+            { label: 'MASTER MERCHANT', value: '5' },
+            { label: 'EMOTO', value: '6' },
+            { label: 'ERPS', value: '7' },
+            { label: 'N.A.', value: '8' }
+          ]
+        },
+      },
+
       ]
     },
-
-//
-{
-  fieldGroupClassName: 'display-flex',
-  fieldGroup: [
-
-    {
-      key: 'monitorCodeCorrect',
-      type: 'radio',
-      templateOptions: {
-        label: 'Is Monitor Code Correct?',
-        required: true,
-        options: [
-          { value: true, label: 'Yes' },
-          { value: false, label: 'No' }
-        ],
-      },
-    },
-
-    {
-      className: 'flex-1',
-      type: 'input',
-      key: 'monitorCodeCorrectRemarks',
-      expressionProperties: {
-
-      },
-      templateOptions: {
-        label: 'Remarks',
-        placeholder: 'Remarks'
-      }
-    }
-
-  ]
-},
-//
     
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
 
         {
+          className: 'flex-1',
           key: 'withSimulInstall',
           type: 'radio',
           templateOptions: {
@@ -123,6 +102,7 @@ export class MaefFormService {
         },
 
         {
+          className: 'flex-1',
           key: 'withSimulDebit',
           type: 'radio',
           templateOptions: {
@@ -137,6 +117,7 @@ export class MaefFormService {
         },
 
         {
+          className: 'flex-1',
           key: 'currency',
           type: 'radio',
           templateOptions: {
@@ -148,72 +129,12 @@ export class MaefFormService {
               { value: '3', label: 'Peso & Dollar' },
             ],
           },
-
-        },
-
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'noReqCreditMidOutlet',
-          expressionProperties: {
-
-          },
-          templateOptions: {
-            label: 'No. Of Requested Credit MID/s For This Outlet',
-            placeholder: 'No. Of Requested Credit MID/s For This Outlet'
-          }
         }
 
       ]
     },
-
     {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'noReqDebitTidOutlet',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          label: 'No. Of Requested Debit TID/s For This Outlet',
-          placeholder: 'No. Of Requested Debit TID/s For This Outlet'
-        },
-      },
-      {
-        className: 'flex-1',
-        type: 'input',
-        key: 'debitMerchNumber',
-        expressionProperties: {
-          'templateOptions.required': (model: any, formState: any) => {
-            return model['withSimulDebit'];
-          }
-        },
-        templateOptions: {
-          label: 'Debit Merchant Number',
-          placeholder: 'Debit Merchant Number'
-        }
-      },
-      {
-        className: 'flex-1',
-        type: 'input',
-        key: 'debitStoreId',
-        expressionProperties: {
-          'templateOptions.required': (model: any, formState: any) => {
-            return model['withSimulDebit'];
-          }
-        },
-        templateOptions: {
-          label: 'Debit Store ID',
-          placeholder: 'Debit Store ID'
-        }
-      },
-      ]
-    },
-
-    {
-      template: '<span class="mat-subheading-1">Credit Checking</span>',
+      template: '<span class="mat-headline">Credit Checking</span>',
     },
 
     {
@@ -361,10 +282,10 @@ export class MaefFormService {
       fieldGroup: [
 
         {
-          key: 'vtmsWithAd',
+          key: 'vmtsWithAd',
           type: 'radio',
           templateOptions: {
-            label: 'VTMS',
+            label: 'VMTS',
             required: true,
             options: [
               { value: true, label: 'With Adverse' },
@@ -377,7 +298,7 @@ export class MaefFormService {
         {
           className: 'flex-1',
           type: 'textarea',
-          key: 'vtmsWithAdRemarks',
+          key: 'vmtsWithAdRemarks',
           expressionProperties: {
 
           },
@@ -607,29 +528,14 @@ export class MaefFormService {
     },
 
     {
-      template: '<span class="mat-subheading-1">Terms Of Acceptance</span>',
+      template: '<span class="mat-headline">Terms Of Acceptance</span>',
     },
 
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
-
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'psv',
-          expressionProperties: {
-            'templateOptions.required': (model: any, formState: any) => {
-              return model['largeAccYes'] == false;
-            }
-          },
-          templateOptions: {
-              label: 'PSV',
-              placeholder: 'PSV'
-          }
-      },
-
       {
+        className: 'flex-1',
         key: 'location',
         type: 'radio',
         templateOptions: {
@@ -641,10 +547,22 @@ export class MaefFormService {
             { value: '3', label: 'Out Of Coverage' }
           ],
         },
-
       },
-
       {
+        className: 'flex-1',
+        key: 'appearance',
+        type: 'radio',
+        templateOptions: {
+          label: 'Appearance',
+          required: true,
+          options: [
+            { value: '1', label: 'Acceptable' },
+            { value: '2', label: 'Non-Acceptable' }
+          ],
+        },
+      },
+      {
+        className: 'flex-1',
         key: 'withTelYes',
         type: 'radio',
         templateOptions: {
@@ -692,40 +610,70 @@ export class MaefFormService {
         },
 
       },
+      {
+        className: 'flex-1',
+        type: 'input',
+        key: 'psv',
+        expressionProperties: {
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['largeAccYes'] == false;
+          }
+        },
+        templateOptions: {
+            label: 'PSV',
+            placeholder: 'PSV'
+        }
+    },
 
       ]
     },
-
-
+     
+    {
+      template: '<span class="mat-headline">Other Checking</span>',
+    },
 
 
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
-
+        {
+          className: 'flex-1',
+          key: 'mdrYes',
+          type: 'radio',
+          templateOptions: {
+            label: 'MDR?',
+            required: true,
+            options: [
+              { value: true, label: 'Yes' },
+              { value: false, label: 'No' },
+            ],
+          },
+  
+        },
+        {
+          className: 'flex-1',
+          key: 'dccMarkUpRebateYes',
+          type: 'radio',
+          templateOptions: {
+            label: 'DCC Mark-Up & Rebate?',
+            required: true,
+            options: [
+              { value: true, label: 'Yes' },
+              { value: false, label: 'No' },
+            ],
+          },
+  
+        },
       {
-        key: 'largeAccYes',
+        className: 'flex-1',
+        key: 'mccCorrectYes',
         type: 'radio',
         templateOptions: {
-          label: 'Large Account',
+          label: 'MCC?',
           required: true,
           options: [
             { value: true, label: 'Yes' },
-            { value: false, label: 'No' }
-          ],
-        },
-
-      },
-
-      {
-        key: 'natureBus',
-        type: 'radio',
-        templateOptions: {
-          label: 'Nature Of Business',
-          required: true,
-          options: [
-            { value: '1', label: 'Desirable' },
-            { value: '2', label: 'Non-Desirable' }
+            { value: false, label: 'No' },
           ],
         },
 
@@ -734,20 +682,29 @@ export class MaefFormService {
       ]
     },
 
-    
-    {
-      template: '<span class="mat-subheading-1">Other Considerations</span>',
-    },
-
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
 
       {
-        key: 'cusNoCorrectYes',
+        className: 'flex-1',
+        key: 'intesCodeYes',
         type: 'radio',
         templateOptions: {
-          label: 'Is Customer Number Correct?',
+          label: 'Intes Code?',
+          required: true,
+          options: [
+            { value: true, label: 'Yes' },
+            { value: false, label: 'No' },
+          ],
+        },
+      },
+      {
+        className: 'flex-1',
+        key: 'bdoSettlemendCASACreditFacYes',
+        type: 'radio',
+        templateOptions: {
+          label: 'BDO Settlement CA/SA For Credit Facility?',
           required: true,
           options: [
             { value: true, label: 'Yes' },
@@ -755,250 +712,33 @@ export class MaefFormService {
             { value: '', label: 'N.A.' }
           ],
         },
-
       },
-
       {
         className: 'flex-1',
-        type: 'input',
-        key: 'cusNoCorrectRemarks',
-        expressionProperties: {
-            
-        },
-        templateOptions: {
-            label: 'Remarks',
-            placeholder: 'Remarks'
-        }
-    },
-
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-
-        {
-          className: 'flex-1',//dropwdown
-          type: 'select',
-          key: 'amexRating',
-          expressionProperties: {
-              
-          },
-          templateOptions: {
-          label: 'AMEX Rating',
-          options:[
-            { label:'', value:'1' }
-          ]
-          },     
-        },
-
-      {
-        key: 'cusNoCorrectYes',//not yet
+        key: 'bdoSettlemendCASADebitFacYes',
         type: 'radio',
         templateOptions: {
-          label: 'BDO Pay Rating?',
-          required: true,
-          options: [
-            { value: '1', label: 'Low Risk' },
-            { value: '2', label: 'Medium Risk' },
-            { value: '3', label: 'High Risk' }
-          ],
-        },
-
-      },
-
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-
-      {
-        className: 'flex-1',
-        key: 'dbaAddCorrectYes',
-        type: 'radio',
-        templateOptions: {
-          label: 'Is DBA(Branch/Outlet Address)Correct?',
+          label: 'BDO Settlement CA/SA For Debit Facility?',
           required: true,
           options: [
             { value: true, label: 'Yes' },
             { value: false, label: 'No' },
+            { value: '', label: 'N.A.' }
           ],
         },
-
       },
-
-      {
-        className: 'flex-3',
-        type: 'input',
-        key: 'dbaAddCorrectRemarks',
-        expressionProperties: {
-            
-        },
-        templateOptions: {
-            label: 'Remarks',
-            placeholder: 'Remarks'
-        }
-    },
-
       ]
     },
-
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
 
       {
         className: 'flex-1',
-        key: 'mccCorrectYes',
+        key: 'feeAccTppYes',
         type: 'radio',
         templateOptions: {
-          label: 'MCC Correct?',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' },
-          ],
-        },
-
-      },
-
-      {
-        className: 'flex-3',
-        type: 'input',
-        key: 'mccCorrectRemarks',
-        expressionProperties: {
-            
-        },
-        templateOptions: {
-            label: 'Remarks',
-            placeholder: 'Remarks'
-        }
-    },
-
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-
-      {
-        className: 'flex-1',
-        key: 'withDccIntesYes',
-        type: 'radio',
-        templateOptions: {
-          label: 'With DCC Intes Code?',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' },
-          ],
-        },
-
-      },
-
-      {
-        className: 'flex-3',
-        type: 'input',
-        key: 'withDccIntesRemarks',
-        expressionProperties: {
-          'templateOptions.required': (model: any, formState: any) => {
-            return model['withDccIntesYes'];
-          }           
-        },
-        templateOptions: {
-            label: 'Remarks',
-            placeholder: 'Remarks',
-            maxLength: 4
-        }
-    },
-
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-
-      {
-        className: 'flex-1',
-        key: 'mdrsCorrectYes',
-        type: 'radio',
-        templateOptions: {
-          label: 'MDRs Correct?',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' },
-          ],
-        },
-
-      },
-
-      {
-        className: 'flex-3',
-        type: 'input',
-        key: 'mdrsCorrectRemarks',
-        expressionProperties: {
-            
-        },
-        templateOptions: {
-            label: 'Remarks',
-            placeholder: 'Remarks'
-        }
-    },
-
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-
-      {
-        className: 'flex-1',
-        key: 'cardPlansCorrect',
-        type: 'radio',
-        templateOptions: {
-          label: 'Is Card Plans/Styles Correct?',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' },
-          ],
-        },
-
-      },
-
-      {
-        className: 'flex-3',
-        type: 'input',
-        key: 'cardPlansCorrectRemarks',
-        expressionProperties: {
-            
-        },
-        templateOptions: {
-            label: 'Remarks',
-            placeholder: 'Remarks'
-        }
-    },
-
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-
-      {
-        className: 'flex-1',
-        key: 'merchGroupCorrect',
-        type: 'radio',
-        templateOptions: {
-          label: 'Is Merchant Group Code Correct?',
+          label: 'Fee Account(For TPP Only)?',
           required: true,
           options: [
             { value: true, label: 'Yes' },
@@ -1008,33 +748,12 @@ export class MaefFormService {
         },
 
       },
-
-      {
-        className: 'flex-3',
-        type: 'input',
-        key: 'merchGroupCorrectRemarks',
-        expressionProperties: {
-            
-        },
-        templateOptions: {
-            label: 'Remarks',
-            placeholder: 'Remarks'
-        }
-    },
-
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-
       {
         className: 'flex-1',
-        key: 'merchMpPromoGrpYes',
+        key: 'holdAccNoYes',
         type: 'radio',
         templateOptions: {
-          label: 'Is Merchant MP Promotions Group Correct?',
+          label: 'Holdout Account Number?',
           required: true,
           options: [
             { value: true, label: 'Yes' },
@@ -1044,33 +763,78 @@ export class MaefFormService {
         },
 
       },
-
       {
-        className: 'flex-3',
-        type: 'input',
-        key: 'merchMpPromoGrpRemarks',
-        expressionProperties: {
-            
-        },
+        className: 'flex-1',
+        key: 'tinYes',
+        type: 'radio',
         templateOptions: {
-            label: 'Remarks',
-            placeholder: 'Remarks'
-        }
+          label: 'TIN?',
+          required: true,
+          options: [
+            { value: true, label: 'Yes' },
+            { value: false, label: 'No' },
+            { value: '', label: 'N.A.' },
+          ],
+        },
+      },
+      ]
     },
 
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
+
+      {
+        className: 'flex-1',
+        key: 'secDtiRegDateYes',
+        type: 'radio',
+        templateOptions: {
+          label: 'SEC/DTI Registration Date?',
+          required: true,
+          options: [
+            { value: true, label: 'Yes' },
+            { value: false, label: 'No' }
+          ],
+        },
+      },
+      {
+        className: 'flex-1',
+        key: 'mobileNumberYes',
+        type: 'radio',
+        templateOptions: {
+          label: 'Mobile Number?',
+          required: true,
+          options: [
+            { value: true, label: 'Yes' },
+            { value: false, label: 'No' }
+          ],
+        },
+      },
+      {
+        className: 'flex-1',
+        key: 'emailAddYes',
+        type: 'radio',
+        templateOptions: {
+          label: 'Email Address?',
+          required: true,
+          options: [
+            { value: true, label: 'Yes' },
+            { value: false, label: 'No' },
+          ],
+        },
+
+      },
       ]
     },    
-
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
-
       {
         className: 'flex-1',
-        key: 'defMpPromoYes',
+        key: 'websiteYes',
         type: 'radio',
         templateOptions: {
-          label: 'Is Default MP Promotion Correct?',
+          label: 'Website?',
           required: true,
           options: [
             { value: true, label: 'Yes' },
@@ -1078,590 +842,38 @@ export class MaefFormService {
             { value: '', label: 'N.A.' },
           ],
         },
-
       },
-
-      {
-        className: 'flex-3',
-        type: 'input',
-        key: 'defMpPromoRemarks',
-        expressionProperties: {
-            
-        },
-        templateOptions: {
-            label: 'Remarks',
-            placeholder: 'Remarks'
-        }
-    },
-
-      ]
-    }, 
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-
       {
         className: 'flex-1',
-        key: 'mcIdCorrectYes',
+        key: 'signVerifYes',
         type: 'radio',
         templateOptions: {
-          label: 'MC Assigned ID Correct?',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' },
-            { value: '', label: 'N.A.' },
-          ],
-        },
-
-      },
-
-      {
-        className: 'flex-3',
-        type: 'input',
-        key: 'mcIdCorrectRemarks',
-        expressionProperties: {
-            
-        },
-        templateOptions: {
-            label: 'Remarks',
-            placeholder: 'Remarks',
-            maxLength: 6
-        }
-    },
-
-      ]
-    }, 
-
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-
-      {
-        className: 'flex-1',
-        key: 'bdoCreditFacCorrect',
-        type: 'radio',
-        templateOptions: {
-          label: 'Is BDO Settlement CA/SA For Credit Facility Correct?',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' },
-            { value: '', label: 'N.A.' },
-          ],
-        },
-
-      },
-
-      {
-        className: 'flex-3',
-        type: 'input',
-        key: 'bdoCreditFacCorrectRemarks',
-        expressionProperties: {
-            
-        },
-        templateOptions: {
-            label: 'Remarks',
-            placeholder: 'Remarks',
-            maxLength: 20
-        }
-    },
-
-      ]
-    }, 
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-
-      {
-        className: 'flex-1',
-        key: 'bdoCreditFacCLass',
-        type: 'radio',
-        expressionProperties: {
-          'templateOptions.required': (model: any, formState: any) => {
-            return model['bdoCreditFacCorrect'];
-          }
-        },
-        templateOptions: {
-          label: 'BDO Settlement CA/SA Classification For Credit Facility?',
-          options: [
-            { value: '1', label: 'Personal' },
-            { value: '2', label: 'Non-Personal' },
-            { value: '3', label: 'Third Party' },
-          ],
-        },
-
-      },
-
-      {
-        className: 'flex-1',
-        key: 'bdoDebitFacCorrect',
-        type: 'radio',
-        templateOptions: {
-          label: 'BDO Settlement CA/SA For Debit Facility Correct Correct?',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' },
-            { value: '', label: 'N.A.' },
-          ],
-        },
-
-      },
-
-      {
-        className: 'flex-1',
-        type: 'input',
-        key: 'bdoDebitFacCorrectRemarks',
-        expressionProperties: {
-            
-        },
-        templateOptions: {
-            label: 'Remarks',
-            placeholder: 'Remarks',
-            maxLength: 20
-        }
-    },
-
-      ]
-    }, 
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-
-      {
-        className: 'flex-1',
-        key: 'bdoDebitFacCLass',
-        type: 'radio',
-        expressionProperties: {
-          'templateOptions.required': (model: any, formState: any) => {
-            return model['bdoDebitFacCorrect'];
-          }
-        },
-        templateOptions: {
-          label: 'BDO Settlement CA/SA Classification For Debit Facility?',
-          options: [
-            { value: '1', label: 'Personal' },
-            { value: '2', label: 'Non-Personal' },
-            { value: '3', label: 'Third Party' }
-          ],
-        },
-
-      },
-
-      {
-        className: 'flex-1',
-        key: 'tinCorrect',
-        type: 'radio',
-        templateOptions: {
-          label: 'Is Tax Identification Number(TIN) Correct?',
+          label: 'Signature Verification?',
           required: true,
           options: [
             { value: true, label: 'Yes' },
             { value: false, label: 'No' }
           ],
         },
-
       },
-
       {
         className: 'flex-1',
-        type: 'input',
-        key: 'tinCorrectRemarks',
-        expressionProperties: {
-            
-        },
+        key: '',
+        type: '',
         templateOptions: {
-            label: 'Remarks',
-            placeholder: 'Remarks',
-            maxLength: 15,
-        }
-    },
-
+        },
+      },
       ]
     }, 
-
     {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-
-      {
-        key: 'taxExemptYes',
-        type: 'radio',
-        templateOptions: {
-          label: 'TAX Exempt?',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' }
-          ],
-        },
-
-      },
-
-      {
-        className: 'flex-1',
-        type: 'input',
-        key: 'taxExemptRemarks',
-        expressionProperties: {
-          'templateOptions.disabled': (model: any, formState: any) => {
-            return !model['taxExemptYes'];
-          }
-        },
-        templateOptions: {
-            label: 'Remarks',
-            placeholder: 'Remarks',
-            maxLength: 20
-        }
-    },
-
-
-
-      ]
-    }, 
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-
-        { 
-          template: '<span class="mat-subheading-1">Tax Exempt Validity(DDMMMYY):</span>',
-        }, 
-        {
-          className: 'flex-1',
-          type: 'calendar',
-          key: 'taxExemptValidityFrom',
-          expressionProperties: {
-              
-          },
-          templateOptions: {
-          label: 'Date From',
-          placeholder: 'Date From'
-          }
-      },
-      {
-        className: 'flex-1',
-        type: 'calendar',
-        key: 'taxExemptValidityTo',
-        expressionProperties: {
-            
-        },
-        templateOptions: {
-          label: 'Date To',
-        placeholder: 'Date To'
-        }
-    }, 
-    {
-      className: 'flex-1',
-      type: 'input',
-      key: 'taxExemptCertIssuedBy',
-      expressionProperties: {
-        'templateOptions.required': (model: any, formState: any) => {
-          return model['taxExemptYes'];
-        }
-      },
-      templateOptions: {
-          label: 'Tax Exempt Certificate Issued By',
-          placeholder:'Tax Exempt Certificate Issued By'
-      },
-  },
-      {
-          className: 'flex-1',
-          type: 'input',
-          key: 'taxExemptClass',
-          expressionProperties: {
-            'templateOptions.required': (model: any, formState: any) => {
-              return model['taxExemptYes'];
-            }   
-          },
-          templateOptions: {
-              label: 'Tax Exempt Classification',
-          placeholder: 'Tax Exempt Classification'
-          }
-      },
-
-      ]
-    },   
-  
-
-    
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-
-      {
-        className: 'flex-1',
-        key: 'regBusNumCorrect',
-        type: 'radio',
-        templateOptions: {
-          label: 'Is Registered Business Number Correct?',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' }
-          ],
-        },
-
-      },
-
-      {
-        className: 'flex-1',
-        type: 'input',
-        key: 'regBusNumCorrectRemarks',
-        expressionProperties: {
-            
-        },
-        templateOptions: {
-            label: 'Remarks',
-            placeholder: 'Remarks',
-            maxLength: 11,
-        }
-    },
-
-    {
-      className: 'flex-1',
-      key: 'dtiRegDateCorrect',
-      type: 'radio',
-      templateOptions: {
-        label: 'Is Sec/DTI Registration Date Correct?',
-        options: [
-          { value: true, label: 'Yes' },
-          { value: false, label: 'No' }
-        ],
-      },
-
-    },
-
-    {
-      className: 'flex-1',
-      type: 'input',
-      key: 'dtiRegDateCorrectRemarks',
-      expressionProperties: {
-          
-      },
-      templateOptions: {
-          label: 'Remarks',
-          placeholder: 'Remarks'
-      }
-  },
-
-
-
-      ]
-    }, 
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-
-      {
-        className: 'flex-1',
-        key: 'imprinterNumCorrect',
-        type: 'radio',
-        templateOptions: {
-          label: 'Is Imprinter Number(Sales Slip Handling) Correct?',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' }
-          ],
-        },
-
-      },
-
-      {
-        className: 'flex-1',
-        type: 'input',
-        key: 'imprinterNumCorrectRemarks',
-        expressionProperties: {
-            
-        },
-        templateOptions: {
-            label: 'Remarks',
-            placeholder: 'Remarks',
-            maxLength: 10
-        }
-    },
-
-    {
-      className: 'flex-1',
-      key: 'imprinterDcCorrect',
-      type: 'radio',
-      templateOptions: {
-        label: 'Is Imprinter DC(Top Corporation) Correct?',
-        required: true,
-        maxLength: 13,
-        options: [
-          { value: true, label: 'Yes' },
-          { value: false, label: 'No' }
-        ],
-      },
-
-    },
-
-    {
-      className: 'flex-1',
-      type: 'input',
-      key: 'imprinterDcCorrectRemarks',
-      expressionProperties: {
-          
-      },
-      templateOptions: {
-          label: 'Remarks',
-          placeholder: 'Remarks'
-      }
-  },
-
-
-
-      ]
-    }, 
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-
-      {
-        className: 'flex-1',
-        key: 'imprinterOthersCorrect',
-        type: 'radio',
-        templateOptions: {
-          label: 'Is Imprinter Others (Class Code) Correct?',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' }
-          ],
-        },
-
-      },
-
-      {
-        className: 'flex-1',
-        type: 'input',
-        key: 'imprinterOthersCorrectRemarks',
-        expressionProperties: {
-            
-        },
-        templateOptions: {
-            label: 'Remarks',
-            placeholder: 'Remarks',
-            maxLength: 12
-        }
-    },
-
-    {
-      className: 'flex-1',
-      key: 'signVerifiedYes',
-      type: 'radio',
-      templateOptions: {
-        label: 'Signature Verified?',
-        required: true,
-        options: [
-          { value: true, label: 'Yes' },
-          { value: false, label: 'No' }
-        ],
-      },
-
-    },
-
-      ]
-    }, 
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-
-      {
-        className: 'flex-1',
-        key: 'namePrincipalCorrect',
-        type: 'radio',
-        templateOptions: {
-          label: 'Is Name Of Principal Owner Correct?',
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' }
-          ],
-        },
-
-      },
-
-      {
-        className: 'flex-1',
-        type: 'input',
-        key: 'namePrincipalCorrectRemarks',
-        expressionProperties: {
-            
-        },
-        templateOptions: {
-            label: 'Remarks',
-            placeholder: 'Remarks',
-            maxLength: 50
-        }
-    },
-
-    {
-      className: 'flex-1',
-      key: 'nameSignatoryCorrect',
-      type: 'radio',
-      templateOptions: {
-        label: 'Is/Are Name/s Of Signatory/ies Correct?',
-        required: true,
-        options: [
-          { value: true, label: 'Yes' },
-          { value: false, label: 'No' }
-        ],
-      },
-
-    },
-
-    {
-      className: 'flex-1',
-      type: 'input',
-      key: 'nameSignatoryCorrectRemarks',
-      expressionProperties: {
-          
-      },
-      templateOptions: {
-          label: 'Remarks',
-          placeholder: 'Remarks',
-          maxLength: 50
-      }
-  },
-  {
-    className: 'flex-1',
-    type: 'select',
-    key: 'reqNumOfSignatory',
-    expressionProperties: {
-        
-    },
-    templateOptions: {
-        label: 'Required Number Of Signatory/ies To Sign',
-        options:[
-          { label: 'Any One/Singly', value: '1'},
-          { label: 'Any Two/Doubly', value: '2'},
-          { label: 'Jointly/All', value: '3'},
-          { label: '1 Group A', value: '4'},
-          { label: '1 Group B. 1 Group C', value: '5'},
-          { label: 'Etc.', value: '6'}
-            ],
-    },
-},
-      ]
-    }, 
-
-    {
-      template: '<span class="mat-subheading-1">Recommendation/Decision</span>',
+      template: '<span class="mat-headline">Decision</span>',
     },
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
 
         {
+          className: 'flex-1',
           type: 'checkbox',
           key: 'chkApprove',
           templateOptions: {
@@ -1670,25 +882,6 @@ export class MaefFormService {
         },
         {
           className: 'flex-1',
-          type: 'input',
-          key: 'chkApproveRemarks',
-          expressionProperties: {
-              
-          },
-          templateOptions: {
-              label: 'Remarks',
-              placeholder: 'Remarks',
-              maxLength: 120
-          }
-      },
-      ]
-    }, 
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-
-        {
           type: 'checkbox',
           key: 'chkWithReq',
           templateOptions: {
@@ -1697,25 +890,6 @@ export class MaefFormService {
         },
         {
           className: 'flex-1',
-          type: 'input',
-          key: 'chkWithReqRemarks',
-          expressionProperties: {
-              
-          },
-          templateOptions: {
-              label: 'Remarks',
-              placeholder: 'Remarks',
-              maxLength: 500,
-          }
-      },
-      ]
-    }, 
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-
-        {
           type: 'checkbox',
           key: 'chkWithException',
           templateOptions: {
@@ -1724,63 +898,27 @@ export class MaefFormService {
         },
         {
           className: 'flex-1',
-          type: 'input',
-          key: 'chkWithExceptionRemarks',
-          expressionProperties: {
-              
-          },
-          templateOptions: {
-              label: 'Remarks',
-              placeholder: 'Remarks',
-              maxLength: 500
-          }
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-
-        {
           type: 'checkbox',
           key: 'chkDecline',
           templateOptions: {
             label: 'Decline'
           },
         },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'chkDeclineRemarks',
-          expressionProperties: {
-              
-          },
-          templateOptions: {
-              label: 'Remarks',
-              placeholder: 'Remarks',
-              maxLength: 120
-          }
-      },
+
       ]
-    },
-
-    {
-      template: '<span class="mat-subheading-1">Recommended Risk Mitigants</span>',
-    },
-
+    }, 
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [{
           className: 'flex-1',
           type: 'input',
-          key: 'midCap',
+          key: 'assignMidCap',
           expressionProperties: {
               
           },
           templateOptions: {
-              label: 'MID Capping',
-              placeholder:'MID Capping',
+              label: 'Assigned MID Cap',
+              placeholder:'Assigned MID Cap',
               maxLength: 13
           },
       },
@@ -1800,13 +938,13 @@ export class MaefFormService {
           {
               className: 'flex-1',
               type: 'input',
-              key: 'holdOutAmount',
+              key: 'holdOutDeposit',
               expressionProperties: {
                   
               },
               templateOptions: {
-                  label: 'Holdout Amount',
-                  placeholder: 'Holdout Amount',
+                  label: 'Holdout Deposit',
+                  placeholder: 'Holdout Deposit',
                   maxLength: 19
               }
           },
@@ -1860,31 +998,78 @@ export class MaefFormService {
             fieldGroup: [{
                 className: 'flex-1',
                 type: 'input',
-                key: 'forNewAffApprovedBy',
+                key: 'approver1',
                 expressionProperties: {
                     
                 },
                 templateOptions: {
-                    label: 'Approved By',
-                    placeholder:'Approved By'
+                    label: 'Approved1',
+                    placeholder:'Approved1'
                 },
-            },
+               },
+
                 {
                     className: 'flex-1',
-                    type: 'input',
-                    key: 'forBranchAffApprovedBy',
+                    type: 'calendar',
+                    key: 'dateApproved1',
                     expressionProperties: {
                         
                     },
                     templateOptions: {
-                        label: 'Approved By',
-                        placeholder: 'Approved By'
+                        label: 'Date Approved',
+                        placeholder: 'Date Approved'
                     }
                 },
+            ]
+          },
+          {
+            fieldGroupClassName: 'display-flex',
+            fieldGroup: [{
+                className: 'flex-1',
+                type: 'input',
+                key: 'approver2',
+                expressionProperties: {
+                    
+                },
+                templateOptions: {
+                    label: 'Approved2',
+                    placeholder:'Approved2'
+                },
+               },
+
                 {
                     className: 'flex-1',
                     type: 'calendar',
-                    key: 'dateApproved',
+                    key: 'dateApproved2',
+                    expressionProperties: {
+                        
+                    },
+                    templateOptions: {
+                        label: 'Date Approved',
+                        placeholder: 'Date Approved'
+                    }
+                },
+            ]
+          },
+          {
+            fieldGroupClassName: 'display-flex',
+            fieldGroup: [{
+                className: 'flex-1',
+                type: 'input',
+                key: 'approver3',
+                expressionProperties: {
+                    
+                },
+                templateOptions: {
+                    label: 'Approved3',
+                    placeholder:'Approved3'
+                },
+               },
+
+                {
+                    className: 'flex-1',
+                    type: 'calendar',
+                    key: 'dateApproved3',
                     expressionProperties: {
                         
                     },
