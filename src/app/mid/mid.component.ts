@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MidService } from './mid.service';
+import { MatDialog } from '@angular/material';
+import { MidFormModalComponent } from '../modal/mid-form-modal/mid-form-modal.component';
 
 @Component({
   selector: 'app-mid',
@@ -13,7 +15,8 @@ export class MidComponent implements OnInit {
   mode: string;
   dataSource;
   form: string;
-  constructor(private _route: ActivatedRoute, private _router: Router, private _service: MidService) { }
+  constructor(private _route: ActivatedRoute, private _router: Router, private _service: MidService,
+  private _dialog: MatDialog) { }
 
   ngOnInit() {
     this.dataSource = this._service.Get();
@@ -26,6 +29,14 @@ export class MidComponent implements OnInit {
     }
   }
   AddMid() {
-    // this._router.navigateByUrl('/midForm');
+    this._dialog.open(MidFormModalComponent, {
+      width: '80%'
+    });
+  }
+
+  GetItem(id) {
+    this._dialog.open(MidFormModalComponent, {
+      width: '80%'
+    });
   }
 }

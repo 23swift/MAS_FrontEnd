@@ -1,4 +1,4 @@
-export class IaolistData {
+export interface IaolistData {
     Id: number;
     UserId: string;
     Name: string;

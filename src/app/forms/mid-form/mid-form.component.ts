@@ -32,8 +32,9 @@ export class MidFormComponent extends AppBaseComponent implements OnInit {
     console.log(this.model);
   }
   Cancel() {
-    const parentRoute = this._router.url.split('/(')[0];
-    this._router.navigateByUrl(`${parentRoute}`);
+    // const currentUrl = this._router.url.split('/(');
+    // const parentRoute = currentUrl[0] + '/(' + currentUrl[1] + ')';
+    // this._router.navigateByUrl(`${parentRoute}`);
   }
   // mode: string;
   // midForm: FormGroup;

@@ -43,7 +43,7 @@ export class BdoFormHeaderComponent implements OnInit {
 
   return(): void {
     this._dialog.open(RemarksModalComponent, {
-      width: '500px'
+      width: '50%'
     });
   }
 }

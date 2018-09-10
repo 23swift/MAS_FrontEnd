@@ -39,11 +39,11 @@
                 <!-- <a (click)="GetItem(element.Id)" mat-mini-fab color="primary">
                     <mat-icon style="color:white;">edit</mat-icon>
                 </a> -->
-                <a (click)="openDialog(element.id,element.TrackingNo)" mat-mini-fab color="primary">
+                <a (click)="openDialog(element.id,element.TrackingNo)" mat-mini-fab color="primary"  matTooltip="Assign Request">
                     <mat-icon style="color:white;" title="Assign To">face</mat-icon> 
                 </a>
                 &nbsp;&nbsp;
-                <a (click)="GetItem(element.Id)" mat-mini-fab class="ownrequest-icon-color">
+                <a (click)="GetItem(element.Id)" mat-mini-fab class="ownrequest-icon-color"  matTooltip="Own Request">
                     <mat-icon style="color:white;" title="Own Request">touch_app</mat-icon> 
                 </a>
             </td>

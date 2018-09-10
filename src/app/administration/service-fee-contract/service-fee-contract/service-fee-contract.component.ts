@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder,FormGroup,Validators} from '@angular/forms';
-import { AppBaseComponent } from '../../app-base/app-base.component';
+import { AppBaseComponent } from '../../../app-base/app-base.component';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({

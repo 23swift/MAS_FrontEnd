@@ -46,12 +46,7 @@ export class MauOfficerDashboardComponent implements OnInit {
             duration: 2000
           });
       }
-      else {
-
-      }
     });
   }
-
-
 
 }
