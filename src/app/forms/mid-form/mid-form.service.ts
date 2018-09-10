@@ -45,6 +45,24 @@ export class MidFormService {
         fieldGroup: [
           {
             className: 'flex-1',
+            key: 'cardPlans',
+            type: 'select',
+            templateOptions: {
+              label: 'Card Plans / Styles',
+              required: true,
+              options: [
+                { value: 1, label: 'OTC' },
+                { value: 2, label: 'Installment Reg' }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        fieldGroupClassName: 'display-flex',
+        fieldGroup: [
+          {
+            className: 'flex-1',
             key: 'monitorCode',
             type: 'select',
             templateOptions: {
@@ -166,8 +184,8 @@ export class MidFormService {
               label: 'Merchant MP Promotions Group',
               required: true,
               options: [
-                { value: 1, label: 'BNPL Flagship'},
-                { value: 2, label: 'Installament Reg'}
+                { value: 1, label: 'BNPL Flagship' },
+                { value: 2, label: 'Installament Reg' }
               ]
             }
           }
@@ -185,8 +203,8 @@ export class MidFormService {
               label: 'Default MP Promotion',
               required: true,
               options: [
-                { value: 1, label: 'BNPL Flagship'},
-                { value: 2, label: 'Installament Reg'}
+                { value: 1, label: 'BNPL Flagship' },
+                { value: 2, label: 'Installament Reg' }
               ]
             }
           }

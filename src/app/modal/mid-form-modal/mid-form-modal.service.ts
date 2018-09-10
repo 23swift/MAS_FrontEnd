@@ -45,6 +45,24 @@ export class MidFormModalService {
         fieldGroup: [
           {
             className: 'flex-1',
+            key: 'cardPlans',
+            type: 'select',
+            templateOptions: {
+              label: 'Card Plans / Styles',
+              required: true,
+              options: [
+                { value: 1, label: 'OTC' },
+                { value: 2, label: 'Installment Reg' }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        fieldGroupClassName: 'display-flex',
+        fieldGroup: [
+          {
+            className: 'flex-1',
             key: 'monitorCode',
             type: 'select',
             templateOptions: {
@@ -95,6 +113,40 @@ export class MidFormModalService {
             type: 'checkbox',
             templateOptions: {
               label: 'Off US'
+            }
+          }
+        ]
+      },
+      {
+        fieldGroupClassName: 'display-flex',
+        fieldGroup: [
+          {
+            className: 'flex-1',
+            key: 'status',
+            type: 'select',
+            defaultValue: 1,
+            templateOptions: {
+              label: 'Status',
+              required: true,
+              options: [
+                { value: 1, label: 'Active' },
+                { value: 2, label: 'Inactive' }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        fieldGroupClassName: 'display-flex',
+        fieldGroup: [
+          {
+            className: 'flex-1',
+            key: 'cupAcceptorId',
+            type: 'input',
+            templateOptions: {
+              label: 'CUP Acceptor ID',
+              required: true,
+              disabled: true
             }
           }
         ]
@@ -164,11 +216,11 @@ export class MidFormModalService {
             type: 'select',
             defaultValue: 1,
             templateOptions: {
-              label: 'Merchant MP Promotions Group',
+              label: 'Merchant Promotions Group',
               required: true,
               options: [
-                { value: 1, label: 'BNPL Flagship'},
-                { value: 2, label: 'Installament Reg'}
+                { value: 1, label: 'BNPL Flagship' },
+                { value: 2, label: 'Installament Reg' }
               ]
             }
           }
@@ -186,8 +238,8 @@ export class MidFormModalService {
               label: 'Default MP Promotion',
               required: true,
               options: [
-                { value: 1, label: 'BNPL Flagship'},
-                { value: 2, label: 'Installament Reg'}
+                { value: 1, label: 'BNPL Flagship' },
+                { value: 2, label: 'Installament Reg' }
               ]
             }
           }
@@ -203,6 +255,19 @@ export class MidFormModalService {
             defaultValue: 1,
             templateOptions: {
               label: 'DCC Mark-up Rate'
+            }
+          }
+        ]
+      },
+      {
+        fieldGroupClassName: 'display-flex',
+        fieldGroup: [
+          {
+            className: 'flex-1',
+            key: 'dccMerchantRebate',
+            type: 'input',
+            templateOptions: {
+              label: 'DCC Merchant Rebate'
             }
           }
         ]

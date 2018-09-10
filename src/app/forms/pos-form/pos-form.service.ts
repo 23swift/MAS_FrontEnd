@@ -481,15 +481,16 @@ export class PosFormService {
     },
     {
       fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'cupAcceptorId',
-        templateOptions: {
-          label: "CUP Acceptor ID",
-          disabled: true
-        }
-      },
+      fieldGroup: [
+      //   {
+      //   className: 'flex-1',
+      //   type: 'input',
+      //   key: 'cupAcceptorId',
+      //   templateOptions: {
+      //     label: "CUP Acceptor ID",
+      //     disabled: true
+      //   }
+      // },
       {
         className: 'flex-1',
         type: 'input',
@@ -1559,15 +1560,15 @@ export class PosFormService {
 
           }
         },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'cupAcceptorId',
-          templateOptions: {
-            label: "CUP Acceptor ID",
+        // {
+        //   className: 'flex-1',
+        //   type: 'input',
+        //   key: 'cupAcceptorId',
+        //   templateOptions: {
+        //     label: "CUP Acceptor ID",
 
-          }
-        },
+        //   }
+        // },
         {
           className: 'flex-1',
           type: 'input',
