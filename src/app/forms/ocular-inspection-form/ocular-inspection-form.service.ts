@@ -191,7 +191,7 @@ export class OcularInspectionFormService {
         },
         {
             className: 'section-label',
-            template: '<span class="mat-headline mat-subheading-1">Business Premise</span><hr />'
+            template: '<span class="mat-headline mat-subheading-1">Business Premise</span>'
         },
         {
             fieldGroupClassName: 'display-flex',
@@ -346,7 +346,7 @@ export class OcularInspectionFormService {
         },
         {
             className: 'section-label',
-            template: '<span class="mat-headline mat-subheading-1">Neighborhood</span><hr />'
+            template: '<span class="mat-headline mat-subheading-1">Neighborhood</span>'
         },
         {
             fieldGroupClassName: 'display-flex',
@@ -364,7 +364,7 @@ export class OcularInspectionFormService {
         },
         {
             className: 'section-label',
-            template: '<span class="mat-headline mat-subheading-1">MOTO (Mandatory For MOTO Facility)</span><hr />'
+            template: '<span class="mat-headline mat-subheading-1">MOTO (Mandatory For MOTO Facility)</span>'
         },
         {
             fieldGroupClassName: 'display-flex',
@@ -392,7 +392,7 @@ export class OcularInspectionFormService {
         },
         {
             className: 'section-label',
-            template: '<span class="mat-headline mat-subheading-1">For Event Purposes Only (Mandatory for Event Facility)</span><hr />'
+            template: '<span class="mat-headline mat-subheading-1">For Event Purposes Only (Mandatory for Event Facility)</span>'
         },
         {
             fieldGroupClassName: 'display-flex',
@@ -492,7 +492,7 @@ export class OcularInspectionFormService {
         },
         {
             className: 'section-label',
-            template: '<span class="mat-headline mat-subheading-1">Information on Last Event Held (Mandatory For Event Facility)</span><hr />'
+            template: '<span class="mat-headline mat-subheading-1">Information on Last Event Held (Mandatory For Event Facility)</span>'
         },
         {
             fieldGroupClassName: 'display-flex',
@@ -543,11 +543,26 @@ export class OcularInspectionFormService {
         },
         {
             className: 'section-label',
-            template: '<span class="mat-headline mat-subheading-1">Overall Findings</span><hr />'
+            template: '<span class="mat-headline mat-subheading-1">Overall Findings</span>'
         },
         {
             fieldGroupClassName: 'display-flex',
             fieldGroup: [
+                {
+                    
+                    key: 'overAllRating',
+                    type: 'radio',
+                    className: 'flex-1',
+                    defaultValue: 'true',
+                    templateOptions: {
+                        required: true,
+                        label: 'OverAll Rating',
+                        options: [
+                            { value: 'acceptable', label: 'ACCEPTABLE' },
+                            { value: 'notacceptable', label: 'NOT ACCEPTABLE' }
+                        ]
+                    }
+                },
                 {
                     key: 'adverseFindings',
                     type: 'radio',
@@ -579,21 +594,6 @@ export class OcularInspectionFormService {
                     templateOptions: {
                         label: 'Remarks',
                         description: ''
-                    }
-                },
-                {
-                    
-                    key: 'overAllRating',
-                    type: 'radio',
-                    className: 'flex-1',
-                    defaultValue: 'true',
-                    templateOptions: {
-                        required: true,
-                        label: 'OverAll Rating',
-                        options: [
-                            { value: 'acceptable', label: 'ACCEPTABLE' },
-                            { value: 'notacceptable', label: 'NOT ACCEPTABLE' }
-                        ]
                     }
                 },
                 {

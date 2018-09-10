@@ -31,7 +31,7 @@ import { MdcsUserDashboardComponent } from './dashboard/mdcs-user-dashboard/mdcs
 import { MdmUserDashboardComponent } from './dashboard/mdm-user-dashboard/mdm-user-dashboard.component';
 import { MqrDashboardComponent } from './dashboard/mqr-dashboard/mqr-dashboard.component';
 import { PsServicingDashboardComponent } from './dashboard/ps-servicing-dashboard/ps-servicing-dashboard.component';
-import { MauOfficer } from './new-affiliation/mau-officer/mau-officer.component';
+import { MauOfficerComponent } from './new-affiliation/mau-officer/mau-officer.component';
 import { ApproverComponent } from './new-affiliation/approver/approver.component';
 import { BranchInfoComponent } from './branch-info/branch-info.component';
 import { BranchListAttachmentPOSComponent } from './branch-list-attachment-pos/branch-list-attachment-pos.component';
@@ -188,7 +188,7 @@ const routes: Routes = [
       { path: 'branch/:mode', component: BranchFormComponent, outlet: 'branch' }
     ]
   },
-  { path: 'na/mauOfficer/:mode/:id', component: MauOfficer },
+  { path: 'na/mauOfficer/:mode/:id', component: MauOfficerComponent },
   { path: 'na/mdcsUser', component: MdcsUserComponent },
   { path: 'na/mdmUser', component: MdmUserComponent },
   { path: 'aoChecking', component: AoCheckingComponent },

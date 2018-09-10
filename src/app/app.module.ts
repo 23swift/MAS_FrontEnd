@@ -64,7 +64,7 @@ import { MdcsUserDashboardComponent } from './dashboard/mdcs-user-dashboard/mdcs
 import { PsServicingDashboardComponent } from './dashboard/ps-servicing-dashboard/ps-servicing-dashboard.component';
 import { MdmUserDashboardComponent } from './dashboard/mdm-user-dashboard/mdm-user-dashboard.component';
 
-import { MauOfficer } from './new-affiliation/mau-officer/mau-officer.component';
+import { MauOfficerComponent } from './new-affiliation/mau-officer/mau-officer.component';
 import { ApproverComponent } from './new-affiliation/approver/approver.component';
 import { BranchInfoComponent } from './branch-info/branch-info.component';
 
@@ -145,7 +145,7 @@ import { ServiceFeeContractListComponent } from './administration/service-fee-co
     MdcsUserDashboardComponent,
     PsServicingDashboardComponent,
     MdmUserDashboardComponent,
-    MauOfficer,
+    MauOfficerComponent,
     ApproverComponent,
     BranchInfoComponent,
     MidFormComponent,

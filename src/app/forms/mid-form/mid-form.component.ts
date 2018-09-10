@@ -24,7 +24,7 @@ export class MidFormComponent extends AppBaseComponent implements OnInit {
 
   ngOnInit() {
     this.form = new FormGroup({});
-    this.fields = this._service.GetFormlyFields();
+    //this.fields = this._service.GetFormlyFields();
     this.model = {};
   }
 
