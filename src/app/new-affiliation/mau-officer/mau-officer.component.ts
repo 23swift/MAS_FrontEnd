@@ -7,7 +7,7 @@ import { AppBaseComponent } from '../../app-base/app-base.component';
   templateUrl: './mau-officer.component.html',
   styleUrls: ['./mau-officer.component.css']
 })
-export class MauOfficer extends AppBaseComponent implements OnInit {
+export class MauOfficerComponent extends AppBaseComponent implements OnInit {
   title: string = 'Merchant Affiliation & Maintenance Pre-screening and Evaluation';
   @Input() displayMode: boolean = false;
   subTitle: string = '';

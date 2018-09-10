@@ -176,12 +176,7 @@ export class MidFormModalService {
                 { value: 2, label: 'SFR2' }
               ]
             }
-          }
-        ]
-      },
-      {
-        fieldGroupClassName: 'display-flex',
-        fieldGroup: [
+          },
           {
             className: 'flex-1',
             key: 'merchantGroupCode',
@@ -223,12 +218,7 @@ export class MidFormModalService {
                 { value: 2, label: 'Installament Reg' }
               ]
             }
-          }
-        ]
-      },
-      {
-        fieldGroupClassName: 'display-flex',
-        fieldGroup: [
+          },
           {
             className: 'flex-1',
             key: 'defaultMpPromotion',
@@ -256,12 +246,7 @@ export class MidFormModalService {
             templateOptions: {
               label: 'DCC Mark-up Rate'
             }
-          }
-        ]
-      },
-      {
-        fieldGroupClassName: 'display-flex',
-        fieldGroup: [
+          },
           {
             className: 'flex-1',
             key: 'dccMerchantRebate',
