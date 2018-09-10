@@ -160,7 +160,7 @@ import { AoMaintenanceFormComponent } from './forms/ao-maintenance-form/ao-maint
     AoListModalComponent,
     AlertMessageComponent,
     HistoryModalComponent,
-    MidFormModalComponent
+    MidFormModalComponent,
     ParameterMaintenanceComponent,
     ParameterMaintenanceFormComponent,
     ParameterMaintenanceListComponent,

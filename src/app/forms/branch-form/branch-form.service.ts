@@ -2013,84 +2013,34 @@ export class BranchFormService {
 
   //#region mmu field
   mmu: FormlyFieldConfig[] = [
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'registeredBusinessNumber',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          label: 'Registered Business Number',
-          placeholder: 'Registered Business Number'
-        },
-      },
-      ]
-    },
-
-    //dropdown  mandatory
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
-        {
-          className: 'flex-1',
-          type: 'select',
-          key: 'dbaZipCode',
-          expressionProperties: {
-
-          },
-          templateOptions: {
-            label: 'Zipcode',
-            required: true,
-            options: [
-              { label: '0400', value: '1' },
-              { label: '0401', value: '2' },
-              { label: '0410', value: '3' },
-              { label: '0420', value: '4' },
-              { label: '0550', value: '5' },
-              { label: '0560', value: '6' },
-              { label: '0700', value: '7' },
-              { label: '0701', value: '8' }
-            ],
-          }
-        }
-      ]
-    },
-    //dropdown
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'branchPhoneNumber',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          label: 'Branch/Outlet Phone Number',
-          placeholder: 'Branch/Outlet Phone Number'
-        },
-      },
       {
         className: 'flex-1',
-        type: 'input',
-        key: 'branchMobileNumber',
+        type: 'select',
+        key: 'dbaZipCode',
         expressionProperties: {
 
         },
         templateOptions: {
-          label: 'Mobile Number',
-          placeholder: 'Mobile Number',
-          required: true
+          label: 'Zipcode',
+          required: true,
+          options: [
+            { label: '0400', value: '1' },
+            { label: '0401', value: '2' },
+            { label: '0410', value: '3' },
+            { label: '0420', value: '4' },
+            { label: '0550', value: '5' },
+            { label: '0560', value: '6' },
+            { label: '0700', value: '7' },
+            { label: '0701', value: '8' }
+          ],
         }
       }
       ]
     },
-
+// ++  can accomodate 5 emails
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [{
@@ -2106,7 +2056,7 @@ export class BranchFormService {
           required: true
         },
       },
-      {
+      {  // ++ mandatory if ecom tpp master merchant erps emoto
         className: 'flex-1',
         type: 'input',
         key: 'branchWebsite',
@@ -2156,6 +2106,7 @@ export class BranchFormService {
           templateOptions: {
             label: 'Settle Account Number (For Crediting Payment)',
             placeholder: 'Settle Account Number (For Crediting Payment)',
+            maxLength: 20,
             disabled: true
           }
         },
@@ -2163,6 +2114,7 @@ export class BranchFormService {
           type: 'select',
           key: 'taxCode',
           templateOptions: {
+            required: true,
             label: 'Tax Code',
             options: [
               { label: 'With Tax', value: '1' },
@@ -2293,7 +2245,8 @@ export class BranchFormService {
         templateOptions: {
           label: 'Name of Company Signatory/ies',
           placeholder: 'Name of Company Signatory/ies',
-          required: true
+          required: true,
+          maxLength: 50
         },
       },
       ]
@@ -2309,6 +2262,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -2324,6 +2278,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -2339,6 +2294,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -2354,6 +2310,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -2369,6 +2326,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -2384,6 +2342,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -2399,6 +2358,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -2414,6 +2374,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -2429,6 +2390,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -2444,6 +2406,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -2459,6 +2422,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -2474,6 +2438,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -2489,6 +2454,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -2504,6 +2470,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 50
         },
       },
       ]
@@ -2520,7 +2487,8 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Special Mailing Address',
-          placeholder: 'Special Mailing Address'
+          placeholder: 'Special Mailing Address',
+          maxLength: 30
         },
       },
       ]
@@ -2536,6 +2504,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 30
         },
       },
       ]
@@ -2551,6 +2520,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 30
         },
       },
       ]
@@ -2566,6 +2536,7 @@ export class BranchFormService {
 
         },
         templateOptions: {
+        maxLength: 30
         },
       },
       ]
@@ -2576,12 +2547,12 @@ export class BranchFormService {
       fieldGroup: [{
         className: 'flex-1',
         type: 'select',
-        key: 'companyCity',
+        key: 'specialMailingCity',
         expressionProperties: {
 
         },
         templateOptions: {
-          label: 'City',
+          label: 'Special Mailing Address City',
           options: [
             { label: 'PASIG', value: '1' },
             { label: 'MAKATI CITY', value: '2' },
@@ -2597,12 +2568,12 @@ export class BranchFormService {
       {
         className: 'flex-1',
         type: 'select',
-        key: 'companyZipCode',
+        key: 'specialMailingZipCode',
         expressionProperties: {
 
         },
         templateOptions: {
-          label: 'ZipCode',
+          label: 'Special Mailing Address ZipCode',
           options: [
             { label: '0400', value: '1' },
             { label: '0401', value: '2' },
@@ -2640,7 +2611,8 @@ export class BranchFormService {
         },
         templateOptions: {
           label: 'Name of Acquirer',
-          placeholder: 'Name of Acquirer'
+          placeholder: 'Name of Acquirer',
+          maxLength: 50
         }
       }
       ]
@@ -2649,6 +2621,7 @@ export class BranchFormService {
     {
       template: '<span class="mat-headline">Storage Of Cardholder Information</span>',
     },
+
     {
       template: '<span class="mat-subheading-1">With Installed Electronic Cash Register?*</span>',
     },
@@ -2689,6 +2662,7 @@ export class BranchFormService {
     {
       template: '<span class="mat-subheading-1">If No, Please Select If For Installation (Yes or No) ?*</span>',
     },
+
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
@@ -2697,6 +2671,7 @@ export class BranchFormService {
           className: 'flex-1',
           type: 'radio',
           templateOptions: {
+            label: '',
             required: true,
             options: [
               { value: true, label: 'Yes' },
@@ -2707,9 +2682,11 @@ export class BranchFormService {
         },
       ]
     },
+
     {
       template: '<span class="mat-subheading-1">If With Installed ECR, Do You Store Card Data By Swiping The Card To Your ECR Or Similar Equipment Other Than The BDO-ISSUED POS Terminal?*</span>',
     },
+
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
@@ -2718,6 +2695,7 @@ export class BranchFormService {
           className: 'flex-1',
           type: 'radio',
           templateOptions: {
+            label: '',
             required: true,
             options: [
               { value: true, label: 'Yes' },
@@ -2737,7 +2715,8 @@ export class BranchFormService {
           },
           templateOptions: {
             label: 'If Yes, Please Indicate The Cardholder Data Stored',
-            placeholder: 'If Yes, Please Indicate The Cardholder Data Stored'
+            placeholder: 'If Yes, Please Indicate The Cardholder Data Stored',
+            maxLength: 50
           }
         }
       ]
@@ -2772,9 +2751,123 @@ export class BranchFormService {
           },
           templateOptions: {
             label: 'If Yes, Please Indicate The Cardholder Data To Be Stored',
-            placeholder: 'If Yes, Please Indicate The Cardholder Data To Be Stored'
+            placeholder: 'If Yes, Please Indicate The Cardholder Data To Be Stored',
+            maxLength: 50
           }
         }
+      ]    ///// +++
+    },
+
+    {
+      template: '<span class="mat-headline">Debit Facility Instructions</span>',
+    },
+
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'input',
+        key: 'settlementAccNoForDebit',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Settlement Account Number for Debit Facility(If CTA)',
+          placeholder: 'Settlement Account Number for Debit Facility(If CTA)',
+          maxLength: 20
+        }
+      },
+      {
+        className: 'flex-1',
+        type: 'input',
+        key: 'payeesName',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Payees Name(if check payment)',
+          placeholder: 'Payees Name(if check payment)',
+          maxLength: 50
+        }
+      }
+      ]
+    },
+
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'input',
+        key: 'emailAddressForReportDist',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Email Address For Report Distribution',
+          placeholder: 'Email Address For Report Distribution',
+          maxLength: 250
+        }
+      },
+      {
+        className: 'flex-1',
+        type: 'input',
+        key: 'mailingAddressForPaymentDel',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Mailing Address for Payment Delivery and Other Reports',
+          placeholder: 'Mailing Address for Payment Delivery and Other Reports',
+          maxLength: 150
+        }
+      }
+      ]
+    },
+
+    {
+      template: '<span class="mat-headline">Cash Agad Facility Instructions</span>',
+    },
+
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'input',
+        key: 'nameAuthorizedSoaRecip',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Name of Authorized SOA Recipient',
+          placeholder: 'Name of Authorized SOA Recipient',
+          maxLength: 120
+        }
+      },
+      {
+        className: 'flex-1',
+        type: 'input',
+        key: 'SoaEmailAddress',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Email Address',
+          placeholder: 'Email Address',
+          maxLength: 250
+        }
+      },
+      {
+        key: 'reportDistribution',
+        type: 'radio',
+        templateOptions: {
+          label: 'Report Distribution?',
+          options: [
+            { value: '1', label: 'Per Company' },
+            { value: '2', label: "Per Company's Branch" }
+          ],
+        },
+
+      },
       ]
     },
 
@@ -2819,12 +2912,10 @@ export class BranchFormService {
           label: "Spouse's Name",
           placeholder: "Spouse's Name"
         }
-      }
+      },
       ]
     },
-
-
-
+  
   ];
   //#endregion 
 
@@ -2832,6 +2923,6 @@ export class BranchFormService {
   constructor() { }
   getBranchFields(): FormlyFieldConfig[] {
 
-    return this.ao;
+    return this.mmu;
   }
 }
