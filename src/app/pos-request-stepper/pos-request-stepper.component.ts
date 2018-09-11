@@ -16,14 +16,15 @@ export class PosRequestStepperComponent implements OnInit {
   isOptional = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
-  title = '';
-  subTitle = '';
-  mode = 'create';
+  title = 'POS Request';
+  subTitle = 'Create';
+  mode: string;
   status = 'done';
   constructor(private _formBuilder: FormBuilder, private route: ActivatedRoute,
     private _router: Router, private _snackBar: MatSnackBar) { }
 
   ngOnInit() {
+    this.mode = ' ';
     this.isOptional = true;
     this.firstFormGroup = this._formBuilder.group({
       firstCtrl: ['', Validators.required]
@@ -31,6 +32,19 @@ export class PosRequestStepperComponent implements OnInit {
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required]
     });
+  }
+
+  public completed(stepper: MatStepper) {
+    stepper.selected.completed = true;
+    stepper.next();
+    return true;
+  }
+  
+  clearUrl() {
+    const parentRoute = this._router.url.split('/(')[0];
+    if (parentRoute) {
+      this._router.navigateByUrl(`${parentRoute}`);
+    }
   }
 
   Submit() {
@@ -41,12 +55,6 @@ export class PosRequestStepperComponent implements OnInit {
     snackBarSub.afterDismissed().subscribe(() => {
       this._router.navigateByUrl('/');
     });
-  }
-
-  public completed(stepper: MatStepper) {
-    stepper.selected.completed = true;
-    stepper.next();
-    return true;
   }
 
 }

@@ -51,6 +51,7 @@ import { BuMaintenanceFormComponent } from './forms/bu-maintenance-form/bu-maint
 import { AoMaintenanceComponent } from './data-management/ao-maintenance/ao-maintenance.component';
 import { ServiceFeeContractComponent } from './administration/service-fee-contract/service-fee-contract/service-fee-contract.component';
 import { ServiceFeeContractFormComponent } from './administration/service-fee-contract/service-fee-contract-form/service-fee-contract-form.component';
+import { BranchListAttachmentPOSRequestComponent } from './branch-list-attachment-posrequest/branch-list-attachment-posrequest.component';
 
 
 const routes: Routes = [
@@ -59,8 +60,8 @@ const routes: Routes = [
   {
     path: 'posStep/:mode', component: PosRequestStepperComponent,
     children: [
-      { path: '', component: BranchListAttachmentPOSComponent, outlet: 'branchPOS' },
-      { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOS' },
+      { path: '', component: BranchListAttachmentPOSRequestComponent, outlet: 'branchPOSRequest' },
+      { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOSRequest' },
     ]
   },
   { path: 'ba/:mode', component: BranchAffiliationComponent },
@@ -101,6 +102,7 @@ const routes: Routes = [
   { path: 'oif', component: OcularInspectionFormComponent },
   { path: 'oifForm', component: OcularInspectionFormComponent },
   { path: 'aoDashboard', component: AoCheckerDashboardComponent },
+  
   // {
   //   path: 'aoChecking', component: AoCheckingComponent,
   //   children: [

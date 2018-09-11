@@ -100,7 +100,10 @@ import { AoMaintenanceFormComponent } from './forms/ao-maintenance-form/ao-maint
 import { ServiceFeeContractComponent } from './administration/service-fee-contract/service-fee-contract/service-fee-contract.component';
 import { ServiceFeeContractFormComponent } from './administration/service-fee-contract/service-fee-contract-form/service-fee-contract-form.component';
 import { ServiceFeeContractListComponent } from './administration/service-fee-contract/service-fee-contract-list/service-fee-contract-list.component';
-
+import { DocumentChecklistConfigurationComponent } from './administration/document-checklist/document-checklist-configuration/document-checklist-configuration/document-checklist-configuration.component';
+import { DocumentChecklistConfigurationFormComponent } from './administration/document-checklist/document-checklist-configuration/document-checklist-configuration-form/document-checklist-configuration-form.component';
+import { DocumentChecklistConfigurationListComponent } from './administration/document-checklist/document-checklist-configuration/document-checklist-configuration-list/document-checklist-configuration-list.component';
+import { BranchListAttachmentPOSRequestComponent } from './branch-list-attachment-posrequest/branch-list-attachment-posrequest.component';
 
 
 
@@ -177,7 +180,11 @@ import { ServiceFeeContractListComponent } from './administration/service-fee-co
     AoMaintenanceFormComponent,
     ServiceFeeContractComponent,
     ServiceFeeContractFormComponent,
-    ServiceFeeContractListComponent
+    ServiceFeeContractListComponent,
+    DocumentChecklistConfigurationComponent,
+    DocumentChecklistConfigurationFormComponent,
+    DocumentChecklistConfigurationListComponent,
+    BranchListAttachmentPOSRequestComponent,
   ],
   imports: [
     BrowserModule,
