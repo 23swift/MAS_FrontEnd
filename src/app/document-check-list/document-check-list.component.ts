@@ -20,9 +20,9 @@ export class DocumentCheckListComponent implements OnInit {
     this.mode = this._route.snapshot.params['mode'];
   }
   GetItem(id) {
-    this._router.navigateByUrl(`${this._router.url}/(documentCheckList:dcl/${this.mode}/${id})`);
+    this._router.navigateByUrl(`${this._router.url}/(documentCheckList:dcl/create/${id})`);
   }
   AddDocument() {
-    this._router.navigateByUrl(`${this._router.url}/(documentCheckList:dcl/${this.mode}/0)`);
+    this._router.navigateByUrl(`${this._router.url}/(documentCheckList:dcl/create/0)`);
   }
 }

@@ -70,7 +70,31 @@ export class MidFormModalService {
               required: true,
               options: [
                 { value: 1, label: 'OTC' },
-                { value: 2, label: 'Installment Reg' }
+                { value: 2, label: 'Installment Reg' },
+                { value: 3, label: 'CNP' }
+              ]
+            }
+          },
+          {
+            className: 'flex-1',
+            key: 'typeOfCnp',
+            type: 'select',
+            expressionProperties: {
+              'templateOptions.required': (model: any, formState: any) => {
+                return model['monitorCode'] === 3;
+              }
+            },
+            templateOptions: {
+              label: 'Type of CNP',
+              options: [
+                { value: 1, label: 'ECOM' },
+                { value: 2, label: 'MOTO' },
+                { value: 3, label: 'RPS' },
+                { value: 4, label: 'TPP' },
+                { value: 5, label: 'Master Merchant' },
+                { value: 6, label: 'EMOTO' },
+                { value: 7, label: 'ERPS' },
+                { value: 8, label: 'N.A.' }
               ]
             }
           }

@@ -104,6 +104,8 @@ import { DocumentChecklistConfigurationComponent } from './administration/docume
 import { DocumentChecklistConfigurationFormComponent } from './administration/document-checklist/document-checklist-configuration/document-checklist-configuration-form/document-checklist-configuration-form.component';
 import { DocumentChecklistConfigurationListComponent } from './administration/document-checklist/document-checklist-configuration/document-checklist-configuration-list/document-checklist-configuration-list.component';
 import { BranchListAttachmentPOSRequestComponent } from './branch-list-attachment-posrequest/branch-list-attachment-posrequest.component';
+import { CheckDialogTypeComponent } from './check-dialog-type/check-dialog-type.component';
+
 
 
 
@@ -185,6 +187,7 @@ import { BranchListAttachmentPOSRequestComponent } from './branch-list-attachmen
     DocumentChecklistConfigurationFormComponent,
     DocumentChecklistConfigurationListComponent,
     BranchListAttachmentPOSRequestComponent,
+    CheckDialogTypeComponent
   ],
   imports: [
     BrowserModule,
@@ -196,6 +199,9 @@ import { BranchListAttachmentPOSRequestComponent } from './branch-list-attachmen
           name: 'calendar',
           component: CalendarTypeComponent
           // wrappers: ['form-field'],
+        }, {
+          name: 'checkDialog',
+          component: CheckDialogTypeComponent
         }]
       }
     ),
