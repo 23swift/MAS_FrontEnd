@@ -13,4 +13,7 @@ export class RemarksModalComponent implements OnInit {
   ngOnInit() {
   }
 
+  Submit() {
+    this._modalRef.close();
+  }
 }

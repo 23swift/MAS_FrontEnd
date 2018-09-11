@@ -100,6 +100,7 @@ import { AoMaintenanceFormComponent } from './forms/ao-maintenance-form/ao-maint
 import { ServiceFeeContractComponent } from './administration/service-fee-contract/service-fee-contract/service-fee-contract.component';
 import { ServiceFeeContractFormComponent } from './administration/service-fee-contract/service-fee-contract-form/service-fee-contract-form.component';
 import { ServiceFeeContractListComponent } from './administration/service-fee-contract/service-fee-contract-list/service-fee-contract-list.component';
+import { CheckDialogTypeComponent } from './check-dialog-type/check-dialog-type.component';
 
 
 
@@ -177,7 +178,8 @@ import { ServiceFeeContractListComponent } from './administration/service-fee-co
     AoMaintenanceFormComponent,
     ServiceFeeContractComponent,
     ServiceFeeContractFormComponent,
-    ServiceFeeContractListComponent
+    ServiceFeeContractListComponent,
+    CheckDialogTypeComponent
   ],
   imports: [
     BrowserModule,
@@ -189,6 +191,9 @@ import { ServiceFeeContractListComponent } from './administration/service-fee-co
           name: 'calendar',
           component: CalendarTypeComponent
           // wrappers: ['form-field'],
+        }, {
+          name: 'checkDialog',
+          component: CheckDialogTypeComponent
         }]
       }
     ),

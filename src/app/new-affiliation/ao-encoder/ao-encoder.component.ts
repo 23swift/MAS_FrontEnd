@@ -16,7 +16,7 @@ export class AoEncoderComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   title = 'New Affiliation';
-  subTitle = 'Create';
+  subTitle = 'DRAFT';
   mode: string;
   status = 'done';
   //  completed:boolean=false;

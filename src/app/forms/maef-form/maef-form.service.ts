@@ -855,14 +855,7 @@ export class MaefFormService {
             { value: false, label: 'No' }
           ],
         },
-      },
-      {
-        className: 'flex-1',
-        key: '',
-        type: '',
-        templateOptions: {
-        },
-      },
+      }
       ]
     }, 
     {
@@ -874,7 +867,7 @@ export class MaefFormService {
 
         {
           className: 'flex-1',
-          type: 'checkbox',
+          type: 'checkDialog',
           key: 'chkApprove',
           templateOptions: {
             label: 'Approve'
