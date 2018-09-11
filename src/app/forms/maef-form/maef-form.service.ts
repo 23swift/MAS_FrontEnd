@@ -34,53 +34,6 @@ export class MaefFormService {
       }
       ]
     },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'select',
-        key: 'typeOfReqMID',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          label: 'Type Of Requested MID',
-          options: [
-            { label: 'OTC', value: '1' },
-            { label: 'GPRS/MOB', value: '2' },
-            { label: 'EVENT', value: '3' },
-            { label: 'POS RENTAL', value: '4' },
-            { label: 'BDO PAY', value: '5' },
-            { label: 'QR', value: '6' },
-            { label: 'CNP', value: '7' },
-          ]
-        },
-      },
-      {
-        className: 'flex-1',
-        type: 'select',
-        key: 'typeOfCnp',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          label: 'Type Of CNP',
-          options: [
-            { label: 'ECOM', value: '1' },
-            { label: 'MOTO', value: '2' },
-            { label: 'RPS', value: '3' },
-            { label: 'TPP', value: '4' },
-            { label: 'MASTER MERCHANT', value: '5' },
-            { label: 'EMOTO', value: '6' },
-            { label: 'ERPS', value: '7' },
-            { label: 'N.A.', value: '8' }
-          ]
-        },
-      },
-
-      ]
-    },
     
     {
       fieldGroupClassName: 'display-flex',
