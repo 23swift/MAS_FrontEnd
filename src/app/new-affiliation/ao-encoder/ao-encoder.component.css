@@ -22,3 +22,7 @@
 .mat-headline {
     font-size: 18px;
 }
+
+.text-right {
+    text-align: right;
+}

@@ -10,8 +10,8 @@
         <app-customer-profile [displayMode]="false"></app-customer-profile>
 
         <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
-                <mat-icon color="primary">navigate_next</mat-icon>
-            </button>
+            <mat-icon color="primary">navigate_next</mat-icon>
+        </button>
     </mat-step>
     <mat-step [completed]="false">
         <ng-template matStepLabel>
@@ -19,17 +19,20 @@
         </ng-template>
         <router-outlet name="branch"></router-outlet>
         <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
-                <mat-icon color="primary">navigate_next</mat-icon>
-            </button>
+            <mat-icon color="primary">navigate_next</mat-icon>
+        </button>
     </mat-step>
     <mat-step [completed]="false">
+        <div class="text-right">
+            <mat-checkbox>Waive OIF</mat-checkbox>
+        </div>
         <ng-template matStepLabel>
             <span class="mat-subheading-1">Occular Inspection Form to Branches</span>
         </ng-template>
         <router-outlet name="branchOIF"></router-outlet>
         <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
-                <mat-icon color="primary">navigate_next</mat-icon>
-            </button>
+            <mat-icon color="primary">navigate_next</mat-icon>
+        </button>
     </mat-step>
     <mat-step [completed]="false">
         <ng-template matStepLabel>
@@ -39,8 +42,8 @@
         <div style="margin-top: 20px;"></div>
         <router-outlet name="mid"></router-outlet>
         <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
-                <mat-icon color="primary">navigate_next</mat-icon>
-            </button>
+            <mat-icon color="primary">navigate_next</mat-icon>
+        </button>
     </mat-step>
     <mat-step [completed]="false">
         <ng-template matStepLabel>
@@ -48,8 +51,8 @@
         </ng-template>
         <router-outlet name="documentCheckList"></router-outlet>
         <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
-                <mat-icon color="primary">navigate_next</mat-icon>
-            </button>
+            <mat-icon color="primary">navigate_next</mat-icon>
+        </button>
     </mat-step>
     <mat-step [completed]="false" state="done">
         <ng-template matStepLabel>

@@ -6,3 +6,7 @@
 .docs-form-container>* {
     width: 100%;
 }
+
+.mat-checkbox > .mat-checkbox-layout {
+    padding-top: 14px;
+}
