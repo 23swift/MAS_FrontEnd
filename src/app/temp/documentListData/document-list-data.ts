@@ -54,6 +54,6 @@ export class DocumentListData {
         }
     ]
 
-    Fields: string [] = ['Select','Description','Code']
+    Fields: string [] = ['Description','Code','Options']
 
 }

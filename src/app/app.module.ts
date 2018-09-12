@@ -241,7 +241,7 @@ import { CheckDialogTypeComponent } from './check-dialog-type/check-dialog-type.
     MatCheckboxModule
   ],
   entryComponents: [RemarksModalComponent, HistoryModalComponent, AoListModalComponent,
-    MidFormModalComponent, DocumentChecklistMaintenanceFormComponent, ServiceFeeContractFormComponent ],
+    MidFormModalComponent, DocumentChecklistMaintenanceFormComponent, ServiceFeeContractFormComponent, DocumentChecklistConfigurationFormComponent ],
   providers: [],
   bootstrap: [AppComponent]
 })

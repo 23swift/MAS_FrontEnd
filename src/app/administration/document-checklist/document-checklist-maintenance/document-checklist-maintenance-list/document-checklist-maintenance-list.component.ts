@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
-import { MatDialogRef, MatDialog, MatSnackBar } from '../../../../../../node_modules/@angular/material';
-import { SelectionModel } from "@angular/cdk/collections";
+import { MatDialog, MatSnackBar } from '../../../../../../node_modules/@angular/material';
+
 import { IdocumentListData } from "../../../../temp/interface/idocument-list-data";
 import { DocumentChecklistMaintenanceService } from './document-checklist-maintenance.service';
 import { DocumentChecklistMaintenanceFormComponent } from "../document-checklist-maintenance-form/document-checklist-maintenance-form.component";
@@ -16,9 +16,7 @@ import { DocumentChecklistMaintenanceFormComponent } from "../document-checklist
 export class DocumentChecklistMaintenanceListComponent implements OnInit {
 
   dataSource = new MatTableDataSource<IdocumentListData>(this._service.Get().ElementData);
-  data = Object.assign(this._service.Get().ElementData);
   displayedColumns: string[];
-  selection = new SelectionModel<IdocumentListData>(true, []);
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
@@ -31,26 +29,6 @@ export class DocumentChecklistMaintenanceListComponent implements OnInit {
     this.displayedColumns = this._service.Get().Fields;
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
-  }
-
-  isAllSelected() {
-    const numSelected = this.selection.selected.length;
-    const numRows = this.dataSource.data.length;
-    return numSelected === numRows;
-  }
-
-  removeSelectedRows() {
-    this.selection.selected.forEach(item => {
-      let index: number = this.data.findIndex(d => d === item);
-      //console.log(this.data.findIndex(d => d === item));
-      this.data.splice(index);
-      //this.dataSource = new MatTableDataSource<IdocumentListData>(this.data);
-    });
-    this.selection = new SelectionModel<IdocumentListData>(true, []);
-  }
-
-  masterToggle() {
-    this.isAllSelected() ? this.selection.clear() : this.dataSource.data.forEach(row => this.selection.select(row));
   }
 
   applySearch(filterValue: string) {

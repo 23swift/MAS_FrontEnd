@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DocumentChecklistConfigurationComponent implements OnInit {
 
+  title: string;
+  subTitle: string;
+  mode: string;
+
   constructor() { }
 
   ngOnInit() {
+    this.title = 'Document CheckList Configuration';
+    this.subTitle = 'Configure Document Checklist';
+    this.mode = ' ';    
   }
 
 }
