@@ -49,16 +49,6 @@ export class DocumentChecklistConfigurationFormComponent implements OnInit {
     return numSelected === numRows;
   }
 
-  removeSelectedRows() {
-    this.selection.selected.forEach(item => {
-      let index: number = this.data.findIndex(d => d === item);
-      //console.log(this.data.findIndex(d => d === item));
-      this.data.splice(index);
-      //this.dataSource = new MatTableDataSource<IdocumentListData>(this.data);
-    });
-    this.selection = new SelectionModel<IdocumentListData>(true, []);
-  }
-
   masterToggle() {
     this.isAllSelected() ? this.selection.clear() : this.dataSource.data.forEach(row => this.selection.select(row));
   }
