@@ -41,7 +41,7 @@ export class DocumentChecklistMaintenanceListComponent implements OnInit {
   openDialog() {
     const dialogRef = this._dialog.open(DocumentChecklistMaintenanceFormComponent, {
       width: '600px',
-      height: '210px'
+      height: '220px'
     });
 
     dialogRef.afterClosed().subscribe(data => {

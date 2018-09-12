@@ -105,6 +105,7 @@ import { DocumentChecklistConfigurationFormComponent } from './administration/do
 import { DocumentChecklistConfigurationListComponent } from './administration/document-checklist/document-checklist-configuration/document-checklist-configuration-list/document-checklist-configuration-list.component';
 import { BranchListAttachmentPOSRequestComponent } from './branch-list-attachment-posrequest/branch-list-attachment-posrequest.component';
 import { CheckDialogTypeComponent } from './check-dialog-type/check-dialog-type.component';
+import { ParameterMaintenanceDetailsComponent } from './administration/parameter-maintenance/parameter-maintenance-details/parameter-maintenance-details.component';
 
 
 
@@ -187,7 +188,8 @@ import { CheckDialogTypeComponent } from './check-dialog-type/check-dialog-type.
     DocumentChecklistConfigurationFormComponent,
     DocumentChecklistConfigurationListComponent,
     BranchListAttachmentPOSRequestComponent,
-    CheckDialogTypeComponent
+    CheckDialogTypeComponent,
+    ParameterMaintenanceDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -240,8 +242,11 @@ import { CheckDialogTypeComponent } from './check-dialog-type/check-dialog-type.
     MatSortModule,
     MatCheckboxModule
   ],
-  entryComponents: [RemarksModalComponent, HistoryModalComponent, AoListModalComponent,
-    MidFormModalComponent, DocumentChecklistMaintenanceFormComponent, ServiceFeeContractFormComponent, DocumentChecklistConfigurationFormComponent ],
+  entryComponents: [RemarksModalComponent, HistoryModalComponent, 
+                    AoListModalComponent,MidFormModalComponent, 
+                    DocumentChecklistMaintenanceFormComponent, ServiceFeeContractFormComponent, 
+                    DocumentChecklistConfigurationFormComponent,ParameterMaintenanceFormComponent,
+                    ParameterMaintenanceDetailsComponent ],
   providers: [],
   bootstrap: [AppComponent]
 })

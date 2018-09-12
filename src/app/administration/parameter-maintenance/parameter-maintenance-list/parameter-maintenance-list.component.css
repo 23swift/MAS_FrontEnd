@@ -5,6 +5,11 @@ table {
     /*overflow: auto;*/
 }
 
+.link-button:hover {
+    color:  #0d47a1;
+    cursor: pointer;
+}
+
 .flex-param-list-header {
     display: flex;
     flex-direction: row;
