@@ -28,11 +28,8 @@ table {
 }
 
 .mat-subheading-1 {
-    font-size: 20px;
-}
-
-.mat-subheading-1 {
     color: #0d47a1;
+    font-size: 20px;
 }
 
 .mat-headline {

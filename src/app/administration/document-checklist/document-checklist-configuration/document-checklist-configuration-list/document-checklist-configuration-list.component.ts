@@ -37,8 +37,8 @@ export class DocumentChecklistConfigurationListComponent implements OnInit {
 
   openDialog() {
     const dialogRef = this._dialog.open(DocumentChecklistConfigurationFormComponent, {
-      width: '600px',
-      height: '210px'
+      width: '1500px',
+      height: '625px'
     });
 
     dialogRef.afterClosed().subscribe(data => {
