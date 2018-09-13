@@ -101,6 +101,7 @@ import { ServiceFeeContractComponent } from './administration/service-fee-contra
 import { ServiceFeeContractFormComponent } from './administration/service-fee-contract/service-fee-contract-form/service-fee-contract-form.component';
 import { ServiceFeeContractListComponent } from './administration/service-fee-contract/service-fee-contract-list/service-fee-contract-list.component';
 import { CheckDialogTypeComponent } from './check-dialog-type/check-dialog-type.component';
+import { AoMaintenanceModalComponent } from './modal/ao-maintenance-modal/ao-maintenance-modal.component';
 
 
 
@@ -179,7 +180,8 @@ import { CheckDialogTypeComponent } from './check-dialog-type/check-dialog-type.
     ServiceFeeContractComponent,
     ServiceFeeContractFormComponent,
     ServiceFeeContractListComponent,
-    CheckDialogTypeComponent
+    CheckDialogTypeComponent,
+    AoMaintenanceModalComponent
   ],
   imports: [
     BrowserModule,
