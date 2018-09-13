@@ -51,6 +51,7 @@ import { BuMaintenanceFormComponent } from './forms/bu-maintenance-form/bu-maint
 import { AoMaintenanceComponent } from './data-management/ao-maintenance/ao-maintenance.component';
 import { ServiceFeeContractComponent } from './administration/service-fee-contract/service-fee-contract/service-fee-contract.component';
 import { ServiceFeeContractFormComponent } from './administration/service-fee-contract/service-fee-contract-form/service-fee-contract-form.component';
+import { PsServicingComponent } from './new-affiliation/ps-servicing/ps-servicing.component';
 
 
 const routes: Routes = [
@@ -191,6 +192,7 @@ const routes: Routes = [
   { path: 'na/mauOfficer/:mode/:id', component: MauOfficerComponent },
   { path: 'na/mdcsUser', component: MdcsUserComponent },
   { path: 'na/mdmUser', component: MdmUserComponent },
+  { path: 'na/psServicing', component: PsServicingComponent },
   { path: 'aoChecking', component: AoCheckingComponent },
   { path: 'posForm', component: PosFormComponent },
   { path: 'newAffSum', component: NewAffiliationSumComponent },

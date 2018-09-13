@@ -79,7 +79,6 @@ import { MaefFormComponent } from './forms/maef-form/maef-form.component';
 
 import { MauCheckerComponent } from './new-affiliation/mau-checker/mau-checker.component';
 import { MdcsUserComponent } from './new-affiliation/mdcs-user/mdcs-user.component';
-import { PsServicingComponent } from './ps-servicing/ps-servicing.component';
 import { MdmUserComponent } from './new-affiliation/mdm-user/mdm-user.component';
 import { AoListModalComponent } from './modal/ao-list-modal/ao-list-modal.component';
 
@@ -101,7 +100,8 @@ import { ServiceFeeContractComponent } from './administration/service-fee-contra
 import { ServiceFeeContractFormComponent } from './administration/service-fee-contract/service-fee-contract-form/service-fee-contract-form.component';
 import { ServiceFeeContractListComponent } from './administration/service-fee-contract/service-fee-contract-list/service-fee-contract-list.component';
 import { CheckDialogTypeComponent } from './check-dialog-type/check-dialog-type.component';
-
+import { BdoDefaultHeaderComponent } from './bdo-default-header/bdo-default-header.component';
+import { PsServicingComponent } from './new-affiliation/ps-servicing/ps-servicing.component';
 
 
 
@@ -159,7 +159,6 @@ import { CheckDialogTypeComponent } from './check-dialog-type/check-dialog-type.
     MaefFormComponent,
     MauCheckerComponent,
     MdcsUserComponent,
-    PsServicingComponent,
     MdmUserComponent,
     AoListModalComponent,
     AlertMessageComponent,
@@ -179,7 +178,9 @@ import { CheckDialogTypeComponent } from './check-dialog-type/check-dialog-type.
     ServiceFeeContractComponent,
     ServiceFeeContractFormComponent,
     ServiceFeeContractListComponent,
-    CheckDialogTypeComponent
+    CheckDialogTypeComponent,
+    BdoDefaultHeaderComponent,
+    PsServicingComponent
   ],
   imports: [
     BrowserModule,
