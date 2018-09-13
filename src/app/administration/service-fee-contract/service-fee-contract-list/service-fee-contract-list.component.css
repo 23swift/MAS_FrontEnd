@@ -5,6 +5,11 @@ table {
     /*overflow: auto;*/
 }
 
+.link-button:hover {
+    color: #0d47a1;
+    cursor: pointer;
+}
+
 .flex-sfcc-list-header {
     display: flex;
     flex-direction: row;
@@ -23,7 +28,7 @@ table {
     background-color: #ff9800 
 }
 
-.ownrequest-icon-color {
+.delete-icon {
     background-color: red
 }
 

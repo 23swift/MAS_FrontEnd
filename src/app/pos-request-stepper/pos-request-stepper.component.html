@@ -2,7 +2,6 @@
 <span class="mat-headline">Please follow the steps:</span>
 <mat-vertical-stepper [linear]="isLinear" #stepper>
     <mat-step>
-
         <ng-template matStepLabel>
             <span class="mat-subheading-1">
                 Select Branch
@@ -11,14 +10,12 @@
         <span class="mat-headline">
             POS Request Details
         </span>
-        <router-outlet name="branchPOS"></router-outlet>
-            <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
-                <mat-icon color="primary">navigate_next</mat-icon>
-            </button>
-            <!-- <app-pos-request></app-pos-request> -->
-    </mat-step>
+        <router-outlet name="branchPOSRequest"></router-outlet>
+        <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
+            <mat-icon color="primary">navigate_next</mat-icon>
+        </button> 
+    </mat-step> 
     <mat-step>
-
         <ng-template matStepLabel>
             <span class="mat-subheading-1">
                 Add MID Request
@@ -26,22 +23,18 @@
         </ng-template>
         <app-mid-request></app-mid-request>
         <br />
-        <!-- <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
+        <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
             <mat-icon color="primary">navigate_next</mat-icon>
-        </button> -->
+        </button>
     </mat-step>
-    <!-- <mat-step state="done">
+    <mat-step state="done">
         <ng-template matStepLabel>
-
             <span class="mat-subheading-1">Done!</span>
-
         </ng-template>
-
         <span class="mat-subheading-1">You are now done. Would you like to submit the Request?</span>
         <div xLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="3px">
             <button mat-stroked-button matStepperPrevious color="primary" (click)="Submit()">Yes</button>
             <button mat-stroked-button (click)="stepper.reset()" color="accent">No</button>
-
         </div>
-    </mat-step> -->
+    </mat-step>
 </mat-vertical-stepper>

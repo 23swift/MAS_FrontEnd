@@ -7,5 +7,5 @@ export class ServiceFeeRateListData {
         { Id: 2, Code: 'Code2', Value: 'V23SS', StraightFeeRate: 2 }
     ]
 
-    Fields: string[] = ['Select','Code', 'Value', 'StraightFeeRate'];
+    Fields: string[] = ['Code', 'Value', 'StraightFeeRate','Options'];
 }

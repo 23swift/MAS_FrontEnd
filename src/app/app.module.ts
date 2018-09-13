@@ -99,9 +99,18 @@ import { AoMaintenanceFormComponent } from './forms/ao-maintenance-form/ao-maint
 import { ServiceFeeContractComponent } from './administration/service-fee-contract/service-fee-contract/service-fee-contract.component';
 import { ServiceFeeContractFormComponent } from './administration/service-fee-contract/service-fee-contract-form/service-fee-contract-form.component';
 import { ServiceFeeContractListComponent } from './administration/service-fee-contract/service-fee-contract-list/service-fee-contract-list.component';
+import { DocumentChecklistConfigurationComponent } from './administration/document-checklist/document-checklist-configuration/document-checklist-configuration/document-checklist-configuration.component';
+import { DocumentChecklistConfigurationFormComponent } from './administration/document-checklist/document-checklist-configuration/document-checklist-configuration-form/document-checklist-configuration-form.component';
+import { DocumentChecklistConfigurationListComponent } from './administration/document-checklist/document-checklist-configuration/document-checklist-configuration-list/document-checklist-configuration-list.component';
+import { BranchListAttachmentPOSRequestComponent } from './branch-list-attachment-posrequest/branch-list-attachment-posrequest.component';
 import { CheckDialogTypeComponent } from './check-dialog-type/check-dialog-type.component';
+<<<<<<< HEAD
 import { BdoDefaultHeaderComponent } from './bdo-default-header/bdo-default-header.component';
 import { PsServicingComponent } from './new-affiliation/ps-servicing/ps-servicing.component';
+=======
+import { ParameterMaintenanceDetailsComponent } from './administration/parameter-maintenance/parameter-maintenance-details/parameter-maintenance-details.component';
+
+>>>>>>> aab0b96f43e6be0b616bc229aefe7d974eeadc6d
 
 
 
@@ -178,9 +187,18 @@ import { PsServicingComponent } from './new-affiliation/ps-servicing/ps-servicin
     ServiceFeeContractComponent,
     ServiceFeeContractFormComponent,
     ServiceFeeContractListComponent,
+<<<<<<< HEAD
     CheckDialogTypeComponent,
     BdoDefaultHeaderComponent,
     PsServicingComponent
+=======
+    DocumentChecklistConfigurationComponent,
+    DocumentChecklistConfigurationFormComponent,
+    DocumentChecklistConfigurationListComponent,
+    BranchListAttachmentPOSRequestComponent,
+    CheckDialogTypeComponent,
+    ParameterMaintenanceDetailsComponent
+>>>>>>> aab0b96f43e6be0b616bc229aefe7d974eeadc6d
   ],
   imports: [
     BrowserModule,
@@ -233,8 +251,11 @@ import { PsServicingComponent } from './new-affiliation/ps-servicing/ps-servicin
     MatSortModule,
     MatCheckboxModule
   ],
-  entryComponents: [RemarksModalComponent, HistoryModalComponent, AoListModalComponent,
-    MidFormModalComponent, DocumentChecklistMaintenanceFormComponent, ServiceFeeContractFormComponent ],
+  entryComponents: [RemarksModalComponent, HistoryModalComponent, 
+                    AoListModalComponent,MidFormModalComponent, 
+                    DocumentChecklistMaintenanceFormComponent, ServiceFeeContractFormComponent, 
+                    DocumentChecklistConfigurationFormComponent,ParameterMaintenanceFormComponent,
+                    ParameterMaintenanceDetailsComponent ],
   providers: [],
   bootstrap: [AppComponent]
 })
