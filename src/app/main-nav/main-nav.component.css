@@ -14,11 +14,11 @@
 	}
 } */
 .mat-toolbar.mat-primary{
-  position: sticky;
+  /*position: sticky;*/
 }
 
  .mat-toolbar  {
-   position: fixed;
+   /*position: fixed;*/
   top: 0;
   left: 0;
   z-index: 2;
@@ -30,7 +30,6 @@
 }
  */
 .mat-headline{
-
 	margin-left: 7px;
 	margin-top: 7px;
 }

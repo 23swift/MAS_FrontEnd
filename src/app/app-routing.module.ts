@@ -51,6 +51,9 @@ import { BuMaintenanceFormComponent } from './forms/bu-maintenance-form/bu-maint
 import { AoMaintenanceComponent } from './data-management/ao-maintenance/ao-maintenance.component';
 import { ServiceFeeContractComponent } from './administration/service-fee-contract/service-fee-contract/service-fee-contract.component';
 import { ServiceFeeContractFormComponent } from './administration/service-fee-contract/service-fee-contract-form/service-fee-contract-form.component';
+import { PsServicingComponent } from './new-affiliation/ps-servicing/ps-servicing.component';
+import { BranchListAttachmentPOSRequestComponent } from './branch-list-attachment-posrequest/branch-list-attachment-posrequest.component';
+import { DocumentChecklistConfigurationComponent } from './administration/document-checklist/document-checklist-configuration/document-checklist-configuration/document-checklist-configuration.component'
 
 
 const routes: Routes = [
@@ -59,8 +62,8 @@ const routes: Routes = [
   {
     path: 'posStep/:mode', component: PosRequestStepperComponent,
     children: [
-      { path: '', component: BranchListAttachmentPOSComponent, outlet: 'branchPOS' },
-      { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOS' },
+      { path: '', component: BranchListAttachmentPOSRequestComponent, outlet: 'branchPOSRequest' },
+      { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOSRequest' },
     ]
   },
   { path: 'ba/:mode', component: BranchAffiliationComponent },
@@ -101,6 +104,7 @@ const routes: Routes = [
   { path: 'oif', component: OcularInspectionFormComponent },
   { path: 'oifForm', component: OcularInspectionFormComponent },
   { path: 'aoDashboard', component: AoCheckerDashboardComponent },
+  
   // {
   //   path: 'aoChecking', component: AoCheckingComponent,
   //   children: [
@@ -191,6 +195,7 @@ const routes: Routes = [
   { path: 'na/mauOfficer/:mode/:id', component: MauOfficerComponent },
   { path: 'na/mdcsUser', component: MdcsUserComponent },
   { path: 'na/mdmUser', component: MdmUserComponent },
+  { path: 'na/psServicing', component: PsServicingComponent },
   { path: 'aoChecking', component: AoCheckingComponent },
   { path: 'posForm', component: PosFormComponent },
   { path: 'newAffSum', component: NewAffiliationSumComponent },
@@ -217,6 +222,7 @@ const routes: Routes = [
   { path: 'historyModal', component: HistoryModalComponent },
   { path: 'paramMaintenance', component: ParameterMaintenanceComponent},
   { path: 'dclMaintenance', component: DocumentChecklistMaintenanceComponent},
+  { path: 'dclConfiguration', component: DocumentChecklistConfigurationComponent},
   { path: 'bu', component: BuMaintenanceComponent },
   { path: 'bus', component: BuMaintenanceFormComponent },
   { path: 'ao', component: AoMaintenanceComponent },

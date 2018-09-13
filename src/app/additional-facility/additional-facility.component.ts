@@ -1,24 +1,12 @@
-import { Component, OnInit,Input } from '@angular/core';
-import {FormGroup} from '@angular/forms';
-import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
-
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-additional-facility',
   templateUrl: './additional-facility.component.html',
-  styleUrls: ['./additional-facility.component.scss'] 
-  //testnnn
+  styleUrls: ['./additional-facility.component.css']
 })
 export class AdditionalFacilityComponent implements OnInit {
-  form = new FormGroup({});
-  model: any = {};
-  options: FormlyFormOptions = {};
-  fields: FormlyFieldConfig[];
-  title :string='Additional Facility';
-  subTitle:string='Create';
-  mode:string;
-executeFunction: Function;
+
   constructor() { }
 
   ngOnInit() {

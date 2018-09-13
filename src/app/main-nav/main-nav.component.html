@@ -1,5 +1,7 @@
+<!-- <app-bdo-default-header [screenName]="''"></app-bdo-default-header> -->
 <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #drawer class="sidenav" fixedInViewport="false" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="over" [opened]="false" position="end">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="false" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="over" [opened]="false" position="end">
         <!--  <mat-toolbar color="accent">
           <span style="color:whitesmoke">Menu</span>
     </mat-toolbar> -->
@@ -54,44 +56,56 @@
             <a routerLink="/home" mat-icon-button>
                 <mat-icon>home</mat-icon>
             </a>
-            <span>Merchant Acquiring System</span>
+            <span>Merchant Acquiring Process</span>
             <span fxFlex></span>
-            <button mat-icon-button [matMenuTriggerFor]="menu" matTooltip="Request"><mat-icon>description</mat-icon></button>
+            <button mat-icon-button [matMenuTriggerFor]="menu" matTooltip="Request">
+                <mat-icon>description</mat-icon>
+            </button>
             <mat-menu #menu="matMenu">
                 <a routerLink="na/aoEncoder/create" mat-menu-item>New Affiliation</a>
                 <a routerLink="/ba/create" mat-menu-item>Branch Affiliation</a>
-               <!-- <a routerLink="/maef" mat-menu-item>MAEF</a> -->
+                <!-- <a routerLink="/maef" mat-menu-item>MAEF</a> -->
 
                 <a routerLink="/posStep/create" mat-menu-item>POS Request</a>
                 <a routerLink="/additionalFacility" mat-menu-item>Additional Facility</a>
                 <a routerLink="/fileMaintenance" mat-menu-item>File Maintenance</a>
             </mat-menu>
-            <button mat-icon-button [matMenuTriggerFor]="admin" matTooltip="Administration"><mat-icon>settings</mat-icon></button>
+            <button mat-icon-button [matMenuTriggerFor]="admin" matTooltip="Administration">
+                <mat-icon>settings</mat-icon>
+            </button>
             <mat-menu #admin="matMenu">
-                    <a routerLink="/paramMaintenance" mat-menu-item>Parameter Maintenance</a>
-                    <a routerLink="dm/ao" mat-menu-item>AO Maintenance</a>    
-                    <a routerLink="/sfcc" mat-menu-item>Service Fee Contract</a>
-                    <a mat-menu-item [matMenuTriggerFor]="docu">Document Checklist</a>
-                    <a routerLink="dm/bu" mat-menu-item>BU Maintenance</a> 
-                    <a mat-menu-item>Default MID Maintenance</a>     
+                <a routerLink="/paramMaintenance" mat-menu-item>Parameter Maintenance</a>
+                <a routerLink="dm/ao" mat-menu-item>AO Maintenance</a>
+                <a routerLink="/sfcc" mat-menu-item>Service Fee Contract</a>
+                <a mat-menu-item [matMenuTriggerFor]="docu">Document Checklist</a>
+                <a routerLink="dm/bu" mat-menu-item>BU Maintenance</a>
+                <a mat-menu-item>Default MID Maintenance</a>
             </mat-menu>
             <mat-menu #docu="matMenu">
                 <a routerLink="/dclMaintenance" mat-menu-item>Maintenance</a>
-                <a mat-menu-item>Configuration</a>  
+<<<<<<< HEAD
+                <a mat-menu-item>Configuration</a>
+=======
+                <a routerLink="/dclConfiguration" mat-menu-item>Configuration</a>  
+>>>>>>> aab0b96f43e6be0b616bc229aefe7d974eeadc6d
             </mat-menu>
 
-            <button mat-icon-button matTooltip="Reports"><mat-icon>assignment</mat-icon></button>
+            <button mat-icon-button matTooltip="Reports">
+                <mat-icon>assignment</mat-icon>
+            </button>
 
 
-            <button type="submit" mat-icon-button matTooltip="Search"><mat-icon>search</mat-icon> </button>
+            <button type="submit" mat-icon-button matTooltip="Search">
+                <mat-icon>search</mat-icon>
+            </button>
             <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" matTooltip="Account">
-        <mat-icon aria-label="Side nav toggle icon">face</mat-icon>
-      </button>
+                <mat-icon aria-label="Side nav toggle icon">face</mat-icon>
+            </button>
 
 
 
         </mat-toolbar>
-        
+
         <ng-content></ng-content>
         <!-- Add Content Here -->
 

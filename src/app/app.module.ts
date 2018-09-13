@@ -79,7 +79,6 @@ import { MaefFormComponent } from './forms/maef-form/maef-form.component';
 
 import { MauCheckerComponent } from './new-affiliation/mau-checker/mau-checker.component';
 import { MdcsUserComponent } from './new-affiliation/mdcs-user/mdcs-user.component';
-import { PsServicingComponent } from './ps-servicing/ps-servicing.component';
 import { MdmUserComponent } from './new-affiliation/mdm-user/mdm-user.component';
 import { AoListModalComponent } from './modal/ao-list-modal/ao-list-modal.component';
 
@@ -100,8 +99,18 @@ import { AoMaintenanceFormComponent } from './forms/ao-maintenance-form/ao-maint
 import { ServiceFeeContractComponent } from './administration/service-fee-contract/service-fee-contract/service-fee-contract.component';
 import { ServiceFeeContractFormComponent } from './administration/service-fee-contract/service-fee-contract-form/service-fee-contract-form.component';
 import { ServiceFeeContractListComponent } from './administration/service-fee-contract/service-fee-contract-list/service-fee-contract-list.component';
+import { DocumentChecklistConfigurationComponent } from './administration/document-checklist/document-checklist-configuration/document-checklist-configuration/document-checklist-configuration.component';
+import { DocumentChecklistConfigurationFormComponent } from './administration/document-checklist/document-checklist-configuration/document-checklist-configuration-form/document-checklist-configuration-form.component';
+import { DocumentChecklistConfigurationListComponent } from './administration/document-checklist/document-checklist-configuration/document-checklist-configuration-list/document-checklist-configuration-list.component';
+import { BranchListAttachmentPOSRequestComponent } from './branch-list-attachment-posrequest/branch-list-attachment-posrequest.component';
 import { CheckDialogTypeComponent } from './check-dialog-type/check-dialog-type.component';
+
 import { AoMaintenanceModalComponent } from './modal/ao-maintenance-modal/ao-maintenance-modal.component';
+
+import { BdoDefaultHeaderComponent } from './bdo-default-header/bdo-default-header.component';
+import { PsServicingComponent } from './new-affiliation/ps-servicing/ps-servicing.component';
+
+import { ParameterMaintenanceDetailsComponent } from './administration/parameter-maintenance/parameter-maintenance-details/parameter-maintenance-details.component';
 
 
 
@@ -160,7 +169,6 @@ import { AoMaintenanceModalComponent } from './modal/ao-maintenance-modal/ao-mai
     MaefFormComponent,
     MauCheckerComponent,
     MdcsUserComponent,
-    PsServicingComponent,
     MdmUserComponent,
     AoListModalComponent,
     AlertMessageComponent,
@@ -180,8 +188,18 @@ import { AoMaintenanceModalComponent } from './modal/ao-maintenance-modal/ao-mai
     ServiceFeeContractComponent,
     ServiceFeeContractFormComponent,
     ServiceFeeContractListComponent,
+    AoMaintenanceModalComponent,
+
     CheckDialogTypeComponent,
-    AoMaintenanceModalComponent
+    BdoDefaultHeaderComponent,
+    PsServicingComponent,
+
+    DocumentChecklistConfigurationComponent,
+    DocumentChecklistConfigurationFormComponent,
+    DocumentChecklistConfigurationListComponent,
+    BranchListAttachmentPOSRequestComponent,
+    CheckDialogTypeComponent,
+    ParameterMaintenanceDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -234,8 +252,11 @@ import { AoMaintenanceModalComponent } from './modal/ao-maintenance-modal/ao-mai
     MatSortModule,
     MatCheckboxModule
   ],
-  entryComponents: [RemarksModalComponent, HistoryModalComponent, AoListModalComponent,
-    MidFormModalComponent, DocumentChecklistMaintenanceFormComponent, ServiceFeeContractFormComponent ],
+  entryComponents: [RemarksModalComponent, HistoryModalComponent, 
+                    AoListModalComponent,MidFormModalComponent, 
+                    DocumentChecklistMaintenanceFormComponent, ServiceFeeContractFormComponent, 
+                    DocumentChecklistConfigurationFormComponent,ParameterMaintenanceFormComponent,
+                    ParameterMaintenanceDetailsComponent ],
   providers: [],
   bootstrap: [AppComponent]
 })

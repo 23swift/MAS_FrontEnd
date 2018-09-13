@@ -16,19 +16,19 @@ export class BranchFormComponent extends AppBaseComponent implements OnInit {
   options: FormlyFormOptions = {};
   fields: FormlyFieldConfig[];
   title :string='Branch Affiliation';
-  subTitle:string='test';
+  subTitle:string;
   mode:string;
   backUrl:string;
   private _branchFormService:BranchFormService;
   constructor(private branchService:BranchFormService,public route: ActivatedRoute,
     public router: Router) { 
       super(route,router);
-      this._branchFormService=branchService;
-      this.getFields();
+      this._branchFormService = this.branchService;
     }
 
   ngOnInit() {
     this.title='Branch';
+    this.getFields();
     // this.baseCreateFunction=this.create;
     // this.baseUpdateFunction=this.update;
    
