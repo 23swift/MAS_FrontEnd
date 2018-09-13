@@ -40,7 +40,7 @@ export class ServiceFeeContractListComponent implements OnInit {
   openDialog() {
     const dialogRef = this._dialog.open(ServiceFeeContractFormComponent, {
       width: '800px',
-      height: '250px'
+      height: '280px'
     });
 
     dialogRef.afterClosed().subscribe(data => {
