@@ -79,7 +79,6 @@ import { MaefFormComponent } from './forms/maef-form/maef-form.component';
 
 import { MauCheckerComponent } from './new-affiliation/mau-checker/mau-checker.component';
 import { MdcsUserComponent } from './new-affiliation/mdcs-user/mdcs-user.component';
-import { PsServicingComponent } from './ps-servicing/ps-servicing.component';
 import { MdmUserComponent } from './new-affiliation/mdm-user/mdm-user.component';
 import { AoListModalComponent } from './modal/ao-list-modal/ao-list-modal.component';
 
@@ -105,6 +104,12 @@ import { DocumentChecklistConfigurationFormComponent } from './administration/do
 import { DocumentChecklistConfigurationListComponent } from './administration/document-checklist/document-checklist-configuration/document-checklist-configuration-list/document-checklist-configuration-list.component';
 import { BranchListAttachmentPOSRequestComponent } from './branch-list-attachment-posrequest/branch-list-attachment-posrequest.component';
 import { CheckDialogTypeComponent } from './check-dialog-type/check-dialog-type.component';
+
+import { AoMaintenanceModalComponent } from './modal/ao-maintenance-modal/ao-maintenance-modal.component';
+
+import { BdoDefaultHeaderComponent } from './bdo-default-header/bdo-default-header.component';
+import { PsServicingComponent } from './new-affiliation/ps-servicing/ps-servicing.component';
+
 import { ParameterMaintenanceDetailsComponent } from './administration/parameter-maintenance/parameter-maintenance-details/parameter-maintenance-details.component';
 
 
@@ -164,7 +169,6 @@ import { ParameterMaintenanceDetailsComponent } from './administration/parameter
     MaefFormComponent,
     MauCheckerComponent,
     MdcsUserComponent,
-    PsServicingComponent,
     MdmUserComponent,
     AoListModalComponent,
     AlertMessageComponent,
@@ -184,6 +188,12 @@ import { ParameterMaintenanceDetailsComponent } from './administration/parameter
     ServiceFeeContractComponent,
     ServiceFeeContractFormComponent,
     ServiceFeeContractListComponent,
+    AoMaintenanceModalComponent,
+
+    CheckDialogTypeComponent,
+    BdoDefaultHeaderComponent,
+    PsServicingComponent,
+
     DocumentChecklistConfigurationComponent,
     DocumentChecklistConfigurationFormComponent,
     DocumentChecklistConfigurationListComponent,
