@@ -797,7 +797,7 @@ export class MaefFormService {
         },
       },
       {
-        className: 'flex-1',
+        className: 'flex-2',
         key: 'signVerifYes',
         type: 'radio',
         templateOptions: {
@@ -843,7 +843,7 @@ export class MaefFormService {
           },
         },
         {
-          className: 'flex-1',
+          className: 'flex-1 mat-form-field-infix',
           type: 'checkDialog',
           key: 'chkDecline',
           templateOptions: {
