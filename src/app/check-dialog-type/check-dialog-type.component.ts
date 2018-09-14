@@ -21,7 +21,7 @@ export class CheckDialogTypeComponent extends FieldType implements OnInit {
   getValue(event) {
     if (event.checked) {
       // console.log(this.indeterminate);
-      // this.indeterminate = false;
+       this.indeterminate = false;
       // console.log(this.indeterminate);
       this._dialogRemarks.open(RemarksModalComponent, {
         width: '50%'

@@ -2,7 +2,7 @@
 
 <div class="flex-branch-list-header">
    <!-- <span class="mat-headline">Merchant Affiliation and Maintenance - Officer</span> -->
-   <span class="mat-headline">Request List - Merchant Partnership Sales</span> 
+   <span class="mat-headline">Requests for Distribution – MAM Manager</span> 
 </div>
 <div fxLayout="row">
     <table mat-table [dataSource]="dataSource">
@@ -37,15 +37,16 @@
         <ng-container matColumnDef="Operation">
             <th mat-header-cell *matHeaderCellDef></th>
             <td mat-cell *matCellDef="let element">
-                <!-- <a (click)="GetItem(element.Id)" mat-mini-fab color="primary">
+                <a (click)="editItem()" mat-mini-fab color="accent" matTooltip="View Request">
                     <mat-icon style="color:white;">edit</mat-icon>
-                </a> -->
+                </a>
+                &nbsp;&nbsp;
                 <a (click)="openDialog(element.id,element.TrackingNo)" mat-mini-fab color="primary"  matTooltip="Assign Request">
-                    <mat-icon style="color:white;" title="Assign To">face</mat-icon> 
+                    <mat-icon style="color:white;" >face</mat-icon> 
                 </a>
                 &nbsp;&nbsp;
                 <a (click)="GetItem(element.Id)" mat-mini-fab class="ownrequest-icon-color"  matTooltip="Own Request">
-                    <mat-icon style="color:white;" title="Own Request">touch_app</mat-icon> 
+                    <mat-icon style="color:white;">touch_app</mat-icon> 
                 </a>
             </td>
         </ng-container>

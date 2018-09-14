@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { AoListModalService } from './ao-list-modal.service';
 import { IaolistData } from "../../temp/interface/iaolist-data";
+import { FormControl } from '../../../../node_modules/@angular/forms';
 
 
 @Component({
@@ -15,8 +16,7 @@ export class AoListModalComponent implements OnInit {
   dataSource: IaolistData[];
   passedData: any;
   selectedValue: string;
-  aoSelectedName: string = 'none';
-
+  aoSelectFrmControl: FormControl;
   constructor(private _matDialogRef: MatDialogRef<AoListModalComponent>,
               private _service: AoListModalService,
               @Inject(MAT_DIALOG_DATA) private _passedData: any) { }
@@ -24,15 +24,16 @@ export class AoListModalComponent implements OnInit {
   ngOnInit() {
     this.dataSource = this._service.getAoList();
     this.passedData = this._passedData;
-    this.aoSelectedName = this.aoSelectedName;
+    this.selectedValue = 'Not yet assigned!';
+    this.aoSelectFrmControl = new FormControl();
   }
-
+ 
   Cancel() {
     this._matDialogRef.close();
   }
 
   Submit() {
-    this._matDialogRef.close(this.aoSelectedName);
+    this._matDialogRef.close(this.aoSelectFrmControl.value);
   }
   
 }
