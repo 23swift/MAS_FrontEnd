@@ -1,1 +1,9 @@
-<p>mdm-user works</p>
+<app-bdo-form-header [text]="title" [sub_text]="subTitle" [mode]="mode"></app-bdo-form-header>
+<app-request-header></app-request-header>
+<!-- <span class="mat-headline">Please follow the steps:</span> -->
+<mat-divider></mat-divider>
+<div class="mat-title color-orange m-left-5px">Customer Profile</div>
+<app-customer-profile [displayMode]="false" readOnly="true"></app-customer-profile>
+<mat-divider></mat-divider>
+<div class="mat-subheading-1 color-orange m-left-5px">Document Checklist</div>
+<app-document-check-list></app-document-check-list>

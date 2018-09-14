@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MidService } from './mid.service';
 import { MatDialog } from '@angular/material';
@@ -15,19 +15,24 @@ export class MidComponent implements OnInit {
   mode: string;
   dataSource;
   form: string;
+  @Input() action?: boolean;
   constructor(private _route: ActivatedRoute, private _router: Router, private _service: MidService,
   private _dialog: MatDialog) { }
 
   ngOnInit() {
     this.dataSource = this._service.Get();
     this.displayedColumns = this._service.GetTableFields();
-    this.form = this._route.snapshot.params['form'];
+    this.form = this._route.snapshot.params['form'] || this.action;
 
-    if (this.form) {
+    if (this.form != undefined) {
       const index = this.displayedColumns.indexOf('Action');
       this.displayedColumns.splice(index, 1);
+      if (this.action == false) {
+        this.form = 'POS';
+      }
     }
   }
+  
   AddMid() {
     this._dialog.open(MidFormModalComponent, {
       width: '80%'

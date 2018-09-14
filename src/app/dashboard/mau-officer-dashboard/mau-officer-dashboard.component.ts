@@ -3,6 +3,7 @@ import { MauOfficerDashboardService } from './mau-officer-dashboard.service';
 import { IRequestDisplay } from '../../temp/interface/irequest-display';
 import { MatDialogRef, MatDialog, MatSnackBar } from '../../../../node_modules/@angular/material';
 import { AoListModalComponent } from '../../modal/ao-list-modal/ao-list-modal.component';
+import { ActivatedRoute, Router } from '../../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-mau-officer-dashboard',
@@ -21,7 +22,9 @@ export class MauOfficerDashboardComponent implements OnInit {
 
   constructor(private _service: MauOfficerDashboardService,
     private _dialog: MatDialog,
-    private _snackBar: MatSnackBar) { }
+    private _snackBar: MatSnackBar,
+    private _route: ActivatedRoute, 
+    private _router: Router) { }
 
   ngOnInit() {
     this.displayedColumns = this._service.GetTableFields();
@@ -30,6 +33,10 @@ export class MauOfficerDashboardComponent implements OnInit {
     this.mode = '';
     this.title = '';
     this.subTitle = '';
+  }
+
+  editItem() {
+    this._router.navigateByUrl('na/mauOfficer/update/0');
   }
 
   openDialog(id, trackingNo): void {
