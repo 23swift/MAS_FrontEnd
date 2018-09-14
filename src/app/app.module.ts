@@ -240,7 +240,7 @@ import { ParameterMaintenanceDetailsComponent } from './administration/parameter
     MatRadioModule,
     MatPaginatorModule,
     MatSortModule,
-    MatCheckboxModule
+    MatCheckboxModule,
   ],
   entryComponents: [RemarksModalComponent, HistoryModalComponent, 
                     AoListModalComponent,MidFormModalComponent, 

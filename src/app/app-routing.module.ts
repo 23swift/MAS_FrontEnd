@@ -209,7 +209,7 @@ const routes: Routes = [
   { path: 'dm/bu/:mode/:id', component: BuMaintenanceFormComponent },
   /////////////////////  <-end  Data Management  /////////////////////////
 
-
+  
   ///////////////////// FOR TESTING PURPOSES ///////////////////////
   { path: 'awr', component: AwrFormComponent },
   { path: 'requestForm', component: RequestFormComponent },
