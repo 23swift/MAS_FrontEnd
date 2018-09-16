@@ -1,3 +1,4 @@
+import { RequestComponent } from './new-affiliation/request/request.component';
 import { AoMaintenanceFormComponent } from './forms/ao-maintenance-form/ao-maintenance-form.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -53,7 +54,7 @@ import { ServiceFeeContractComponent } from './administration/service-fee-contra
 import { ServiceFeeContractFormComponent } from './administration/service-fee-contract/service-fee-contract-form/service-fee-contract-form.component';
 import { PsServicingComponent } from './new-affiliation/ps-servicing/ps-servicing.component';
 import { BranchListAttachmentPOSRequestComponent } from './branch-list-attachment-posrequest/branch-list-attachment-posrequest.component';
-import { DocumentChecklistConfigurationComponent } from './administration/document-checklist/document-checklist-configuration/document-checklist-configuration/document-checklist-configuration.component'
+import { DocumentChecklistConfigurationComponent } from './administration/document-checklist/document-checklist-configuration/document-checklist-configuration/document-checklist-configuration.component';
 
 
 const routes: Routes = [
@@ -228,6 +229,7 @@ const routes: Routes = [
   { path: 'ao', component: AoMaintenanceComponent },
   { path: 'aof', component: AoMaintenanceFormComponent},
   { path: 'sfcc', component: ServiceFeeContractComponent},
+  { path: 'request', component: RequestComponent}
 
 ];
 
