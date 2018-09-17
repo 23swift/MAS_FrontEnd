@@ -10,9 +10,9 @@
         </mat-expansion-panel-header>
 <app-branch-form></app-branch-form>
 <mat-tab-group>
-   <mat-tab label="OIF"> <app-ocular-inspection-form [displayMode]="true"></app-ocular-inspection-form> </mat-tab>
-   <mat-tab label="POS"><app-pos-form [displayMode]="true"></app-pos-form></mat-tab>
-   <mat-tab label="MID"><app-mid></app-mid></mat-tab>
+   <mat-tab label="OIF" [showOif]="showOif"> <app-ocular-inspection-form [displayMode]="true"></app-ocular-inspection-form> </mat-tab>
+   <mat-tab label="POS" [showPos]="showPos"><app-pos-form [displayMode]="true"></app-pos-form></mat-tab>
+   <mat-tab label="MID" [showMid]="showMid"><app-mid></app-mid></mat-tab>
 </mat-tab-group>
 
     </mat-expansion-panel>
