@@ -1,5 +1,5 @@
 <div class="header-container">
-  <!--  <div><img src="assets/img/bdoLogo.png" class="header-logo" alt=""> </div> -->
+    <!-- <div><img src="assets/img/bdoLogo.png" class="header-logo" alt=""> </div> -->
     <div style="margin-left:10px;"> <span class="mat-title">{{text}}</span>
         <br>
         <span style="color:orange" class="mat-subheading-2">{{sub_text}}</span>
@@ -29,21 +29,22 @@
            <!-- </div> -->
 
 
-            <button *ngIf="showRequestFlowOptions" (click)="return()" mat-button matTooltip="Return Request"><mat-icon  class="request-mat-icon">subdirectory_arrow_left</mat-icon> Return Request</button>
-            <button *ngIf="showRequestFlowOptions" (click)="submit()" mat-button matTooltip="Submit Request"><mat-icon  class="request-mat-icon">arrow_forward</mat-icon> Submit Request</button>
+            <button *ngIf="showRequestFlowOptions" (click)="return()" mat-flat-button color="primary" matTooltip="Return Request"><mat-icon  class="request-mat-icon">subdirectory_arrow_left</mat-icon> Return Request</button>
+            <button *ngIf="showRequestFlowOptions" (click)="submit()" mat-flat-button color="primary" matTooltip="Submit Request"><mat-icon  class="request-mat-icon">arrow_forward</mat-icon> Submit Request</button>
+            <button *ngIf="showWelcomeLetter" (click)="submit()" mat-flat-button color="primary" matTooltip="Generate Welcome Letter"><mat-icon class="request-mat-icon">mail_outline</mat-icon> Generate Welcome Letter</button>
             <!-- BUTTON FOR CREATION -->
-         <!--   <button *ngIf="showCreateOptions" (click)="submit()" mat-button matTooltip="Submit Request"><mat-icon  class="request-mat-icon">arrow_forward</mat-icon> Submit Request</button> -->
+         <!--   <button *ngIf="showCreateOptions" (click)="submit()" mat-flat-button matTooltip="Submit Request"><mat-icon  class="request-mat-icon">arrow_forward</mat-icon> Submit Request</button> -->
 
 
-            <!-- 	<button mat-button color="primary" matTooltip="Approve Request" ><mat-icon  class="request-mat-icon">done</mat-icon>Approve</button>
-      <button mat-button color="primary" matTooltip="Decline request"><mat-icon  class="request-mat-icon">clear</mat-icon>Decline</button>
-      <button mat-button color="primary" matTooltip="Return Request"><mat-icon  class="request-mat-icon">subdirectory_arrow_left</mat-icon>Return </button>
-      <button mat-button  color="primary" matTooltip="Submit Request" ><mat-icon  class="request-mat-icon">arrow_forward</mat-icon>Submit</button> -->
+            <!-- 	<button mat-flat-button color="primary" matTooltip="Approve Request" ><mat-icon  class="request-mat-icon">done</mat-icon>Approve</button>
+      <button mat-flat-button color="primary" matTooltip="Decline request"><mat-icon  class="request-mat-icon">clear</mat-icon>Decline</button>
+      <button mat-flat-button color="primary" matTooltip="Return Request"><mat-icon  class="request-mat-icon">subdirectory_arrow_left</mat-icon>Return </button>
+      <button mat-flat-button  color="primary" matTooltip="Submit Request" ><mat-icon  class="request-mat-icon">arrow_forward</mat-icon>Submit</button> -->
         </div>
     </mat-toolbar>
 
     <!-- <div>
-        <button fxFlex fxShow=”true” fxHide.lg=”true” mat-button [matMenuTriggerFor]="requestMenu">
+        <button fxFlex fxShow=”true” fxHide.lg=”true” mat-flat-button [matMenuTriggerFor]="requestMenu">
   			<mat-icon color="primary">menu</mat-icon>
   	</button>
 

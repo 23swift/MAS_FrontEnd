@@ -14,7 +14,8 @@ export class ParameterMaintenanceFormService {
           type: 'input',
           className: 'flex-1',
           templateOptions: {
-            label: 'Description'
+            label: 'Description',
+            required: true,
           }
         },
         {
@@ -22,7 +23,8 @@ export class ParameterMaintenanceFormService {
           type: 'input',
           className: 'flex-1',
           templateOptions: {
-            label: 'Code'
+            label: 'Code',
+            required: true
           }
         },
       ]

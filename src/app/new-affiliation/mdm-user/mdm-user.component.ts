@@ -8,10 +8,15 @@ import { MdmUserService } from './mdm-user.service';
   providers: [MdmUserService]
 })
 export class MdmUserComponent implements OnInit {
-
+  mode: string;
+  title: string;
+  subTitle: string;
   constructor() { }
 
   ngOnInit() {
+    this.mode = 'mdmUser';
+    this.title = 'New Affiliation';
+    this.subTitle = 'APPROVED';
   }
 
 }

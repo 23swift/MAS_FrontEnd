@@ -14,6 +14,7 @@ export class BdoFormHeaderComponent implements OnInit {
   showApprovalOptions: boolean;
   showRequestFlowOptions: boolean;
   showCreateOptions: boolean;
+  showWelcomeLetter: boolean;
   @Input() mode: string;
   @Input() text: string;
   @Input() sub_text: string;
@@ -22,14 +23,15 @@ export class BdoFormHeaderComponent implements OnInit {
   constructor(private _route: ActivatedRoute, private _router: Router, private _snackBar: MatSnackBar, private _dialog: MatDialog) {}
 
   ngOnInit() {
-    this.showApprovalOptions = true;
+    this.showApprovalOptions = false;
     this.showRequestFlowOptions = false;
     this.showCreateOptions = false;
+    this.showWelcomeLetter = false;
 
     this.mode = this.mode ? this.mode : 'create';
-
+    console.log(this.mode);
     if (this._router.url !== '/home') {
-      if (this.mode === 'approval') {
+      if (this.mode.match(/approval/i)) {
         this.showApprovalOptions = true;
       }
       if (this.mode.match(/update/i) || this.mode.match(/approval/)) {
@@ -37,6 +39,9 @@ export class BdoFormHeaderComponent implements OnInit {
       }
       if (this.mode.match(/create/i)) {
         this.showCreateOptions = true;
+      }
+      if (this.mode.match(/mdmUser/i)) {
+        this.showWelcomeLetter = true;
       }
     }
   }
