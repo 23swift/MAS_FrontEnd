@@ -55,6 +55,7 @@ import { ServiceFeeContractFormComponent } from './administration/service-fee-co
 import { PsServicingComponent } from './new-affiliation/ps-servicing/ps-servicing.component';
 import { BranchListAttachmentPOSRequestComponent } from './branch-list-attachment-posrequest/branch-list-attachment-posrequest.component';
 import { DocumentChecklistConfigurationComponent } from './administration/document-checklist/document-checklist-configuration/document-checklist-configuration/document-checklist-configuration.component';
+import { MqrUserComponent } from './new-affiliation/mqr-user/mqr-user.component';
 
 
 const routes: Routes = [
@@ -207,6 +208,8 @@ const routes: Routes = [
   { path: 'newAffSum', component: NewAffiliationSumComponent },
   { path: 'home', component: HomeScreenComponent },
   { path: 'oif', component: OcularInspectionFormComponent },
+  { path: 'na/mqrUser/:mode/:id', component: MqrUserComponent },
+
 
   ////////////////////// Data Management start-> /////////////////////////
   { path: 'dm/ao', component: AoMaintenanceComponent },
