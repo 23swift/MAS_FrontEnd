@@ -110,6 +110,7 @@ import { BdoDefaultHeaderComponent } from './bdo-default-header/bdo-default-head
 import { PsServicingComponent } from './new-affiliation/ps-servicing/ps-servicing.component';
 import { ParameterMaintenanceDetailsComponent } from './administration/parameter-maintenance/parameter-maintenance-details/parameter-maintenance-details.component';
 import { RequestComponent } from './new-affiliation/request/request.component';
+import { DocumentCheckListFormRequestLevelComponent } from './forms/document-check-list-form-request-level/document-check-list-form-request-level.component';
 
 
 
@@ -199,7 +200,8 @@ import { RequestComponent } from './new-affiliation/request/request.component';
     BdoDefaultHeaderComponent,
     PsServicingComponent,
     ParameterMaintenanceDetailsComponent,
-    RequestComponent
+    RequestComponent,
+    DocumentCheckListFormRequestLevelComponent
   ],
   imports: [
     BrowserModule,

@@ -7,8 +7,9 @@
     flex-direction: column;
 }
 
-.m-left-20px {
+.m-lr-20px {
     margin-left: 20px;
+    margin-right: 20px;
 }
 
 .m-btm-20px {

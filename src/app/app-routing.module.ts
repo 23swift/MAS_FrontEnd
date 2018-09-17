@@ -55,6 +55,7 @@ import { ServiceFeeContractFormComponent } from './administration/service-fee-co
 import { PsServicingComponent } from './new-affiliation/ps-servicing/ps-servicing.component';
 import { BranchListAttachmentPOSRequestComponent } from './branch-list-attachment-posrequest/branch-list-attachment-posrequest.component';
 import { DocumentChecklistConfigurationComponent } from './administration/document-checklist/document-checklist-configuration/document-checklist-configuration/document-checklist-configuration.component';
+import { DocumentCheckListFormRequestLevelComponent } from './forms/document-check-list-form-request-level/document-check-list-form-request-level.component';
 
 
 const routes: Routes = [
@@ -198,7 +199,7 @@ const routes: Routes = [
   {
     path: 'na/mdmUser', component: MdmUserComponent, children: [
       { path: '', component: DocumentCheckListComponent, outlet: 'docForm' },
-      { path: 'docForm', component: DocumentCheckListFormComponent, outlet: 'docForm' }
+      { path: 'docForm', component: DocumentCheckListFormRequestLevelComponent, outlet: 'docForm' }
     ]
   },
   { path: 'na/psServicing', component: PsServicingComponent },
