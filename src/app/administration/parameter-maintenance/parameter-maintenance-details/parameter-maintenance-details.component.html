@@ -27,21 +27,11 @@
         <mat-divider></mat-divider>
       </mat-list-item>
       <mat-list-item *ngIf="isEditItem">
-        <mat-form-field class="flex-1">
-          <input matInput placeholder="Edit Item" style="font-size: 18px" />
+        <mat-form-field class="flex-1 mat-form-field-infix">
+          <input matInput placeholder="Edit Item" style="font-size: 18px;" />
           <mat-icon matSuffix (click)="saveDetail()" class="save-button">check_circle</mat-icon>
           <mat-icon matSuffix (click)="cancelSave()" class="cancel-button">cancel</mat-icon>
         </mat-form-field>
-        <mat-divider></mat-divider>
-      </mat-list-item>
-      <mat-list-item>
-        <mat-icon matPreffix class="bullet-style">label_important</mat-icon>
-        <span>Item 2</span>
-        <mat-divider></mat-divider>
-      </mat-list-item>
-      <mat-list-item>
-        <mat-icon matPreffix class="bullet-style">label_important</mat-icon>
-        <span>Item 3</span>
         <mat-divider></mat-divider>
       </mat-list-item>
     </mat-list>
