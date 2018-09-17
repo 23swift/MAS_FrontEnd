@@ -9,9 +9,9 @@ import { AppBaseComponent } from '../app-base/app-base.component';
 })
 export class BranchInfoComponent extends AppBaseComponent implements OnInit {
   @Input()displayMode:boolean=false;
-  @Input() showOif = true;
-  @Input() showPos = true;
-  @Input() showMid = true;
+  @Input() showOif? = true;
+  @Input() showPos? = true;
+  @Input() showMid? = true;
 
   constructor(public route: ActivatedRoute,
     public router: Router) {
