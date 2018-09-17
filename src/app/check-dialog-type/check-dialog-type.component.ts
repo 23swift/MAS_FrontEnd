@@ -9,7 +9,9 @@ import { RemarksModalComponent } from '../modal/remarks-modal/remarks-modal.comp
   styleUrls: ['./check-dialog-type.component.css']
 })
 export class CheckDialogTypeComponent extends FieldType implements OnInit {
-  indeterminate : boolean;
+  //indeterminate : boolean;
+  indeterminate = true;
+  checked = false;
   constructor(private _dialogRemarks: MatDialog) {
     super()
    }
@@ -20,9 +22,7 @@ export class CheckDialogTypeComponent extends FieldType implements OnInit {
 
   getValue(event) {
     if (event.checked) {
-      // console.log(this.indeterminate);
        this.indeterminate = false;
-      // console.log(this.indeterminate);
       this._dialogRemarks.open(RemarksModalComponent, {
         width: '50%'
       });
