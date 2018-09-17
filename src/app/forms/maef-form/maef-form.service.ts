@@ -10,6 +10,20 @@ export class MaefFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [{
         className: 'flex-1',
+        type: 'alertmessage',
+        key: 'errField',
+        hideExpression: "model['errField'] == undefined",
+        templateOptions: {
+          label: ''
+        }
+
+      }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [{
+        className: 'flex-1',
         type: 'input',
         key: 'businessName',
         expressionProperties: {
@@ -34,7 +48,26 @@ export class MaefFormService {
       }
       ]
     },
-    
+
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
+        {
+          className: 'flex-1',
+          type: 'alertmessage',
+          key: 'alertmsg',
+          templateOptions: {
+            label: 'label',
+            hidden: true
+          },
+          hideExpression: (model: any, formState: any) => {
+            return !model['withSimulInstall'];
+          }
+        },
+
+      ]
+    },
+
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
@@ -412,14 +445,14 @@ export class MaefFormService {
           key: 'nameOfPep',
           expressionProperties: {
             'templateOptions.required': (model: any, formState: any) => {
-              return model['amlaClass'] == '2';   
+              return model['amlaClass'] == '2';
             }
           },
           templateOptions: {
-              label: 'Specify Name/ Relationship Of PEP:',
-              placeholder: 'Specify Name/ Relationship Of PEP:'
+            label: 'Specify Name/ Relationship Of PEP:',
+            placeholder: 'Specify Name/ Relationship Of PEP:'
           }
-      },
+        },
 
       ]
     },
@@ -469,13 +502,13 @@ export class MaefFormService {
           expressionProperties: {
             'templateOptions.required': (model: any, formState: any) => {
               return model['rptClass'] == '3';
-            }             
+            }
           },
           templateOptions: {
-              label: 'Specify Name/ Relationship Of RP:',
-              placeholder: 'Specify Name/ Relationship Of RP:'
+            label: 'Specify Name/ Relationship Of RP:',
+            placeholder: 'Specify Name/ Relationship Of RP:'
           }
-      },
+        },
 
       ]
     },
@@ -487,47 +520,47 @@ export class MaefFormService {
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
-      {
-        className: 'flex-1',
-        key: 'location',
-        type: 'radio',
-        templateOptions: {
-          label: 'Location',
-          required: true,
-          options: [
-            { value: '1', label: 'Outskirt' },
-            { value: '2', label: 'Non-Outskirt' },
-            { value: '3', label: 'Out Of Coverage' }
-          ],
+        {
+          className: 'flex-1',
+          key: 'location',
+          type: 'radio',
+          templateOptions: {
+            label: 'Location',
+            required: true,
+            options: [
+              { value: '1', label: 'Outskirt' },
+              { value: '2', label: 'Non-Outskirt' },
+              { value: '3', label: 'Out Of Coverage' }
+            ],
+          },
         },
-      },
-      {
-        className: 'flex-1',
-        key: 'appearance',
-        type: 'radio',
-        templateOptions: {
-          label: 'Appearance',
-          required: true,
-          options: [
-            { value: '1', label: 'Acceptable' },
-            { value: '2', label: 'Non-Acceptable' }
-          ],
+        {
+          className: 'flex-1',
+          key: 'appearance',
+          type: 'radio',
+          templateOptions: {
+            label: 'Appearance',
+            required: true,
+            options: [
+              { value: '1', label: 'Acceptable' },
+              { value: '2', label: 'Non-Acceptable' }
+            ],
+          },
         },
-      },
-      {
-        className: 'flex-1',
-        key: 'withTelYes',
-        type: 'radio',
-        templateOptions: {
-          label: 'With Telephone Landline',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' }
-          ],
-        },
+        {
+          className: 'flex-1',
+          key: 'withTelYes',
+          type: 'radio',
+          templateOptions: {
+            label: 'With Telephone Landline',
+            required: true,
+            options: [
+              { value: true, label: 'Yes' },
+              { value: false, label: 'No' }
+            ],
+          },
 
-      },
+        },
 
       ]
     },
@@ -536,51 +569,51 @@ export class MaefFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
 
-      {
-        key: 'largeAccYes',
-        type: 'radio',
-        templateOptions: {
-          label: 'Large Account',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' }
-          ],
+        {
+          key: 'largeAccYes',
+          type: 'radio',
+          templateOptions: {
+            label: 'Large Account',
+            required: true,
+            options: [
+              { value: true, label: 'Yes' },
+              { value: false, label: 'No' }
+            ],
+          },
+
         },
 
-      },
+        {
+          key: 'natureBus',
+          type: 'radio',
+          templateOptions: {
+            label: 'Nature Of Business',
+            required: true,
+            options: [
+              { value: '1', label: 'Desirable' },
+              { value: '2', label: 'Non-Desirable' }
+            ],
+          },
 
-      {
-        key: 'natureBus',
-        type: 'radio',
-        templateOptions: {
-          label: 'Nature Of Business',
-          required: true,
-          options: [
-            { value: '1', label: 'Desirable' },
-            { value: '2', label: 'Non-Desirable' }
-          ],
         },
-
-      },
-      {
-        className: 'flex-1',
-        type: 'input',
-        key: 'psv',
-        expressionProperties: {
-          'templateOptions.required': (model: any, formState: any) => {
-            return model['largeAccYes'] == false;
-          }
-        },
-        templateOptions: {
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'psv',
+          expressionProperties: {
+            'templateOptions.required': (model: any, formState: any) => {
+              return model['largeAccYes'] == false;
+            }
+          },
+          templateOptions: {
             label: 'PSV',
             placeholder: 'PSV'
-        }
-    },
+          }
+        },
 
       ]
     },
-     
+
     {
       template: '<span class="mat-headline">Other Checking</span>',
     },
@@ -601,7 +634,7 @@ export class MaefFormService {
               { value: false, label: 'No' },
             ],
           },
-  
+
         },
         {
           className: 'flex-1',
@@ -615,22 +648,22 @@ export class MaefFormService {
               { value: false, label: 'No' },
             ],
           },
-  
-        },
-      {
-        className: 'flex-1',
-        key: 'mccCorrectYes',
-        type: 'radio',
-        templateOptions: {
-          label: 'MCC?',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' },
-          ],
-        },
 
-      },
+        },
+        {
+          className: 'flex-1',
+          key: 'mccCorrectYes',
+          type: 'radio',
+          templateOptions: {
+            label: 'MCC?',
+            required: true,
+            options: [
+              { value: true, label: 'Yes' },
+              { value: false, label: 'No' },
+            ],
+          },
+
+        },
 
       ]
     },
@@ -639,97 +672,97 @@ export class MaefFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
 
-      {
-        className: 'flex-1',
-        key: 'intesCodeYes',
-        type: 'radio',
-        templateOptions: {
-          label: 'Intes Code?',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' },
-          ],
+        {
+          className: 'flex-1',
+          key: 'intesCodeYes',
+          type: 'radio',
+          templateOptions: {
+            label: 'Intes Code?',
+            required: true,
+            options: [
+              { value: true, label: 'Yes' },
+              { value: false, label: 'No' },
+            ],
+          },
         },
-      },
-      {
-        className: 'flex-1',
-        key: 'bdoSettlemendCASACreditFacYes',
-        type: 'radio',
-        templateOptions: {
-          label: 'BDO Settlement CA/SA For Credit Facility?',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' },
-            { value: '', label: 'N.A.' }
-          ],
+        {
+          className: 'flex-1',
+          key: 'bdoSettlemendCASACreditFacYes',
+          type: 'radio',
+          templateOptions: {
+            label: 'BDO Settlement CA/SA For Credit Facility?',
+            required: true,
+            options: [
+              { value: true, label: 'Yes' },
+              { value: false, label: 'No' },
+              { value: '', label: 'N.A.' }
+            ],
+          },
         },
-      },
-      {
-        className: 'flex-1',
-        key: 'bdoSettlemendCASADebitFacYes',
-        type: 'radio',
-        templateOptions: {
-          label: 'BDO Settlement CA/SA For Debit Facility?',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' },
-            { value: '', label: 'N.A.' }
-          ],
+        {
+          className: 'flex-1',
+          key: 'bdoSettlemendCASADebitFacYes',
+          type: 'radio',
+          templateOptions: {
+            label: 'BDO Settlement CA/SA For Debit Facility?',
+            required: true,
+            options: [
+              { value: true, label: 'Yes' },
+              { value: false, label: 'No' },
+              { value: '', label: 'N.A.' }
+            ],
+          },
         },
-      },
       ]
     },
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
 
-      {
-        className: 'flex-1',
-        key: 'feeAccTppYes',
-        type: 'radio',
-        templateOptions: {
-          label: 'Fee Account(For TPP Only)?',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' },
-            { value: '', label: 'N.A.' },
-          ],
-        },
+        {
+          className: 'flex-1',
+          key: 'feeAccTppYes',
+          type: 'radio',
+          templateOptions: {
+            label: 'Fee Account(For TPP Only)?',
+            required: true,
+            options: [
+              { value: true, label: 'Yes' },
+              { value: false, label: 'No' },
+              { value: '', label: 'N.A.' },
+            ],
+          },
 
-      },
-      {
-        className: 'flex-1',
-        key: 'holdAccNoYes',
-        type: 'radio',
-        templateOptions: {
-          label: 'Holdout Account Number?',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' },
-            { value: '', label: 'N.A.' },
-          ],
         },
+        {
+          className: 'flex-1',
+          key: 'holdAccNoYes',
+          type: 'radio',
+          templateOptions: {
+            label: 'Holdout Account Number?',
+            required: true,
+            options: [
+              { value: true, label: 'Yes' },
+              { value: false, label: 'No' },
+              { value: '', label: 'N.A.' },
+            ],
+          },
 
-      },
-      {
-        className: 'flex-1',
-        key: 'tinYes',
-        type: 'radio',
-        templateOptions: {
-          label: 'TIN?',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' },
-            { value: '', label: 'N.A.' },
-          ],
         },
-      },
+        {
+          className: 'flex-1',
+          key: 'tinYes',
+          type: 'radio',
+          templateOptions: {
+            label: 'TIN?',
+            required: true,
+            options: [
+              { value: true, label: 'Yes' },
+              { value: false, label: 'No' },
+              { value: '', label: 'N.A.' },
+            ],
+          },
+        },
       ]
     },
 
@@ -737,80 +770,80 @@ export class MaefFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
 
-      {
-        className: 'flex-1',
-        key: 'secDtiRegDateYes',
-        type: 'radio',
-        templateOptions: {
-          label: 'SEC/DTI Registration Date?',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' }
-          ],
+        {
+          className: 'flex-1',
+          key: 'secDtiRegDateYes',
+          type: 'radio',
+          templateOptions: {
+            label: 'SEC/DTI Registration Date?',
+            required: true,
+            options: [
+              { value: true, label: 'Yes' },
+              { value: false, label: 'No' }
+            ],
+          },
         },
-      },
-      {
-        className: 'flex-1',
-        key: 'mobileNumberYes',
-        type: 'radio',
-        templateOptions: {
-          label: 'Mobile Number?',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' }
-          ],
+        {
+          className: 'flex-1',
+          key: 'mobileNumberYes',
+          type: 'radio',
+          templateOptions: {
+            label: 'Mobile Number?',
+            required: true,
+            options: [
+              { value: true, label: 'Yes' },
+              { value: false, label: 'No' }
+            ],
+          },
         },
-      },
-      {
-        className: 'flex-1',
-        key: 'emailAddYes',
-        type: 'radio',
-        templateOptions: {
-          label: 'Email Address?',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' },
-          ],
-        },
+        {
+          className: 'flex-1',
+          key: 'emailAddYes',
+          type: 'radio',
+          templateOptions: {
+            label: 'Email Address?',
+            required: true,
+            options: [
+              { value: true, label: 'Yes' },
+              { value: false, label: 'No' },
+            ],
+          },
 
-      },
+        },
       ]
-    },    
+    },
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
-      {
-        className: 'flex-1',
-        key: 'websiteYes',
-        type: 'radio',
-        templateOptions: {
-          label: 'Website?',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' },
-            { value: '', label: 'N.A.' },
-          ],
+        {
+          className: 'flex-1',
+          key: 'websiteYes',
+          type: 'radio',
+          templateOptions: {
+            label: 'Website?',
+            required: true,
+            options: [
+              { value: true, label: 'Yes' },
+              { value: false, label: 'No' },
+              { value: '', label: 'N.A.' },
+            ],
+          },
         },
-      },
-      {
-        className: 'flex-2',
-        key: 'signVerifYes',
-        type: 'radio',
-        templateOptions: {
-          label: 'Signature Verification?',
-          required: true,
-          options: [
-            { value: true, label: 'Yes' },
-            { value: false, label: 'No' }
-          ],
-        },
-      }
+        {
+          className: 'flex-2',
+          key: 'signVerifYes',
+          type: 'radio',
+          templateOptions: {
+            label: 'Signature Verification?',
+            required: true,
+            options: [
+              { value: true, label: 'Yes' },
+              { value: false, label: 'No' }
+            ],
+          },
+        }
       ]
-    }, 
+    },
     {
       template: '<span class="mat-headline">Decision</span>',
     },
@@ -852,182 +885,182 @@ export class MaefFormService {
         },
 
       ]
-    }, 
+    },
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [{
-          className: 'flex-1',
-          type: 'input',
-          key: 'assignMidCap',
-          expressionProperties: {
-              
-          },
-          templateOptions: {
-              label: 'Assigned MID Cap',
-              placeholder:'Assigned MID Cap',
-              maxLength: 13
-          },
+        className: 'flex-1',
+        type: 'input',
+        key: 'assignMidCap',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Assigned MID Cap',
+          placeholder: 'Assigned MID Cap',
+          maxLength: 13
+        },
       },
-          {
-              className: 'flex-1',
-              type: 'input',
-              key: 'payDelay',
-              expressionProperties: {
-                  
-              },
-              templateOptions: {
-                  label: 'Pay Delay Days',
-                  placeholder: 'Pay Delay Days',
-                  maxLength: 2
-              }
-          },
-          {
-              className: 'flex-1',
-              type: 'input',
-              key: 'holdOutDeposit',
-              expressionProperties: {
-                  
-              },
-              templateOptions: {
-                  label: 'Holdout Deposit',
-                  placeholder: 'Holdout Deposit',
-                  maxLength: 19
-              }
-          },
+      {
+        className: 'flex-1',
+        type: 'input',
+        key: 'payDelay',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Pay Delay Days',
+          placeholder: 'Pay Delay Days',
+          maxLength: 2
+        }
+      },
+      {
+        className: 'flex-1',
+        type: 'input',
+        key: 'holdOutDeposit',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Holdout Deposit',
+          placeholder: 'Holdout Deposit',
+          maxLength: 19
+        }
+      },
       ]
     },
-  
-          {
-            fieldGroupClassName: 'display-flex',
-            fieldGroup: [{
-                className: 'flex-1',
-                type: 'textarea',
-                key: 'otherRemarks',
-                expressionProperties: {
-                    
-                },
-                templateOptions: {
-                    label: 'Other Remarks',
-                    placeholder:'Other Remarks',
-                    maxLength: 2000
-                },
-            },
-                {
-                    className: 'flex-1',
-                    type: 'input',
-                    key: 'processedBy',
-                    expressionProperties: {
-                        
-                    },
-                    templateOptions: {
-                        label: 'Processed By',
-                        placeholder: 'Processed By'
-                    }
-                },
-                {
-                    className: 'flex-1',
-                    type: 'calendar',
-                    key: 'dateProcessed',
-                    expressionProperties: {
-                        
-                    },
-                    templateOptions: {
-                        label: 'Date Processed',
-                        placeholder: 'Date Processed'
-                    }
-                },
-            ]
-          },
-    
-          {
-            fieldGroupClassName: 'display-flex',
-            fieldGroup: [{
-                className: 'flex-1',
-                type: 'input',
-                key: 'approver1',
-                expressionProperties: {
-                    
-                },
-                templateOptions: {
-                    label: 'Approved1',
-                    placeholder:'Approved1'
-                },
-               },
 
-                {
-                    className: 'flex-1',
-                    type: 'calendar',
-                    key: 'dateApproved1',
-                    expressionProperties: {
-                        
-                    },
-                    templateOptions: {
-                        label: 'Date Approved',
-                        placeholder: 'Date Approved'
-                    }
-                },
-            ]
-          },
-          {
-            fieldGroupClassName: 'display-flex',
-            fieldGroup: [{
-                className: 'flex-1',
-                type: 'input',
-                key: 'approver2',
-                expressionProperties: {
-                    
-                },
-                templateOptions: {
-                    label: 'Approved2',
-                    placeholder:'Approved2'
-                },
-               },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'textarea',
+        key: 'otherRemarks',
+        expressionProperties: {
 
-                {
-                    className: 'flex-1',
-                    type: 'calendar',
-                    key: 'dateApproved2',
-                    expressionProperties: {
-                        
-                    },
-                    templateOptions: {
-                        label: 'Date Approved',
-                        placeholder: 'Date Approved'
-                    }
-                },
-            ]
-          },
-          {
-            fieldGroupClassName: 'display-flex',
-            fieldGroup: [{
-                className: 'flex-1',
-                type: 'input',
-                key: 'approver3',
-                expressionProperties: {
-                    
-                },
-                templateOptions: {
-                    label: 'Approved3',
-                    placeholder:'Approved3'
-                },
-               },
+        },
+        templateOptions: {
+          label: 'Other Remarks',
+          placeholder: 'Other Remarks',
+          maxLength: 2000
+        },
+      },
+      {
+        className: 'flex-1',
+        type: 'input',
+        key: 'processedBy',
+        expressionProperties: {
 
-                {
-                    className: 'flex-1',
-                    type: 'calendar',
-                    key: 'dateApproved3',
-                    expressionProperties: {
-                        
-                    },
-                    templateOptions: {
-                        label: 'Date Approved',
-                        placeholder: 'Date Approved'
-                    }
-                },
-            ]
-          },
-    
-  
+        },
+        templateOptions: {
+          label: 'Processed By',
+          placeholder: 'Processed By'
+        }
+      },
+      {
+        className: 'flex-1',
+        type: 'calendar',
+        key: 'dateProcessed',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Date Processed',
+          placeholder: 'Date Processed'
+        }
+      },
+      ]
+    },
+
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'input',
+        key: 'approver1',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Approved1',
+          placeholder: 'Approved1'
+        },
+      },
+
+      {
+        className: 'flex-1',
+        type: 'calendar',
+        key: 'dateApproved1',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Date Approved',
+          placeholder: 'Date Approved'
+        }
+      },
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'input',
+        key: 'approver2',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Approved2',
+          placeholder: 'Approved2'
+        },
+      },
+
+      {
+        className: 'flex-1',
+        type: 'calendar',
+        key: 'dateApproved2',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Date Approved',
+          placeholder: 'Date Approved'
+        }
+      },
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'input',
+        key: 'approver3',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Approved3',
+          placeholder: 'Approved3'
+        },
+      },
+
+      {
+        className: 'flex-1',
+        type: 'calendar',
+        key: 'dateApproved3',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Date Approved',
+          placeholder: 'Date Approved'
+        }
+      },
+      ]
+    },
+
+
 
   ];
 

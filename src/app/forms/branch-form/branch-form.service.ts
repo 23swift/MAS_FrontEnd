@@ -303,7 +303,7 @@ export class BranchFormService {
 
 
         {
-          className: 'flex-1',
+          className: 'flex-1 mat-form-field-infix',
           type: 'calendar',
           key: 'taxExemptValidityFrom',
           expressionProperties: {
@@ -318,7 +318,7 @@ export class BranchFormService {
           }
         },
         {
-          className: 'flex-1',
+          className: 'flex-1 mat-form-field-infix',
           type: 'calendar',
           key: 'taxExemptValidityTo',
           expressionProperties: {

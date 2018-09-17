@@ -1,5 +1,5 @@
 <div class="header-container">
-    <div><img src="assets/img/bdoLogo.png" class="header-logo" alt=""> </div>
+  <!--  <div><img src="assets/img/bdoLogo.png" class="header-logo" alt=""> </div> -->
     <div style="margin-left:10px;"> <span class="mat-title">{{text}}</span>
         <br>
         <span style="color:orange" class="mat-subheading-2">{{sub_text}}</span>
@@ -11,7 +11,13 @@
         <div fxLayout="row" fxLayoutGap="6px" fxLayoutAlign="space-around center">
             <span fxFlex></span>
 
-            <div *ngIf="showApprovalOptions">
+           <!-- <div *ngIf="showApprovalOptions">-->
+                    <button mat-fab style="font-size: 12px;" color="primary" matTooltip="Approve Request">
+                            <span style="color:white">Return to AO</span>  
+                            </button>
+                    <button mat-fab style="font-size: 12px;" color="primary" matTooltip="Approve Request">
+                            <span style="color:white">Return to MAMO</span>  
+                            </button>
                 <button mat-fab style="font-size: 12px;" color="primary" matTooltip="Approve Request">
 						<span style="color:white">Approve</span>  
 						</button>
@@ -20,7 +26,7 @@
 						  <span style="color:white">Decline</span>  
 						  </button>
 
-            </div>
+           <!-- </div> -->
 
 
             <button *ngIf="showRequestFlowOptions" (click)="return()" mat-button matTooltip="Return Request"><mat-icon  class="request-mat-icon">subdirectory_arrow_left</mat-icon> Return Request</button>

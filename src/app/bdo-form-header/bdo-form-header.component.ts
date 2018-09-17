@@ -22,8 +22,8 @@ export class BdoFormHeaderComponent implements OnInit {
   constructor(private _route: ActivatedRoute, private _router: Router, private _snackBar: MatSnackBar, private _dialog: MatDialog) {}
 
   ngOnInit() {
-    this.showApprovalOptions = false;
-    this.showRequestFlowOptions = true;
+    this.showApprovalOptions = true;
+    this.showRequestFlowOptions = false;
     this.showCreateOptions = false;
 
     this.mode = this.mode ? this.mode : 'create';

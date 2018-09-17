@@ -214,6 +214,10 @@ import { RequestComponent } from './new-affiliation/request/request.component';
         }, {
           name: 'checkDialog',
           component: CheckDialogTypeComponent
+        },
+        {
+          name: 'alertmessage',
+          component: AlertMessageComponent
         }]
       }
     ),
