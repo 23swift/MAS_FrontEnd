@@ -23,9 +23,14 @@ export class CheckDialogTypeComponent extends FieldType implements OnInit {
   getValue(event) {
     if (event.checked) {
        this.indeterminate = false;
-      this._dialogRemarks.open(RemarksModalComponent, {
+      const test = this._dialogRemarks.open(RemarksModalComponent, {
         width: '50%'
       });
+
+      test.afterClosed().subscribe(x => {
+        this.model['errField'] = x.remarks;
+        console.log(x);
+      })
     }
   }
 }

@@ -216,6 +216,10 @@ import { MqrUserComponent } from './new-affiliation/mqr-user/mqr-user.component'
         }, {
           name: 'checkDialog',
           component: CheckDialogTypeComponent
+        },
+        {
+          name: 'alertmessage',
+          component: AlertMessageComponent
         }]
       }
     ),

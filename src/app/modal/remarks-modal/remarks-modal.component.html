@@ -1,14 +1,13 @@
 <div class="remarks-container">
+  <mat-dialog-content [formGroup]="form">
   <mat-form-field style="width:100%">
-    <textarea matInput placeholder="Remarks"></textarea>
+    <textarea matInput formControlName="remarks" placeholder="Remarks"></textarea>
   </mat-form-field>
+</mat-dialog-content>
   <div style="text-align: right;">
-    <!-- <div style="display: block">
-    <div class="flex-1"> -->
-    <!-- <div xLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="3px"> -->
-    <!-- <button style="margin-top:3px" mat-stroked-button matStepperPrevious color="primary" (click)="Submit()">Yes</button> -->
+
     <button style="margin-top:3px" mat-stroked-button color="primary" (click)="Submit()">Submit</button>
     <button style="margin-top:3px" mat-stroked-button color="accent" (click)="Submit()">Cancel</button>
-    <!-- </div> -->
+
   </div>
 </div>
