@@ -11,7 +11,6 @@ import { DocumentCheckListFormService } from './document-check-list-form.service
   providers: [DocumentCheckListFormService]
 })
 export class DocumentCheckListFormComponent implements OnInit {
-  mode: string;
   documentForm: FormGroup;
   documentList: Object[];
 
@@ -24,7 +23,7 @@ export class DocumentCheckListFormComponent implements OnInit {
       dateSubmitted: new FormControl(''),
       fileUpload: new FormControl('')
     });
-    this.mode = this._route.snapshot.params['docMode'];
+    
     this.documentList = this._service.GetDocumentList();
   }
 
@@ -33,6 +32,7 @@ export class DocumentCheckListFormComponent implements OnInit {
   }
   Cancel() {
     const parentRoute = this._router.url.split('/(')[0];
+    console.log(parentRoute);
     this._router.navigateByUrl(`${parentRoute}`);
   }
 }

@@ -21,8 +21,8 @@ export class MdmUserDashboardComponent implements OnInit {
     this.displayedColumns = this._service.GetTableFields();
     this.dataSource = this._service.Get();
 
-    this.mode = 'create';
-    this.title = 'New Affiliation';
-    this.subTitle = 'MDM User';
+    this.mode = ' ';
+    this.title = ' ';
+    this.subTitle = ' ';
   }
 }

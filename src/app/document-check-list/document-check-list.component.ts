@@ -11,6 +11,7 @@ import { DocumentCheckListService, DocumentDisplayInfo } from './document-check-
 export class DocumentCheckListComponent implements OnInit {
   displayedColumns: string[];
   mode: string;
+  forMdm: boolean;
   dataSource;
   constructor(private _route: ActivatedRoute, private _router: Router, private _service: DocumentCheckListService) { }
 
@@ -18,10 +19,16 @@ export class DocumentCheckListComponent implements OnInit {
     this.dataSource = this._service.Get();
     this.displayedColumns = this._service.GetTableFields();
     this.mode = this._route.snapshot.params['mode'];
+
+    if (this._router.url.indexOf('mdmUser') > -1) {
+      this.forMdm = true;
+    }
   }
+
   GetItem(id) {
     this._router.navigateByUrl(`${this._router.url}/(documentCheckList:dcl/create/${id})`);
   }
+
   AddDocument() {
     this._router.navigateByUrl(`${this._router.url}/(documentCheckList:dcl/create/0)`);
   }

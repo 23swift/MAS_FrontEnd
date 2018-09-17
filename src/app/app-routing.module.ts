@@ -95,7 +95,7 @@ const routes: Routes = [
       { path: 'OIF/:id?', component: OcularInspectionFormComponent, outlet: 'branchOIF' },
       { path: '', component: BranchListAttachmentPOSComponent, outlet: 'branchPOS' },
       { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOS' },
-      { path: 'MID/:form', component: MidComponent, outlet: 'mid'},
+      { path: 'MID/:form', component: MidComponent, outlet: 'mid' },
       { path: '', component: DocumentCheckListComponent, outlet: 'documentCheckList' },
       { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
     ]
@@ -105,7 +105,7 @@ const routes: Routes = [
   { path: 'oif', component: OcularInspectionFormComponent },
   { path: 'oifForm', component: OcularInspectionFormComponent },
   { path: 'aoDashboard', component: AoCheckerDashboardComponent },
-  
+
   // {
   //   path: 'aoChecking', component: AoCheckingComponent,
   //   children: [
@@ -172,7 +172,7 @@ const routes: Routes = [
       { path: 'OIF/:id?', component: OcularInspectionFormComponent, outlet: 'branchOIF' },
       { path: '', component: BranchListAttachmentPOSComponent, outlet: 'branchPOS' },
       { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOS' },
-      { path: 'MID/:form', component: MidComponent, outlet: 'mid'},
+      { path: 'MID/:form', component: MidComponent, outlet: 'mid' },
       { path: '', component: DocumentCheckListComponent, outlet: 'documentCheckList' },
       { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
     ]
@@ -195,7 +195,12 @@ const routes: Routes = [
   },
   { path: 'na/mauOfficer/:mode/:id', component: MauOfficerComponent }, // 1
   { path: 'na/mdcsUser', component: MdcsUserComponent },
-  { path: 'na/mdmUser', component: MdmUserComponent },
+  {
+    path: 'na/mdmUser', component: MdmUserComponent, children: [
+      { path: '', component: DocumentCheckListComponent, outlet: 'docForm' },
+      { path: 'docForm', component: DocumentCheckListFormComponent, outlet: 'docForm' }
+    ]
+  },
   { path: 'na/psServicing', component: PsServicingComponent },
   { path: 'aoChecking', component: AoCheckingComponent },
   { path: 'posForm', component: PosFormComponent },
@@ -212,7 +217,7 @@ const routes: Routes = [
   { path: 'dm/bu/:mode/:id', component: BuMaintenanceFormComponent },
   /////////////////////  <-end  Data Management  /////////////////////////
 
-  
+
   ///////////////////// FOR TESTING PURPOSES ///////////////////////
   { path: 'awr', component: AwrFormComponent },
   { path: 'requestForm', component: RequestFormComponent },
@@ -221,15 +226,15 @@ const routes: Routes = [
   { path: 'midForm', component: MidFormModalComponent },
   { path: 'mid', component: MidComponent },
   { path: 'historyModal', component: HistoryModalComponent },
-  { path: 'paramMaintenance', component: ParameterMaintenanceComponent},
-  { path: 'dclMaintenance', component: DocumentChecklistMaintenanceComponent},
-  { path: 'dclConfiguration', component: DocumentChecklistConfigurationComponent},
+  { path: 'paramMaintenance', component: ParameterMaintenanceComponent },
+  { path: 'dclMaintenance', component: DocumentChecklistMaintenanceComponent },
+  { path: 'dclConfiguration', component: DocumentChecklistConfigurationComponent },
   { path: 'bu', component: BuMaintenanceComponent },
   { path: 'bus', component: BuMaintenanceFormComponent },
   { path: 'ao', component: AoMaintenanceComponent },
-  { path: 'aof', component: AoMaintenanceFormComponent},
-  { path: 'sfcc', component: ServiceFeeContractComponent},
-  { path: 'request', component: RequestComponent}
+  { path: 'aof', component: AoMaintenanceFormComponent },
+  { path: 'sfcc', component: ServiceFeeContractComponent },
+  { path: 'request', component: RequestComponent }
 
 ];
 
