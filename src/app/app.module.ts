@@ -216,6 +216,10 @@ import { DocumentCheckListFormRequestLevelComponent } from './forms/document-che
         }, {
           name: 'checkDialog',
           component: CheckDialogTypeComponent
+        },
+        {
+          name: 'alertmessage',
+          component: AlertMessageComponent
         }]
       }
     ),
