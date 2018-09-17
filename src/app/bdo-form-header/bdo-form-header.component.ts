@@ -23,7 +23,7 @@ export class BdoFormHeaderComponent implements OnInit {
 
   ngOnInit() {
     this.showApprovalOptions = false;
-    this.showRequestFlowOptions = true;
+    this.showRequestFlowOptions = false;
     this.showCreateOptions = false;
 
     this.mode = this.mode ? this.mode : 'create';
