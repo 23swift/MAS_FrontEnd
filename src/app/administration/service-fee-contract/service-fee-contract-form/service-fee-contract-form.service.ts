@@ -13,7 +13,8 @@ export class ServiceFeeContractFormService {
           type: 'input',
           key: 'vc',
           templateOptions: {
-            label: 'VC'
+            label: 'VC',
+            required: true
           },
         },
         {
@@ -21,7 +22,8 @@ export class ServiceFeeContractFormService {
           type: 'input',
           key: 'jcb',
           templateOptions: {
-            label: 'JCB'
+            label: 'JCB',
+            required: true
           },
         },
         {
@@ -29,7 +31,8 @@ export class ServiceFeeContractFormService {
           type: 'input',
           key: 'cup',
           templateOptions: {
-            label: 'CUP'
+            label: 'CUP',
+            required: true
           },
         },
         {
@@ -37,7 +40,8 @@ export class ServiceFeeContractFormService {
           type: 'input',
           key: 'mc',
           templateOptions: {
-            label: 'MC'
+            label: 'MC',
+            required: true
           }
         }
       ]
@@ -50,7 +54,8 @@ export class ServiceFeeContractFormService {
           type: 'input',
           key: 'amex',
           templateOptions: {
-            label: 'AMEX'
+            label: 'AMEX',
+            required: true
           },
         },
         {
@@ -58,7 +63,8 @@ export class ServiceFeeContractFormService {
           type: 'input',
           key: 'dc',
           templateOptions: {
-            label: 'DC'
+            label: 'DC',
+            required: true
           },
         },
         {
@@ -74,7 +80,8 @@ export class ServiceFeeContractFormService {
           type: 'input',
           key: 'code',
           templateOptions: {
-            label: 'Code'
+            label: 'Code',
+            required: true
           }
         }
       ]
