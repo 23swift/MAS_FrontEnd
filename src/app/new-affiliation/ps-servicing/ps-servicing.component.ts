@@ -13,12 +13,14 @@ export class PsServicingComponent implements OnInit {
   title: string;
   subTitle: string;
   mode: string;
+  midAction: boolean;
   constructor(private _router: Router) { }
 
   ngOnInit() {
     this.title = '';
     this.subTitle = '';
     this.mode = '';
+    this.midAction = false;
   }
 
   completed(stepper: MatStepper) {

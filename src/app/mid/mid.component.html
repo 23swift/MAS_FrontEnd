@@ -1,6 +1,6 @@
-<div class="flex-branch-list-header"  *ngIf="form !== 'POS'">
+<div class="flex-branch-list-header">
     <span class="mat-headline">MID Details</span>
-    <a (click)="AddMid()" mat-mini-fab>
+    <a (click)="AddMid()" mat-mini-fab *ngIf="form !== 'POS'">
         <mat-icon>playlist_add</mat-icon>
     </a>
 </div>

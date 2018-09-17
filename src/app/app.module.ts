@@ -106,11 +106,10 @@ import { BranchListAttachmentPOSRequestComponent } from './branch-list-attachmen
 import { CheckDialogTypeComponent } from './check-dialog-type/check-dialog-type.component';
 
 import { AoMaintenanceModalComponent } from './modal/ao-maintenance-modal/ao-maintenance-modal.component';
-
 import { BdoDefaultHeaderComponent } from './bdo-default-header/bdo-default-header.component';
 import { PsServicingComponent } from './new-affiliation/ps-servicing/ps-servicing.component';
-
 import { ParameterMaintenanceDetailsComponent } from './administration/parameter-maintenance/parameter-maintenance-details/parameter-maintenance-details.component';
+import { RequestComponent } from './new-affiliation/request/request.component';
 
 
 
@@ -189,17 +188,18 @@ import { ParameterMaintenanceDetailsComponent } from './administration/parameter
     ServiceFeeContractFormComponent,
     ServiceFeeContractListComponent,
     AoMaintenanceModalComponent,
-
     CheckDialogTypeComponent,
     BdoDefaultHeaderComponent,
     PsServicingComponent,
-
     DocumentChecklistConfigurationComponent,
     DocumentChecklistConfigurationFormComponent,
     DocumentChecklistConfigurationListComponent,
     BranchListAttachmentPOSRequestComponent,
     CheckDialogTypeComponent,
-    ParameterMaintenanceDetailsComponent
+    BdoDefaultHeaderComponent,
+    PsServicingComponent,
+    ParameterMaintenanceDetailsComponent,
+    RequestComponent
   ],
   imports: [
     BrowserModule,

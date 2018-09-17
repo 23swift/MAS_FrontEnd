@@ -6,13 +6,13 @@ export class DashboardData {
           Id: 1, TrackingNo: '0000001',
           RequestType: 'New Affiliation', BusinessName: 'Aldo',
           RequestDate: '06/05/2018', BranchName: 'SM Megamall',
-          Location: 'Mandaluyong', RequestStatus: 'FOR CADENCIE PROCESSING'
+          Location: 'Mandaluyong', RequestStatus: 'FOR APPROVAL'
         },
         {
           Id: 2, TrackingNo: '0000002',
           RequestType: 'New Affiliation', BusinessName: 'Aldo',
           RequestDate: '06/05/2018', BranchName: 'SM Calamba',
-          Location: 'Calamba', RequestStatus: 'FOR CADENCIE PROCESSING'
+          Location: 'Calamba', RequestStatus: 'FOR APPROVAL'
         }
       ];
 

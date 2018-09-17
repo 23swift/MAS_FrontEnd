@@ -22,6 +22,7 @@
       <span class="mat-subheading-1">POS</span>
     </ng-template>
     <app-pos-form></app-pos-form>
+    <app-mid [action]="midAction"></app-mid>
     <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
       <mat-icon color="primary">navigate_next</mat-icon>
     </button>
