@@ -110,6 +110,7 @@ import { BdoDefaultHeaderComponent } from './bdo-default-header/bdo-default-head
 import { PsServicingComponent } from './new-affiliation/ps-servicing/ps-servicing.component';
 import { ParameterMaintenanceDetailsComponent } from './administration/parameter-maintenance/parameter-maintenance-details/parameter-maintenance-details.component';
 import { RequestComponent } from './new-affiliation/request/request.component';
+import { DocumentCheckListFormRequestLevelComponent } from './forms/document-check-list-form-request-level/document-check-list-form-request-level.component';
 import { MqrUserComponent } from './new-affiliation/mqr-user/mqr-user.component';
 import { AoMaintenanceListComponent } from './administration/ao-maintenance/ao-maintenance-list/ao-maintenance-list.component';
 import { BuMaintenanceListComponent } from './administration/bu-maintenance/bu-maintenance-list/bu-maintenance-list.component';
@@ -205,13 +206,14 @@ import { DefaultMidMaintenanceListComponent } from './administration/default-mid
     PsServicingComponent,
     ParameterMaintenanceDetailsComponent,
     RequestComponent,
-    MqrUserComponent,
     AoMaintenanceListComponent,
     BuMaintenanceListComponent,
     DefaultMidMaintenanceComponent,
     DefaultMidMaintenanceFormComponent,
     DefaultMidMaintenanceListComponent,
-    AoMaintenanceFormComponent
+    AoMaintenanceFormComponent,
+    DocumentCheckListFormRequestLevelComponent,
+    MqrUserComponent,
   ],
   imports: [
     BrowserModule,

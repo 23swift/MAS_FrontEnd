@@ -1,6 +1,14 @@
-table {
+.docs-form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.docs-form-container>* {
     width: 100%;
-    background-color: #fafafa;
+}
+
+.mat-checkbox > .mat-checkbox-layout {
+    padding-top: 14px;
 }
 
 .flex-branch-list-header {
@@ -20,9 +28,4 @@ table {
 
 .mat-headline {
     font-size: 18px;
-}
-
-.m-lr-20px {
-    margin-left: 20px;
-    margin-right: 20px;
 }
