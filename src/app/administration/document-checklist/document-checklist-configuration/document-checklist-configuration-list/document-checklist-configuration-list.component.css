@@ -5,6 +5,11 @@ table {
     /*overflow: auto;*/
 }
 
+.mat-title {
+    color: #0d47a1;
+    font-size: 35px;
+}
+
 .flex-dclConfiguration-list-header {
     display: flex;
     flex-direction: row;
