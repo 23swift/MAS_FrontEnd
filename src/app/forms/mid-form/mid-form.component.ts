@@ -24,7 +24,7 @@ export class MidFormComponent extends AppBaseComponent implements OnInit {
 
   ngOnInit() {
     this.form = new FormGroup({});
-    //this.fields = this._service.GetFormlyFields();
+    this.fields = this._service.GetFormlyFields();
     this.model = {};
   }
 
@@ -35,6 +35,7 @@ export class MidFormComponent extends AppBaseComponent implements OnInit {
     // const currentUrl = this._router.url.split('/(');
     // const parentRoute = currentUrl[0] + '/(' + currentUrl[1] + ')';
     // this._router.navigateByUrl(`${parentRoute}`);
+    
   }
   // mode: string;
   // midForm: FormGroup;

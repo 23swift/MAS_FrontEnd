@@ -75,11 +75,11 @@
             </button>
             <mat-menu #admin="matMenu">
                 <a routerLink="/paramMaintenance" mat-menu-item>Parameter Maintenance</a>
-                <a routerLink="dm/ao" mat-menu-item>AO Maintenance</a>
+                <a routerLink="/aoMaintenance" mat-menu-item>AO Maintenance</a>
                 <a routerLink="/sfcc" mat-menu-item>Service Fee Contract</a>
                 <a mat-menu-item [matMenuTriggerFor]="docu">Document Checklist</a>
-                <a routerLink="dm/bu" mat-menu-item>BU Maintenance</a>
-                <a mat-menu-item>Default MID Maintenance</a>
+                <a routerLink="/buMaintenance" mat-menu-item>BU Maintenance</a>
+                <a routerLink="/defaultMIDMaintenance" mat-menu-item>Default MID Maintenance</a>
             </mat-menu>
             <mat-menu #docu="matMenu">
                 <a routerLink="/dclMaintenance" mat-menu-item>Maintenance</a>
