@@ -56,6 +56,7 @@ import { PsServicingComponent } from './new-affiliation/ps-servicing/ps-servicin
 import { BranchListAttachmentPOSRequestComponent } from './branch-list-attachment-posrequest/branch-list-attachment-posrequest.component';
 import { DocumentChecklistConfigurationComponent } from './administration/document-checklist/document-checklist-configuration/document-checklist-configuration/document-checklist-configuration.component';
 import { DocumentCheckListFormRequestLevelComponent } from './forms/document-check-list-form-request-level/document-check-list-form-request-level.component';
+import { MqrUserComponent } from './new-affiliation/mqr-user/mqr-user.component';
 
 
 const routes: Routes = [
@@ -208,6 +209,8 @@ const routes: Routes = [
   { path: 'newAffSum', component: NewAffiliationSumComponent },
   { path: 'home', component: HomeScreenComponent },
   { path: 'oif', component: OcularInspectionFormComponent },
+  { path: 'na/mqrUser/:mode/:id', component: MqrUserComponent },
+
 
   ////////////////////// Data Management start-> /////////////////////////
   { path: 'dm/ao', component: AoMaintenanceComponent },

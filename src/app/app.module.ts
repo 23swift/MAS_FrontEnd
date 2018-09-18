@@ -111,6 +111,7 @@ import { PsServicingComponent } from './new-affiliation/ps-servicing/ps-servicin
 import { ParameterMaintenanceDetailsComponent } from './administration/parameter-maintenance/parameter-maintenance-details/parameter-maintenance-details.component';
 import { RequestComponent } from './new-affiliation/request/request.component';
 import { DocumentCheckListFormRequestLevelComponent } from './forms/document-check-list-form-request-level/document-check-list-form-request-level.component';
+import { MqrUserComponent } from './new-affiliation/mqr-user/mqr-user.component';
 
 
 
@@ -201,7 +202,8 @@ import { DocumentCheckListFormRequestLevelComponent } from './forms/document-che
     PsServicingComponent,
     ParameterMaintenanceDetailsComponent,
     RequestComponent,
-    DocumentCheckListFormRequestLevelComponent
+    DocumentCheckListFormRequestLevelComponent,
+    MqrUserComponent
   ],
   imports: [
     BrowserModule,
