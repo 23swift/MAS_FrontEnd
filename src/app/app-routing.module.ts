@@ -68,12 +68,20 @@ const routes: Routes = [
     children: [
       { path: '', component: BranchListAttachmentPOSRequestComponent, outlet: 'branchPOSRequest' },
       { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOSRequest' },
+      { path: '', component: MidRequestComponent, outlet: 'midRequest' },
+      { path: 'mid/:id?', component: MidFormComponent, outlet: 'midRequest' }
+    ]
+  },
+  { path: 'ba/:mode', component: BranchAffiliationComponent },
+  {
+    path: 'additionalFacility/:mode', component: AdditionalFacilityComponent,
+    children: [
+      { path: '', component: BranchListAttachmentPOSRequestComponent, outlet: 'branchPOSRequest' },
+      { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOSRequest' },
       { path: '', component: MidRequestComponent, outlet: 'midRequest'},
       { path: 'mid/:id?', component: MidFormComponent, outlet: 'midRequest'}
     ]
   },
-  { path: 'ba/:mode', component: BranchAffiliationComponent },
-  { path: 'additionalFacility', component: AdditionalFacilityComponent },
   { path: 'fileMaintenance', component: FileMaintenanceComponent },
   { path: 'ext/:mode', component: ExtentionComponent },
   { path: 'maef', component: MaefFormComponent },
@@ -240,7 +248,7 @@ const routes: Routes = [
   { path: 'aoMaintenance', component: AoMaintenanceComponent },
   { path: 'sfcc', component: ServiceFeeContractComponent },
   { path: 'request', component: RequestComponent },
-  {path: 'defaultMIDMaintenance', component: DefaultMidMaintenanceComponent},
+  { path: 'defaultMIDMaintenance', component: DefaultMidMaintenanceComponent },
 
 ];
 
