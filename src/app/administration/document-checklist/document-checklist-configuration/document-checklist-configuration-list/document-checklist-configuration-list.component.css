@@ -7,7 +7,8 @@ table {
 
 .mat-title {
     color: #0d47a1;
-    font-size: 30px;
+    font-size: 32px;
+    margin: 16px;
 }
 
 .flex-dclConfiguration-list-header {
