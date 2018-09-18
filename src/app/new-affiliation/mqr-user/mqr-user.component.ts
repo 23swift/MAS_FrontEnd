@@ -17,8 +17,8 @@ export class MqrUserComponent implements OnInit {
     private _snackbar: MatSnackBar) { }
 
   ngOnInit() {
-    this.title = 'Test Title';
-    this.subTitle = 'Test Subtitle'
+    this.title = 'Merchant Quality and Control Review';
+    this.subTitle = 'Review Requests'
     this.mode = 'approval';
   }
 

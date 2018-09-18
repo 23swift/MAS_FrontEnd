@@ -57,6 +57,7 @@ import { DocumentChecklistConfigurationComponent } from './administration/docume
 import { DocumentCheckListFormRequestLevelComponent } from './forms/document-check-list-form-request-level/document-check-list-form-request-level.component';
 import { MqrUserComponent } from './new-affiliation/mqr-user/mqr-user.component';
 import { DefaultMidMaintenanceComponent } from './administration/default-mid-maintenance/default-mid-maintenance/default-mid-maintenance.component';
+import { MidRequestComponent } from './mid-request/mid-request.component';
 
 
 const routes: Routes = [
@@ -67,6 +68,8 @@ const routes: Routes = [
     children: [
       { path: '', component: BranchListAttachmentPOSRequestComponent, outlet: 'branchPOSRequest' },
       { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOSRequest' },
+      { path: '', component: MidRequestComponent, outlet: 'midRequest'},
+      { path: 'mid/:id?', component: MidFormComponent, outlet: 'midRequest'}
     ]
   },
   { path: 'ba/:mode', component: BranchAffiliationComponent },

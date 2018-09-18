@@ -21,7 +21,8 @@
                 Add MID Request
             </span>
         </ng-template>
-        <app-mid-request></app-mid-request>
+        <router-outlet name="midRequest"></router-outlet>
+        <!-- <app-mid-request></app-mid-request> -->
         <br />
         <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
             <mat-icon color="primary">navigate_next</mat-icon>
