@@ -12,13 +12,19 @@ export class DashboardData {
           Id: 2, TrackingNo: '0000002',
           RequestType: 'New Affiliation', BusinessName: 'Aldo',
           RequestDate: '06/05/2018', BranchName: 'SM Calamba',
-          Location: 'Calamba', RequestStatus: 'APPROVED WITH REQUIREMENTS'
+          Location: 'Calamba', RequestStatus: 'APPROVED'
         },
         {
           Id: 3, TrackingNo: '0000003',
           RequestType: 'New Affiliation', BusinessName: 'Aldo',
           RequestDate: '06/05/2018', BranchName: 'SM Sta. Rosa',
-          Location: 'Sta. Rosa', RequestStatus: 'APPROVED WITH EXCEPTIONS'
+          Location: 'Sta. Rosa', RequestStatus: 'FOR CADENCIE PROCESSING'
+        },
+        {
+          Id: 4, TrackingNo: '0000004',
+          RequestType: 'New Affiliation', BusinessName: 'Aldo',
+          RequestDate: '06/05/2018', BranchName: 'Walter Calamba',
+          Location: 'Calamba', RequestStatus: 'FOR CADENCIE PROCESSING'
         }
       ];
 

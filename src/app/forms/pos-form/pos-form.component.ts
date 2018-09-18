@@ -6,6 +6,7 @@ import { inherits } from 'util';
 import { AppBaseComponent } from '../../../app/app-base/app-base.component';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { PosFormService } from './pos-form.service';
+import { FormlyFieldConfigService } from '../../services/formly-field-config.service';
 
 @Component({
   selector: 'app-pos-form',
@@ -16,14 +17,19 @@ import { PosFormService } from './pos-form.service';
 export class PosFormComponent extends AppBaseComponent implements OnInit {
 
   userGroup: string;
-  @Input() displayMode: boolean = false;
-  constructor(private _posFormService: PosFormService, private _route: ActivatedRoute, private _router: Router) {
+  @Input() displayMode: boolean;
+  constructor(private _posFormService: PosFormService, private _route: ActivatedRoute, private _router: Router, private _formService: FormlyFieldConfigService) {
     super(_route, _router);
     this.userGroup = 'ao';
     this.fields = _posFormService.getPosFields(this.userGroup);
   }
 
   ngOnInit() {
+    if (this.displayMode) {
+      this._formService.disabled(this.fields);
+    } else {
+      this._formService.enabled(this.fields);
+    }
   }
 
   public cancel() {

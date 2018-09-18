@@ -112,6 +112,7 @@ import { ParameterMaintenanceDetailsComponent } from './administration/parameter
 import { RequestComponent } from './new-affiliation/request/request.component';
 import { DocumentCheckListFormRequestLevelComponent } from './forms/document-check-list-form-request-level/document-check-list-form-request-level.component';
 import { MqrUserComponent } from './new-affiliation/mqr-user/mqr-user.component';
+import { MidModalComponent } from './modal/mid-modal/mid-modal.component';
 
 
 
@@ -203,7 +204,8 @@ import { MqrUserComponent } from './new-affiliation/mqr-user/mqr-user.component'
     ParameterMaintenanceDetailsComponent,
     RequestComponent,
     DocumentCheckListFormRequestLevelComponent,
-    MqrUserComponent
+    MqrUserComponent,
+    MidModalComponent
   ],
   imports: [
     BrowserModule,
@@ -264,7 +266,7 @@ import { MqrUserComponent } from './new-affiliation/mqr-user/mqr-user.component'
                     AoListModalComponent,MidFormModalComponent, 
                     DocumentChecklistMaintenanceFormComponent, ServiceFeeContractFormComponent, 
                     DocumentChecklistConfigurationFormComponent,ParameterMaintenanceFormComponent,
-                    ParameterMaintenanceDetailsComponent ],
+                    ParameterMaintenanceDetailsComponent , MidModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

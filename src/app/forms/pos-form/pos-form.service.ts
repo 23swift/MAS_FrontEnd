@@ -20,15 +20,15 @@ export class PosFormService {
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'requestorsName',
-          templateOptions: {
-            label: "Requestor's Name",
-            disabled: true
-          }
-        },
+        // {
+        //   className: 'flex-1',
+        //   type: 'input',
+        //   key: 'requestorsName',
+        //   templateOptions: {
+        //     label: "Requestor's Name",
+        //     disabled: true
+        //   }
+        // },
         {
           className: 'flex-1',
           type: 'input',
@@ -482,33 +482,33 @@ export class PosFormService {
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
-      //   {
-      //   className: 'flex-1',
-      //   type: 'input',
-      //   key: 'cupAcceptorId',
-      //   templateOptions: {
-      //     label: "CUP Acceptor ID",
-      //     disabled: true
-      //   }
-      // },
-      {
-        className: 'flex-1',
-        type: 'input',
-        key: 'merchantLoyalty',
-        templateOptions: {
-          label: "Merchant Loyalty",
-          disabled: true
-        }
-      },
-      {
-        className: 'flex-1',
-        type: 'input',
-        key: 'merchantLoyalty',
-        templateOptions: {
-          label: "Merchant Prepaid",
-          disabled: true
-        }
-      },]
+        //   {
+        //   className: 'flex-1',
+        //   type: 'input',
+        //   key: 'cupAcceptorId',
+        //   templateOptions: {
+        //     label: "CUP Acceptor ID",
+        //     disabled: true
+        //   }
+        // },
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'merchantLoyalty',
+          templateOptions: {
+            label: "Merchant Loyalty",
+            disabled: true
+          }
+        },
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'merchantLoyalty',
+          templateOptions: {
+            label: "Merchant Prepaid",
+            disabled: true
+          }
+        },]
     },
     {
       fieldGroupClassName: 'display-flex',
@@ -832,24 +832,28 @@ export class PosFormService {
 
   aoFields: FormlyFieldConfig[] = [
     {
-      className: 'flex-1',
-      type: 'select',
-      key: 'natureOfRequest',
-      templateOptions: {
-        label: 'Nature Of Request',
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'select',
+        key: 'natureOfRequest',
+        templateOptions: {
+          label: 'Nature Of Request',
+        }
       }
+      ]
     },
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'requestorsName',
-          templateOptions: {
-            label: "Requestor's Name",
-          }
-        },
+        // {
+        //   className: 'flex-1',
+        //   type: 'input',
+        //   key: 'requestorsName',
+        //   templateOptions: {
+        //     label: "Requestor's Name",
+        //   }
+        // },
         {
           className: 'flex-1',
           type: 'input',
@@ -1255,262 +1259,262 @@ export class PosFormService {
 
           }
         },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'creditStraightMidVmjaVmjac',
-    //       templateOptions: {
-    //         label: "Credit Straight MID-VMJA/VMJAC",
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'creditStraightMidVmjaVmjac',
+        //       templateOptions: {
+        //         label: "Credit Straight MID-VMJA/VMJAC",
 
-    //       }
-    //     }
-    //   ]
-    // },
-    // {
-    //   fieldGroupClassName: 'display-flex',
-    //   fieldGroup: [
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'creditStraightMidVmj',
-    //       templateOptions: {
-    //         label: "Credit Straight MID-VMJ",
+        //       }
+        //     }
+        //   ]
+        // },
+        // {
+        //   fieldGroupClassName: 'display-flex',
+        //   fieldGroup: [
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'creditStraightMidVmj',
+        //       templateOptions: {
+        //         label: "Credit Straight MID-VMJ",
 
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'creditStraightMidAmex',
-    //       templateOptions: {
-    //         label: "Credit Straight MID-AMEX (If with VMJ)",
+        //       }
+        //     },
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'creditStraightMidAmex',
+        //       templateOptions: {
+        //         label: "Credit Straight MID-AMEX (If with VMJ)",
 
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'cupAcceptorId',
-    //       templateOptions: {
-    //         label: "CUP Acceptor ID",
+        //       }
+        //     },
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'cupAcceptorId',
+        //       templateOptions: {
+        //         label: "CUP Acceptor ID",
 
-    //       }
-    //     },
-    //   ]
-    // },
-    // {
-    //   fieldGroupClassName: 'display-flex',
-    //   fieldGroup: [
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'merchantLoyalty',
-    //       templateOptions: {
-    //         label: "Merchant Loyalty",
+        //       }
+        //     },
+        //   ]
+        // },
+        // {
+        //   fieldGroupClassName: 'display-flex',
+        //   fieldGroup: [
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'merchantLoyalty',
+        //       templateOptions: {
+        //         label: "Merchant Loyalty",
 
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'merchantLoyalty',
-    //       templateOptions: {
-    //         label: "Merchant Prepaid",
+        //       }
+        //     },
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'merchantLoyalty',
+        //       templateOptions: {
+        //         label: "Merchant Prepaid",
 
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'regularInstallmentMidVmjaVmjac',
-    //       templateOptions: {
-    //         label: "Regular Installment MID-VMJA/VMJAC",
+        //       }
+        //     },
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'regularInstallmentMidVmjaVmjac',
+        //       templateOptions: {
+        //         label: "Regular Installment MID-VMJA/VMJAC",
 
-    //       }
-    //     }
-    //   ]
-    // },
-    // {
-    //   fieldGroupClassName: 'display-flex',
-    //   fieldGroup: [
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'regularInstallmentMidVmj',
-    //       templateOptions: {
-    //         label: "Regular Installment MID-VMJ",
+        //       }
+        //     }
+        //   ]
+        // },
+        // {
+        //   fieldGroupClassName: 'display-flex',
+        //   fieldGroup: [
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'regularInstallmentMidVmj',
+        //       templateOptions: {
+        //         label: "Regular Installment MID-VMJ",
 
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'regularInstallmentMidAmex',
-    //       templateOptions: {
-    //         label: "Regular Installment MID-AMEX (If with VMJ)",
+        //       }
+        //     },
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'regularInstallmentMidAmex',
+        //       templateOptions: {
+        //         label: "Regular Installment MID-AMEX (If with VMJ)",
 
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'zeroInstallmentMidVmjaVmjac',
-    //       templateOptions: {
-    //         label: "Zero Installment MID-VMJA/VMJAC",
+        //       }
+        //     },
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'zeroInstallmentMidVmjaVmjac',
+        //       templateOptions: {
+        //         label: "Zero Installment MID-VMJA/VMJAC",
 
-    //       }
-    //     }
-    //   ]
-    // },
-    // {
-    //   fieldGroupClassName: 'display-flex',
-    //   fieldGroup: [
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'zeroInstallmentMidVmj',
-    //       templateOptions: {
-    //         label: "Zero Installment MID-VMJ",
+        //       }
+        //     }
+        //   ]
+        // },
+        // {
+        //   fieldGroupClassName: 'display-flex',
+        //   fieldGroup: [
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'zeroInstallmentMidVmj',
+        //       templateOptions: {
+        //         label: "Zero Installment MID-VMJ",
 
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'zeroInstallmentMidAmex',
-    //       templateOptions: {
-    //         label: "Zero Installment MID-AMEX (If with VMJ)",
+        //       }
+        //     },
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'zeroInstallmentMidAmex',
+        //       templateOptions: {
+        //         label: "Zero Installment MID-AMEX (If with VMJ)",
 
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'regularBnplInstallmentMidVmjaVmjac',
-    //       templateOptions: {
-    //         label: "Regular BNPL Installment MID-VMJA/VMJAC",
+        //       }
+        //     },
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'regularBnplInstallmentMidVmjaVmjac',
+        //       templateOptions: {
+        //         label: "Regular BNPL Installment MID-VMJA/VMJAC",
 
-    //       }
-    //     }
-    //   ]
-    // },
-    // {
-    //   fieldGroupClassName: 'display-flex',
-    //   fieldGroup: [
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'zeroBnplInstallmentMidVmjaVmjac',
-    //       templateOptions: {
-    //         label: "Zero BNPL Installment MID-VMJA/VMJAC",
+        //       }
+        //     }
+        //   ]
+        // },
+        // {
+        //   fieldGroupClassName: 'display-flex',
+        //   fieldGroup: [
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'zeroBnplInstallmentMidVmjaVmjac',
+        //       templateOptions: {
+        //         label: "Zero BNPL Installment MID-VMJA/VMJAC",
 
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'debitTID',
-    //       templateOptions: {
-    //         label: "Debit TID",
+        //       }
+        //     },
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'debitTID',
+        //       templateOptions: {
+        //         label: "Debit TID",
 
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'dccMarkup',
-    //       templateOptions: {
-    //         label: "DCC MARK UP",
+        //       }
+        //     },
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'dccMarkup',
+        //       templateOptions: {
+        //         label: "DCC MARK UP",
 
-    //       }
-    //     }
-    //   ]
-    // },
-    // {
-    //   fieldGroupClassName: 'display-flex',
-    //   fieldGroup: [
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'bdoPayMobileNumberOfTerminals',
-    //       templateOptions: {
-    //         label: "BDO Pay Mobile – Number of Terminals (Count)",
+        //       }
+        //     }
+        //   ]
+        // },
+        // {
+        //   fieldGroupClassName: 'display-flex',
+        //   fieldGroup: [
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'bdoPayMobileNumberOfTerminals',
+        //       templateOptions: {
+        //         label: "BDO Pay Mobile – Number of Terminals (Count)",
 
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'bdoPayMobileBusinessGroup',
-    //       templateOptions: {
-    //         label: "BDO Pay Mobile – Business Group (If applicable)",
+        //       }
+        //     },
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'bdoPayMobileBusinessGroup',
+        //       templateOptions: {
+        //         label: "BDO Pay Mobile – Business Group (If applicable)",
 
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'bdoPayMobileMerchantPortalUserEmailAddress',
-    //       templateOptions: {
-    //         label: "BDO Pay Mobile – Merchant Portal User's Email Address",
+        //       }
+        //     },
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'bdoPayMobileMerchantPortalUserEmailAddress',
+        //       templateOptions: {
+        //         label: "BDO Pay Mobile – Merchant Portal User's Email Address",
 
-    //       }
-    //     }
-    //   ]
-    // },
-    // {
-    //   fieldGroupClassName: 'display-flex',
-    //   fieldGroup: [
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'bdoPayMobileMerchantPortalNominatedUsername',
-    //       templateOptions: {
-    //         label: "BDO Pay Mobile – Merchant Portal Nominated Username",
+        //       }
+        //     }
+        //   ]
+        // },
+        // {
+        //   fieldGroupClassName: 'display-flex',
+        //   fieldGroup: [
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'bdoPayMobileMerchantPortalNominatedUsername',
+        //       templateOptions: {
+        //         label: "BDO Pay Mobile – Merchant Portal Nominated Username",
 
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'bdoPayMobileInternetConnection',
-    //       templateOptions: {
-    //         label: "BDO Pay Mobile – Internet Connection",
+        //       }
+        //     },
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'bdoPayMobileInternetConnection',
+        //       templateOptions: {
+        //         label: "BDO Pay Mobile – Internet Connection",
 
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'bdoPayMobileInternetProvider',
-    //       templateOptions: {
-    //         label: "BDO Pay Mobile – Internet Provider",
+        //       }
+        //     },
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'bdoPayMobileInternetProvider',
+        //       templateOptions: {
+        //         label: "BDO Pay Mobile – Internet Provider",
 
-    //       }
-    //     }
-    //   ]
-    // },
-    // {
-    //   fieldGroupClassName: 'display-flex',
-    //   fieldGroup: [
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'bdoPayMobileReferenceField',
-    //       templateOptions: {
-    //         label: "BDO Pay Mobile – Reference Field",
+        //       }
+        //     }
+        //   ]
+        // },
+        // {
+        //   fieldGroupClassName: 'display-flex',
+        //   fieldGroup: [
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'bdoPayMobileReferenceField',
+        //       templateOptions: {
+        //         label: "BDO Pay Mobile – Reference Field",
 
-    //       }
-    //     },
-    //     {
-    //       className: 'flex-1',
-    //       type: 'input',
-    //       key: 'bdoPayMobileRfName',
-    //       templateOptions: {
-    //         label: "BDO Pay Mobile – If RF is Customized, pls Include RF Name (Max 10 Characters)",
+        //       }
+        //     },
+        //     {
+        //       className: 'flex-1',
+        //       type: 'input',
+        //       key: 'bdoPayMobileRfName',
+        //       templateOptions: {
+        //         label: "BDO Pay Mobile – If RF is Customized, pls Include RF Name (Max 10 Characters)",
 
-    //       }
-    //     }
+        //       }
+        //     }
       ]
     }
   ]

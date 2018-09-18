@@ -15,6 +15,8 @@ export class BdoFormHeaderComponent implements OnInit {
   showRequestFlowOptions: boolean;
   showCreateOptions: boolean;
   showWelcomeLetter: boolean;
+  showCadencieProcessingButton: boolean;
+  showPosProcessingButton: boolean;
   @Input() mode: string;
   @Input() text: string;
   @Input() sub_text: string;
@@ -27,6 +29,8 @@ export class BdoFormHeaderComponent implements OnInit {
     this.showRequestFlowOptions = false;
     this.showCreateOptions = false;
     this.showWelcomeLetter = false;
+    this.showCadencieProcessingButton = false;
+    this.showPosProcessingButton = false;
 
     this.mode = this.mode ? this.mode : 'create';
     console.log(this.mode);
@@ -42,6 +46,12 @@ export class BdoFormHeaderComponent implements OnInit {
       }
       if (this.mode.match(/mdmUser/i)) {
         this.showWelcomeLetter = true;
+      }
+      if (this.mode.match(/forCadencie/i)) {
+        this.showCadencieProcessingButton = true;
+      }
+      if (this.mode.match(/forPos/i)) {
+        this.showPosProcessingButton = true;
       }
     }
   }
