@@ -109,6 +109,7 @@ export class AoMaintenanceFormService {
           key: 'BUHeadTag',
           type: 'radio',
           className: 'flex-1',
+          defaultValue: 'false',
           templateOptions: {
             label: 'Is Business Unit Head?',
             options: [
