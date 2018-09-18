@@ -92,10 +92,10 @@ import { ParameterMaintenanceListComponent } from './administration/parameter-ma
 import { DocumentChecklistMaintenanceComponent } from './administration/document-checklist/document-checklist-maintenance/document-checklist-maintenance/document-checklist-maintenance.component';
 import { DocumentChecklistMaintenanceFormComponent } from './administration/document-checklist/document-checklist-maintenance/document-checklist-maintenance-form/document-checklist-maintenance-form.component';
 import { DocumentChecklistMaintenanceListComponent } from './administration/document-checklist/document-checklist-maintenance/document-checklist-maintenance-list/document-checklist-maintenance-list.component';
-import { BuMaintenanceComponent } from './data-management/bu-maintenance/bu-maintenance.component';
-import { BuMaintenanceFormComponent } from './forms/bu-maintenance-form/bu-maintenance-form.component';
-import { AoMaintenanceComponent } from './data-management/ao-maintenance/ao-maintenance.component';
-import { AoMaintenanceFormComponent } from './forms/ao-maintenance-form/ao-maintenance-form.component';
+import { BuMaintenanceComponent } from './administration/bu-maintenance/bu-maintenance/bu-maintenance.component';
+import { BuMaintenanceFormComponent } from './administration/bu-maintenance/bu-maintenance-form/bu-maintenance-form.component';
+import { AoMaintenanceComponent } from './administration/ao-maintenance/ao-maintenance/ao-maintenance.component';
+import { AoMaintenanceFormComponent } from './administration/ao-maintenance/ao-maintenance-form/ao-maintenance-form.component';
 import { ServiceFeeContractComponent } from './administration/service-fee-contract/service-fee-contract/service-fee-contract.component';
 import { ServiceFeeContractFormComponent } from './administration/service-fee-contract/service-fee-contract-form/service-fee-contract-form.component';
 import { ServiceFeeContractListComponent } from './administration/service-fee-contract/service-fee-contract-list/service-fee-contract-list.component';
@@ -113,6 +113,11 @@ import { RequestComponent } from './new-affiliation/request/request.component';
 import { DocumentCheckListFormRequestLevelComponent } from './forms/document-check-list-form-request-level/document-check-list-form-request-level.component';
 import { MqrUserComponent } from './new-affiliation/mqr-user/mqr-user.component';
 import { MidModalComponent } from './modal/mid-modal/mid-modal.component';
+import { AoMaintenanceListComponent } from './administration/ao-maintenance/ao-maintenance-list/ao-maintenance-list.component';
+import { BuMaintenanceListComponent } from './administration/bu-maintenance/bu-maintenance-list/bu-maintenance-list.component';
+import { DefaultMidMaintenanceComponent } from './administration/default-mid-maintenance/default-mid-maintenance/default-mid-maintenance.component';
+import { DefaultMidMaintenanceFormComponent } from './administration/default-mid-maintenance/default-mid-maintenance-form/default-mid-maintenance-form.component';
+import { DefaultMidMaintenanceListComponent } from './administration/default-mid-maintenance/default-mid-maintenance-list/default-mid-maintenance-list.component';
 
 
 
@@ -186,7 +191,6 @@ import { MidModalComponent } from './modal/mid-modal/mid-modal.component';
     BuMaintenanceComponent,
     BuMaintenanceFormComponent,
     AoMaintenanceComponent,
-    AoMaintenanceFormComponent,
     ServiceFeeContractComponent,
     ServiceFeeContractFormComponent,
     ServiceFeeContractListComponent,
@@ -203,6 +207,12 @@ import { MidModalComponent } from './modal/mid-modal/mid-modal.component';
     PsServicingComponent,
     ParameterMaintenanceDetailsComponent,
     RequestComponent,
+    AoMaintenanceListComponent,
+    BuMaintenanceListComponent,
+    DefaultMidMaintenanceComponent,
+    DefaultMidMaintenanceFormComponent,
+    DefaultMidMaintenanceListComponent,
+    AoMaintenanceFormComponent,
     DocumentCheckListFormRequestLevelComponent,
     MqrUserComponent,
     MidModalComponent
@@ -266,7 +276,7 @@ import { MidModalComponent } from './modal/mid-modal/mid-modal.component';
                     AoListModalComponent,MidFormModalComponent, 
                     DocumentChecklistMaintenanceFormComponent, ServiceFeeContractFormComponent, 
                     DocumentChecklistConfigurationFormComponent,ParameterMaintenanceFormComponent,
-                    ParameterMaintenanceDetailsComponent , MidModalComponent],
+                    ParameterMaintenanceDetailsComponent,AoMaintenanceFormComponent, BuMaintenanceFormComponent,DefaultMidMaintenanceFormComponent,MidFormComponent, MidModalComponent ],
   providers: [],
   bootstrap: [AppComponent]
 })

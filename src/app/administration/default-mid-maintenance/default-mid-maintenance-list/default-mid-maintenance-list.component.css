@@ -17,14 +17,14 @@ table {
 }
 
 
-.flex-dclMaintenance-list-header {
+.flex-list-header {
     display: flex;
     flex-direction: row;
     /* border:4px blue solid; */
     justify-content: space-between;
 }
 
-.flex-dclMaintenance-list-footer {
+.flex-list-footer {
     display: flex;
     flex-direction: row;
     /* border:4px blue solid; */
