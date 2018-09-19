@@ -112,6 +112,7 @@ import { ParameterMaintenanceDetailsComponent } from './administration/parameter
 import { RequestComponent } from './new-affiliation/request/request.component';
 import { DocumentCheckListFormRequestLevelComponent } from './forms/document-check-list-form-request-level/document-check-list-form-request-level.component';
 import { MqrUserComponent } from './new-affiliation/mqr-user/mqr-user.component';
+import { MidModalComponent } from './modal/mid-modal/mid-modal.component';
 import { AoMaintenanceListComponent } from './administration/ao-maintenance/ao-maintenance-list/ao-maintenance-list.component';
 import { BuMaintenanceListComponent } from './administration/bu-maintenance/bu-maintenance-list/bu-maintenance-list.component';
 import { DefaultMidMaintenanceComponent } from './administration/default-mid-maintenance/default-mid-maintenance/default-mid-maintenance.component';
@@ -214,6 +215,7 @@ import { DefaultMidMaintenanceListComponent } from './administration/default-mid
     AoMaintenanceFormComponent,
     DocumentCheckListFormRequestLevelComponent,
     MqrUserComponent,
+    MidModalComponent
   ],
   imports: [
     BrowserModule,
@@ -274,7 +276,7 @@ import { DefaultMidMaintenanceListComponent } from './administration/default-mid
                     AoListModalComponent,MidFormModalComponent, 
                     DocumentChecklistMaintenanceFormComponent, ServiceFeeContractFormComponent, 
                     DocumentChecklistConfigurationFormComponent,ParameterMaintenanceFormComponent,
-                    ParameterMaintenanceDetailsComponent,AoMaintenanceFormComponent, BuMaintenanceFormComponent,DefaultMidMaintenanceFormComponent,MidFormComponent ],
+                    ParameterMaintenanceDetailsComponent,AoMaintenanceFormComponent, BuMaintenanceFormComponent,DefaultMidMaintenanceFormComponent,MidFormComponent, MidModalComponent ],
   providers: [],
   bootstrap: [AppComponent]
 })

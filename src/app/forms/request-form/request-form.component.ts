@@ -18,6 +18,7 @@ export class RequestFormComponent implements OnInit {
         className: 'flex-1',
         key: 'rtNo',
         type: 'input',
+        defaultValue: '0000001',
         expressionProperties: {
           'templateOptions.disabled': 'true'
         },
@@ -45,6 +46,7 @@ export class RequestFormComponent implements OnInit {
         className: 'flex-1',
         key: 'status',
         type: 'input',
+        defaultValue: 'DECLINED',
         expressionProperties: {
           'templateOptions.disabled': 'true'
         },
@@ -56,6 +58,7 @@ export class RequestFormComponent implements OnInit {
         className: 'flex-1',
         key: 'aoCode',
         type: 'input',
+        defaultValue: 'AO001',
         expressionProperties: {
           'templateOptions.disabled': 'true'
         },

@@ -8,18 +8,20 @@ import { AppBaseComponent } from '../app-base/app-base.component';
   styleUrls: ['./branch-info.component.css']
 })
 export class BranchInfoComponent extends AppBaseComponent implements OnInit {
-  @Input()displayMode:boolean=false;
-  @Input() showOif? = true;
-  @Input() showPos? = true;
-  @Input() showMid? = true;
+  // export class BranchInfoComponent implements OnInit {
+  @Input() displayMode: boolean;
+  @Input() showOif?= true;
+  @Input() showPos?= true;
+  @Input() showMid?= true;
 
   constructor(public route: ActivatedRoute,
     public router: Router) {
-      super(route, router);
-      
-     }
+    super(route, router);
+
+  }
 
   ngOnInit() {
+
   }
 
 }

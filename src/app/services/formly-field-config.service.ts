@@ -26,7 +26,9 @@ export class FormlyFieldConfigService {
       if (field.fieldGroup) {
         field.fieldGroup.forEach(fieldInGroup => {
           fieldInGroup.expressionProperties = fieldInGroup.expressionProperties || {};
-          fieldInGroup.expressionProperties['templateOptions.disabled'] = 'formState.disabled';
+          fieldInGroup.expressionProperties['templateOptions.disabled'] = () => {
+            return true;//'formState.disabled';
+          };
         });
       }
     });
