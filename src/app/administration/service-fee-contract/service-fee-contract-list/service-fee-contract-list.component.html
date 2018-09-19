@@ -1,5 +1,5 @@
 <div class="flex-sfcc-list-header">
-    <span class="mat-headline"> Service Fee Contract List </span>
+    <span class="mat-title"> Service Fee Contract List </span>
 </div>
 <div class="flex-sfcc-list-header">
     <mat-form-field class="flex-1">
@@ -14,24 +14,27 @@
         <ng-container matColumnDef="Code">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Code </th>
             <td mat-cell *matCellDef="let element">
-                <span (click)="openDialog()" class="link-button">{{element.Code}}</span>
+                <span>{{element.Code}}</span>
             </td>
         </ng-container>
         <ng-container matColumnDef="Value">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Value </th>
-            <td mat-cell *matCellDef="let element" >
-                <span (click)="openDialog()" class="link-button">{{element.Value}}</span>
+            <td mat-cell *matCellDef="let element">
+                <span>{{element.Value}}</span>
             </td>
         </ng-container>
         <ng-container matColumnDef="StraightFeeRate">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Straight Fee Rate </th>
             <td mat-cell *matCellDef="let element">
-                <span (click)="openDialog()" class="link-button" >{{element.StraightFeeRate}}</span>
+                <span>{{element.StraightFeeRate}}</span>
             </td>
         </ng-container>
         <ng-container matColumnDef="Options">
             <th mat-header-cell *matHeaderCellDef></th>
             <td mat-cell *matCellDef="let element">
+                <a (click)="openDialog()" matTooltip="Details" color="primary" mat-mini-fab>
+                    <mat-icon>toc</mat-icon>
+                </a> &nbsp;&nbsp;&nbsp;&nbsp;
                 <a matTooltip="Delete" class="delete-icon" mat-mini-fab>
                     <mat-icon style="color:white;">close</mat-icon>
                 </a>

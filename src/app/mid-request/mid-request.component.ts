@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MidFormModalComponent } from '../modal/mid-form-modal/mid-form-modal.component';
+import { ActivatedRoute, Router } from '../../../node_modules/@angular/router';
 
 export interface MidRequest {
   currency: string;
@@ -27,9 +29,12 @@ export class MidRequestComponent implements OnInit {
 
   displayedColumns: string[] = ['currency', 'monitorCode', 'merchantGroupCode', 'sfcc', 'controls'];
   dataSource = ELEMENT_DATA;
-  constructor() { }
+  constructor(private _route: ActivatedRoute,
+              private _router: Router) { }
 
   ngOnInit() {
   }
-
+ 
+  
+ 
 }

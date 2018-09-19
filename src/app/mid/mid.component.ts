@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MidService } from './mid.service';
 import { MatDialog } from '@angular/material';
 import { MidFormModalComponent } from '../modal/mid-form-modal/mid-form-modal.component';
+import { MidModalComponent } from '../modal/mid-modal/mid-modal.component';
 
 @Component({
   selector: 'app-mid',
@@ -16,6 +17,7 @@ export class MidComponent implements OnInit {
   dataSource;
   form: string;
   @Input() action?: boolean;
+  @Input() update?: boolean;
   constructor(private _route: ActivatedRoute, private _router: Router, private _service: MidService,
   private _dialog: MatDialog) { }
 
@@ -25,8 +27,11 @@ export class MidComponent implements OnInit {
     this.form = this._route.snapshot.params['form'] || this.action;
 
     if (this.form != undefined) {
-      const index = this.displayedColumns.indexOf('Action');
-      this.displayedColumns.splice(index, 1);
+      if (!this.update) {
+        const index = this.displayedColumns.indexOf('Action');
+        this.displayedColumns.splice(index, 1);
+      }
+            
       if (this.action == false) {
         this.form = 'POS';
       }
@@ -43,5 +48,11 @@ export class MidComponent implements OnInit {
     this._dialog.open(MidFormModalComponent, {
       width: '80%'
     });
+  }
+
+  generateMid() {
+    this._dialog.open(MidModalComponent, {
+      width: '80%'
+    })
   }
 }

@@ -1,5 +1,4 @@
 import { RequestComponent } from './new-affiliation/request/request.component';
-import { AoMaintenanceFormComponent } from './forms/ao-maintenance-form/ao-maintenance-form.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PosRequestComponent } from './pos-request/pos-request.component';
@@ -47,14 +46,18 @@ import { MidFormModalComponent } from './modal/mid-form-modal/mid-form-modal.com
 import { ParameterMaintenanceComponent } from './administration/parameter-maintenance/parameter-maintenance/parameter-maintenance.component';
 import { DocumentChecklistMaintenanceComponent } from './administration/document-checklist/document-checklist-maintenance/document-checklist-maintenance/document-checklist-maintenance.component';
 
-import { BuMaintenanceComponent } from './data-management/bu-maintenance/bu-maintenance.component';
-import { BuMaintenanceFormComponent } from './forms/bu-maintenance-form/bu-maintenance-form.component';
-import { AoMaintenanceComponent } from './data-management/ao-maintenance/ao-maintenance.component';
+import { BuMaintenanceComponent } from './administration/bu-maintenance/bu-maintenance/bu-maintenance.component';
+import { BuMaintenanceFormComponent } from './administration/bu-maintenance/bu-maintenance-form/bu-maintenance-form.component';
+import { AoMaintenanceComponent } from './administration/ao-maintenance/ao-maintenance/ao-maintenance.component';
 import { ServiceFeeContractComponent } from './administration/service-fee-contract/service-fee-contract/service-fee-contract.component';
 import { ServiceFeeContractFormComponent } from './administration/service-fee-contract/service-fee-contract-form/service-fee-contract-form.component';
 import { PsServicingComponent } from './new-affiliation/ps-servicing/ps-servicing.component';
 import { BranchListAttachmentPOSRequestComponent } from './branch-list-attachment-posrequest/branch-list-attachment-posrequest.component';
 import { DocumentChecklistConfigurationComponent } from './administration/document-checklist/document-checklist-configuration/document-checklist-configuration/document-checklist-configuration.component';
+import { DocumentCheckListFormRequestLevelComponent } from './forms/document-check-list-form-request-level/document-check-list-form-request-level.component';
+import { MqrUserComponent } from './new-affiliation/mqr-user/mqr-user.component';
+import { DefaultMidMaintenanceComponent } from './administration/default-mid-maintenance/default-mid-maintenance/default-mid-maintenance.component';
+import { MidRequestComponent } from './mid-request/mid-request.component';
 
 
 const routes: Routes = [
@@ -65,10 +68,20 @@ const routes: Routes = [
     children: [
       { path: '', component: BranchListAttachmentPOSRequestComponent, outlet: 'branchPOSRequest' },
       { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOSRequest' },
+      { path: '', component: MidRequestComponent, outlet: 'midRequest' },
+      { path: 'mid/:id?', component: MidFormComponent, outlet: 'midRequest' }
     ]
   },
   { path: 'ba/:mode', component: BranchAffiliationComponent },
-  { path: 'additionalFacility', component: AdditionalFacilityComponent },
+  {
+    path: 'additionalFacility/:mode', component: AdditionalFacilityComponent,
+    children: [
+      { path: '', component: BranchListAttachmentPOSRequestComponent, outlet: 'branchPOSRequest' },
+      { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOSRequest' },
+      { path: '', component: MidRequestComponent, outlet: 'midRequest'},
+      { path: 'mid/:id?', component: MidFormComponent, outlet: 'midRequest'}
+    ]
+  },
   { path: 'fileMaintenance', component: FileMaintenanceComponent },
   { path: 'ext/:mode', component: ExtentionComponent },
   { path: 'maef', component: MaefFormComponent },
@@ -198,7 +211,7 @@ const routes: Routes = [
   {
     path: 'na/mdmUser', component: MdmUserComponent, children: [
       { path: '', component: DocumentCheckListComponent, outlet: 'docForm' },
-      { path: 'docForm', component: DocumentCheckListFormComponent, outlet: 'docForm' }
+      { path: 'docForm', component: DocumentCheckListFormRequestLevelComponent, outlet: 'docForm' }
     ]
   },
   { path: 'na/psServicing', component: PsServicingComponent },
@@ -207,14 +220,16 @@ const routes: Routes = [
   { path: 'newAffSum', component: NewAffiliationSumComponent },
   { path: 'home', component: HomeScreenComponent },
   { path: 'oif', component: OcularInspectionFormComponent },
+  { path: 'na/mqrUser/:mode/:id', component: MqrUserComponent },
+
 
   ////////////////////// Data Management start-> /////////////////////////
-  { path: 'dm/ao', component: AoMaintenanceComponent },
-  { path: 'dm/ao/:mode', component: AoMaintenanceFormComponent },
-  { path: 'dm/ao/:mode/:id', component: AoMaintenanceFormComponent },
-  { path: 'dm/bu', component: BuMaintenanceComponent },
-  { path: 'dm/bu/:mode', component: BuMaintenanceFormComponent },
-  { path: 'dm/bu/:mode/:id', component: BuMaintenanceFormComponent },
+  // { path: 'dm/ao', component: AoMaintenanceComponent },
+  // { path: 'dm/ao/:mode', component: AoMaintenanceFormComponent },
+  // { path: 'dm/ao/:mode/:id', component: AoMaintenanceFormComponent },
+  // { path: 'dm/bu', component: BuMaintenanceComponent },
+  // { path: 'dm/bu/:mode', component: BuMaintenanceFormComponent },
+  // { path: 'dm/bu/:mode/:id', component: BuMaintenanceFormComponent },
   /////////////////////  <-end  Data Management  /////////////////////////
 
 
@@ -229,13 +244,17 @@ const routes: Routes = [
   { path: 'paramMaintenance', component: ParameterMaintenanceComponent },
   { path: 'dclMaintenance', component: DocumentChecklistMaintenanceComponent },
   { path: 'dclConfiguration', component: DocumentChecklistConfigurationComponent },
-  { path: 'bu', component: BuMaintenanceComponent },
-  { path: 'bus', component: BuMaintenanceFormComponent },
-  { path: 'ao', component: AoMaintenanceComponent },
-  { path: 'aof', component: AoMaintenanceFormComponent },
+  { path: 'buMaintenance', component: BuMaintenanceComponent },
+  { path: 'aoMaintenance', component: AoMaintenanceComponent },
   { path: 'sfcc', component: ServiceFeeContractComponent },
+<<<<<<< HEAD
   { path: 'request/:mode/:id', component: RequestComponent }
 
+=======
+  { path: 'request', component: RequestComponent },
+  { path: 'branchForm', component: BranchFormComponent },
+  { path: 'defaultMIDMaintenance', component: DefaultMidMaintenanceComponent }
+>>>>>>> d7ceb14e3e04c1ef8ce4d02bf8cabc6334e5f706
 ];
 
 @NgModule({

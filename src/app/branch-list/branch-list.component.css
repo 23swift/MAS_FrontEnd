@@ -21,3 +21,8 @@ table {
 .mat-headline {
     font-size: 18px;
 }
+
+.m-lr-20px {
+    margin-left: 20px;
+    margin-right: 20px;
+}

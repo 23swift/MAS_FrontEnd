@@ -11,12 +11,14 @@ export class MdcsUserComponent implements OnInit {
   title: string;
   subTitle: string;
   mode: string;
+  showOif: boolean;
   constructor() { }
 
   ngOnInit() {
     this.title = 'New Affiliation';
-    this.subTitle = 'FOR MDCS USER';
-    this.mode = 'create';
+    this.subTitle = 'APPROVED';
+    this.mode = 'forCadencie';
+    this.showOif = false;
   }
 
 }

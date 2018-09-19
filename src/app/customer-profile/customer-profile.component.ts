@@ -4,16 +4,18 @@ import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
 import { CustomerProfileService } from './customer-profile.service'
 import { AppBaseComponent } from '../app-base/app-base.component';
 import { Router, ActivatedRoute } from '@angular/router';
+import { FormlyFieldConfigService } from '../services/formly-field-config.service';
 
 @Component({
   selector: 'app-customer-profile',
   templateUrl: './customer-profile.component.html',
-  styleUrls: ['./customer-profile.component.css']
+  styleUrls: ['./customer-profile.component.css'],
+  providers: [CustomerProfileService, FormlyFieldConfigService]
 })
 export class CustomerProfileComponent extends AppBaseComponent implements OnInit {
   //Properties
   @Input() displayMode: boolean = false;
-  @Input() readOnly?: boolean;
+  
   model: CutomerProfile;
   title = 'New Affiliation';
 
@@ -26,11 +28,13 @@ export class CustomerProfileComponent extends AppBaseComponent implements OnInit
 
   constructor(public route: ActivatedRoute,
     public router: Router,
-    private customerProfileService: CustomerProfileService) {
+    private _customerProfileService: CustomerProfileService,
+    private _formlyFieldConfigService: FormlyFieldConfigService
+  ) {
 
     super(route, router);
 
-    this.fields = customerProfileService.getPosFields();
+    this.fields = this._customerProfileService.getCustomerProfileFields();
     this.form.disable();
   }
 
@@ -39,62 +43,25 @@ export class CustomerProfileComponent extends AppBaseComponent implements OnInit
     this.model.businessName = 'Bench';
     this.model.dtiRegDate = new Date();
     this.model.ownership = 1;
-    this.readOnly = this.readOnly ? true : false;
     // apply expressionProperty for disabled based on formState to all fields
     if (this.displayMode == true) {
-      this.disableFields();
+      this._formlyFieldConfigService.disabled(this.fields);
     } else {
-      this.enableFields();
+      this._formlyFieldConfigService.enabled(this.fields);
     }
-
-
   }
 
-  public disableFields() {
-
-
-    this.fields.forEach(field => {
-      field.expressionProperties = field.expressionProperties || {};
-      field.expressionProperties['templateOptions.disabled'] = 'formState.disabled';
-      if (field.fieldGroup) {
-        field.fieldGroup.forEach(fieldInGroup => {
-
-          fieldInGroup.expressionProperties = fieldInGroup.expressionProperties || {};
-          fieldInGroup.expressionProperties['templateOptions.disabled'] = 'formState.disabled';
-        });
-      }
-
-    });
-  }
-  public enableFields() {
-
-
-
-    this.fields.forEach(field => {
-      field.expressionProperties = field.expressionProperties || {};
-      // field.expressionProperties['templateOptions.disabled'] = 'false';
-      if (field.fieldGroup) {
-        field.fieldGroup.forEach(fieldInGroup => {
-
-          fieldInGroup.expressionProperties = fieldInGroup.expressionProperties || {};
-          // fieldInGroup.expressionProperties['templateOptions.disabled'] ='false';
-        });
-      }
-
-    });
-  }
-
-
+  
   submit() {
     alert(JSON.stringify(this.model));
     console.log(JSON.stringify(this.model));
-    this.disableFields();
+    this._formlyFieldConfigService.disabled(this.fields);
     this.options.formState = 'disabled: true';
     this.displayMode = true;
   }
 
   edit() {
-    this.enableFields();
+    this._formlyFieldConfigService.enabled(this.fields)
     this.options.formState = 'disabled: false';
     this.displayMode = false;
   }
