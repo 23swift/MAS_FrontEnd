@@ -234,7 +234,7 @@ const routes: Routes = [
   { path: 'ao', component: AoMaintenanceComponent },
   { path: 'aof', component: AoMaintenanceFormComponent },
   { path: 'sfcc', component: ServiceFeeContractComponent },
-  { path: 'request', component: RequestComponent }
+  { path: 'request/:mode/:id', component: RequestComponent }
 
 ];
 
