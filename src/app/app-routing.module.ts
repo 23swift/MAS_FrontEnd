@@ -251,14 +251,9 @@ const routes: Routes = [
   { path: 'buMaintenance', component: BuMaintenanceComponent },
   { path: 'aoMaintenance', component: AoMaintenanceComponent },
   { path: 'sfcc', component: ServiceFeeContractComponent },
-<<<<<<< HEAD
-  { path: 'request/:mode/:id', component: RequestComponent }
-
-=======
   { path: 'request', component: RequestComponent },
   { path: 'branchForm', component: BranchFormComponent },
   { path: 'defaultMIDMaintenance', component: DefaultMidMaintenanceComponent }
->>>>>>> d7ceb14e3e04c1ef8ce4d02bf8cabc6334e5f706
 ];
 
 @NgModule({
