@@ -69,7 +69,9 @@ const routes: Routes = [
       { path: '', component: BranchListAttachmentPOSRequestComponent, outlet: 'branchPOSRequest' },
       { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOSRequest' },
       { path: '', component: MidRequestComponent, outlet: 'midRequest' },
-      { path: 'mid/:id?', component: MidFormComponent, outlet: 'midRequest' }
+      { path: 'mid/:id?', component: MidFormComponent, outlet: 'midRequest' },
+      { path: '', component: DocumentCheckListComponent, outlet: 'documentChecklist'},
+      { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
     ]
   },
   { path: 'ba/:mode', component: BranchAffiliationComponent },
@@ -79,7 +81,9 @@ const routes: Routes = [
       { path: '', component: BranchListAttachmentPOSRequestComponent, outlet: 'branchPOSRequest' },
       { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOSRequest' },
       { path: '', component: MidRequestComponent, outlet: 'midRequest'},
-      { path: 'mid/:id?', component: MidFormComponent, outlet: 'midRequest'}
+      { path: 'mid/:id?', component: MidFormComponent, outlet: 'midRequest'},
+      { path: '', component: DocumentCheckListComponent, outlet: 'documentChecklist'},
+      { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
     ]
   },
   { path: 'fileMaintenance', component: FileMaintenanceComponent },
