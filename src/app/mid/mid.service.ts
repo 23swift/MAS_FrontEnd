@@ -17,7 +17,11 @@ export class MidService {
       { Id: 6, Currency: 'PHP', MonitorCode: 'BNPL 0%', MerchantGroupCode: 'MerchGrp1Z' }
     ];
   }
-  GetTableFields() {
-    return ['Currency', 'MonitorCode', 'MerchantGroupCode', 'Action'];
+  GetTableFields(update) {
+    if (update) {
+      return ['Currency', 'MonitorCode', 'MerchantGroupCode', 'Action'];
+    } else {
+      return ['Currency', 'MonitorCode', 'MerchantGroupCode'];
+    }
   }
 }
