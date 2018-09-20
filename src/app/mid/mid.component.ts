@@ -19,25 +19,18 @@ export class MidComponent implements OnInit {
   @Input() action?: boolean;
   @Input() update?: boolean;
   constructor(private _route: ActivatedRoute, private _router: Router, private _service: MidService,
-  private _dialog: MatDialog) { }
+    private _dialog: MatDialog) { }
 
   ngOnInit() {
     this.dataSource = this._service.Get();
-    this.displayedColumns = this._service.GetTableFields();
     this.form = this._route.snapshot.params['form'] || this.action;
-
-    if (this.form != undefined) {
-      if (!this.update) {
-        const index = this.displayedColumns.indexOf('Action');
-        this.displayedColumns.splice(index, 1);
-      }
-            
-      if (this.action == false) {
-        this.form = 'POS';
-      }
+    this.displayedColumns = this._service.GetTableFields(this.update);
+    
+    if (this.action == false) {
+      this.form = 'POS';
     }
   }
-  
+
   AddMid() {
     this._dialog.open(MidFormModalComponent, {
       width: '80%'

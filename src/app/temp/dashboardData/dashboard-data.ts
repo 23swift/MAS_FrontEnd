@@ -6,13 +6,13 @@ export class DashboardData {
           Id: 1, TrackingNo: '0000001',
           RequestType: 'New Affiliation', BusinessName: 'Bench',
           RequestDate: '06/05/2018', BranchName: 'SM Megamall',
-          Location: 'Mandaluyong', RequestStatus: 'DECLINED'
+          Location: 'Mandaluyong', RequestStatus: 'APPROVED WITH REQUIREMENTS'
         },
         {
           Id: 2, TrackingNo: '0000002',
           RequestType: 'New Affiliation', BusinessName: 'Bench',
           RequestDate: '06/05/2018', BranchName: 'SM Calamba',
-          Location: 'Calamba', RequestStatus: 'APPROVED'
+          Location: 'Calamba', RequestStatus: 'DECLINED'
         },
         {
           Id: 3, TrackingNo: '0000003',
@@ -30,7 +30,7 @@ export class DashboardData {
           Id: 5, TrackingNo: '0000005',
           RequestType: 'New Affiliation', BusinessName: 'Bench',
           RequestDate: '06/05/2018', BranchName: 'SM Megamall',
-          Location: 'Mandaluyong', RequestStatus: 'APPROVED WITH REQUIREMENTS'
+          Location: 'Sta. Rosa', RequestStatus: 'DECLINED'
         }
       ];
 
