@@ -21,3 +21,20 @@ table {
 .mat-headline {
     font-size: 18px;
 }
+
+.text-center {
+    text-align: center;
+}
+
+.mat-button {
+    min-width: 0px;
+}
+
+.save-button, .cancel-button {
+    color: #043673;
+}
+
+.cancel-button:hover, .save-button:hover {
+    color: #FDB913;
+    cursor: pointer;
+}

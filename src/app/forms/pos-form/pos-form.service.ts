@@ -149,7 +149,6 @@ export class PosFormService {
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
-        ,
         {
           className: 'flex-1',
           type: 'input',
@@ -1808,6 +1807,7 @@ export class PosFormService {
 
   getPosFields(userGroup): FormlyFieldConfig[] {
     var retFields: FormlyFieldConfig[];
+    userGroup = 'asdasd';
     switch (userGroup) {
       case 'ao':
         retFields = this.aoFields

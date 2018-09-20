@@ -17,9 +17,9 @@ export class PsServicingComponent implements OnInit {
   constructor(private _router: Router) { }
 
   ngOnInit() {
-    this.title = '';
-    this.subTitle = '';
-    this.mode = '';
+    this.title = 'New Affiliation';
+    this.subTitle = 'FOR POS PROCESSING';
+    this.mode = 'forPsChecker';
     this.midAction = false;
   }
 
