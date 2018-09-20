@@ -59,6 +59,7 @@ import { MqrUserComponent } from './new-affiliation/mqr-user/mqr-user.component'
 import { DefaultMidMaintenanceComponent } from './administration/default-mid-maintenance/default-mid-maintenance/default-mid-maintenance.component';
 import { MidRequestComponent } from './mid-request/mid-request.component';
 import { DebitTidComponent } from './debit-tid/debit-tid.component';
+import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
 
 
 const routes: Routes = [
@@ -71,7 +72,7 @@ const routes: Routes = [
       { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOSRequest' },
       { path: '', component: MidRequestComponent, outlet: 'midRequest' },
       { path: 'mid/:id?', component: MidFormComponent, outlet: 'midRequest' },
-      { path: '', component: DocumentCheckListComponent, outlet: 'documentChecklist'},
+      { path: '', component: DocumentCheckListComponent, outlet: 'documentChecklist' },
       { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
     ]
   },
@@ -81,9 +82,9 @@ const routes: Routes = [
     children: [
       { path: '', component: BranchListAttachmentPOSRequestComponent, outlet: 'branchPOSRequest' },
       { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOSRequest' },
-      { path: '', component: MidRequestComponent, outlet: 'midRequest'},
-      { path: 'mid/:id?', component: MidFormComponent, outlet: 'midRequest'},
-      { path: '', component: DocumentCheckListComponent, outlet: 'documentChecklist'},
+      { path: '', component: MidRequestComponent, outlet: 'midRequest' },
+      { path: 'mid/:id?', component: MidFormComponent, outlet: 'midRequest' },
+      { path: '', component: DocumentCheckListComponent, outlet: 'documentChecklist' },
       { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
     ]
   },
@@ -225,7 +226,12 @@ const routes: Routes = [
   { path: 'newAffSum', component: NewAffiliationSumComponent },
   { path: 'home', component: HomeScreenComponent },
   { path: 'oif', component: OcularInspectionFormComponent },
-  { path: 'na/mqrUser/:mode/:id', component: MqrUserComponent },
+  {
+    path: 'na/mqrUser', component: MqrUserComponent,
+    children: [
+      { path: 'MID/:form', component: MidComponent, outlet: 'mid' }
+    ]
+  },
 
 
   ////////////////////// Data Management start-> /////////////////////////
@@ -256,7 +262,8 @@ const routes: Routes = [
   { path: 'request', component: RequestComponent },
   { path: 'branchForm', component: BranchFormComponent },
   { path: 'defaultMIDMaintenance', component: DefaultMidMaintenanceComponent },
-  { path: 'debitTid', component: DebitTidComponent}
+  { path: 'debitTid', component: DebitTidComponent},
+  { path: 'custProfile', component: CustomerProfileComponent }
 ];
 
 @NgModule({
