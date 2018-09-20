@@ -24,13 +24,13 @@ export class MqrDashboardComponent implements OnInit {
     this.displayedColumns = this._service.GetTableFields();
     this.dataSource = this._service.Get();
 
-    this.mode = 'create';
+    this.mode = 'update';
     this.title = 'New Affiliation';
     this.subTitle = 'MAU Encoder';
   }
 
   GetItem(id) {
     //console.log(id);
-    this._router.navigateByUrl('na/mqrUser/approval/' + id);
+    this._router.navigateByUrl('na/mqrUser');
   }
 }

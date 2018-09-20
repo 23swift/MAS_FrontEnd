@@ -29,18 +29,18 @@
         </button>
     </mat-step>
     <mat-step>
-            <ng-template matStepLabel>
-                <span class="mat-subheading-1">
-                   Attach Required Documents
-                </span>
-            </ng-template>
-            <router-outlet name="documentChecklist"></router-outlet>
-            <!-- <app-mid-request></app-mid-request> -->
-            <br />
-            <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
-                <mat-icon color="primary">navigate_next</mat-icon>
-            </button>
-        </mat-step>
+        <ng-template matStepLabel>
+            <span class="mat-subheading-1">
+                Attach Required Documents
+            </span>
+        </ng-template>
+        <router-outlet name="documentChecklist"></router-outlet>
+        <!-- <app-mid-request></app-mid-request> -->
+        <br />
+        <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
+            <mat-icon color="primary">navigate_next</mat-icon>
+        </button>
+    </mat-step>
     <mat-step state="done">
         <ng-template matStepLabel>
             <span class="mat-subheading-1">Done!</span>
