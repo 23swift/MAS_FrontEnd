@@ -2,6 +2,7 @@ import { Component, OnInit ,ViewChild } from '@angular/core';
 import { MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
 import { MatDialog, MatSnackBar } from '../../../../../node_modules/@angular/material';
 import { DefaultMidMaintenanceFormComponent } from '../default-mid-maintenance-form/default-mid-maintenance-form.component';
+import { DeleteModalComponent } from '../../../modal/delete-modal/delete-modal.component';
 
 export interface DefaultMIDInfo {
   Currency: string;
@@ -10,7 +11,8 @@ export interface DefaultMIDInfo {
 }
 const ELEMENT_DATA: DefaultMIDInfo[] = [
   {Currency: 'PHP', MonitorCode: 'OTC', MerchantGroupCode: 'DM01- Diners Migrated'},
-  {Currency: 'USD', MonitorCode: 'Installment Reg', MerchantGroupCode: 'MerchGrp24'}
+  {Currency: 'USD', MonitorCode: 'Installment Reg', MerchantGroupCode: 'MerchGrp24'},
+  {Currency: 'USD', MonitorCode: 'OTC', MerchantGroupCode: 'DM01 - Diners'}
  ];
 
 @Component({
@@ -48,6 +50,13 @@ export class DefaultMidMaintenanceListComponent implements OnInit {
         if (data) {
           this._matSnackBar.open('Added Document:', data, { duration: 2000 });
         }
+      });
+    }
+
+    openDeleteDialog() {
+      const dialogRef = this._dialog.open(DeleteModalComponent, {
+        width: '800px',
+        height: '140px'
       });
     }
 

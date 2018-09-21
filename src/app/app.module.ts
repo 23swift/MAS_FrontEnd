@@ -118,6 +118,7 @@ import { BuMaintenanceListComponent } from './administration/bu-maintenance/bu-m
 import { DefaultMidMaintenanceComponent } from './administration/default-mid-maintenance/default-mid-maintenance/default-mid-maintenance.component';
 import { DefaultMidMaintenanceFormComponent } from './administration/default-mid-maintenance/default-mid-maintenance-form/default-mid-maintenance-form.component';
 import { DefaultMidMaintenanceListComponent } from './administration/default-mid-maintenance/default-mid-maintenance-list/default-mid-maintenance-list.component';
+import { DeleteModalComponent } from './modal/delete-modal/delete-modal.component';
 
 
 
@@ -215,7 +216,8 @@ import { DefaultMidMaintenanceListComponent } from './administration/default-mid
     AoMaintenanceFormComponent,
     DocumentCheckListFormRequestLevelComponent,
     MqrUserComponent,
-    MidModalComponent
+    MidModalComponent,
+    DeleteModalComponent
   ],
   imports: [
     BrowserModule,
@@ -276,7 +278,7 @@ import { DefaultMidMaintenanceListComponent } from './administration/default-mid
                     AoListModalComponent,MidFormModalComponent, 
                     DocumentChecklistMaintenanceFormComponent, ServiceFeeContractFormComponent, 
                     DocumentChecklistConfigurationFormComponent,ParameterMaintenanceFormComponent,
-                    ParameterMaintenanceDetailsComponent,AoMaintenanceFormComponent, BuMaintenanceFormComponent,DefaultMidMaintenanceFormComponent,MidFormComponent, MidModalComponent ],
+                    ParameterMaintenanceDetailsComponent,AoMaintenanceFormComponent, BuMaintenanceFormComponent,DefaultMidMaintenanceFormComponent,MidFormComponent, MidModalComponent, DeleteModalComponent ],
   providers: [],
   bootstrap: [AppComponent]
 })
