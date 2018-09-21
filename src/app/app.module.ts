@@ -119,6 +119,7 @@ import { DefaultMidMaintenanceComponent } from './administration/default-mid-mai
 import { DefaultMidMaintenanceFormComponent } from './administration/default-mid-maintenance/default-mid-maintenance-form/default-mid-maintenance-form.component';
 import { DefaultMidMaintenanceListComponent } from './administration/default-mid-maintenance/default-mid-maintenance-list/default-mid-maintenance-list.component';
 import { DeleteModalComponent } from './modal/delete-modal/delete-modal.component';
+import { DebitTidComponent } from './debit-tid/debit-tid.component';
 
 
 
@@ -217,7 +218,8 @@ import { DeleteModalComponent } from './modal/delete-modal/delete-modal.componen
     DocumentCheckListFormRequestLevelComponent,
     MqrUserComponent,
     MidModalComponent,
-    DeleteModalComponent
+    DeleteModalComponent,
+    DebitTidComponent
   ],
   imports: [
     BrowserModule,

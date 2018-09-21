@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class MidService {
 
   constructor() { }
@@ -19,7 +17,7 @@ export class MidService {
   }
   GetTableFields(update) {
     if (update) {
-      return ['Currency', 'MonitorCode', 'MerchantGroupCode', 'Action'];
+      return ['Currency', 'MonitorCode', 'MerchantGroupCode', 'MID', 'TID'];
     } else {
       return ['Currency', 'MonitorCode', 'MerchantGroupCode'];
     }

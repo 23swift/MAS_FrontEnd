@@ -18,6 +18,7 @@ export class BdoFormHeaderComponent implements OnInit {
   showWelcomeLetter: boolean;
   showCadencieProcessingButton: boolean;
   showPosProcessingButton: boolean;
+  showPsCheckerButton: boolean;
   @Input() mode: string;
   @Input() text: string;
   @Input() sub_text: string;
@@ -32,9 +33,10 @@ export class BdoFormHeaderComponent implements OnInit {
     this.showWelcomeLetter = false;
     this.showCadencieProcessingButton = false;
     this.showPosProcessingButton = false;
+    this.showPsCheckerButton = false;
 
     this.mode = this.mode ? this.mode : 'create';
-    console.log(this.mode);
+    
     if (this._router.url !== '/home') {
       if (this.mode.match(/approval/i)) {
         this.showApprovalOptions = true;
@@ -53,6 +55,9 @@ export class BdoFormHeaderComponent implements OnInit {
       }
       if (this.mode.match(/forPos/i)) {
         this.showPosProcessingButton = true;
+      }
+      if (this.mode.match(/forPsChecker/i)) {
+        this.showPsCheckerButton = true;        
       }
     }
   }

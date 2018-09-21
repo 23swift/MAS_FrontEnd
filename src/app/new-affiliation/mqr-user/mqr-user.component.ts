@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '../../../../node_modules/@angular/router';
 import { MatSnackBar } from '../../../../node_modules/@angular/material';
 
+
 @Component({
   selector: 'app-mqr-user',
   templateUrl: './mqr-user.component.html',
@@ -19,7 +20,7 @@ export class MqrUserComponent implements OnInit {
   ngOnInit() {
     this.title = 'Merchant Quality and Control Review';
     this.subTitle = 'Review Requests'
-    this.mode = 'approval';
+    this.mode = 'update';
   }
 
   Submit() {
