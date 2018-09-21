@@ -3,7 +3,7 @@
 <!-- <span class="mat-headline">Please follow the steps:</span> -->
 <mat-divider></mat-divider>
 <div class="mat-title color-orange m-left-5px">Customer Profile</div>
-<app-customer-profile [displayMode]="false" readOnly="true"></app-customer-profile>
+<app-customer-profile [displayMode]="true"></app-customer-profile>
 <mat-divider></mat-divider>
 <mat-vertical-stepper [linear]="true" #stepper class="m-top-20px">
   <!-- <mat-step [completed]="false">
@@ -21,7 +21,7 @@
     <ng-template matStepLabel>
       <span class="mat-subheading-1">POS</span>
     </ng-template>
-    <app-pos-form></app-pos-form>
+    <app-pos-form [displayMode]="true"></app-pos-form>
     <app-mid [action]="midAction"></app-mid>
     <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
       <mat-icon color="primary">navigate_next</mat-icon>

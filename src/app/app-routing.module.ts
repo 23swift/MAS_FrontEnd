@@ -58,6 +58,7 @@ import { DocumentCheckListFormRequestLevelComponent } from './forms/document-che
 import { MqrUserComponent } from './new-affiliation/mqr-user/mqr-user.component';
 import { DefaultMidMaintenanceComponent } from './administration/default-mid-maintenance/default-mid-maintenance/default-mid-maintenance.component';
 import { MidRequestComponent } from './mid-request/mid-request.component';
+import { DebitTidComponent } from './debit-tid/debit-tid.component';
 import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
 
 
@@ -258,10 +259,10 @@ const routes: Routes = [
   { path: 'aoMaintenance', component: AoMaintenanceComponent },
   { path: 'sfcc', component: ServiceFeeContractComponent },
   { path: 'request/:mode/:id', component: RequestComponent },
-
   { path: 'request', component: RequestComponent },
   { path: 'branchForm', component: BranchFormComponent },
   { path: 'defaultMIDMaintenance', component: DefaultMidMaintenanceComponent },
+  { path: 'debitTid', component: DebitTidComponent},
   { path: 'custProfile', component: CustomerProfileComponent }
 ];
 
