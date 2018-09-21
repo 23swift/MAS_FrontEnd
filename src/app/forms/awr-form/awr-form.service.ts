@@ -41,45 +41,45 @@ export class AwrFormService {
         }
       ]
     },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          className: 'flex-1',
-          key: 'isMdrRelated',
-          type: 'checkbox',
-          templateOptions: {
-            label: 'MDR Related'
-          }
-        },
-        {
-          className: 'flex-2',
-          type: 'input',
-          key: 'mdrRelatedDetails',
-          templateOptions: {
-            label: 'Details',
-            maxLength: 500
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'checkbox',
-          key: 'isIncompleteDetails',
-          templateOptions: {
-            label: 'Type of Affiliation'
-          }
-        },
-        {
-          className: 'flex-2',
-          type: 'input',
-          key: 'incompleteDetails',
-          templateOptions: {
-            label: 'Details',
-            maxLength: 500
-          }
-        }
-      ]
-    },
+    // {
+    //   fieldGroupClassName: 'display-flex',
+    //   fieldGroup: [
+    //     {
+    //       className: 'flex-1',
+    //       key: 'isMdrRelated',
+    //       type: 'checkbox',
+    //       templateOptions: {
+    //         label: 'MDR Related'
+    //       }
+    //     },
+    //     {
+    //       className: 'flex-1',
+    //       type: 'input',
+    //       key: 'mdrRelatedDetails',
+    //       templateOptions: {
+    //         label: 'Details',
+    //         maxLength: 500
+    //       }
+    //     },
+    //     {
+    //       className: 'flex-1',
+    //       type: 'checkbox',
+    //       key: 'isIncompleteDetails',
+    //       templateOptions: {
+    //         label: 'Type of Affiliation'
+    //       }
+    //     },
+    //     {
+    //       className: 'flex-1',
+    //       type: 'input',
+    //       key: 'incompleteDetails',
+    //       templateOptions: {
+    //         label: 'Details',
+    //         maxLength: 500
+    //       }
+    //     }
+    //   ]
+    // },
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
@@ -691,7 +691,7 @@ export class AwrFormService {
         },
         {
           className: 'flex-1',
-          type: 'checkbox',
+          type: 'checkDialog',
           key: 'cancel',
           templateOptions: {
             label: 'Cancel',
@@ -712,7 +712,7 @@ export class AwrFormService {
       fieldGroup: [
         {
           className: 'flex-1',
-          type: 'checkbox',
+          type: 'checkDialog',
           key: 'isTempoWaiver',
           templateOptions: {
             label: 'Tempo Waiver'

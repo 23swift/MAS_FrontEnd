@@ -34,7 +34,6 @@ import { PosRequestStepperComponent } from './pos-request-stepper/pos-request-st
 import { BranchListComponent } from './branch-list/branch-list.component';
 import { BranchAffiliationComponent } from './branch-affiliation/branch-affiliation.component';
 import { AdditionalFacilityComponent } from './additional-facility/additional-facility.component';
-import { FileMaintenanceComponent } from './file-maintenance/file-maintenance.component';
 import { AppBaseComponent } from './app-base/app-base.component';
 import { ExtentionComponent } from './extention/extention.component';
 import { AoEncoderComponent } from './new-affiliation/ao-encoder/ao-encoder.component';
@@ -119,9 +118,9 @@ import { DefaultMidMaintenanceComponent } from './administration/default-mid-mai
 import { DefaultMidMaintenanceFormComponent } from './administration/default-mid-maintenance/default-mid-maintenance-form/default-mid-maintenance-form.component';
 import { DefaultMidMaintenanceListComponent } from './administration/default-mid-maintenance/default-mid-maintenance-list/default-mid-maintenance-list.component';
 import { DebitTidComponent } from './debit-tid/debit-tid.component';
-
-
-
+import { FmLeAoEncoderComponent } from './file-maintenance/legal-entity/fm-le-ao-encoder/fm-le-ao-encoder.component';
+import { FmMidAoEncoderComponent } from './file-maintenance/mid/fm-mid-ao-encoder/fm-mid-ao-encoder.component';
+import { FmBrAoEncoderComponent } from './file-maintenance/branch/fm-br-ao-encoder/fm-br-ao-encoder.component';
 
 
 
@@ -137,7 +136,6 @@ import { DebitTidComponent } from './debit-tid/debit-tid.component';
     BranchListComponent,
     BranchAffiliationComponent,
     AdditionalFacilityComponent,
-    FileMaintenanceComponent,
     AppBaseComponent,
     ExtentionComponent,
     AoEncoderComponent,
@@ -217,7 +215,10 @@ import { DebitTidComponent } from './debit-tid/debit-tid.component';
     DocumentCheckListFormRequestLevelComponent,
     MqrUserComponent,
     MidModalComponent,
-    DebitTidComponent
+    DebitTidComponent,
+    FmLeAoEncoderComponent,
+    FmMidAoEncoderComponent,
+    FmBrAoEncoderComponent
   ],
   imports: [
     BrowserModule,
