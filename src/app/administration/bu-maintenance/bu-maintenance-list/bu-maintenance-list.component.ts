@@ -2,6 +2,7 @@ import { Component, OnInit ,ViewChild } from '@angular/core';
 import { MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
 import { MatDialog, MatSnackBar } from '../../../../../node_modules/@angular/material';
 import { BuMaintenanceFormComponent } from '../bu-maintenance-form/bu-maintenance-form.component';
+import { DeleteModalComponent } from '../../../modal/delete-modal/delete-modal.component';
 
 
 export interface IBUMaintenanceInfo {
@@ -14,7 +15,8 @@ const ELEMENT_DATA: IBUMaintenanceInfo[] = [
   {UserId: 'A007002356',Name: 'Racquel Bernardo', BusinessUnit: 'Merchant Acquiring Sales Unit'},
   {UserId: 'A012001164',Name: 'Arnold Costamero', BusinessUnit: 'Merchant Affiliation and Maintenance Unit'},
   {UserId: 'A007001870',Name: 'Amor Bisco', BusinessUnit: 'Merchant Acquiring Sales Unit'},
-  {UserId: 'A008001756',Name: 'Maximo Rico', BusinessUnit: 'Merchant Affiliation and Maintenance Unit'}
+  {UserId: 'A008001756',Name: 'Maximo Rico', BusinessUnit: 'Merchant Affiliation and Maintenance Unit'},
+  {UserId: 'A025015373',Name: 'Jonas Navarro', BusinessUnit: 'Merchant Affiliation and Maintenance Unit'}
  ];
 
 @Component({
@@ -52,6 +54,13 @@ export class BuMaintenanceListComponent implements OnInit {
         if (data) {
           this._matSnackBar.open('Added Document:', data, { duration: 2000 });
         }
+      });
+    }
+
+    openDeleteDialog() {
+      const dialogRef = this._dialog.open(DeleteModalComponent, {
+        width: '800px',
+        height: '140px'
       });
     }
 

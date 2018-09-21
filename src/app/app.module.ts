@@ -6,8 +6,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyMaterialModule } from '@ngx-formly/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatToolbarModule, MatTooltipModule, MatCheckboxModule, MatRadioModule, MatDialogModule, MatPaginator,
-  MatPaginatorModule, MatSortModule, MatSortHeader } from '@angular/material';
+import {
+  MatToolbarModule, MatTooltipModule, MatCheckboxModule, MatRadioModule, MatDialogModule, MatPaginator,
+  MatPaginatorModule, MatSortModule, MatSortHeader
+} from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -117,6 +119,7 @@ import { BuMaintenanceListComponent } from './administration/bu-maintenance/bu-m
 import { DefaultMidMaintenanceComponent } from './administration/default-mid-maintenance/default-mid-maintenance/default-mid-maintenance.component';
 import { DefaultMidMaintenanceFormComponent } from './administration/default-mid-maintenance/default-mid-maintenance-form/default-mid-maintenance-form.component';
 import { DefaultMidMaintenanceListComponent } from './administration/default-mid-maintenance/default-mid-maintenance-list/default-mid-maintenance-list.component';
+import { DeleteModalComponent } from './modal/delete-modal/delete-modal.component';
 import { DebitTidComponent } from './debit-tid/debit-tid.component';
 import { FmLeAoEncoderComponent } from './file-maintenance/legal-entity/fm-le-ao-encoder/fm-le-ao-encoder.component';
 import { FmMidAoEncoderComponent } from './file-maintenance/mid/fm-mid-ao-encoder/fm-mid-ao-encoder.component';
@@ -215,6 +218,7 @@ import { FmBrAoEncoderComponent } from './file-maintenance/branch/fm-br-ao-encod
     DocumentCheckListFormRequestLevelComponent,
     MqrUserComponent,
     MidModalComponent,
+    DeleteModalComponent,
     DebitTidComponent,
     FmLeAoEncoderComponent,
     FmMidAoEncoderComponent,
@@ -275,11 +279,11 @@ import { FmBrAoEncoderComponent } from './file-maintenance/branch/fm-br-ao-encod
     MatSortModule,
     MatCheckboxModule,
   ],
-  entryComponents: [RemarksModalComponent, HistoryModalComponent, 
-                    AoListModalComponent,MidFormModalComponent, 
-                    DocumentChecklistMaintenanceFormComponent, ServiceFeeContractFormComponent, 
-                    DocumentChecklistConfigurationFormComponent,ParameterMaintenanceFormComponent,
-                    ParameterMaintenanceDetailsComponent,AoMaintenanceFormComponent, BuMaintenanceFormComponent,DefaultMidMaintenanceFormComponent,MidFormComponent, MidModalComponent ],
+  entryComponents: [RemarksModalComponent, HistoryModalComponent,
+    AoListModalComponent, MidFormModalComponent,
+    DocumentChecklistMaintenanceFormComponent, ServiceFeeContractFormComponent,
+    DocumentChecklistConfigurationFormComponent, ParameterMaintenanceFormComponent,
+    ParameterMaintenanceDetailsComponent, AoMaintenanceFormComponent, BuMaintenanceFormComponent, DefaultMidMaintenanceFormComponent, MidFormComponent, MidModalComponent, DeleteModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

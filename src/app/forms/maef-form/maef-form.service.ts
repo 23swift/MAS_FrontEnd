@@ -851,14 +851,14 @@ export class MaefFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
 
-        {
+  /*      {
           className: 'flex-1',
           type: 'checkbox',
           key: 'chkApprove',
           templateOptions: {
             label: 'Approve'
           },
-        },
+        }, */
         {
           className: 'flex-1',
           type: 'checkbox',
@@ -875,14 +875,14 @@ export class MaefFormService {
             label: 'With Exception'
           },
         },
-        {
+ /*       {
           className: 'flex-1 mat-form-field-infix',
           type: 'checkDialog',
           key: 'chkDecline',
           templateOptions: {
             label: 'Decline'
           },
-        },
+        },*/
 
       ]
     },
@@ -982,21 +982,34 @@ export class MaefFormService {
 
         },
         templateOptions: {
-          label: 'Approved1',
-          placeholder: 'Approved1'
+          label: 'Approver 1',
+          disabled: true
         },
       },
 
       {
         className: 'flex-1',
-        type: 'calendar',
-        key: 'dateApproved1',
+        type: 'input',
+        key: 'decision1',
         expressionProperties: {
 
         },
         templateOptions: {
-          label: 'Date Approved',
-          placeholder: 'Date Approved'
+          label: 'Approver 1 Decision',
+          disabled: true
+        }
+      },
+
+      {
+        className: 'flex-1',
+        type: 'calendar',
+        key: 'decisionDate1',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Approver 1 Decision Date',
+          disabled: true
         }
       },
       ]
@@ -1011,21 +1024,34 @@ export class MaefFormService {
 
         },
         templateOptions: {
-          label: 'Approved2',
-          placeholder: 'Approved2'
+          label: 'Approver 2',
+          disabled: true
         },
       },
 
       {
         className: 'flex-1',
-        type: 'calendar',
-        key: 'dateApproved2',
+        type: 'input',
+        key: 'decision2',
         expressionProperties: {
 
         },
         templateOptions: {
-          label: 'Date Approved',
-          placeholder: 'Date Approved'
+          label: 'Approver 2 Decision',
+          disabled: true
+        }
+      },
+
+      {
+        className: 'flex-1',
+        type: 'calendar',
+        key: 'decisionDate2',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Approver 2 Decision Date',
+          disabled: true
         }
       },
       ]
@@ -1040,21 +1066,34 @@ export class MaefFormService {
 
         },
         templateOptions: {
-          label: 'Approved3',
-          placeholder: 'Approved3'
+          label: 'Approver 3',
+          disabled: true
         },
       },
 
       {
         className: 'flex-1',
-        type: 'calendar',
-        key: 'dateApproved3',
+        type: 'input',
+        key: 'decision3',
         expressionProperties: {
 
         },
         templateOptions: {
-          label: 'Date Approved',
-          placeholder: 'Date Approved'
+          label: 'Approver 3 Decision',
+          disabled: true
+        }
+      },
+
+      {
+        className: 'flex-1',
+        type: 'calendar',
+        key: 'decisionDate3',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          label: 'Approver 3 Decision Date',
+          disabled: true
         }
       },
       ]
