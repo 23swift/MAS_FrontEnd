@@ -35,6 +35,10 @@
             <button *ngIf="showCadencieProcessingButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Submit For Cadencie Processing"><mat-icon class="request-mat-icon">arrow_forward</mat-icon> Submit For Cadencie Processing</button>
             <button *ngIf="showPosProcessingButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Submit For POS Processing"><mat-icon class="request-mat-icon">arrow_forward</mat-icon> Submit For POS Processing</button>
             <button *ngIf="showPsCheckerButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Submit For Inventory Checking"><mat-icon class="request-mat-icon">arrow_forward</mat-icon> Submit For Inventory Checking</button>
+            <button *ngIf="showMqrUserProcessingButton" (click)="return()" mat-flat-button color="primary" matTooltip="Return to AO"><mat-icon class="request-mat-icon">subdirectory_arrow_left</mat-icon> Return to AO</button>
+            <button *ngIf="showMqrUserProcessingButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Reviewed"><mat-icon class="request-mat-icon">thumb_up</mat-icon> Reviewed</button>
+            <button *ngIf="showMqrUserProcessingButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Complete"><mat-icon class="request-mat-icon">check</mat-icon> Complete</button>
+
             <!-- BUTTON FOR CREATION -->
          <!--   <button *ngIf="showCreateOptions" (click)="submit()" mat-flat-button matTooltip="Submit Request"><mat-icon  class="request-mat-icon">arrow_forward</mat-icon> Submit Request</button> -->
 

@@ -62,45 +62,6 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-1',
-          type: 'checkbox',
-          key: 'isIncompleteDetails',
-          templateOptions: {
-            label: 'Type of Affiliation'
-          }
-        },
-        {
-          className: 'flex-2',
-          type: 'input',
-          key: 'incompleteDetails',
-          templateOptions: {
-            label: 'Details',
-            maxLength: 500
-          }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          className: 'flex-1',
-          key: 'isMdrRelated',
-          type: 'checkbox',
-          templateOptions: {
-            label: 'MDR Related'
-          }
-        },
-        {
-          className: 'flex-2',
-          type: 'input',
-          key: 'mdrRelatedDetails',
-          templateOptions: {
-            label: 'Details',
-            maxLength: 500
-          }
-        },
-        {
           className: 'flex-2',
           type: 'checkbox',
           key: 'isIncompleteDetails',
@@ -173,23 +134,6 @@ export class AwrFormService {
           className: 'flex-2',
           type: 'input',
           key: 'incompleteOifDetails',
-          templateOptions: {
-            label: 'Details',
-            maxLength: 500
-          }
-        },
-        {
-          className: 'flex-2',
-          type: 'checkbox',
-          key: 'isIncompleteBusinessDocuments',
-          templateOptions: {
-            label: 'Incomplete Details in Other Business Documents'
-          }
-        },
-        {
-          className: 'flex-2',
-          type: 'input',
-          key: 'incompleteBusinessDocumentsDetails',
           templateOptions: {
             label: 'Details',
             maxLength: 500
@@ -699,10 +643,10 @@ export class AwrFormService {
         },
         {
           className: 'flex-1',
-          type: 'checkbox',
+          type: 'input',
           key: 'cancelRemarks',
           templateOptions: {
-            label: 'Cancel Remarks',
+            label: 'Details',
           }
         }
       ]
