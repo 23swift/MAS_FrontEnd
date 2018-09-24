@@ -175,3 +175,7 @@ body {
     padding-right:10px !important;
 }
    
+.break-word * {
+    white-space: normal !important;
+    word-break: break-word;
+}
