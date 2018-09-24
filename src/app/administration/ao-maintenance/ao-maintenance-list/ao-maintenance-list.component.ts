@@ -3,6 +3,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
 import { MatDialog, MatSnackBar } from '../../../../../node_modules/@angular/material';
 import { AoMaintenanceFormComponent } from '../ao-maintenance-form/ao-maintenance-form.component';
+import { DeleteModalComponent } from '../../../modal/delete-modal/delete-modal.component';
 
 
 export interface AODisplayInfo {
@@ -15,7 +16,8 @@ export interface AODisplayInfo {
 }
 const ELEMENT_DATA: AODisplayInfo[] = [
   {UserId: 'A025001391',Name: 'Juanico Sistoso Cabanit', ContactNumber: '4606060', BusinessUnit: 'Alternative Channels Unit', Segment: 'Angeles/Tarlac', BUHeadTag: true },
-  {UserId: 'A025008799',Name: 'Janice Torres Angeles', ContactNumber: '8888', BusinessUnit: 'MM1 - South Metro Manila Unit', Segment: 'Manila Area', BUHeadTag: false }
+  {UserId: 'A025008799',Name: 'Janice Torres Angeles', ContactNumber: '8888', BusinessUnit: 'MM1 - South Metro Manila Unit', Segment: 'Manila Area', BUHeadTag: false },
+  {UserId: 'A025015373',Name: 'Jonas Villa Navarro', ContactNumber: '45859', BusinessUnit: 'Alternative Channels Unit', Segment: 'Manila Area', BUHeadTag: false }
  ];
 
 @Component({
@@ -53,6 +55,13 @@ export class AoMaintenanceListComponent implements OnInit {
       if (data) {
         this._matSnackBar.open('Added Document:', data, { duration: 2000 });
       }
+    });
+  }
+
+  openDeleteDialog() {
+    const dialogRef = this._dialog.open(DeleteModalComponent, {
+      width: '800px',
+      height: '140px'
     });
   }
 

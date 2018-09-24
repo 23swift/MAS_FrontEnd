@@ -6,8 +6,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyMaterialModule } from '@ngx-formly/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatToolbarModule, MatTooltipModule, MatCheckboxModule, MatRadioModule, MatDialogModule, MatPaginator,
-  MatPaginatorModule, MatSortModule, MatSortHeader } from '@angular/material';
+import {
+  MatToolbarModule, MatTooltipModule, MatCheckboxModule, MatRadioModule, MatDialogModule, MatPaginator,
+  MatPaginatorModule, MatSortModule, MatSortHeader
+} from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -34,7 +36,6 @@ import { PosRequestStepperComponent } from './pos-request-stepper/pos-request-st
 import { BranchListComponent } from './branch-list/branch-list.component';
 import { BranchAffiliationComponent } from './branch-affiliation/branch-affiliation.component';
 import { AdditionalFacilityComponent } from './additional-facility/additional-facility.component';
-import { FileMaintenanceComponent } from './file-maintenance/file-maintenance.component';
 import { AppBaseComponent } from './app-base/app-base.component';
 import { ExtentionComponent } from './extention/extention.component';
 import { AoEncoderComponent } from './new-affiliation/ao-encoder/ao-encoder.component';
@@ -118,10 +119,11 @@ import { BuMaintenanceListComponent } from './administration/bu-maintenance/bu-m
 import { DefaultMidMaintenanceComponent } from './administration/default-mid-maintenance/default-mid-maintenance/default-mid-maintenance.component';
 import { DefaultMidMaintenanceFormComponent } from './administration/default-mid-maintenance/default-mid-maintenance-form/default-mid-maintenance-form.component';
 import { DefaultMidMaintenanceListComponent } from './administration/default-mid-maintenance/default-mid-maintenance-list/default-mid-maintenance-list.component';
+import { DeleteModalComponent } from './modal/delete-modal/delete-modal.component';
 import { DebitTidComponent } from './debit-tid/debit-tid.component';
-
-
-
+import { FmLeAoEncoderComponent } from './file-maintenance/legal-entity/fm-le-ao-encoder/fm-le-ao-encoder.component';
+import { FmMidAoEncoderComponent } from './file-maintenance/mid/fm-mid-ao-encoder/fm-mid-ao-encoder.component';
+import { FmBrAoEncoderComponent } from './file-maintenance/branch/fm-br-ao-encoder/fm-br-ao-encoder.component';
 
 
 
@@ -137,7 +139,6 @@ import { DebitTidComponent } from './debit-tid/debit-tid.component';
     BranchListComponent,
     BranchAffiliationComponent,
     AdditionalFacilityComponent,
-    FileMaintenanceComponent,
     AppBaseComponent,
     ExtentionComponent,
     AoEncoderComponent,
@@ -217,7 +218,11 @@ import { DebitTidComponent } from './debit-tid/debit-tid.component';
     DocumentCheckListFormRequestLevelComponent,
     MqrUserComponent,
     MidModalComponent,
-    DebitTidComponent
+    DeleteModalComponent,
+    DebitTidComponent,
+    FmLeAoEncoderComponent,
+    FmMidAoEncoderComponent,
+    FmBrAoEncoderComponent
   ],
   imports: [
     BrowserModule,
@@ -274,11 +279,11 @@ import { DebitTidComponent } from './debit-tid/debit-tid.component';
     MatSortModule,
     MatCheckboxModule,
   ],
-  entryComponents: [RemarksModalComponent, HistoryModalComponent, 
-                    AoListModalComponent,MidFormModalComponent, 
-                    DocumentChecklistMaintenanceFormComponent, ServiceFeeContractFormComponent, 
-                    DocumentChecklistConfigurationFormComponent,ParameterMaintenanceFormComponent,
-                    ParameterMaintenanceDetailsComponent,AoMaintenanceFormComponent, BuMaintenanceFormComponent,DefaultMidMaintenanceFormComponent,MidFormComponent, MidModalComponent ],
+  entryComponents: [RemarksModalComponent, HistoryModalComponent,
+    AoListModalComponent, MidFormModalComponent,
+    DocumentChecklistMaintenanceFormComponent, ServiceFeeContractFormComponent,
+    DocumentChecklistConfigurationFormComponent, ParameterMaintenanceFormComponent,
+    ParameterMaintenanceDetailsComponent, AoMaintenanceFormComponent, BuMaintenanceFormComponent, DefaultMidMaintenanceFormComponent, MidFormComponent, MidModalComponent, DeleteModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

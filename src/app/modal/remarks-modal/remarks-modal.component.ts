@@ -18,21 +18,18 @@ export interface RemModal {
 export class RemarksModalComponent implements OnInit {
   
   form: FormGroup;
-  //remarks: string;
+
 
   constructor(
-    // private _fb: FormBuilder,
+
     private _modalRef: MatDialogRef<RemarksModalComponent>
-    // ,
-    // @Inject(MAT_DIALOG_DATA) {remarks}:RemModal
+
   ) { 
-    //this.remarks = remarks;
+
     this.form = new FormGroup({
       remarks: new FormControl('')
     });
-    // _fb.group(
-    //    {remarks:[remarks]}
-    // );
+
   }
 
   ngOnInit() {
