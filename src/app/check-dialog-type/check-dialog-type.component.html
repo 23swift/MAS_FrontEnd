@@ -1,1 +1,6 @@
-<mat-checkbox [checked]="checked" [(indeterminate)]="indeterminate" [formControl]="formControl" [formlyAttributes]="field" (change)="getValue($event)">{{ to.label }}</mat-checkbox>
+<div class="mat-form-field-wrapper">
+    <div class="mat-form-field-infix">
+        <mat-checkbox [checked]="checked" [(indeterminate)]="indeterminate" [formControl]="formControl" [formlyAttributes]="field"
+            (change)="getValue($event)">{{ to.label }}</mat-checkbox>
+    </div>
+</div>
