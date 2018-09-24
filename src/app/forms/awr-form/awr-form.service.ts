@@ -173,32 +173,18 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-1 break-word',
+          className: 'flex-5 break-word',
           type: 'input',
           key: 'incompleteOifDetails',
           templateOptions: {
             label: 'Details',
             maxLength: 500
           }
-        },
-        {
-          className: 'flex-1 break-word',
-          type: 'checkbox',
-          key: 'isIncompleteBusinessDocuments',
-          templateOptions: {
-            label: 'Incomplete Details in Other Business Documents'
-          }
-        },
-        {
-          className: 'flex-1 break-word',
-          type: 'input',
-          key: 'incompleteBusinessDocumentsDetails',
-          templateOptions: {
-            label: 'Details',
-            maxLength: 500
-          }
         }
       ]
+    },
+    {
+      template: '<div class="display-flex"><span class="mat-headline">INCOMPLETE DETAILS IN OTHER BUSINESS DOCUMENTS</span></div>',
     },
     {
       fieldGroupClassName: 'display-flex',

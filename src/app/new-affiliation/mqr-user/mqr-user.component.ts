@@ -20,10 +20,12 @@ export class MqrUserComponent implements OnInit {
   ngOnInit() {
     this.title = 'Merchant Quality and Control Review';
     this.subTitle = 'Review Requests'
-    this.mode = 'update';
+    this.mode = 'mqrUser';
   }
 
   Submit() {
     this._router.navigateByUrl('/');
   }
+
+  
 }

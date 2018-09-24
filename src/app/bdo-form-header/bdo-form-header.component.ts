@@ -19,6 +19,7 @@ export class BdoFormHeaderComponent implements OnInit {
   showCadencieProcessingButton: boolean;
   showPosProcessingButton: boolean;
   showPsCheckerButton: boolean;
+  showMqrUserProcessingButton: boolean;
   @Input() mode: string;
   @Input() text: string;
   @Input() sub_text: string;
@@ -34,6 +35,7 @@ export class BdoFormHeaderComponent implements OnInit {
     this.showCadencieProcessingButton = false;
     this.showPosProcessingButton = false;
     this.showPsCheckerButton = false;
+    this.showMqrUserProcessingButton = false;
 
     this.mode = this.mode ? this.mode : 'create';
     
@@ -58,6 +60,9 @@ export class BdoFormHeaderComponent implements OnInit {
       }
       if (this.mode.match(/forPsChecker/i)) {
         this.showPsCheckerButton = true;        
+      }
+      if (this.mode.match(/mqrUser/i)) {
+        this.showMqrUserProcessingButton = true;
       }
     }
   }
