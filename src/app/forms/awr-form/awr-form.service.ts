@@ -81,6 +81,9 @@ export class AwrFormService {
     //   ]
     // },
     {
+      template: '<div class="display-flex"><span class="mat-headline">PENDING REQUIREMENT</span></div>',
+    },
+    {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
@@ -597,7 +600,7 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-1 break-word',
+          className: 'flex-5 break-word',
           type: 'input',
           key: 'notesDetails',
           templateOptions: {
@@ -605,6 +608,14 @@ export class AwrFormService {
             maxLength: 500
           }
         },
+      ]
+    },
+    {
+      template: '<div class="display-flex"><span class="mat-headline">REQUIREMENT TYPE</span></div>',
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1 break-word',
           type: 'checkbox',
@@ -680,7 +691,15 @@ export class AwrFormService {
             label: 'Remarks / Special Conditions Indicated in the MAEF (if any)',
             disabled: true
           }
-        },
+        }
+      ]
+    },
+    {
+      template: '<div class="display-flex"><span class="mat-headline">AO COMPLIANCE</span></div>',
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1 break-word',
           type: 'checkbox',
@@ -699,31 +718,10 @@ export class AwrFormService {
         },
         {
           className: 'flex-1 break-word',
-          type: 'checkbox',
-          key: 'cancelRemarks',
-          templateOptions: {
-            label: 'Cancel Remarks',
-          }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          className: 'flex-1 break-word',
           type: 'checkDialog',
           key: 'isTempoWaiver',
           templateOptions: {
             label: 'Tempo Waiver'
-          }
-        },
-        {
-          className: 'flex-6 break-word',
-          type: 'input',
-          key: 'tempoWaiverDetails',
-          templateOptions: {
-            label: 'Details'
           }
         }
       ]
