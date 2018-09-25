@@ -10,7 +10,7 @@ export class AwrFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           key: 'legalName',
           type: 'input',
           expressionProperties: {
@@ -21,7 +21,7 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'dbaName',
           expressionProperties: {
@@ -32,7 +32,7 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'dbaAddress',
           templateOptions: {
@@ -41,50 +41,53 @@ export class AwrFormService {
         }
       ]
     },
+    // {
+    //   fieldGroupClassName: 'display-flex',
+    //   fieldGroup: [
+    //     {
+    //       className: 'flex-1 break-word',
+    //       key: 'isMdrRelated',
+    //       type: 'checkbox',
+    //       templateOptions: {
+    //         label: 'MDR Related'
+    //       }
+    //     },
+    //     {
+    //       className: 'flex-1 break-word',
+    //       type: 'input',
+    //       key: 'mdrRelatedDetails',
+    //       templateOptions: {
+    //         label: 'Details',
+    //         maxLength: 50
+    //       }
+    //     },
+    //     {
+    //       className: 'flex-1 break-word',
+    //       type: 'checkbox',
+    //       key: 'isIncompleteDetails',
+    //       templateOptions: {
+    //         label: 'Type of Affiliation'
+    //       }
+    //     },
+    //     {
+    //       className: 'flex-1 break-word',
+    //       type: 'input',
+    //       key: 'incompleteDetails',
+    //       templateOptions: {
+    //         label: 'Details',
+    //         maxLength: 50
+    //       }
+    //     }
+    //   ]
+    // },
     {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          className: 'flex-1',
-          key: 'isMdrRelated',
-          type: 'checkbox',
-          templateOptions: {
-            label: 'MDR Related'
-          }
-        },
-        {
-          className: 'flex-2',
-          type: 'input',
-          key: 'mdrRelatedDetails',
-          templateOptions: {
-            label: 'Details',
-            maxLength: 500
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'checkbox',
-          key: 'isIncompleteDetails',
-          templateOptions: {
-            label: 'Type of Affiliation'
-          }
-        },
-        {
-          className: 'flex-2',
-          type: 'input',
-          key: 'incompleteDetails',
-          templateOptions: {
-            label: 'Details',
-            maxLength: 500
-          }
-        }
-      ]
+      template: '<div class="display-flex"><span class="mat-headline">PENDING REQUIREMENT</span></div>',
     },
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           key: 'isMdrRelated',
           type: 'checkbox',
           templateOptions: {
@@ -92,16 +95,16 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'mdrRelatedDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'checkbox',
           key: 'isIncompleteDetails',
           templateOptions: {
@@ -109,12 +112,12 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'incompleteDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         }
       ]
@@ -123,7 +126,7 @@ export class AwrFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-          className: 'flex-3',
+          className: 'flex-1 break-word',
           key: 'isIncompleteMerchantAgreement',
           type: 'checkbox',
           templateOptions: {
@@ -131,16 +134,16 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'incompleteMerchantAgreementDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'checkbox',
           key: 'isIncompleteSecretaryCertificate',
           templateOptions: {
@@ -148,12 +151,12 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'incompleteSecretaryCertificateDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         }
       ]
@@ -162,7 +165,7 @@ export class AwrFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           key: 'isIncompleteOif',
           type: 'checkbox',
           templateOptions: {
@@ -170,38 +173,42 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'incompleteOifDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
+          key: 'isIncompleteDetailsInOtherBusinessDocuments',
           type: 'checkbox',
-          key: 'isIncompleteBusinessDocuments',
           templateOptions: {
-            label: 'Incomplete Details in Other Business Documents'
+            label: 'Incomplete Details In Other Business Documents'
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
-          key: 'incompleteBusinessDocumentsDetails',
+          key: 'incompleteDetailsInOtherBusinessDocumentsDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
-        }
+        },
       ]
     },
+    // {
+    //   template: '<div class="display-flex"><span class="mat-headline">INCOMPLETE DETAILS IN OTHER BUSINESS DOCUMENTS</span></div>',
+    // },
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
+        
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           key: 'isIncompleteCorporatePapers',
           type: 'checkbox',
           templateOptions: {
@@ -209,16 +216,16 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'incompleteCorporatePapersDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           type: 'checkbox',
           key: 'isIncompleteId',
           templateOptions: {
@@ -226,12 +233,12 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'incompleteIdDtails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         }
       ]
@@ -240,7 +247,7 @@ export class AwrFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           key: 'isIncompletePhotos',
           type: 'checkbox',
           templateOptions: {
@@ -248,16 +255,16 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'incompletePhotosDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           type: 'checkbox',
           key: 'isIncompleteDocument',
           templateOptions: {
@@ -265,12 +272,12 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'incompleteDocumentDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         }
       ]
@@ -279,7 +286,7 @@ export class AwrFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           key: 'isNoProofDbaName',
           type: 'checkbox',
           templateOptions: {
@@ -287,16 +294,16 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'noProofDbaNameDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           type: 'checkbox',
           key: 'noProofDbaAddress',
           templateOptions: {
@@ -304,12 +311,12 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'noProofDbaAddressDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         }
       ]
@@ -318,7 +325,7 @@ export class AwrFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           key: 'isUnclearDocument',
           type: 'checkbox',
           templateOptions: {
@@ -326,16 +333,16 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'unclearDocumentDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           type: 'checkbox',
           key: 'isExpiredDocument',
           templateOptions: {
@@ -343,12 +350,12 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'expiredDocumentDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         }
       ]
@@ -357,7 +364,7 @@ export class AwrFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           key: 'isComparedWithOriginal',
           type: 'checkbox',
           templateOptions: {
@@ -365,16 +372,16 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'comparedWithOriginalDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           type: 'checkbox',
           key: 'isSignatureMatched',
           templateOptions: {
@@ -382,12 +389,12 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'signatureMatchedDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         }
       ]
@@ -396,7 +403,7 @@ export class AwrFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           key: 'isInformationMatching',
           type: 'checkbox',
           templateOptions: {
@@ -404,16 +411,16 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'informationMatchingDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           key: 'isMismatchSfccMdr',
           type: 'checkbox',
           templateOptions: {
@@ -421,12 +428,12 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'mismatchSfccMdrDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         }
       ]
@@ -435,7 +442,7 @@ export class AwrFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           type: 'checkbox',
           key: 'noPosFormInSharedFolder',
           templateOptions: {
@@ -443,16 +450,16 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'noPosFormInSharedFolderDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           key: 'noBuhApprovalOn',
           type: 'checkbox',
           templateOptions: {
@@ -460,12 +467,12 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'noBuhApprovalOnDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         }
       ]
@@ -474,7 +481,7 @@ export class AwrFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           key: 'isGprsTerminal',
           type: 'checkbox',
           templateOptions: {
@@ -482,7 +489,7 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           type: 'checkbox',
           key: 'noDebitFacility',
           templateOptions: {
@@ -490,7 +497,7 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           type: 'checkbox',
           key: 'zeroPayDelay',
           templateOptions: {
@@ -498,7 +505,7 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           type: 'checkbox',
           key: 'newContactDetails',
           templateOptions: {
@@ -511,7 +518,7 @@ export class AwrFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           key: 'isInvalidCasa',
           type: 'checkbox',
           templateOptions: {
@@ -519,16 +526,16 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'invalidCasaDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'checkbox',
           key: 'isSettlementOfOutstandingBalance',
           templateOptions: {
@@ -536,12 +543,12 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'settlementOfOutstandingBalanceDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         }
       ]
@@ -550,7 +557,7 @@ export class AwrFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           key: 'noHoldoutDeposit',
           type: 'checkbox',
           templateOptions: {
@@ -558,16 +565,16 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'noHoldoutDepositDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'checkbox',
           key: 'isEcrSp',
           templateOptions: {
@@ -575,12 +582,12 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'ecrSpDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         }
       ]
@@ -589,7 +596,7 @@ export class AwrFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           key: 'isNotes',
           type: 'checkbox',
           templateOptions: {
@@ -597,16 +604,24 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-5 break-word',
           type: 'input',
           key: 'notesDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
+      ]
+    },
+    {
+      template: '<div class="display-flex"><span class="mat-headline">REQUIREMENT TYPE</span></div>',
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           type: 'checkbox',
           key: 'isReturned',
           templateOptions: {
@@ -614,7 +629,7 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'checkbox',
           key: 'isNotReturned',
           templateOptions: {
@@ -627,7 +642,7 @@ export class AwrFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'ao',
           templateOptions: {
@@ -636,7 +651,7 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'bu',
           templateOptions: {
@@ -650,7 +665,7 @@ export class AwrFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'creditOfficerOfMaef',
           templateOptions: {
@@ -659,7 +674,7 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'approverOfMaef',
           templateOptions: {
@@ -673,16 +688,24 @@ export class AwrFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-          className: 'flex-2',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'remarksMaef',
           templateOptions: {
             label: 'Remarks / Special Conditions Indicated in the MAEF (if any)',
             disabled: true
           }
-        },
+        }
+      ]
+    },
+    {
+      template: '<div class="display-flex"><span class="mat-headline">AO COMPLIANCE</span></div>',
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
-          className: 'flex-1',
+          className: 'flex-1 break-word',
           type: 'checkbox',
           key: 'complete',
           templateOptions: {
@@ -690,40 +713,19 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-1',
-          type: 'checkbox',
+          className: 'flex-1 break-word',
+          type: 'checkDialog',
           key: 'cancel',
           templateOptions: {
             label: 'Cancel',
           }
         },
         {
-          className: 'flex-1',
-          type: 'checkbox',
-          key: 'cancelRemarks',
-          templateOptions: {
-            label: 'Cancel Remarks',
-          }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          className: 'flex-1',
-          type: 'checkbox',
+          className: 'flex-1 break-word',
+          type: 'checkDialog',
           key: 'isTempoWaiver',
           templateOptions: {
             label: 'Tempo Waiver'
-          }
-        },
-        {
-          className: 'flex-2',
-          type: 'input',
-          key: 'tempoWaiverDetails',
-          templateOptions: {
-            label: 'Details'
           }
         }
       ]

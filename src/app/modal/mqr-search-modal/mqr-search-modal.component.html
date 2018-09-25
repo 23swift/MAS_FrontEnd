@@ -1,0 +1,28 @@
+<div class="mat-headline display-flex">
+  <mat-icon>search</mat-icon> Search
+  <mat-icon class="close-button flex-1" (click)="closeDialog()">close</mat-icon>
+</div>
+<div class="mat-card-content" style="padding-top: 5px">
+  <mat-form-field class="flex-3">
+    <input matInput placeholder="Search" />
+  </mat-form-field>
+  <a (click)="openDialog()" color="primary" mat-mini-fab matTooltip="Search">
+    <mat-icon>search</mat-icon>
+  </a>
+</div>
+<div class="mat-card-content" style="padding-top: 5px;">
+  <div class="mat-checkbox" style="display: flex">
+    <mat-checkbox class="mat-form-field-infix" style="flex: 1">RT Number</mat-checkbox>
+    <mat-checkbox class="mat-form-field-infix" style="flex: 1">Request Type</mat-checkbox>
+    <mat-checkbox class="mat-form-field-infix" style="flex: 1">Legal/DBA Name</mat-checkbox>
+  </div>
+  <div class="mat-checkbox" style="display: flex">
+    <mat-checkbox class="mat-form-field-infix" style="flex: 1">Date Requested</mat-checkbox>
+    <mat-checkbox class="mat-form-field-infix" style="flex: 1">Request Status</mat-checkbox>
+    <mat-checkbox class="mat-form-field-infix" style="flex: 1">Account Officer</mat-checkbox>
+  </div>
+  <div class="mat-checkbox" style="display: flex">
+    <mat-checkbox class="mat-form-field-infix" style="flex: 1">Aging</mat-checkbox>
+  </div>
+
+</div>

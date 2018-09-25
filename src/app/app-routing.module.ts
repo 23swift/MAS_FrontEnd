@@ -5,7 +5,6 @@ import { PosRequestComponent } from './pos-request/pos-request.component';
 import { PosRequestStepperComponent } from './pos-request-stepper/pos-request-stepper.component';
 import { BranchAffiliationComponent } from './branch-affiliation/branch-affiliation.component';
 import { AdditionalFacilityComponent } from './additional-facility/additional-facility.component';
-import { FileMaintenanceComponent } from './file-maintenance/file-maintenance.component';
 import { ExtentionComponent } from './extention/extention.component';
 import { BranchFormComponent } from './forms/branch-form/branch-form.component';
 import { AoEncoderComponent } from './new-affiliation/ao-encoder/ao-encoder.component';
@@ -60,6 +59,9 @@ import { DefaultMidMaintenanceComponent } from './administration/default-mid-mai
 import { MidRequestComponent } from './mid-request/mid-request.component';
 import { DebitTidComponent } from './debit-tid/debit-tid.component';
 import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
+import { FmLeAoEncoderComponent } from './file-maintenance/legal-entity/fm-le-ao-encoder/fm-le-ao-encoder.component';
+import { FmBrAoEncoderComponent } from './file-maintenance/branch/fm-br-ao-encoder/fm-br-ao-encoder.component';
+import { FmMidAoEncoderComponent } from './file-maintenance/mid/fm-mid-ao-encoder/fm-mid-ao-encoder.component';
 
 
 const routes: Routes = [
@@ -76,7 +78,29 @@ const routes: Routes = [
       { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
     ]
   },
-  { path: 'ba/:mode', component: BranchAffiliationComponent },
+  { path: 'ba/:mode', component: BranchAffiliationComponent, 
+     children: [
+      // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
+      { path: '', component: BranchListComponent, outlet: 'branch' },
+      {
+        path: 'branch/:mode/:id', component: BranchFormComponent, outlet: 'branch', children: [
+          { path: '', component: MidComponent, outlet: 'mid' }
+        ]
+      },
+      {
+        path: 'branch/:mode', component: BranchFormComponent, outlet: 'branch', children: [
+          { path: '', component: MidComponent, outlet: 'mid' }
+        ]
+      },
+      { path: '', component: BranchListAttachmentComponent, outlet: 'branchOIF' },
+      { path: 'OIF/:id?', component: OcularInspectionFormComponent, outlet: 'branchOIF' },
+      { path: '', component: BranchListAttachmentPOSComponent, outlet: 'branchPOS' },
+      { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOS' },
+      { path: 'MID/:form', component: MidComponent, outlet: 'mid' },
+      { path: '', component: DocumentCheckListComponent, outlet: 'documentCheckList' },
+      { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
+    ]
+  },
   {
     path: 'additionalFacility/:mode', component: AdditionalFacilityComponent,
     children: [
@@ -88,7 +112,6 @@ const routes: Routes = [
       { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
     ]
   },
-  { path: 'fileMaintenance', component: FileMaintenanceComponent },
   { path: 'ext/:mode', component: ExtentionComponent },
   { path: 'maef', component: MaefFormComponent },
   { path: 'approver/:mode/:id', component: ApproverComponent },
@@ -232,8 +255,9 @@ const routes: Routes = [
       { path: 'MID/:form', component: MidComponent, outlet: 'mid' }
     ]
   },
-
-
+  { path: 'fm/legalEntity/aoEncoder', component: FmLeAoEncoderComponent },
+  { path: 'fm/branch/aoEncoder', component: FmBrAoEncoderComponent },
+  { path: 'fm/mid/aoEncoder', component: FmMidAoEncoderComponent },
   ////////////////////// Data Management start-> /////////////////////////
   // { path: 'dm/ao', component: AoMaintenanceComponent },
   // { path: 'dm/ao/:mode', component: AoMaintenanceFormComponent },
@@ -262,7 +286,7 @@ const routes: Routes = [
   { path: 'request', component: RequestComponent },
   { path: 'branchForm', component: BranchFormComponent },
   { path: 'defaultMIDMaintenance', component: DefaultMidMaintenanceComponent },
-  { path: 'debitTid', component: DebitTidComponent},
+  { path: 'debitTid', component: DebitTidComponent },
   { path: 'custProfile', component: CustomerProfileComponent }
 ];
 

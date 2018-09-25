@@ -41,6 +41,10 @@
             <button *ngIf="showApprovalOptions" (click)="return()" mat-flat-button color="primary" matTooltip="Return Request"> Approve</button>
             <button *ngIf="showApprovalOptions" (click)="submit()" mat-flat-button color="primary" matTooltip="Submit Request"> Decline</button>
             <!--   <- approval -->
+            <button *ngIf="showMqrUserProcessingButton" (click)="return()" mat-flat-button color="primary" matTooltip="Return to AO"><mat-icon class="request-mat-icon">subdirectory_arrow_left</mat-icon> Return to AO</button>
+            <button *ngIf="showMqrUserProcessingButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Submit For Approval"><mat-icon class="request-mat-icon">thumb_up</mat-icon> Submit For Approval</button>
+            <button *ngIf="showMqrUserProcessingButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Forward to MDCS"><mat-icon class="request-mat-icon">arrow_forward</mat-icon> Forward to MDCS</button>
+
             <!-- BUTTON FOR CREATION -->
          <!--   <button *ngIf="showCreateOptions" (click)="submit()" mat-flat-button matTooltip="Submit Request"><mat-icon  class="request-mat-icon">arrow_forward</mat-icon> Submit Request</button> -->
 

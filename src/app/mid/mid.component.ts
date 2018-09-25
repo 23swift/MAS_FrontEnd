@@ -1,9 +1,10 @@
-import { Component, OnInit, Input, Renderer2 } from '@angular/core';
+import { Component, OnInit, Input, Renderer2, ElementRef, ViewChildren, QueryList } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MidService } from './mid.service';
 import { MatDialog } from '@angular/material';
 import { MidFormModalComponent } from '../modal/mid-form-modal/mid-form-modal.component';
 import { MidModalComponent } from '../modal/mid-modal/mid-modal.component';
+import { FormControl } from '../../../node_modules/@angular/forms';
 
 @Component({
   selector: 'app-mid',
@@ -12,15 +13,18 @@ import { MidModalComponent } from '../modal/mid-modal/mid-modal.component';
   providers: [MidService]
 })
 export class MidComponent implements OnInit {
+  @ViewChildren('midInput') midInputRef: QueryList<ElementRef>;
+  // private midInputRef: ElementRef;
   displayedColumns: string[];
   mode: string;
-  dataSource;
+  dataSource: Object[];
   form: string;
-  midIndex: number;
-  midControl: boolean;
-  midIsSaved: boolean;
-  tidIndex: number;
-  tidControl: boolean;
+  midIndex: number; // ROW WHERE ADDING OR UPDATE OF MID IS CLICKED
+  midContainer: number[]; // CONTAINER OF ALL MIDs
+  midInput: FormControl; // FORM CONTROL FOR MID INPUTTED
+  tidIndex: number; // ROW WHERE ADDING OR UPDATE OF TID IS CLICKED
+  tidContainer: string[]; // CONTAINER OF ALL TIDs
+  tidInput: FormControl; // FORM CONTROL FOR TID INPUTTED
 
   @Input() action?: boolean;
   @Input() update?: boolean;
@@ -30,11 +34,14 @@ export class MidComponent implements OnInit {
   ngOnInit() {
     this.dataSource = this._service.Get();
     this.form = this._route.snapshot.params['form'] || this.action;
-    this.midIsSaved = false;
+    this.midContainer = new Array<number>(this.dataSource.length);
+    this.tidContainer = new Array<string>(this.dataSource.length);
     /////// TO BE DELETED ////////
     this.update = true;
     /////////////////////////////
     this.displayedColumns = this._service.GetTableFields(this.update);
+    this.midInput = new FormControl('');
+    this.tidInput = new FormControl('');
 
     if (this.action == false) {
       this.form = 'POS';
@@ -47,45 +54,55 @@ export class MidComponent implements OnInit {
     });
   }
 
-  GetItem(id) {
-    this._dialog.open(MidFormModalComponent, {
-      width: '80%'
-    });
-  }
-
   showMidUpdateButton(index) {
     this.midIndex = index;
+    if (this.midContainer[index] != undefined) {
+      this.midInput.setValue(this.midContainer[index]);
+    } else {
+      this.midInput.setValue(undefined);
+    }
+  }
+
+  saveMid(element, index) {
+    const value = element.value;
+    if (value.match(/^\d{10}$|^$/)) {
+      if (value === "") {
+        this.midContainer.splice(index, 1);  
+      } else {
+        this.midContainer.splice(index, 1, +value);
+      }
+      this.midIndex = undefined;
+    } else {
+      console.log('Invalid MIDs Inputted!');
+    }
+  }
+
+  cancel() {
+    this.midIndex = undefined;
+    this.tidIndex = undefined;
   }
 
   showTidUpdateButton(index) {
     this.tidIndex = index;
-  }
 
-  showMidControl() {
-    this.midControl = true;
-  }
-
-  showTidControl() {
-    this.tidControl = true;
-  }
-
-  checkSave(index) {
-    if (this.midIsSaved === false) {
-      document.getElementById('mid' + index).innerHTML = '';
+    if (this.tidContainer[index] != undefined) {
+      this.tidInput.setValue(this.tidContainer[index]);
+    } else {
+      this.tidInput.setValue(undefined);
     }
-    this.midControl = false;
   }
 
-  saveMid() {
-    this.midIsSaved = true;
+  saveTid(element, index) {
+    const value = element.value;
+    if (value.match(/^\d{10}(,\d{10})+?$/)) {
+      if (value === "") {
+        this.tidContainer.splice(index, 1);  
+      } else {
+        this.tidContainer.splice(index, 1, value);
+      }
+      this.tidIndex = undefined;
+    } else {
+      console.log('Invalid TIDs Inputted!');
+    }
   }
-
-  // hidTidControl() {
-  //   this.tidControl = false;
-  // }
-  // generateMid() {
-  //   this._dialog.open(MidModalComponent, {
-  //     width: '80%'
-  //   })
-  // }
 }
