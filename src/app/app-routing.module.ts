@@ -78,7 +78,29 @@ const routes: Routes = [
       { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
     ]
   },
-  { path: 'ba/:mode', component: BranchAffiliationComponent },
+  { path: 'ba/:mode', component: BranchAffiliationComponent, 
+     children: [
+      // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
+      { path: '', component: BranchListComponent, outlet: 'branch' },
+      {
+        path: 'branch/:mode/:id', component: BranchFormComponent, outlet: 'branch', children: [
+          { path: '', component: MidComponent, outlet: 'mid' }
+        ]
+      },
+      {
+        path: 'branch/:mode', component: BranchFormComponent, outlet: 'branch', children: [
+          { path: '', component: MidComponent, outlet: 'mid' }
+        ]
+      },
+      { path: '', component: BranchListAttachmentComponent, outlet: 'branchOIF' },
+      { path: 'OIF/:id?', component: OcularInspectionFormComponent, outlet: 'branchOIF' },
+      { path: '', component: BranchListAttachmentPOSComponent, outlet: 'branchPOS' },
+      { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOS' },
+      { path: 'MID/:form', component: MidComponent, outlet: 'mid' },
+      { path: '', component: DocumentCheckListComponent, outlet: 'documentCheckList' },
+      { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
+    ]
+  },
   {
     path: 'additionalFacility/:mode', component: AdditionalFacilityComponent,
     children: [

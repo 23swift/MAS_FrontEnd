@@ -27,6 +27,10 @@ export class ParameterMaintenanceFormComponent implements OnInit {
     this.fields = this._service.GetParameterMaintenanceFields();
   }
 
+  save(model) {
+    this._matDialogRef.close(model);
+  }
+
   cancel() {
       this._matDialogRef.close();
   }
