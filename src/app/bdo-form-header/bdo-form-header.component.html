@@ -10,7 +10,7 @@
 
         <div fxLayout="row" fxLayoutGap="6px" fxLayoutAlign="space-around center">
             <span fxFlex></span>
-
+<!--
            <div *ngIf="showApprovalOptions">
                     <button mat-flat-button style="font-size: 12px;" color="primary" matTooltip="Approve Request">
                             <span style="color:white">Return to AO</span>  
@@ -21,12 +21,12 @@
                 <button mat-flat-button style="font-size: 12px;" color="primary" matTooltip="Approve Request">
 						<span style="color:white">Approve</span>  
 						</button>
-                <button mat-flat-button style="font-size: 12px;" matTooltip="Decline request">
+                <button mat-flat-button style="font-size: 12px;" matTooltip="Decline request"> -->
 						  <!-- <mat-icon  class="request-mat-icon">clear</mat-icon> -->
-						  <span style="color:white">Decline</span>  
+				<!--		  <span style="color:white">Decline</span>  
 						  </button>
 
-           </div>
+           </div> -->
 
 
             <button *ngIf="showRequestFlowOptions" (click)="return()" mat-flat-button color="primary" matTooltip="Return Request"><mat-icon  class="request-mat-icon">subdirectory_arrow_left</mat-icon> Return Request</button>
@@ -35,6 +35,12 @@
             <button *ngIf="showCadencieProcessingButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Submit For Cadencie Processing"><mat-icon class="request-mat-icon">arrow_forward</mat-icon> Submit For Cadencie Processing</button>
             <button *ngIf="showPosProcessingButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Submit For POS Processing"><mat-icon class="request-mat-icon">arrow_forward</mat-icon> Submit For POS Processing</button>
             <button *ngIf="showPsCheckerButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Submit For Inventory Checking"><mat-icon class="request-mat-icon">arrow_forward</mat-icon> Submit For Inventory Checking</button>
+             <!--   approval -> -->
+            <button *ngIf="showApprovalOptions" (click)="return()" mat-flat-button color="primary" matTooltip="Return to AO"> Return to AO</button>
+            <button *ngIf="showApprovalOptions" (click)="submit()" mat-flat-button color="primary" matTooltip="Submit Request"> Return to MAMO</button>
+            <button *ngIf="showApprovalOptions" (click)="return()" mat-flat-button color="primary" matTooltip="Return Request"> Approve</button>
+            <button *ngIf="showApprovalOptions" (click)="submit()" mat-flat-button color="primary" matTooltip="Submit Request"> Decline</button>
+            <!--   <- approval -->
             <!-- BUTTON FOR CREATION -->
          <!--   <button *ngIf="showCreateOptions" (click)="submit()" mat-flat-button matTooltip="Submit Request"><mat-icon  class="request-mat-icon">arrow_forward</mat-icon> Submit Request</button> -->
 

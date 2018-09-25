@@ -91,7 +91,7 @@ const routes: Routes = [
   { path: 'fileMaintenance', component: FileMaintenanceComponent },
   { path: 'ext/:mode', component: ExtentionComponent },
   { path: 'maef', component: MaefFormComponent },
-  { path: 'reqapprover', component: ApproverComponent },
+  { path: 'approver/:mode/:id', component: ApproverComponent },
   { path: 'branch/:mode', component: BranchFormComponent },
   { path: 'branchinfo', component: BranchInfoComponent },
   { path: 'branchOIF', component: OcularInspectionFormComponent },
