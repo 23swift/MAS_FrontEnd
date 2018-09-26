@@ -124,6 +124,8 @@ import { DebitTidComponent } from './debit-tid/debit-tid.component';
 import { FmLeAoEncoderComponent } from './file-maintenance/legal-entity/fm-le-ao-encoder/fm-le-ao-encoder.component';
 import { FmMidAoEncoderComponent } from './file-maintenance/mid/fm-mid-ao-encoder/fm-mid-ao-encoder.component';
 import { FmBrAoEncoderComponent } from './file-maintenance/branch/fm-br-ao-encoder/fm-br-ao-encoder.component';
+import { MdcsEncoderDashboardComponent } from './dashboard/mdcs-encoder-dashboard/mdcs-encoder-dashboard.component';
+import { MdcsCheckerDashboardComponent } from './dashboard/mdcs-checker-dashboard/mdcs-checker-dashboard.component';
 
 
 
@@ -222,7 +224,9 @@ import { FmBrAoEncoderComponent } from './file-maintenance/branch/fm-br-ao-encod
     DebitTidComponent,
     FmLeAoEncoderComponent,
     FmMidAoEncoderComponent,
-    FmBrAoEncoderComponent
+    FmBrAoEncoderComponent,
+    MdcsEncoderDashboardComponent,
+    MdcsCheckerDashboardComponent
   ],
   imports: [
     BrowserModule,

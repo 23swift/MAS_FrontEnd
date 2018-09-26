@@ -62,6 +62,8 @@ import { CustomerProfileComponent } from './customer-profile/customer-profile.co
 import { FmLeAoEncoderComponent } from './file-maintenance/legal-entity/fm-le-ao-encoder/fm-le-ao-encoder.component';
 import { FmBrAoEncoderComponent } from './file-maintenance/branch/fm-br-ao-encoder/fm-br-ao-encoder.component';
 import { FmMidAoEncoderComponent } from './file-maintenance/mid/fm-mid-ao-encoder/fm-mid-ao-encoder.component';
+import { MdcsEncoderDashboardComponent } from './dashboard/mdcs-encoder-dashboard/mdcs-encoder-dashboard.component';
+import { MdcsCheckerDashboardComponent } from './dashboard/mdcs-checker-dashboard/mdcs-checker-dashboard.component';
 
 
 const routes: Routes = [
@@ -169,6 +171,8 @@ const routes: Routes = [
   { path: 'apprDashboard', component: ApproverDashboardComponent },
   { path: 'mauEncoderDashboard', component: MauEncoderDashboardComponent },
   { path: 'mauOfficerDashboard', component: MauOfficerDashboardComponent },
+  { path: 'mdcsEncoderDashboard', component: MdcsEncoderDashboardComponent },
+  { path: 'mdcsCheckerDashboard', component: MdcsCheckerDashboardComponent },
   { path: 'mdcsUserDashboard', component: MdcsUserDashboardComponent },
   { path: 'mdmUserDashboard', component: MdmUserDashboardComponent },
   { path: 'mqrDashboard', component: MqrDashboardComponent },

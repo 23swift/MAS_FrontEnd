@@ -1,46 +1,56 @@
 <div class="header-container">
-    <!-- <div><img src="assets/img/bdoLogo.png" class="header-logo" alt=""> </div> -->
-    <div style="margin-left:10px;"> <span class="mat-title">{{text}}</span>
+    <div fxHide fxShow.lt-lg>
+        <img src="assets/img/bdoLogo.png" class="header-logo" alt="">
+    </div>
+    <div style="margin-left:10px;">
+        <span class="mat-title">{{text}}</span>
         <br>
         <span style="color:orange" class="mat-subheading-2">{{sub_text}}</span>
     </div>
     <span fxFlex></span>
 
-    <mat-toolbar class="request-mat-toolbar" fxFlex fxShow=”true” fxHide.sm=”true”>
+    <mat-toolbar class="request-mat-toolbar" fxFlex fxHide fxShow.gt-md>
 
         <div fxLayout="row" fxLayoutGap="6px" fxLayoutAlign="space-around center">
             <span fxFlex></span>
 
-           <div *ngIf="showApprovalOptions">
-                    <button mat-flat-button style="font-size: 12px;" color="primary" matTooltip="Approve Request">
-                            <span style="color:white">Return to AO</span>  
-                            </button>
-                    <button mat-flat-button style="font-size: 12px;" color="primary" matTooltip="Approve Request">
-                            <span style="color:white">Return to MAMO</span>  
-                            </button>
+            <div *ngIf="showApprovalOptions">
                 <button mat-flat-button style="font-size: 12px;" color="primary" matTooltip="Approve Request">
-						<span style="color:white">Approve</span>  
-						</button>
+                    <span style="color:white">Return to AO</span>
+                </button>
+                <button mat-flat-button style="font-size: 12px;" color="primary" matTooltip="Approve Request">
+                    <span style="color:white">Return to MAMO</span>
+                </button>
+                <button mat-flat-button style="font-size: 12px;" color="primary" matTooltip="Approve Request">
+                    <span style="color:white">Approve</span>
+                </button>
                 <button mat-flat-button style="font-size: 12px;" matTooltip="Decline request">
-						  <!-- <mat-icon  class="request-mat-icon">clear</mat-icon> -->
-						  <span style="color:white">Decline</span>  
-						  </button>
-
-           </div>
-
-
-            <button *ngIf="showRequestFlowOptions" (click)="return()" mat-flat-button color="primary" matTooltip="Return Request"><mat-icon  class="request-mat-icon">subdirectory_arrow_left</mat-icon> Return Request</button>
-            <button *ngIf="showRequestFlowOptions" (click)="submit()" mat-flat-button color="primary" matTooltip="Submit Request"><mat-icon  class="request-mat-icon">arrow_forward</mat-icon> Submit Request</button>
-            <button *ngIf="showWelcomeLetter" (click)="submit()" mat-flat-button color="primary" matTooltip="Generate Welcome Letter"><mat-icon class="request-mat-icon">mail_outline</mat-icon> Generate Welcome Letter</button>
-            <button *ngIf="showCadencieProcessingButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Submit For Cadencie Processing"><mat-icon class="request-mat-icon">arrow_forward</mat-icon> Submit For Cadencie Processing</button>
-            <button *ngIf="showPosProcessingButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Submit For POS Processing"><mat-icon class="request-mat-icon">arrow_forward</mat-icon> Submit For POS Processing</button>
-            <button *ngIf="showPsCheckerButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Submit For Inventory Checking"><mat-icon class="request-mat-icon">arrow_forward</mat-icon> Submit For Inventory Checking</button>
-            <button *ngIf="showMqrUserProcessingButton" (click)="return()" mat-flat-button color="primary" matTooltip="Return to AO"><mat-icon class="request-mat-icon">subdirectory_arrow_left</mat-icon> Return to AO</button>
-            <button *ngIf="showMqrUserProcessingButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Reviewed"><mat-icon class="request-mat-icon">thumb_up</mat-icon> Reviewed</button>
-            <button *ngIf="showMqrUserProcessingButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Complete"><mat-icon class="request-mat-icon">check</mat-icon> Complete</button>
-
-            <!-- BUTTON FOR CREATION -->
-         <!--   <button *ngIf="showCreateOptions" (click)="submit()" mat-flat-button matTooltip="Submit Request"><mat-icon  class="request-mat-icon">arrow_forward</mat-icon> Submit Request</button> -->
+                    <!-- <mat-icon  class="request-mat-icon">clear</mat-icon> -->
+                    <span style="color:white">Decline</span>
+                </button>
+            </div>
+            <div *ngIf="showRequestFlowOptions">
+                <button (click)="return()" mat-flat-button color="primary" matTooltip="Return Request">
+                    <mat-icon class="request-mat-icon">subdirectory_arrow_left</mat-icon> Return Request</button>
+                <button (click)="submit()" mat-flat-button color="primary" matTooltip="Submit Request">
+                    <mat-icon class="request-mat-icon">arrow_forward</mat-icon> Submit Request</button>
+            </div>
+            <button *ngIf="showWelcomeLetter" (click)="submit()" mat-flat-button color="primary" matTooltip="Generate Welcome Letter">
+                <mat-icon class="request-mat-icon">mail_outline</mat-icon> Generate Welcome Letter</button>
+            <button *ngIf="showCadencieProcessingButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Submit For Processing">
+                <mat-icon class="request-mat-icon">arrow_forward</mat-icon> Submit For Processing</button>
+            <button *ngIf="showPosProcessingButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Submit For POS Processing">
+                <mat-icon class="request-mat-icon">arrow_forward</mat-icon> Submit For POS Processing</button>
+            <button *ngIf="showPsCheckerButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Submit For Inventory Checking">
+                <mat-icon class="request-mat-icon">arrow_forward</mat-icon> Submit For Inventory Checking</button>
+            <button *ngIf="showMqrUserProcessingButton" (click)="return()" mat-flat-button color="primary" matTooltip="Return to AO">
+                <mat-icon class="request-mat-icon">subdirectory_arrow_left</mat-icon> Return to AO</button>
+            <button *ngIf="showMqrUserProcessingButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Reviewed">
+                <mat-icon class="request-mat-icon">thumb_up</mat-icon> Reviewed</button>
+            <button *ngIf="showMqrUserProcessingButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Complete">
+                <mat-icon class="request-mat-icon">check</mat-icon> Complete</button>
+            <button *ngIf="showCreateOptions" (click)="submit()" mat-flat-button matTooltip="Submit Request">
+                <mat-icon class="request-mat-icon">arrow_forward</mat-icon> Submit Request</button>
 
 
             <!-- 	<button mat-flat-button color="primary" matTooltip="Approve Request" ><mat-icon  class="request-mat-icon">done</mat-icon>Approve</button>
@@ -50,25 +60,51 @@
         </div>
     </mat-toolbar>
 
-    <!-- <div>
-        <button fxFlex fxShow=”true” fxHide.lg=”true” mat-flat-button [matMenuTriggerFor]="requestMenu">
-  			<mat-icon color="primary">menu</mat-icon>
-  	</button>
+    <div fxFlex fxShow fxHide.gt-md>
+        <button mat-flat-button style="float: right;" [matMenuTriggerFor]="requestMenu">
+            <mat-icon class="request-mat-icon">menu</mat-icon>
+        </button>
 
         <mat-menu class="request-menu-container" #requestMenu="matMenu" style="padding:0;">
+            <div fxLayout="column" fxLayoutAlign="start" fxLayoutGap="2px">
+                <!-- APPROVAL MENU -->
+                <button *ngIf="showApprovalOptions" mat-flat-button style="font-size: 12px;" color="primary" matTooltip="Approve Request">
+                    <span style="color:white">Return to AO</span>
+                </button>
+                <button *ngIf="showApprovalOptions" mat-flat-button style="font-size: 12px;" color="primary" matTooltip="Approve Request">
+                    <span style="color:white">Return to MAMO</span>
+                </button>
+                <button *ngIf="showApprovalOptions" mat-flat-button style="font-size: 12px;" color="primary" matTooltip="Approve Request">
+                    <span style="color:white">Approve</span>
+                </button>
+                <button *ngIf="showApprovalOptions" mat-flat-button style="font-size: 12px;" matTooltip="Decline request">
+                    <span style="color:white">Decline</span>
+                </button>
+                <button *ngIf="showApprovalOptions" (click)="return()" mat-flat-button color="primary" matTooltip="Return Request">
+                    <mat-icon class="request-mat-icon">subdirectory_arrow_left</mat-icon> Return Request</button>
+                <button *ngIf="showApprovalOptions" (click)="submit()" mat-flat-button color="primary" matTooltip="Submit Request">
+                    <mat-icon class="request-mat-icon">arrow_forward</mat-icon> Submit Request</button>
 
-            <div fxLayout="column" fxLayoutAlign="start">
 
-                <button mat-menu-item color="primary" matTooltip="Approve Request"><mat-icon class="request-mat-icon" >done</mat-icon>Approve</button>
-                <button mat-menu-item color="primary" matTooltip="Decline request"><mat-icon  class="request-mat-icon" >clear</mat-icon>Decline</button>
-                <button mat-menu-item color="primary" matTooltip="Return Request" matTooltip="Return Request"><mat-icon  class="request-mat-icon" >subdirectory_arrow_left</mat-icon>Return</button>
-                <button mat-menu-item color="primary" matTooltip="Submit Request" matTooltip="Submit Request"><mat-icon  class="request-mat-icon">arrow_forward</mat-icon>Submit</button>
-
-
+                <button *ngIf="showWelcomeLetter" (click)="submit()" mat-flat-button color="primary" matTooltip="Generate Welcome Letter">
+                    <mat-icon class="request-mat-icon">mail_outline</mat-icon> Generate Welcome Letter</button>
+                <button *ngIf="showCadencieProcessingButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Submit For Processing">
+                    <mat-icon class="request-mat-icon">arrow_forward</mat-icon> Submit For Processing</button>
+                <button *ngIf="showPosProcessingButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Submit For POS Processing">
+                    <mat-icon class="request-mat-icon">arrow_forward</mat-icon> Submit For POS Processing</button>
+                <button *ngIf="showPsCheckerButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Submit For Inventory Checking">
+                    <mat-icon class="request-mat-icon">arrow_forward</mat-icon> Submit For Inventory Checking</button>
+                <button *ngIf="showMqrUserProcessingButton" (click)="return()" mat-flat-button color="primary" matTooltip="Return to AO">
+                    <mat-icon class="request-mat-icon">subdirectory_arrow_left</mat-icon> Return to AO</button>
+                <button *ngIf="showMqrUserProcessingButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Reviewed">
+                    <mat-icon class="request-mat-icon">thumb_up</mat-icon> Reviewed</button>
+                <button *ngIf="showMqrUserProcessingButton" (click)="submit()" mat-flat-button color="primary" matTooltip="Complete">
+                    <mat-icon class="request-mat-icon">check</mat-icon> Complete</button>
+                <button *ngIf="showCreateOptions" (click)="submit()" mat-flat-button matTooltip="Submit Request">
+                    <mat-icon class="request-mat-icon">arrow_forward</mat-icon> Submit Request</button>
             </div>
-
         </mat-menu>
 
-    </div> -->
+    </div>
 
 </div>

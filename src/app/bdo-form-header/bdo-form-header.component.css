@@ -55,3 +55,7 @@
 .request-mat-icon {
     color: #FDB913;
 }
+
+.mat-flat-button {
+    min-width: 0px;
+}
