@@ -82,11 +82,11 @@ const routes: Routes = [
   {
     path: 'ba/:mode', component: BranchAffiliationComponent,
     children: [
-      {
-        path: '', component: CustomerProfileListComponent, outlet: 'customerProfile', children: [
-          { path: 'custProfile/:id?', component: CustomerProfileComponent, outlet: 'customerProfile' },
-        ]
-      },
+      // {
+      //   path: '', component: CustomerProfileListComponent, outlet: 'customerProfile', children: [
+      //     { path: 'custProfile/:id?', component: CustomerProfileComponent, outlet: 'customerProfile' },
+      //   ]
+      // },
 
       // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
       { path: '', component: BranchListComponent, outlet: 'branch' },
@@ -100,7 +100,8 @@ const routes: Routes = [
           { path: '', component: MidComponent, outlet: 'mid' }
         ]
       },
-
+      { path: '', component: CustomerProfileListComponent, outlet: 'customerProfile' },
+      { path: 'custProfile/:id?', component: CustomerProfileComponent, outlet: 'customerProfile' },
       { path: '', component: BranchListAttachmentComponent, outlet: 'branchOIF' },
       { path: 'OIF/:id?', component: OcularInspectionFormComponent, outlet: 'branchOIF' },
       { path: '', component: BranchListAttachmentPOSComponent, outlet: 'branchPOS' },

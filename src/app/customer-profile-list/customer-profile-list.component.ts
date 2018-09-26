@@ -20,7 +20,7 @@ const ELEMENT_DATA: CustomerProfileDisplayInfo[] = [
 })
 
 export class CustomerProfileListComponent implements OnInit {
-  displayedColumns: string[] = ['BusinessName', 'Ownership', 'SecDtiRegistrationDate', 'Operation'];
+  displayedColumns: string[] = ['BusinessName', 'Operation'];
   dataSource = ELEMENT_DATA;
   @Input() displayMode: boolean = false;
 
@@ -30,8 +30,10 @@ export class CustomerProfileListComponent implements OnInit {
   ngOnInit() {
   }
 
-  getItem(Id) {
+  getItem() {
     this.router.navigate([{ outlets: { primary: '', customerProfile: 'custProfile' } }]);
   }
+
+
 
 }
