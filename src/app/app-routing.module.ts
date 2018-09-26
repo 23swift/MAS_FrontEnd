@@ -62,6 +62,7 @@ import { CustomerProfileComponent } from './customer-profile/customer-profile.co
 import { FmLeAoEncoderComponent } from './file-maintenance/legal-entity/fm-le-ao-encoder/fm-le-ao-encoder.component';
 import { FmBrAoEncoderComponent } from './file-maintenance/branch/fm-br-ao-encoder/fm-br-ao-encoder.component';
 import { FmMidAoEncoderComponent } from './file-maintenance/mid/fm-mid-ao-encoder/fm-mid-ao-encoder.component';
+import { CustomerProfileListComponent } from './customer-profile-list/customer-profile-list.component';
 
 
 const routes: Routes = [
@@ -78,8 +79,15 @@ const routes: Routes = [
       { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
     ]
   },
-  { path: 'ba/:mode', component: BranchAffiliationComponent, 
-     children: [
+  {
+    path: 'ba/:mode', component: BranchAffiliationComponent,
+    children: [
+      {
+        path: '', component: CustomerProfileListComponent, outlet: 'customerProfile', children: [
+          { path: 'custProfile/:id?', component: CustomerProfileComponent, outlet: 'customerProfile' },
+        ]
+      },
+
       // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
       { path: '', component: BranchListComponent, outlet: 'branch' },
       {
@@ -92,6 +100,7 @@ const routes: Routes = [
           { path: '', component: MidComponent, outlet: 'mid' }
         ]
       },
+
       { path: '', component: BranchListAttachmentComponent, outlet: 'branchOIF' },
       { path: 'OIF/:id?', component: OcularInspectionFormComponent, outlet: 'branchOIF' },
       { path: '', component: BranchListAttachmentPOSComponent, outlet: 'branchPOS' },

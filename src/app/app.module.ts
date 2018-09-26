@@ -124,7 +124,8 @@ import { DebitTidComponent } from './debit-tid/debit-tid.component';
 import { FmLeAoEncoderComponent } from './file-maintenance/legal-entity/fm-le-ao-encoder/fm-le-ao-encoder.component';
 import { FmMidAoEncoderComponent } from './file-maintenance/mid/fm-mid-ao-encoder/fm-mid-ao-encoder.component';
 import { FmBrAoEncoderComponent } from './file-maintenance/branch/fm-br-ao-encoder/fm-br-ao-encoder.component';
-import { MqrSearchModalComponent } from './modal/mqr-search-modal/mqr-search-modal.component';
+import { CustomerProfileListComponent } from './customer-profile-list/customer-profile-list.component';
+import { SearchModalComponent } from './modal/search-modal/search-modal.component';
 
 
 
@@ -224,7 +225,8 @@ import { MqrSearchModalComponent } from './modal/mqr-search-modal/mqr-search-mod
     FmLeAoEncoderComponent,
     FmMidAoEncoderComponent,
     FmBrAoEncoderComponent,
-    MqrSearchModalComponent
+    SearchModalComponent,
+    CustomerProfileListComponent
   ],
   imports: [
     BrowserModule,
@@ -285,7 +287,7 @@ import { MqrSearchModalComponent } from './modal/mqr-search-modal/mqr-search-mod
     AoListModalComponent, MidFormModalComponent,
     DocumentChecklistMaintenanceFormComponent, ServiceFeeContractFormComponent,
     DocumentChecklistConfigurationFormComponent, ParameterMaintenanceFormComponent,
-    ParameterMaintenanceDetailsComponent, AoMaintenanceFormComponent, BuMaintenanceFormComponent, DefaultMidMaintenanceFormComponent, MidFormComponent, MidModalComponent, DeleteModalComponent,MqrSearchModalComponent],
+    ParameterMaintenanceDetailsComponent, AoMaintenanceFormComponent, BuMaintenanceFormComponent, DefaultMidMaintenanceFormComponent, MidFormComponent, MidModalComponent, DeleteModalComponent,SearchModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

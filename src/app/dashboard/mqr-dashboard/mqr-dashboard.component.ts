@@ -3,7 +3,8 @@ import { MqrDashboardService } from './mqr-dashboard.service';
 //import { IRequestDisplay } from '../../temp/interface/irequest-display';
 import { Route, Router, ActivatedRoute } from '../../../../node_modules/@angular/router';
 import { MatDialog, MatDialogRef, MatSnackBar } from '../../../../node_modules/@angular/material';
-import { MqrSearchModalComponent } from '../../modal/mqr-search-modal/mqr-search-modal.component';
+
+import { SearchModalComponent } from '../../modal/search-modal/search-modal.component';
 
 export interface IRequestDisplay {
   Id: number;
@@ -91,7 +92,7 @@ export class MqrDashboardComponent implements OnInit {
   }
 
   openSearchDialog() {
-    const dialogRef = this._matDialog.open(MqrSearchModalComponent, {
+    const dialogRef = this._matDialog.open(SearchModalComponent, {
       autoFocus: false
     });
 

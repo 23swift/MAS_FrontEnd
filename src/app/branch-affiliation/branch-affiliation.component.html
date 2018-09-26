@@ -3,10 +3,11 @@
 <mat-vertical-stepper [linear]="true" #stepper>
     <mat-step [completed]="false">
         <ng-template matStepLabel>
-            <span class="mat-subheading-1">Create Customer Profile</span>
+            <span class="mat-subheading-1">Select Customer From List</span>
         </ng-template>
         <span class="mat-headline">Customer Profile</span>
-        <app-customer-profile [displayMode]="false"></app-customer-profile>
+        <!-- <app-customer-profile-list  [displayMode]="false"></app-customer-profile-list> -->
+        <router-outlet name="customerProfile"></router-outlet>
         <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
             <mat-icon color="primary">navigate_next</mat-icon>
         </button>

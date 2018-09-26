@@ -3,13 +3,13 @@ import { FormControl } from '../../../../node_modules/@angular/forms';
 import { MatDialogRef } from '../../../../node_modules/@angular/material';
 
 @Component({
-  selector: 'app-mqr-search-modal',
-  templateUrl: './mqr-search-modal.component.html',
-  styleUrls: ['./mqr-search-modal.component.css']
+  selector: 'app-search-modal',
+  templateUrl: './search-modal.component.html',
+  styleUrls: ['./search-modal.component.css']
 })
-export class MqrSearchModalComponent implements OnInit {
+export class SearchModalComponent implements OnInit {
 
-  constructor(private _matDialogRef: MatDialogRef<MqrSearchModalComponent>) { }
+  constructor(private _matDialogRef: MatDialogRef<SearchModalComponent>) { }
 
   ngOnInit( ) {
 
