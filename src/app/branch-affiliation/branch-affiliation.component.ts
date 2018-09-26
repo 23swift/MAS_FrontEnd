@@ -1,63 +1,65 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
-import { BranchService } from '../services/branch.service';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatSnackBar } from '@angular/material';
+import { MatStepper } from '@angular/material';
+import { ActivatedRoute, Router } from '@angular/router';
+
 @Component({
   selector: 'app-branch-affiliaton',
   templateUrl: './branch-affiliation.component.html',
   styleUrls: ['./branch-affiliation.component.css']
 })
+
 export class BranchAffiliationComponent implements OnInit {
-  form = new FormGroup({});
-  model: any = {};
-  options: FormlyFormOptions = {};
-  fields: FormlyFieldConfig[];
-  title: string = 'Branch Affiliation';
-  subTitle: string = '';
+  isLinear = false;
+  isOptional = false;
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
+  title = 'Branch Affiliation';
+  subTitle = 'Draft';
   mode: string;
-  executeFunction: Function;
-  private _branchService: BranchService;
-  // @Input() mode: string;
-  constructor(private branchService: BranchService, private route: ActivatedRoute,
-    private router: Router) {
-    this._branchService = branchService;
-    this.getFields();
-  }
+  status = 'done';
+
+  constructor(private _formBuilder: FormBuilder, private route: ActivatedRoute,
+    private _router: Router, private _snackBar: MatSnackBar
+  ) { }
 
   ngOnInit() {
-
-    this.mode = this.route.snapshot.paramMap.get('mode');
-    this.selectMode();
+    this.mode = this.route.snapshot.params['mode'];
+    this.isOptional = true;
+    this.firstFormGroup = this._formBuilder.group({
+      firstCtrl: ['', Validators.required]
+    });
+    this.secondFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required]
+    });
 
   }
 
-  private selectMode() {
-    switch (this.mode) {
-      case 'create':
-        this.subTitle = 'Create';
-        this.executeFunction = this.create;
+  public completed(stepper: MatStepper) {
+    this.clearUrl();
 
-        break;
-      case 'update':
-        this.subTitle = 'Update';
-        this.executeFunction = this.update;
-        break;
-      default:
-        break;
+    stepper.selected.completed = true;
+    stepper.next();
+    return true;
+  }
+
+  clearUrl() {
+    const parentRoute = this._router.url.split('/(')[0];
+    if (parentRoute) {
+      this._router.navigateByUrl(`${parentRoute}`);
     }
-
   }
 
-  private create() {
-    alert('create');
-  }
-  private update() {
-    alert('updated');
-  }
+  Submit() {
+    const snackBarSub = this._snackBar.open('New Affiliation Request!', 'Submitted', {
+      duration: 2000
+    });
 
-  private getFields() {
-    this.fields = this._branchService.getBranchFields();
+    snackBarSub.afterDismissed().subscribe(() => {
+      this._router.navigateByUrl('/');
+    });
   }
 
 }

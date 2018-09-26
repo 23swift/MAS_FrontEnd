@@ -1,0 +1,10 @@
+
+.close-button:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.close-button {
+    color: gray;
+    text-align: right
+}

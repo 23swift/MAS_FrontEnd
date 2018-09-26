@@ -58,7 +58,7 @@ export class AwrFormService {
     //       key: 'mdrRelatedDetails',
     //       templateOptions: {
     //         label: 'Details',
-    //         maxLength: 500
+    //         maxLength: 50
     //       }
     //     },
     //     {
@@ -75,7 +75,7 @@ export class AwrFormService {
     //       key: 'incompleteDetails',
     //       templateOptions: {
     //         label: 'Details',
-    //         maxLength: 500
+    //         maxLength: 50
     //       }
     //     }
     //   ]
@@ -100,7 +100,7 @@ export class AwrFormService {
           key: 'mdrRelatedDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
         {
@@ -117,7 +117,7 @@ export class AwrFormService {
           key: 'incompleteDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         }
       ]
@@ -139,7 +139,7 @@ export class AwrFormService {
           key: 'incompleteMerchantAgreementDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
         {
@@ -156,7 +156,7 @@ export class AwrFormService {
           key: 'incompleteSecretaryCertificateDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         }
       ]
@@ -173,22 +173,40 @@ export class AwrFormService {
           }
         },
         {
-          className: 'flex-5 break-word',
+          className: 'flex-1 break-word',
           type: 'input',
           key: 'incompleteOifDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
-        }
+        },
+        {
+          className: 'flex-1 break-word',
+          key: 'isIncompleteDetailsInOtherBusinessDocuments',
+          type: 'checkbox',
+          templateOptions: {
+            label: 'Incomplete Details In Other Business Documents'
+          }
+        },
+        {
+          className: 'flex-1 break-word',
+          type: 'input',
+          key: 'incompleteDetailsInOtherBusinessDocumentsDetails',
+          templateOptions: {
+            label: 'Details',
+            maxLength: 50
+          }
+        },
       ]
     },
-    {
-      template: '<div class="display-flex"><span class="mat-headline">INCOMPLETE DETAILS IN OTHER BUSINESS DOCUMENTS</span></div>',
-    },
+    // {
+    //   template: '<div class="display-flex"><span class="mat-headline">INCOMPLETE DETAILS IN OTHER BUSINESS DOCUMENTS</span></div>',
+    // },
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
+        
         {
           className: 'flex-1 break-word',
           key: 'isIncompleteCorporatePapers',
@@ -203,7 +221,7 @@ export class AwrFormService {
           key: 'incompleteCorporatePapersDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
         {
@@ -220,7 +238,7 @@ export class AwrFormService {
           key: 'incompleteIdDtails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         }
       ]
@@ -242,7 +260,7 @@ export class AwrFormService {
           key: 'incompletePhotosDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
         {
@@ -259,7 +277,7 @@ export class AwrFormService {
           key: 'incompleteDocumentDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         }
       ]
@@ -281,7 +299,7 @@ export class AwrFormService {
           key: 'noProofDbaNameDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
         {
@@ -298,7 +316,7 @@ export class AwrFormService {
           key: 'noProofDbaAddressDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         }
       ]
@@ -320,7 +338,7 @@ export class AwrFormService {
           key: 'unclearDocumentDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
         {
@@ -337,7 +355,7 @@ export class AwrFormService {
           key: 'expiredDocumentDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         }
       ]
@@ -359,7 +377,7 @@ export class AwrFormService {
           key: 'comparedWithOriginalDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
         {
@@ -376,7 +394,7 @@ export class AwrFormService {
           key: 'signatureMatchedDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         }
       ]
@@ -398,7 +416,7 @@ export class AwrFormService {
           key: 'informationMatchingDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
         {
@@ -415,7 +433,7 @@ export class AwrFormService {
           key: 'mismatchSfccMdrDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         }
       ]
@@ -437,7 +455,7 @@ export class AwrFormService {
           key: 'noPosFormInSharedFolderDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
         {
@@ -454,7 +472,7 @@ export class AwrFormService {
           key: 'noBuhApprovalOnDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         }
       ]
@@ -513,7 +531,7 @@ export class AwrFormService {
           key: 'invalidCasaDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
         {
@@ -530,7 +548,7 @@ export class AwrFormService {
           key: 'settlementOfOutstandingBalanceDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         }
       ]
@@ -552,7 +570,7 @@ export class AwrFormService {
           key: 'noHoldoutDepositDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
         {
@@ -569,7 +587,7 @@ export class AwrFormService {
           key: 'ecrSpDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         }
       ]
@@ -591,7 +609,7 @@ export class AwrFormService {
           key: 'notesDetails',
           templateOptions: {
             label: 'Details',
-            maxLength: 500
+            maxLength: 50
           }
         },
       ]

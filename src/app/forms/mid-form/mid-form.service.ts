@@ -62,7 +62,7 @@ export class MidFormService {
         fieldGroupClassName: 'display-flex',
         fieldGroup: [
           {
-            className: 'flex-1',
+            className: 'flex-4',
             key: 'monitorCode',
             type: 'select',
             templateOptions: {
@@ -72,6 +72,22 @@ export class MidFormService {
                 { value: 1, label: 'OTC' },
                 { value: 2, label: 'Installment Reg' }
               ]
+            }
+          },
+          {
+            className: 'flex-1',
+            key: 'majorPurchase',
+            type: 'checkbox',
+            templateOptions: {
+              label: 'Major Purchase'
+            }
+          },
+          {
+            className: 'flex-1',
+            key: 'offUs',
+            type: 'checkbox',
+            templateOptions: {
+              label: 'Off US'
             }
           }
         ]
@@ -91,29 +107,14 @@ export class MidFormService {
             }
           },
           {
-            className: 'flex-4',
+            className: 'flex-1',
             key: 'currencyPhp',
             type: 'checkbox',
             templateOptions: {
               label: 'USD',
             }
           },
-          {
-            className: 'flex-1',
-            key: 'majorPurchase',
-            type: 'checkbox',
-            templateOptions: {
-              label: 'Major Purchase'
-            }
-          },
-          {
-            className: 'flex-1',
-            key: 'offUs',
-            type: 'checkbox',
-            templateOptions: {
-              label: 'Off US'
-            }
-          }
+ 
         ]
       },
       {

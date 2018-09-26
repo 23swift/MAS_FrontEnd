@@ -64,6 +64,7 @@ import { FmBrAoEncoderComponent } from './file-maintenance/branch/fm-br-ao-encod
 import { FmMidAoEncoderComponent } from './file-maintenance/mid/fm-mid-ao-encoder/fm-mid-ao-encoder.component';
 import { MdcsEncoderDashboardComponent } from './dashboard/mdcs-encoder-dashboard/mdcs-encoder-dashboard.component';
 import { MdcsCheckerDashboardComponent } from './dashboard/mdcs-checker-dashboard/mdcs-checker-dashboard.component';
+import { CustomerProfileListComponent } from './customer-profile-list/customer-profile-list.component';
 
 
 const routes: Routes = [
@@ -80,7 +81,38 @@ const routes: Routes = [
       { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
     ]
   },
-  { path: 'ba/:mode', component: BranchAffiliationComponent },
+  {
+    path: 'ba/:mode', component: BranchAffiliationComponent,
+    children: [
+      // {
+      //   path: '', component: CustomerProfileListComponent, outlet: 'customerProfile', children: [
+      //     { path: 'custProfile/:id?', component: CustomerProfileComponent, outlet: 'customerProfile' },
+      //   ]
+      // },
+
+      // { path: '', redirectTo: 'branchList', pathMatch: 'full' }
+      { path: '', component: BranchListComponent, outlet: 'branch' },
+      {
+        path: 'branch/:mode/:id', component: BranchFormComponent, outlet: 'branch', children: [
+          { path: '', component: MidComponent, outlet: 'mid' }
+        ]
+      },
+      {
+        path: 'branch/:mode', component: BranchFormComponent, outlet: 'branch', children: [
+          { path: '', component: MidComponent, outlet: 'mid' }
+        ]
+      },
+      { path: '', component: CustomerProfileListComponent, outlet: 'customerProfile' },
+      { path: 'custProfile/:id?', component: CustomerProfileComponent, outlet: 'customerProfile' },
+      { path: '', component: BranchListAttachmentComponent, outlet: 'branchOIF' },
+      { path: 'OIF/:id?', component: OcularInspectionFormComponent, outlet: 'branchOIF' },
+      { path: '', component: BranchListAttachmentPOSComponent, outlet: 'branchPOS' },
+      { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOS' },
+      { path: 'MID/:form', component: MidComponent, outlet: 'mid' },
+      { path: '', component: DocumentCheckListComponent, outlet: 'documentCheckList' },
+      { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
+    ]
+  },
   {
     path: 'additionalFacility/:mode', component: AdditionalFacilityComponent,
     children: [
@@ -94,7 +126,7 @@ const routes: Routes = [
   },
   { path: 'ext/:mode', component: ExtentionComponent },
   { path: 'maef', component: MaefFormComponent },
-  { path: 'reqapprover', component: ApproverComponent },
+  { path: 'na/approver/:mode/:id', component: ApproverComponent },
   { path: 'branch/:mode', component: BranchFormComponent },
   { path: 'branchinfo', component: BranchInfoComponent },
   { path: 'branchOIF', component: OcularInspectionFormComponent },

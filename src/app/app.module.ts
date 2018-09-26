@@ -126,6 +126,8 @@ import { FmMidAoEncoderComponent } from './file-maintenance/mid/fm-mid-ao-encode
 import { FmBrAoEncoderComponent } from './file-maintenance/branch/fm-br-ao-encoder/fm-br-ao-encoder.component';
 import { MdcsEncoderDashboardComponent } from './dashboard/mdcs-encoder-dashboard/mdcs-encoder-dashboard.component';
 import { MdcsCheckerDashboardComponent } from './dashboard/mdcs-checker-dashboard/mdcs-checker-dashboard.component';
+import { CustomerProfileListComponent } from './customer-profile-list/customer-profile-list.component';
+import { SearchModalComponent } from './modal/search-modal/search-modal.component';
 
 
 
@@ -226,7 +228,9 @@ import { MdcsCheckerDashboardComponent } from './dashboard/mdcs-checker-dashboar
     FmMidAoEncoderComponent,
     FmBrAoEncoderComponent,
     MdcsEncoderDashboardComponent,
-    MdcsCheckerDashboardComponent
+    MdcsCheckerDashboardComponent,
+    SearchModalComponent,
+    CustomerProfileListComponent
   ],
   imports: [
     BrowserModule,
@@ -287,7 +291,7 @@ import { MdcsCheckerDashboardComponent } from './dashboard/mdcs-checker-dashboar
     AoListModalComponent, MidFormModalComponent,
     DocumentChecklistMaintenanceFormComponent, ServiceFeeContractFormComponent,
     DocumentChecklistConfigurationFormComponent, ParameterMaintenanceFormComponent,
-    ParameterMaintenanceDetailsComponent, AoMaintenanceFormComponent, BuMaintenanceFormComponent, DefaultMidMaintenanceFormComponent, MidFormComponent, MidModalComponent, DeleteModalComponent],
+    ParameterMaintenanceDetailsComponent, AoMaintenanceFormComponent, BuMaintenanceFormComponent, DefaultMidMaintenanceFormComponent, MidFormComponent, MidModalComponent, DeleteModalComponent,SearchModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

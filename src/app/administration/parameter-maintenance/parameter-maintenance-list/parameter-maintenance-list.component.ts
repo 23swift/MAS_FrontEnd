@@ -4,6 +4,7 @@ import { IparametermaintenanceData } from '../../../temp/interface/iparametermai
 import { MatPaginator, MatTableDataSource, MatSort, MatDialog, MatDialogRef, MatSnackBar } from '@angular/material';
 import { ParameterMaintenanceFormComponent } from '../parameter-maintenance-form/parameter-maintenance-form.component';
 import { ParameterMaintenanceDetailsComponent } from '../parameter-maintenance-details/parameter-maintenance-details.component';
+import { forEach } from '../../../../../node_modules/@angular/router/src/utils/collection';
 
 @Component({
   selector: 'app-parameter-maintenance-list',
@@ -14,6 +15,7 @@ import { ParameterMaintenanceDetailsComponent } from '../parameter-maintenance-d
 export class ParameterMaintenanceListComponent implements OnInit {
   dataSource = new MatTableDataSource<IparametermaintenanceData>(this._service.Get().ElementData);
   displayedColumns: string[];
+  testData: string[];
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
@@ -38,21 +40,30 @@ export class ParameterMaintenanceListComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(data => {
       if (data) {
-        this._matSnackBar.open('Added Document:', data, { duration: 2000 });
+
+        this.dataSource.data.push({ Id: this.dataSource.data.length + 1, Description: data.Description, Code: data.Code });
+        this.dataSource._updateChangeSubscription();
+
+        this._matSnackBar.open('Added Parameter:', data.Description, { duration: 2000 });
       }
     });
   }
 
-  openDialogDetails() {
+  openDialogDetails(element, index) {
+
+    
     const dialogRef = this._dialog.open(ParameterMaintenanceDetailsComponent, {
       width: '600px',
       height: '600px',
-      autoFocus: false
+      autoFocus: false,
+      data: element
     });
+
+
 
     dialogRef.afterClosed().subscribe(data => {
       if (data) {
-        this._matSnackBar.open('Added Document:', data, { duration: 2000 });
+        this._matSnackBar.open('Added Parameter Detail:', data, { duration: 2000 });
       }
     });
   }
