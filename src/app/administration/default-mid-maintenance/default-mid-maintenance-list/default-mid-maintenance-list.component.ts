@@ -3,6 +3,7 @@ import { MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
 import { MatDialog, MatSnackBar } from '../../../../../node_modules/@angular/material';
 import { DefaultMidMaintenanceFormComponent } from '../default-mid-maintenance-form/default-mid-maintenance-form.component';
 import { DeleteModalComponent } from '../../../modal/delete-modal/delete-modal.component';
+import { MidFormModalComponent } from '../../../modal/mid-form-modal/mid-form-modal.component'
 
 export interface DefaultMIDInfo {
   Currency: string;
@@ -41,7 +42,7 @@ export class DefaultMidMaintenanceListComponent implements OnInit {
     }
   
     openDialog() {
-      const dialogRef = this._dialog.open(DefaultMidMaintenanceFormComponent, {
+      const dialogRef = this._dialog.open(MidFormModalComponent, {
         width: '1000px',
         height: '700px'
       });

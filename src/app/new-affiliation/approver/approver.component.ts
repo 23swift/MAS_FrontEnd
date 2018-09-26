@@ -10,12 +10,14 @@ import { AppBaseComponent } from '../../app-base/app-base.component';
 export class ApproverComponent extends AppBaseComponent implements OnInit {
   @Input() displayMode: boolean = true;
   title: string = 'Request Approval';
+  mode: string;
   constructor(public route: ActivatedRoute,
     public router: Router) {
     super(route, router);
   }
 
   ngOnInit() {
+    this.mode = this.route.snapshot.params.mode;
   }
 
 }

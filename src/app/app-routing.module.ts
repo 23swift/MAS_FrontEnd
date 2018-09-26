@@ -123,7 +123,7 @@ const routes: Routes = [
   },
   { path: 'ext/:mode', component: ExtentionComponent },
   { path: 'maef', component: MaefFormComponent },
-  { path: 'reqapprover', component: ApproverComponent },
+  { path: 'na/approver/:mode/:id', component: ApproverComponent },
   { path: 'branch/:mode', component: BranchFormComponent },
   { path: 'branchinfo', component: BranchInfoComponent },
   { path: 'branchOIF', component: OcularInspectionFormComponent },

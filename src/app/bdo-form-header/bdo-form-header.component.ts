@@ -43,7 +43,7 @@ export class BdoFormHeaderComponent implements OnInit {
       if (this.mode.match(/approval/i)) {
         this.showApprovalOptions = true;
       }
-      if (this.mode.match(/update/i) || this.mode.match(/approval/)) {
+      if (this.mode.match(/update/i) /*|| this.mode.match(/approval/)*/) {
         this.showRequestFlowOptions = true;
       }
       if (this.mode.match(/create/i)) {

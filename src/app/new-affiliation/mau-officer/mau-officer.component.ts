@@ -10,6 +10,7 @@ import { AppBaseComponent } from '../../app-base/app-base.component';
 export class MauOfficerComponent extends AppBaseComponent implements OnInit {
   title: string = 'Merchant Affiliation & Maintenance Pre-screening and Evaluation';
   @Input() displayMode: boolean = false;
+  mode: string;
   subTitle: string = '';
   constructor(public route: ActivatedRoute,
     public router: Router) {
@@ -17,6 +18,7 @@ export class MauOfficerComponent extends AppBaseComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.mode = this.route.snapshot.params.mode;
   }
 
 }
