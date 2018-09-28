@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material';
 import { MatStepper } from '@angular/material';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AoEncoderService } from './ao-encoder.service';
 
 @Component({
   selector: 'app-ao-encoder-step',
   templateUrl: './ao-encoder.component.html',
-  styleUrls: ['./ao-encoder.component.css']
+  styleUrls: ['./ao-encoder.component.css'],
+  providers: [AoEncoderService]
 })
 export class AoEncoderComponent implements OnInit {
   isLinear = false;

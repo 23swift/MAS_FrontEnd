@@ -19,8 +19,8 @@ export class MdcsCheckerDashboardComponent implements OnInit {
   private _matDialog: MatDialog) { }
 
   ngOnInit() {
-    this.displayedColumns = this._service.GetTableFields();
-    this.dataSource = this._service.Get();
+    this.displayedColumns = this._service.getTableFields();
+    this.dataSource = this._service.get(0);
   }
 
   private getItem(Id) {

@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar, MatStepper } from '@angular/material';
+import { AoCheckerService } from './ao-checker.service';
 
 @Component({
   selector: 'app-ao-checker',
   templateUrl: './ao-checker.component.html',
-  styleUrls: ['./ao-checker.component.css']
+  styleUrls: ['./ao-checker.component.css'],
+  providers: [AoCheckerService]
 })
 export class AoCheckerComponent implements OnInit {
   isLinear = false;

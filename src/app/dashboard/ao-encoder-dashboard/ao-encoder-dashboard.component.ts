@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AoEncoderDashboardService } from './ao-encoder-dashboard.service';
 import { IRequestDisplay } from '../../temp/interface/irequest-display';
+import { Router } from 'node_modules/@angular/router';
 
 @Component({
   selector: 'app-ao-encoder-dashboard',
@@ -15,14 +16,18 @@ export class AoEncoderDashboardComponent implements OnInit {
   mode: string;
   title: string;
   subTitle: string;
-  constructor(private _service: AoEncoderDashboardService) { }
+  constructor(private _service: AoEncoderDashboardService, private _router: Router) { }
 
   ngOnInit() {
-    this.displayedColumns = this._service.GetTableFields();
-    this.dataSource = this._service.Get();
+    this.displayedColumns = this._service.getTableFields();
+    this.dataSource = this._service.get(0);
 
     this.mode = 'create';
     this.title = 'New Affiliation';
     this.subTitle = 'AO Encoder';
+  }
+
+  getItem() {
+    this._router.navigateByUrl('na/aoEncoder')
   }
 }

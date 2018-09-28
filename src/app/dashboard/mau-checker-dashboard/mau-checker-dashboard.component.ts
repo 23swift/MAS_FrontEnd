@@ -18,8 +18,8 @@ export class MauCheckerDashboardComponent implements OnInit {
   constructor(private _service: MauCheckerDashboardService) { }
 
   ngOnInit() {
-    this.displayedColumns = this._service.GetTableFields();
-    this.dataSource = this._service.Get();
+    this.displayedColumns = this._service.getTableFields();
+    this.dataSource = this._service.get(0);
 
     this.mode = 'create';
     this.title = 'New Affiliation';

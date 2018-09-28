@@ -21,15 +21,15 @@ export class AoCheckerDashboardComponent implements OnInit {
   constructor(private _route: ActivatedRoute, private _router: Router, private _service: AoCheckerDashboardService) { }
 
   ngOnInit() {
-    this.displayedColumns = this._service.GetTableFields();
-    this.dataSource = this._service.Get();
+    this.displayedColumns = this._service.getTableFields();
+    this.dataSource = this._service.get(0);
 
     this.mode = '';
     this.title = '';
     this.subTitle = '';
   }
 
-  private GetItem(Id) {
-    this._router.navigateByUrl('naStep/update/' + Id);
+  private getItem(Id) {
+    this._router.navigateByUrl('na/aoChecker');
   }
 }

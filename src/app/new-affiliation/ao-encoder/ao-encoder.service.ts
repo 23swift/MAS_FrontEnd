@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 const apiUrl = '';
 @Injectable()
-export class MdcsEncoderService {
+export class AoEncoderService {
 
   constructor(private _http: HttpClient) { }
   
