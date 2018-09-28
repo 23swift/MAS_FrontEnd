@@ -128,6 +128,8 @@ import { MdcsEncoderDashboardComponent } from './dashboard/mdcs-encoder-dashboar
 import { MdcsCheckerDashboardComponent } from './dashboard/mdcs-checker-dashboard/mdcs-checker-dashboard.component';
 import { CustomerProfileListComponent } from './customer-profile-list/customer-profile-list.component';
 import { SearchModalComponent } from './modal/search-modal/search-modal.component';
+import { MdcsEncoderComponent } from './new-affiliation/mdcs-encoder/mdcs-encoder.component';
+import { MdcsCheckerComponent } from './new-affiliation/mdcs-checker/mdcs-checker.component';
 
 
 
@@ -230,7 +232,9 @@ import { SearchModalComponent } from './modal/search-modal/search-modal.componen
     MdcsEncoderDashboardComponent,
     MdcsCheckerDashboardComponent,
     SearchModalComponent,
-    CustomerProfileListComponent
+    CustomerProfileListComponent,
+    MdcsEncoderComponent,
+    MdcsCheckerComponent
   ],
   imports: [
     BrowserModule,

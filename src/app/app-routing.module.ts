@@ -65,6 +65,8 @@ import { FmMidAoEncoderComponent } from './file-maintenance/mid/fm-mid-ao-encode
 import { MdcsEncoderDashboardComponent } from './dashboard/mdcs-encoder-dashboard/mdcs-encoder-dashboard.component';
 import { MdcsCheckerDashboardComponent } from './dashboard/mdcs-checker-dashboard/mdcs-checker-dashboard.component';
 import { CustomerProfileListComponent } from './customer-profile-list/customer-profile-list.component';
+import { MdcsEncoderComponent } from './new-affiliation/mdcs-encoder/mdcs-encoder.component';
+import { MdcsCheckerComponent } from './new-affiliation/mdcs-checker/mdcs-checker.component';
 
 
 const routes: Routes = [
@@ -257,6 +259,9 @@ const routes: Routes = [
       { path: 'docForm', component: DocumentCheckListFormRequestLevelComponent, outlet: 'docForm' }
     ]
   },
+  { path: 'na/mdcsEncoder/:mode', component: MdcsEncoderComponent },
+  { path: 'na/mdcsChecker/:mode', component: MdcsCheckerComponent },
+  // { path: 'na/mdcsUser', component: MdcsUserComponent },
   { path: 'na/psServicing', component: PsServicingComponent },
   { path: 'aoChecking', component: AoCheckingComponent },
   { path: 'posForm', component: PosFormComponent },

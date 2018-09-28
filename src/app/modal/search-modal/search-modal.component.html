@@ -1,9 +1,10 @@
-<div class="mat-headline display-flex">
-  <mat-icon>search</mat-icon> Search
+<div class="mat-headline" fxLayout="row" fxLayoutAlign="space-between">
+  <mat-label fxLayoutAlign="start center">
+    <mat-icon>search</mat-icon> Search</mat-label>
   <mat-icon class="close-button flex-1" (click)="closeDialog()">close</mat-icon>
 </div>
-<div class="mat-card-content" style="padding-top: 5px">
-  <mat-form-field class="flex-3">
+<div class="mat-card-content" fxLayout="row" style="padding-top: 5px">
+  <mat-form-field fxFlex>
     <input matInput placeholder="Search" />
   </mat-form-field>
   <a (click)="openDialog()" color="primary" mat-mini-fab matTooltip="Search">
@@ -11,18 +12,21 @@
   </a>
 </div>
 <div class="mat-card-content" style="padding-top: 5px;">
-  <div class="mat-checkbox" style="display: flex">
-    <mat-checkbox class="mat-form-field-infix" style="flex: 1">RT Number</mat-checkbox>
-    <mat-checkbox class="mat-form-field-infix" style="flex: 1">Request Type</mat-checkbox>
-    <mat-checkbox class="mat-form-field-infix" style="flex: 1">Legal/DBA Name</mat-checkbox>
-  </div>
-  <div class="mat-checkbox" style="display: flex">
-    <mat-checkbox class="mat-form-field-infix" style="flex: 1">Date Requested</mat-checkbox>
-    <mat-checkbox class="mat-form-field-infix" style="flex: 1">Request Status</mat-checkbox>
-    <mat-checkbox class="mat-form-field-infix" style="flex: 1">Account Officer</mat-checkbox>
-  </div>
-  <div class="mat-checkbox" style="display: flex">
-    <mat-checkbox class="mat-form-field-infix" style="flex: 1">Aging</mat-checkbox>
-  </div>
+  <div class="mat-checkbox" fxLayout="row" *ngFor="let container of criteriaContainer;">
+    <div *ngFor="let criteria of container">
+      <div class="mat-form-field-infix">
+          <mat-checkbox>{{criteria}}</mat-checkbox>  
+      </div>
+    </div>
+    <!-- <div class="mat-form-field-infix">
+        <mat-checkbox>{{ container | json}}</mat-checkbox>  
+    </div>
+    <div class="mat-form-field-infix">
+        <mat-checkbox>123</mat-checkbox>  
+    </div>
+    <div class="mat-form-field-infix">
+        <mat-checkbox>123</mat-checkbox>  
+    </div> -->
 
+  </div>
 </div>
