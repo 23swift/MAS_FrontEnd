@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 const apiUrl = '';
 @Injectable()
-export class HistoryModalService {
+export class RemarksModalService {
 
   constructor(private _http: HttpClient) { }
 
