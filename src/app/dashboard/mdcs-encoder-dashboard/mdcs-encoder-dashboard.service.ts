@@ -8,10 +8,11 @@ export class MdcsEncoderDashboardService implements OnInit {
   private _dashboard: DashboardData;
 
   constructor(private _http: HttpClient) {
+    this._dashboard = new DashboardData();
   }
 
   ngOnInit() {
-    this._dashboard = new DashboardData();
+    
   }
 
   getTableFields() {

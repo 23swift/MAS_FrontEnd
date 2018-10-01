@@ -29,6 +29,26 @@ export class DashboardData {
         // }
       ];
 
-    Fields: string[] = ['TrackingNo', 'RequestType', 'BusinessName',
+    Fields = ['TrackingNo', 'RequestType', 'BusinessName',
     'RequestDate', 'BranchName', 'Location', 'RequestStatus', 'Operation'];
+
+    PosFields = ['TrackingNo', 'RequesterName', 'RequestType', 'DBAName',
+    'RequestDate', 'BranchName', 'Location', 'RequestStatus', 'NatureOfRequest', 'Operation'];
+
+    PosData = [
+      {
+        Id: 1, TrackingNo: '0000001', RequesterName: 'Juan dela Cruz',
+        RequestType: 'New Affiliation', DBAName: 'Bench',
+        RequestDate: '06/05/2018', BranchName: 'SM Megamall',
+        Location: 'Mandaluyong', RequestStatus: 'FOR POS PROCESSING',
+        NatureOfRequest: 'New Installation'
+      },
+      {
+        Id: 2, TrackingNo: '0000002', RequesterName: 'Juan dela Cruz',
+        RequestType: 'New Affiliation', DBAName: 'Bench',
+        RequestDate: '06/05/2018', BranchName: 'SM Calamba',
+        Location: 'Calamba', RequestStatus: 'FOR POS PROCESSING',
+        NatureOfRequest: 'New Installation'
+      }
+    ];
 }

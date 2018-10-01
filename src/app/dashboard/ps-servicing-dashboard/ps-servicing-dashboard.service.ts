@@ -8,14 +8,15 @@ export class PsServicingDashboardService implements OnInit {
   private _dashboard: DashboardData;
 
   constructor(private _http: HttpClient) {
-  }
-
-  ngOnInit() {
     this._dashboard = new DashboardData();
   }
 
+  ngOnInit() {
+    
+  }
+
   getTableFields() {
-    return this._dashboard.Fields;
+    return this._dashboard.PosFields;
   }
   
   getAll() {
@@ -24,7 +25,7 @@ export class PsServicingDashboardService implements OnInit {
 
   get(id) {
     // return this._http.get(apiUrl + id);
-    return this._dashboard.ElementData;
+    return this._dashboard.PosData;
   }
 
   create(): void {

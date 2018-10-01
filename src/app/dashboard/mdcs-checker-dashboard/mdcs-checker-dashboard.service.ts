@@ -8,13 +8,15 @@ export class MdcsCheckerDashboardService implements OnInit {
   private _dashboard: DashboardData;
 
   constructor(private _http: HttpClient) {
-  }
-
-  ngOnInit() {
     this._dashboard = new DashboardData();
   }
 
+  ngOnInit() {
+    
+  }
+
   getTableFields() {
+    console.log(this._dashboard);
     return this._dashboard.Fields;
   }
   
