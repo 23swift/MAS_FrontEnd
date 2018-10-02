@@ -1,19 +1,38 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { DashboardData } from '../../temp/dashboardData/dashboard-data';
+import { HttpClient } from '@angular/common/http';
 
+const apiUrl = '';
 @Injectable()
-export class PsServicingDashboardService {
+export class PsServicingDashboardService implements OnInit {
   private _dashboard: DashboardData;
 
-  constructor() {
+  constructor(private _http: HttpClient) {
     this._dashboard = new DashboardData();
   }
 
-  Get() {
-    return this._dashboard.ElementData;
+  ngOnInit() {
+    
   }
 
-  GetTableFields() {
-    return this._dashboard.Fields;
+  getTableFields() {
+    return this._dashboard.PosFields;
+  }
+  
+  getAll() {
+    return this._http.get(apiUrl);
+  }
+
+  get(id) {
+    // return this._http.get(apiUrl + id);
+    return this._dashboard.PosData;
+  }
+
+  create(): void {
+    this._http.post(apiUrl, {});
+  }
+
+  update(): void {
+    this._http.put(apiUrl, {});
   }
 }

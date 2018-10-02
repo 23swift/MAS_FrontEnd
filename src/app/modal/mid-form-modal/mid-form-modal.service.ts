@@ -1,44 +1,12 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
+const apiUrl = '';
 @Injectable()
 export class MidFormModalService {
-  constructor() { }
-  // Get(): Object[] {
-  //   return [
-  //     { Id: 1, Currency: 'PHP', MonitorCode: 'OTC', MerchantGroupCode: 'DM01 - Diners' },
-  //     { Id: 2, Currency: 'PHP', MonitorCode: 'Installment Reg', MerchantGroupCode: 'MerchGrp24' }
-  //   ];
-  // }
+  constructor(private _http: HttpClient) { }
 
-  GetMonitorCodeList() {
-    return [
-      { Id: 1, Description: 'OTC' },
-      { Id: 2, Description: 'Installment Reg' }
-    ];
-  }
-
-  GetCurrency() {
-    return [
-      { Id: 1, Description: 'PHP' },
-      { Id: 2, Description: 'USD' }
-    ];
-  }
-
-  GetMerchantGroupCode() {
-    return [
-      { Id: 1, Description: 'DM01 - Diners' },
-      { Id: 2, Description: 'MerchGrp24' }
-    ];
-  }
-
-  GetSfrStraightList() {
-    return [
-      { Id: 1, Description: 'SFR1' },
-      { Id: 2, Description: 'SFR2' }
-    ];
-  }
-
-  GetFormlyFields() {
+  getFormlyFields() {
     return [
       {
         fieldGroupClassName: 'display-flex',
@@ -282,5 +250,17 @@ export class MidFormModalService {
         ]
       }
     ];
+  }
+
+  getById() {
+    return this._http.get(apiUrl);
+  }
+
+  create(): void {
+    this._http.post(apiUrl, {});
+  }
+
+  update(): void {
+    this._http.put(apiUrl, {});
   }
 }

@@ -179,3 +179,21 @@ body {
     white-space: normal !important;
     word-break: break-word;
 }
+
+input.ng-invalid.ng-touched + * > label, 
+input.ng-invalid.ng-touched + span {
+    color: red !important;
+}
+
+// input.ng-invalid::placeholder {
+//     color: red !important;
+//     opacity: 1; /* Firefox */
+// }
+
+// input.ng-invalid:-ms-input-placeholder { /* Internet Explorer 10-11 */
+//    color: red !important;
+// }
+
+// input.ng-invalid::-ms-input-placeholder { /* Microsoft Edge */
+//    color: red !important;
+// }

@@ -8,3 +8,7 @@
     color: gray;
     text-align: right
 }
+
+.mat-checkbox-layout {
+    white-space: normal !important;
+}

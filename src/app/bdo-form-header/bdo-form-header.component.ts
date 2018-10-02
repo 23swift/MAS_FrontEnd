@@ -20,6 +20,8 @@ export class BdoFormHeaderComponent implements OnInit {
   showPosProcessingButton: boolean;
   showPsCheckerButton: boolean;
   showMqrUserProcessingButton: boolean;
+  showMdcsChecking: boolean;
+  showPreScreen: boolean;
   @Input() mode: string;
   @Input() text: string;
   @Input() sub_text: string;
@@ -36,6 +38,8 @@ export class BdoFormHeaderComponent implements OnInit {
     this.showPosProcessingButton = false;
     this.showPsCheckerButton = false;
     this.showMqrUserProcessingButton = false;
+    this.showMdcsChecking = false;
+    this.showPreScreen = false;
 
     this.mode = this.mode ? this.mode : 'create';
     
@@ -63,6 +67,12 @@ export class BdoFormHeaderComponent implements OnInit {
       }
       if (this.mode.match(/mqrUser/i)) {
         this.showMqrUserProcessingButton = true;
+      }
+      if (this.mode.match(/forMdcsChecking/i)) {
+        this.showMdcsChecking = true;
+      }
+      if (this.mode.match(/forPreScreening/)) {
+        this.showPreScreen = true;
       }
     }
   }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FieldType } from '@ngx-formly/material';
-import {  MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material';
 import { RemarksModalComponent } from '../modal/remarks-modal/remarks-modal.component';
 
 @Component({
@@ -14,23 +14,24 @@ export class CheckDialogTypeComponent extends FieldType implements OnInit {
   checked = false;
   constructor(private _dialogRemarks: MatDialog) {
     super()
-   }
+  }
 
   ngOnInit() {
-    
+
   }
 
   getValue(event) {
     if (event.checked) {
-       this.indeterminate = false;
-      const test = this._dialogRemarks.open(RemarksModalComponent, {
+      this.indeterminate = false;
+      const modalRef = this._dialogRemarks.open(RemarksModalComponent, {
         width: '50%'
       });
 
-      test.afterClosed().subscribe(x => {
-        this.model['errField'] = x.remarks;
-        console.log(x);
+      modalRef.afterClosed().subscribe(x => {
+        this.model[this.key + 'Remarks'] = x.remarks;
       })
+    } else {
+      this.model[this.key + 'Remarks'] = undefined;
     }
   }
 }

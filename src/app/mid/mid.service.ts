@@ -1,11 +1,14 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
+const apiUrl = '';
 @Injectable()
 export class MidService {
 
-  constructor() { }
+  constructor(private _http: HttpClient) { }
 
-  Get() {
+  get() {
+    // return this._http.get(apiUrl);
     return [
       { Id: 1, Currency: 'PHP', MonitorCode: 'OTC', MerchantGroupCode: 'DM01 - Diners' },
       { Id: 2, Currency: 'PHP', MonitorCode: 'Installment Reg', MerchantGroupCode: 'MerchGrp24' },
@@ -15,11 +18,19 @@ export class MidService {
       { Id: 6, Currency: 'PHP', MonitorCode: 'BNPL 0%', MerchantGroupCode: 'MerchGrp1Z' }
     ];
   }
-  GetTableFields(update) {
+  getTableFields(update) {
     if (update) {
       return ['Currency', 'MonitorCode', 'MerchantGroupCode', 'MID', 'TID'];
     } else {
       return ['Currency', 'MonitorCode', 'MerchantGroupCode'];
     }
+  }
+
+  create(): void {
+    this._http.post(apiUrl, {});
+  }
+
+  update(): void {
+    this._http.post(apiUrl, {});
   }
 }

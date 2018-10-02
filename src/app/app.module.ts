@@ -124,8 +124,15 @@ import { DebitTidComponent } from './debit-tid/debit-tid.component';
 import { FmLeAoEncoderComponent } from './file-maintenance/legal-entity/fm-le-ao-encoder/fm-le-ao-encoder.component';
 import { FmMidAoEncoderComponent } from './file-maintenance/mid/fm-mid-ao-encoder/fm-mid-ao-encoder.component';
 import { FmBrAoEncoderComponent } from './file-maintenance/branch/fm-br-ao-encoder/fm-br-ao-encoder.component';
+import { MdcsEncoderDashboardComponent } from './dashboard/mdcs-encoder-dashboard/mdcs-encoder-dashboard.component';
+import { MdcsCheckerDashboardComponent } from './dashboard/mdcs-checker-dashboard/mdcs-checker-dashboard.component';
 import { CustomerProfileListComponent } from './customer-profile-list/customer-profile-list.component';
 import { SearchModalComponent } from './modal/search-modal/search-modal.component';
+import { MdcsEncoderComponent } from './new-affiliation/mdcs-encoder/mdcs-encoder.component';
+import { MdcsCheckerComponent } from './new-affiliation/mdcs-checker/mdcs-checker.component';
+import { PosTerminalFormComponent } from './forms/pos-terminal-form/pos-terminal-form.component';
+import { PosTerminalFormModalComponent } from './modal/pos-terminal-form-modal/pos-terminal-form-modal.component';
+import { PosTerminalBrandListComponent } from './pos-terminal-brand-list/pos-terminal-brand-list.component';
 
 
 
@@ -225,8 +232,15 @@ import { SearchModalComponent } from './modal/search-modal/search-modal.componen
     FmLeAoEncoderComponent,
     FmMidAoEncoderComponent,
     FmBrAoEncoderComponent,
+    MdcsEncoderDashboardComponent,
+    MdcsCheckerDashboardComponent,
     SearchModalComponent,
-    CustomerProfileListComponent
+    CustomerProfileListComponent,
+    MdcsEncoderComponent,
+    MdcsCheckerComponent,
+    PosTerminalFormComponent,
+    PosTerminalFormModalComponent,
+    PosTerminalBrandListComponent
   ],
   imports: [
     BrowserModule,
@@ -287,7 +301,9 @@ import { SearchModalComponent } from './modal/search-modal/search-modal.componen
     AoListModalComponent, MidFormModalComponent,
     DocumentChecklistMaintenanceFormComponent, ServiceFeeContractFormComponent,
     DocumentChecklistConfigurationFormComponent, ParameterMaintenanceFormComponent,
-    ParameterMaintenanceDetailsComponent, AoMaintenanceFormComponent, BuMaintenanceFormComponent, DefaultMidMaintenanceFormComponent, MidFormComponent, MidModalComponent, DeleteModalComponent,SearchModalComponent],
+    ParameterMaintenanceDetailsComponent, AoMaintenanceFormComponent, BuMaintenanceFormComponent, 
+    DefaultMidMaintenanceFormComponent, MidFormComponent, MidModalComponent, DeleteModalComponent, 
+    SearchModalComponent, PosTerminalFormModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

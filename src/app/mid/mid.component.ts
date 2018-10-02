@@ -32,14 +32,11 @@ export class MidComponent implements OnInit {
     private _dialog: MatDialog, private _renderer: Renderer2) { }
 
   ngOnInit() {
-    this.dataSource = this._service.Get();
+    this.dataSource = this._service.get();
     this.form = this._route.snapshot.params['form'] || this.action;
     this.midContainer = new Array<number>(this.dataSource.length);
     this.tidContainer = new Array<string>(this.dataSource.length);
-    /////// TO BE DELETED ////////
-    this.update = true;
-    /////////////////////////////
-    this.displayedColumns = this._service.GetTableFields(this.update);
+    this.displayedColumns = this._service.getTableFields(this.update);
     this.midInput = new FormControl('');
     this.tidInput = new FormControl('');
 
@@ -48,7 +45,7 @@ export class MidComponent implements OnInit {
     }
   }
 
-  AddMid() {
+  addMid() {
     this._dialog.open(MidFormModalComponent, {
       width: '80%'
     });
@@ -94,7 +91,7 @@ export class MidComponent implements OnInit {
 
   saveTid(element, index) {
     const value = element.value;
-    if (value.match(/^\d{10}(,\d{10})+?$/)) {
+    if (value.match(/^\d{10}(,\d{10})*$/)) {
       if (value === "") {
         this.tidContainer.splice(index, 1);  
       } else {
