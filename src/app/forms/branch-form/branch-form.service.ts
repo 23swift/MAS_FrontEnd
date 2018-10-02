@@ -317,7 +317,7 @@ export class BranchFormService {
             placeholder: 'Date From'
           }
         },
-        {
+        { 
           className: 'flex-1 mat-form-field-infix',
           type: 'calendar',
           key: 'taxExemptValidityTo',

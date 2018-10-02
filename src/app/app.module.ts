@@ -132,6 +132,9 @@ import { MdcsEncoderComponent } from './new-affiliation/mdcs-encoder/mdcs-encode
 import { MdcsCheckerComponent } from './new-affiliation/mdcs-checker/mdcs-checker.component';
 import { MamVerificationScreenFormComponent } from './forms/mam-verification-screen-form/mam-verification-screen-form.component';
 
+import { PosTerminalFormModalComponent } from './modal/pos-terminal-form-modal/pos-terminal-form-modal.component';
+import { PosTerminalBrandListComponent } from './pos-terminal-brand-list/pos-terminal-brand-list.component';
+
 
 
 @NgModule({
@@ -236,7 +239,10 @@ import { MamVerificationScreenFormComponent } from './forms/mam-verification-scr
     CustomerProfileListComponent,
     MdcsEncoderComponent,
     MdcsCheckerComponent,
-    MamVerificationScreenFormComponent
+    MamVerificationScreenFormComponent,
+    
+    PosTerminalFormModalComponent,
+    PosTerminalBrandListComponent
   ],
   imports: [
     BrowserModule,
@@ -297,7 +303,9 @@ import { MamVerificationScreenFormComponent } from './forms/mam-verification-scr
     AoListModalComponent, MidFormModalComponent,
     DocumentChecklistMaintenanceFormComponent, ServiceFeeContractFormComponent,
     DocumentChecklistConfigurationFormComponent, ParameterMaintenanceFormComponent,
-    ParameterMaintenanceDetailsComponent, AoMaintenanceFormComponent, BuMaintenanceFormComponent, DefaultMidMaintenanceFormComponent, MidFormComponent, MidModalComponent, DeleteModalComponent,SearchModalComponent],
+    ParameterMaintenanceDetailsComponent, AoMaintenanceFormComponent, BuMaintenanceFormComponent, 
+    DefaultMidMaintenanceFormComponent, MidFormComponent, MidModalComponent, DeleteModalComponent, 
+    SearchModalComponent, PosTerminalFormModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

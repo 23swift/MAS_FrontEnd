@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class PsServicingDashboardComponent implements OnInit {
   displayedColumns: string[];
-  dataSource: IRequestDisplay[];
+  dataSource;
 
   mode: string;
   title: string;

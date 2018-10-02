@@ -227,83 +227,19 @@ export class PosFormService {
         },
         {
           className: 'flex-1',
-          type: 'select',
-          key: 'terminalBrand',
-          templateOptions: {
-            label: "Terminal Brand",
-            disabled: true
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'select',
-          key: 'terminalType',
-          templateOptions: {
-            label: "Terminal Type",
-            disabled: true
-          }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          className: 'flex-1',
-          type: 'select',
-          key: 'terminalModelRequested',
-          templateOptions: {
-            label: "Terminal Model Requested",
-            disabled: true
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'numberOfTerminalsRequested',
-          templateOptions: {
-            label: "Number of Terminal/s Requested",
-            disabled: true
-          }
-        },
-        {
-          className: 'flex-1',
           type: 'input',
           key: 'numberOfPrintedSlips',
           templateOptions: {
             label: "Number of Printed Slips",
             disabled: true
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'input',
           key: 'reasonForThreeSlipsPrinting',
           templateOptions: {
             label: "Reason For 3 Slips Printing",
-            disabled: true
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'telcoProvider',
-          templateOptions: {
-            label: "Telco Provider (for Dial-up)",
-            disabled: true
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'simType',
-          templateOptions: {
-            label: "Sim Type (for GPRS)",
             disabled: true
           }
         }
@@ -363,23 +299,6 @@ export class PosFormService {
           }
         },
         {
-          key: 'tipAdjust',
-          type: 'radio',
-          templateOptions: {
-            label: 'TIP ADJUST',
-            options: [
-              { value: 'true', label: 'Yes' },
-              { value: 'false', label: 'No' }
-            ],
-            disabled: true
-          }
-        },
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
           className: 'flex-1',
           type: 'select',
           key: 'mustSettle',
@@ -387,31 +306,7 @@ export class PosFormService {
             label: "Must Settle (No. Of Days Required)",
             disabled: true
           }
-        },
-        {
-          key: 'hotelSetupFacility',
-          type: 'radio',
-          templateOptions: {
-            label: 'HOTEL SET-UP FACILITY (PRE-AUTH, OFF-LINE)?',
-            options: [
-              { value: 'true', label: 'Yes' },
-              { value: 'false', label: 'No' }
-            ],
-            disabled: true
-          }
-        },
-        {
-          key: 'manualKeyInFacility',
-          type: 'radio',
-          templateOptions: {
-            label: 'MANUAL KEY-IN FACILITY?',
-            options: [
-              { value: 'true', label: 'Yes' },
-              { value: 'false', label: 'No' }
-            ],
-            disabled: true
-          }
-        },
+        }
       ]
     },
     {
@@ -443,7 +338,7 @@ export class PosFormService {
             label: "Credit Straight MID-VMJA/VMJAC",
             disabled: true
           }
-        },
+        }
       ]
     },
     {

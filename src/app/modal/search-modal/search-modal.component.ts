@@ -25,7 +25,7 @@ export class SearchModalComponent implements OnInit {
     this.criteriaContainer = new Array<Array<string>>();
     var rawArray = [];
     this.searchCriteria.mdcsEncoder.forEach((val, index, arr) => {
-      if (index != 0 && index % 3 == 0) {
+      if (index != 0 && index % 2 == 0) {
         this.criteriaContainer.push(rawArray);
         rawArray = [];
       }

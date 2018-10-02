@@ -29,7 +29,8 @@ export class MdcsEncoderDashboardComponent implements OnInit {
 
   openSearchDialog() {
     const dialogRef = this._matDialog.open(SearchModalComponent, {
-      autoFocus: false
+      autoFocus: false,
+      width: '40%'
     });
   }
 }
