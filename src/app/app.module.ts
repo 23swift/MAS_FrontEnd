@@ -130,6 +130,7 @@ import { CustomerProfileListComponent } from './customer-profile-list/customer-p
 import { SearchModalComponent } from './modal/search-modal/search-modal.component';
 import { MdcsEncoderComponent } from './new-affiliation/mdcs-encoder/mdcs-encoder.component';
 import { MdcsCheckerComponent } from './new-affiliation/mdcs-checker/mdcs-checker.component';
+import { MamVerificationScreenFormComponent } from './forms/mam-verification-screen-form/mam-verification-screen-form.component';
 
 
 
@@ -234,7 +235,8 @@ import { MdcsCheckerComponent } from './new-affiliation/mdcs-checker/mdcs-checke
     SearchModalComponent,
     CustomerProfileListComponent,
     MdcsEncoderComponent,
-    MdcsCheckerComponent
+    MdcsCheckerComponent,
+    MamVerificationScreenFormComponent
   ],
   imports: [
     BrowserModule,
