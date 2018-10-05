@@ -130,6 +130,7 @@ import { CustomerProfileListComponent } from './customer-profile-list/customer-p
 import { SearchModalComponent } from './modal/search-modal/search-modal.component';
 import { MdcsEncoderComponent } from './new-affiliation/mdcs-encoder/mdcs-encoder.component';
 import { MdcsCheckerComponent } from './new-affiliation/mdcs-checker/mdcs-checker.component';
+import { MamVerificationScreenFormComponent } from './forms/mam-verification-screen-form/mam-verification-screen-form.component';
 
 import { PosTerminalFormModalComponent } from './modal/pos-terminal-form-modal/pos-terminal-form-modal.component';
 import { PosTerminalBrandListComponent } from './pos-terminal-brand-list/pos-terminal-brand-list.component';
@@ -238,6 +239,7 @@ import { PosTerminalBrandListComponent } from './pos-terminal-brand-list/pos-ter
     CustomerProfileListComponent,
     MdcsEncoderComponent,
     MdcsCheckerComponent,
+    MamVerificationScreenFormComponent,
     
     PosTerminalFormModalComponent,
     PosTerminalBrandListComponent
