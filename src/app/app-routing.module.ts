@@ -251,7 +251,7 @@ const routes: Routes = [
       { path: 'branch/:mode', component: BranchFormComponent, outlet: 'branch' }
     ]
   },
-  { path: 'na/mauOfficer/:mode/:id', component: MauOfficerComponent }, // 1
+  { path: 'na/mauOfficer/:id', component: MauOfficerComponent }, // 1
   { path: 'na/mdcsUser', component: MdcsUserComponent },
   {
     path: 'na/mdmUser', component: MdmUserComponent, children: [
