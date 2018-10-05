@@ -23,11 +23,13 @@ export class MauOfficerDashboardComponent implements OnInit {
   constructor(private _service: MauOfficerDashboardService,
     private _dialog: MatDialog,
     private _snackBar: MatSnackBar,
-    private _route: ActivatedRoute, 
+    private _route: ActivatedRoute,
     private _router: Router) { }
 
   ngOnInit() {
-    this.displayedColumns = this._service.GetTableFields();
+    this.displayedColumns = ['TrackingNo', 'RequestType', 'BusinessName',
+                             'RequestDate', 'BranchName', 'Location', 
+                             'RequestStatus', 'Operation']
     this.dataSource = this._service.Get();
 
     this.mode = '';
@@ -35,14 +37,12 @@ export class MauOfficerDashboardComponent implements OnInit {
     this.subTitle = '';
   }
 
-  editItem() {
-    this._router.navigateByUrl('na/mauOfficer/update/0');
+  editItem(id) {
+    this._router.navigateByUrl('na/mauOfficer/' + id);
   }
 
   openDialog(id, trackingNo): void {
     const dialogRef = this._dialog.open(AoListModalComponent, {
-      width: '600px',
-      height: '300px',
       data: { id: id, trackingNo: trackingNo }
     });
 

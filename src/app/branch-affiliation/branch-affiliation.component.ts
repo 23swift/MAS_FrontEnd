@@ -53,7 +53,7 @@ export class BranchAffiliationComponent implements OnInit {
   }
 
   Submit() {
-    const snackBarSub = this._snackBar.open('New Affiliation Request!', 'Submitted', {
+    const snackBarSub = this._snackBar.open('Branch Affiliation Request!', 'Submitted', {
       duration: 2000
     });
 

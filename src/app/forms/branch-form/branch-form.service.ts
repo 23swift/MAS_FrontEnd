@@ -261,7 +261,7 @@ export class BranchFormService {
         {
           className: 'flex-1',
           type: 'input',
-          key: 'settleAccountNumber',
+          key: 'settlementAccNoCreditFac',
           expressionProperties: {
             'templateOptions.disabled': (model: any, formState: any) => {
 
@@ -273,8 +273,8 @@ export class BranchFormService {
             },
           },
           templateOptions: {
-            label: 'Settle Account Number (For Crediting Payment)',
-            placeholder: 'Settle Account Number (For Crediting Payment)',
+            label: 'Settlement Account Number For Credit Facility(If CTA)',
+            placeholder: 'Settlement Account Number For Credit Facility(If CTA)',
             maxLength: 20,
             disabled: true
           }

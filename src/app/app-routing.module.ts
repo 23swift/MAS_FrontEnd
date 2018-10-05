@@ -67,6 +67,7 @@ import { MdcsCheckerDashboardComponent } from './dashboard/mdcs-checker-dashboar
 import { CustomerProfileListComponent } from './customer-profile-list/customer-profile-list.component';
 import { MdcsEncoderComponent } from './new-affiliation/mdcs-encoder/mdcs-encoder.component';
 import { MdcsCheckerComponent } from './new-affiliation/mdcs-checker/mdcs-checker.component';
+import { MamVerificationScreenFormComponent } from './forms/mam-verification-screen-form/mam-verification-screen-form.component';
 
 
 const routes: Routes = [
@@ -251,7 +252,7 @@ const routes: Routes = [
       { path: 'branch/:mode', component: BranchFormComponent, outlet: 'branch' }
     ]
   },
-  { path: 'na/mauOfficer/:mode/:id', component: MauOfficerComponent }, // 1
+  { path: 'na/mauOfficer/:id', component: MauOfficerComponent }, // 1
   { path: 'na/mdcsUser', component: MdcsUserComponent },
   {
     path: 'na/mdmUser', component: MdmUserComponent, children: [
@@ -306,7 +307,8 @@ const routes: Routes = [
   { path: 'branchForm', component: BranchFormComponent },
   { path: 'defaultMIDMaintenance', component: DefaultMidMaintenanceComponent },
   { path: 'debitTid', component: DebitTidComponent },
-  { path: 'custProfile', component: CustomerProfileComponent }
+  { path: 'custProfile', component: CustomerProfileComponent },
+  { path: 'mam', component:  MamVerificationScreenFormComponent }
 ];
 
 @NgModule({
