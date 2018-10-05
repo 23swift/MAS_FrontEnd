@@ -28,6 +28,6 @@ export class AoEncoderDashboardComponent implements OnInit {
   }
 
   getItem() {
-    this._router.navigateByUrl('na/aoEncoder')
+    this._router.navigateByUrl('na/aoEncoder/update')
   }
 }

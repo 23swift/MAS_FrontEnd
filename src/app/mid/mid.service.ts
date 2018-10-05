@@ -20,9 +20,9 @@ export class MidService {
   }
   getTableFields(update) {
     if (update) {
-      return ['Currency', 'MonitorCode', 'MerchantGroupCode', 'MID', 'TID'];
+      return ['Currency', 'MonitorCode', 'MerchantGroupCode', 'MID', 'TID', 'Action'];
     } else {
-      return ['Currency', 'MonitorCode', 'MerchantGroupCode'];
+      return ['Currency', 'MonitorCode', 'MerchantGroupCode', 'Action'];
     }
   }
 

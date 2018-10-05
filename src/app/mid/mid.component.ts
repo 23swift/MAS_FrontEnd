@@ -102,4 +102,8 @@ export class MidComponent implements OnInit {
       console.log('Invalid TIDs Inputted!');
     }
   }
+
+  deleteItem(id) {
+    console.log('DELETE MID');
+  }
 }

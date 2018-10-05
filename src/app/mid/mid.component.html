@@ -64,6 +64,14 @@
                 </div>
             </td>
         </ng-container>
+        <ng-container matColumnDef="Action">
+            <th mat-header-cell *matHeaderCellDef class="text-center"></th>
+            <td mat-cell *matCellDef="let element;let i = index" class="text-center">
+                <a (click)="deleteItem(element.Id)" mat-mini-fab color="primary" matTooltip="Delete MID">
+                    <mat-icon style="color:white;">delete_outline</mat-icon>
+                </a>
+            </td>
+        </ng-container>
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
