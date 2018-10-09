@@ -740,14 +740,6 @@ export class PosFormService {
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
-        // {
-        //   className: 'flex-1',
-        //   type: 'input',
-        //   key: 'requestorsName',
-        //   templateOptions: {
-        //     label: "Requestor's Name",
-        //   }
-        // },
         {
           className: 'flex-1',
           type: 'input',
@@ -939,48 +931,6 @@ export class PosFormService {
           key: 'contactNumber',
           templateOptions: {
             label: "Contact Number",
-
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'select',
-          key: 'terminalBrand',
-          templateOptions: {
-            label: "Terminal Brand",
-
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'select',
-          key: 'terminalType',
-          templateOptions: {
-            label: "Terminal Type",
-
-          }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'terminalModelRequested',
-          templateOptions: {
-            label: "Terminal Model Requested",
-
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'numberOfTerminalsRequested',
-          templateOptions: {
-            label: "Number of Terminal/s Requested",
-
           }
         },
         {
@@ -989,39 +939,14 @@ export class PosFormService {
           key: 'numberOfPrintedSlips',
           templateOptions: {
             label: "Number of Printed Slips",
-
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'input',
           key: 'reasonForThreeSlipsPrinting',
           templateOptions: {
-            label: "Reason For 3 Slips Printing",
-
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'telcoProvider',
-          templateOptions: {
-            label: "Telco Provider (for Dial-up)",
-
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'simType',
-          templateOptions: {
-            label: "Sim Type (for GPRS)",
-
+            label: "Reason For 3 Slips Printing"
           }
         }
       ]
@@ -1078,18 +1003,6 @@ export class PosFormService {
             label: "Other Required Profiling Facility (tip adjust, binver, BDO Pay, etc)",
 
           }
-        },
-        {
-          key: 'tipAdjust',
-          type: 'radio',
-          templateOptions: {
-            label: 'TIP ADJUST',
-            options: [
-              { value: 'true', label: 'Yes' },
-              { value: 'false', label: 'No' }
-            ],
-
-          }
         }
       ]
     },
@@ -1102,31 +1015,6 @@ export class PosFormService {
           key: 'mustSettle',
           templateOptions: {
             label: "Must Settle (No. Of Days Required)",
-
-          }
-        },
-        {
-
-          key: 'hotelSetupFacility',
-          type: 'radio',
-          templateOptions: {
-            label: 'HOTEL SET-UP FACILITY (PRE-AUTH, OFF-LINE)?',
-            options: [
-              { value: 'true', label: 'Yes' },
-              { value: 'false', label: 'No' }
-            ],
-
-          }
-        },
-        {
-          key: 'manualKeyInFacility',
-          type: 'radio',
-          templateOptions: {
-            label: 'MANUAL KEY-IN FACILITY?',
-            options: [
-              { value: 'true', label: 'Yes' },
-              { value: 'false', label: 'No' }
-            ],
 
           }
         }
@@ -1702,7 +1590,7 @@ export class PosFormService {
 
   getPosFields(userGroup): FormlyFieldConfig[] {
     var retFields: FormlyFieldConfig[];
-    userGroup = 'asdasd';
+    userGroup = 'ao';
     switch (userGroup) {
       case 'ao':
         retFields = this.aoFields

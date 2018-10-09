@@ -42,9 +42,6 @@
         <ng-template matStepLabel>
             <span class="mat-subheading-1">Attach Occular Inspection Form to Branches</span>
         </ng-template>
-        <div class="text-right">
-            <mat-checkbox>Waive OIF</mat-checkbox>
-        </div>
         <!-- <app-branch-list-attachment [name]="branchOIF"></app-branch-list-attachment> -->
         <router-outlet name="branchOIF"></router-outlet>
         <!-- <app-branch-list></app-branch-list> -->
@@ -62,8 +59,9 @@
         <!-- <app-branch-list></app-branch-list> -->
         <!-- <app-branch-list-attachment [name]="branchPOS"></app-branch-list-attachment> -->
         <router-outlet name="branchPOS"></router-outlet>
-        <div style="margin-top: 20px;"></div>
-        <router-outlet name="mid"></router-outlet>
+        <div style="margin-top: 20px;">
+            <router-outlet name="mid"></router-outlet>
+        </div>
         <button style="margin-top:3px" mat-button color="primary" (click)="completed(stepper);">Next
             <mat-icon color="primary">navigate_next</mat-icon>
         </button>
@@ -71,7 +69,7 @@
     </mat-step>
     <mat-step [completed]="false">
         <ng-template matStepLabel>
-            <span class="mat-subheading-1">Attach Required Documents</span>
+            <span class="mat-subheading-1">Requirements</span>
         </ng-template>
         <router-outlet name="documentCheckList"></router-outlet>
 
