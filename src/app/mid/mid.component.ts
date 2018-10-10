@@ -25,6 +25,7 @@ export class MidComponent implements OnInit {
   tidIndex: number; // ROW WHERE ADDING OR UPDATE OF TID IS CLICKED
   tidContainer: string[]; // CONTAINER OF ALL TIDs
   tidInput: FormControl; // FORM CONTROL FOR TID INPUTTED
+  showDeleteMid: boolean;
 
   @Input() action?: boolean;
   @Input() update?: boolean;
@@ -43,6 +44,14 @@ export class MidComponent implements OnInit {
     if (this.action == false) {
       this.form = 'POS';
     }
+
+    this._route.data.subscribe(data => {
+      if (data['showDeleteMid']) {
+        this.showDeleteMid = true;
+      } else {
+        this.showDeleteMid = false;
+      }
+    })
   }
 
   addMid() {

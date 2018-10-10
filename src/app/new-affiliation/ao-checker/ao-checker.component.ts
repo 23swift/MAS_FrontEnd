@@ -16,7 +16,7 @@ export class AoCheckerComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   title = 'New Affiliation';
-  subTitle = 'FOR AO CHECKING';
+  subTitle = 'FOR AO CHECKER REVIEW';
   mode: string;
   status = 'done';
 

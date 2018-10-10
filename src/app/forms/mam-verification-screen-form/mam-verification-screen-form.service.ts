@@ -926,7 +926,7 @@ export class MamVerificationScreenFormService {
           key: 'merchantGrade',
           type: 'radio',
           templateOptions: {
-            label: 'merchantGrade',
+            label: 'Merchant Grade',
             required: true,
             options: [
               { value: 1, label: 'High Risk' },
@@ -1006,6 +1006,7 @@ export class MamVerificationScreenFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [  
         {
+          className: 'flex-1',
           key: 'hotelSetupFacility',
           type: 'radio',
           templateOptions: {
@@ -1018,6 +1019,7 @@ export class MamVerificationScreenFormService {
           }
         },
         {
+          className: 'flex-1',
           key: 'manualKeyInFacility',
           type: 'radio',
           templateOptions: {

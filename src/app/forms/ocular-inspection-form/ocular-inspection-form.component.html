@@ -1,10 +1,13 @@
-<span class="mat-headline">
+<div class="text-right" *ngIf="showWaive">
+    <mat-checkbox>Waive on screen OIF</mat-checkbox>
+</div>
+<p class="mat-headline">
     Occular Inspection Form
-  </span>
+</p>
 <form [formGroup]="form" (ngSubmit)="submit()">
     <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form">
         <div *ngIf="!displayMode" fxLayout="row wrap" fxLayoutAlign="end center" fxLayoutGap="3px">
-            <button type="submit" color="primary" mat-raised-button>Save </button>
+            <button type="submit" color="primary" mat-raised-button>Create </button>
             <button type="button" (click)="cancel();" color="accent" mat-raised-button>Cancel</button>
         </div>
     </formly-form>
