@@ -74,6 +74,9 @@ export class BdoFormHeaderComponent implements OnInit {
       if (this.mode.match(/forPreScreening/)) {
         this.showPreScreen = true;
       }
+      if (this.mode.match(/mauOfficer/i)) {
+        this.showRequestFlowOptions = false;
+      }
     }
   }
 

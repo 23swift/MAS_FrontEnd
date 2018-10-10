@@ -9,3 +9,9 @@ table {
 .ownrequest-icon-color {
     background-color: green
 }
+
+.item-edit:hover {
+    color:  #0d47a1;
+    cursor: pointer;
+    text-decoration: underline !important;
+}

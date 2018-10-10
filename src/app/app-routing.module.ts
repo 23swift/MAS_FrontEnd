@@ -68,6 +68,7 @@ import { CustomerProfileListComponent } from './customer-profile-list/customer-p
 import { MdcsEncoderComponent } from './new-affiliation/mdcs-encoder/mdcs-encoder.component';
 import { MdcsCheckerComponent } from './new-affiliation/mdcs-checker/mdcs-checker.component';
 import { MamVerificationScreenFormComponent } from './forms/mam-verification-screen-form/mam-verification-screen-form.component';
+import { PosTerminalBrandListComponent } from './pos-terminal-brand-list/pos-terminal-brand-list.component';
 
 
 const routes: Routes = [
@@ -140,19 +141,21 @@ const routes: Routes = [
       { path: '', component: BranchListComponent, outlet: 'branch' },
       {
         path: 'branch/:mode/:id', component: BranchFormComponent, outlet: 'branch', children: [
+          // { path: '', component: PosTerminalBrandListComponent, outlet: 'pos-terminal', data: { showAddTerminal: true } },
           { path: '', component: MidComponent, outlet: 'mid' }
         ]
       },
       {
         path: 'branch/:mode', component: BranchFormComponent, outlet: 'branch', children: [
-          { path: '', component: MidComponent, outlet: 'mid' }
+          // { path: '', component: PosTerminalBrandListComponent, outlet: 'pos-terminal', data: { showAddTerminal: true } },
+          { path: '', component: MidComponent, outlet: 'mid', data: { showDeleteMid: true } }
         ]
       },
       { path: '', component: BranchListAttachmentComponent, outlet: 'branchOIF' },
       { path: 'OIF/:id?', component: OcularInspectionFormComponent, outlet: 'branchOIF' },
       { path: '', component: BranchListAttachmentPOSComponent, outlet: 'branchPOS' },
       { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOS' },
-      { path: 'MID/:form', component: MidComponent, outlet: 'mid' },
+      { path: 'MID/:form', component: MidComponent, outlet: 'mid', data: { showDeleteMid: false } },
       { path: '', component: DocumentCheckListComponent, outlet: 'documentCheckList' },
       { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
     ]
@@ -252,7 +255,7 @@ const routes: Routes = [
       { path: 'branch/:mode', component: BranchFormComponent, outlet: 'branch' }
     ]
   },
-  { path: 'na/mauOfficer/:mode/:id', component: MauOfficerComponent }, // 1
+  { path: 'na/mauOfficer/:id', component: MauOfficerComponent }, // 1
   { path: 'na/mdcsUser', component: MdcsUserComponent },
   {
     path: 'na/mdmUser', component: MdmUserComponent, children: [

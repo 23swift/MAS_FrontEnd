@@ -134,6 +134,8 @@ import { MamVerificationScreenFormComponent } from './forms/mam-verification-scr
 
 import { PosTerminalFormModalComponent } from './modal/pos-terminal-form-modal/pos-terminal-form-modal.component';
 import { PosTerminalBrandListComponent } from './pos-terminal-brand-list/pos-terminal-brand-list.component';
+import { PrintDebitFacilityTypeComponent } from './print-debit-facility-type/print-debit-facility-type.component';
+import { PrintAdmrcSectionTypeComponent } from './print-admrc-section-type/print-admrc-section-type.component';
 
 
 
@@ -240,9 +242,10 @@ import { PosTerminalBrandListComponent } from './pos-terminal-brand-list/pos-ter
     MdcsEncoderComponent,
     MdcsCheckerComponent,
     MamVerificationScreenFormComponent,
-    
     PosTerminalFormModalComponent,
-    PosTerminalBrandListComponent
+    PosTerminalBrandListComponent,
+    PrintDebitFacilityTypeComponent,
+    PrintAdmrcSectionTypeComponent
   ],
   imports: [
     BrowserModule,
@@ -261,7 +264,18 @@ import { PosTerminalBrandListComponent } from './pos-terminal-brand-list/pos-ter
         {
           name: 'alertmessage',
           component: AlertMessageComponent
-        }]
+        },
+        ////// USE FOR PRINTING DEBIT FACILITY AND ADMRC SECTION
+        {
+          name: 'printDebit',
+          component: PrintDebitFacilityTypeComponent
+        },
+        {
+          name: 'printAdmrc',
+          component: PrintAdmrcSectionTypeComponent
+        }
+        ////////////////////////////////////////////////////////
+      ]
       }
     ),
     BrowserAnimationsModule,

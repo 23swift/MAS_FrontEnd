@@ -15,7 +15,7 @@ export class MdcsCheckerComponent implements OnInit {
 
   ngOnInit() {
     this.title = 'New Affiliation';
-    this.subTitle = 'FOR MDCS CHECKING';
+    this.subTitle = 'FOR ENCODER CHECKER REVIEW';
     this.mode = 'forPreScreening';
   }
 }

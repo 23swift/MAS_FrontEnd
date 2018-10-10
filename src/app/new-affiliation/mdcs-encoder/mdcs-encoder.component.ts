@@ -15,7 +15,7 @@ export class MdcsEncoderComponent implements OnInit {
 
   ngOnInit() {
     this.title = 'New Affiliation';
-    this.subTitle = 'FOR MDCS ENCODING';
+    this.subTitle = 'FOR ENCODING';
     this.mode = 'forMdcsChecking';
   }
 }

@@ -930,7 +930,7 @@ export class BranchFormService {
     },
 
     {
-      template: '<span class="mat-headline">Debit Facility Instructions</span>',
+      type: 'printDebit'
     },
 
     {
@@ -2764,7 +2764,7 @@ export class BranchFormService {
     },
 
     {
-      template: '<span class="mat-headline">Debit Facility Instructions</span>',
+      type: 'printDebit'
     },
 
     {
@@ -3790,7 +3790,7 @@ export class BranchFormService {
     },
 
     {
-      template: '<span class="mat-headline">Debit Facility Instructions</span>',
+      type: 'printDebit'
     },
 
     {
@@ -4389,7 +4389,9 @@ export class BranchFormService {
       }
       ]
     },
-    { template: '<span class="mat-headline">ADMRC Fields</span>' },
+    { 
+      type: 'printAdmrc'
+     },
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
@@ -5433,7 +5435,7 @@ export class BranchFormService {
     },
 
     {
-      template: '<span class="mat-headline">Debit Facility Instructions</span>',
+      type: 'printDebit'
     },
 
     {
@@ -5955,7 +5957,9 @@ export class BranchFormService {
       }
       ]
     },
-    { template: '<span class="mat-headline">ADMRC Fields</span>' },
+    {
+      type: 'printAdmrc'
+    },
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
@@ -6136,6 +6140,6 @@ export class BranchFormService {
 
   constructor() { }
   getBranchFields(): FormlyFieldConfig[] {
-    return this.mdcsChecker;
+    return this.ao;
   }
 }

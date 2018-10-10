@@ -1,10 +1,12 @@
 export interface IRequestDisplay {
     Id: number;
-    TrackingNo: string;
+    ReferenceNo: string;
+    RequestDate: string;
     RequestType: string;
     BusinessName: string;
-    RequestDate: string;
-    BranchName: string;
-    Location: string;
-    RequestStatus: string;
+    DBAName: string;
+    RequestedBy: string;
+    Aging: string;
+    Status: string;
+    TAT: string;
 }

@@ -197,3 +197,9 @@ input.ng-invalid.ng-touched + span {
 // input.ng-invalid::-ms-input-placeholder { /* Microsoft Edge */
 //    color: red !important;
 // }
+
+.print-container {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+}
