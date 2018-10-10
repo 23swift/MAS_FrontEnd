@@ -20,7 +20,7 @@ export class BranchFormService {
 
           },
           templateOptions: {
-            label: 'DBA Name(DBA/Trade Name)',
+            label: 'DBA Name(DBA/Trade Name)11',
             placeholder: 'DBA Name(DBA/Trade Name)',
             required: true,
             maxLength: 22
@@ -3117,6 +3117,7 @@ export class BranchFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
+          className: 'flex-1',
           key: 'paymentMethodCreditFac',
           type: 'radio',
           templateOptions: {
@@ -3135,8 +3136,14 @@ export class BranchFormService {
             label: 'Settle Account Number (For Crediting Payment)',
             placeholder: 'Settle Account Number (For Crediting Payment)'
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
+          className: 'flex-1',
           type: 'select',
           key: 'taxCode',
           templateOptions: {
@@ -3148,6 +3155,7 @@ export class BranchFormService {
           }
         },
         {
+          className: 'flex-1',
           type: 'select',
           key: 'taxType',
           templateOptions: {
@@ -4754,6 +4762,7 @@ export class BranchFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
+          className: 'flex-1',
           key: 'paymentMethodCreditFac',
           type: 'radio',
           templateOptions: {
@@ -4772,8 +4781,14 @@ export class BranchFormService {
             label: 'Settle Account Number (For Crediting Payment)',
             placeholder: 'Settle Account Number (For Crediting Payment)'
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
+          className: 'flex-1',
           type: 'select',
           key: 'taxCode',
           templateOptions: {
@@ -4785,6 +4800,7 @@ export class BranchFormService {
           }
         },
         {
+          className: 'flex-1',
           type: 'select',
           key: 'taxType',
           templateOptions: {

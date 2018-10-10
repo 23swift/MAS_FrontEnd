@@ -408,6 +408,7 @@ export class MaefFormService {
       fieldGroup: [
 
         {
+          className: 'flex-1',
           key: 'amlaYes',
           type: 'radio',
           templateOptions: {
@@ -423,6 +424,7 @@ export class MaefFormService {
 
         {
           key: 'amlaClass',
+          className: 'flex-1',
           type: 'radio',
           expressionProperties: {
             'templateOptions.required': (model: any, formState: any) => {
@@ -462,6 +464,7 @@ export class MaefFormService {
       fieldGroup: [
 
         {
+          className: 'flex-1',
           key: 'rptYes',
           type: 'radio',
           templateOptions: {
@@ -476,6 +479,7 @@ export class MaefFormService {
         },
 
         {
+          className: 'flex-1',
           key: 'rptClass',
           type: 'radio',
           expressionProperties: {
@@ -570,6 +574,7 @@ export class MaefFormService {
       fieldGroup: [
 
         {
+          className: 'flex-1',
           key: 'largeAccYes',
           type: 'radio',
           templateOptions: {
@@ -584,6 +589,7 @@ export class MaefFormService {
         },
 
         {
+          className: 'flex-1',
           key: 'natureBus',
           type: 'radio',
           templateOptions: {
