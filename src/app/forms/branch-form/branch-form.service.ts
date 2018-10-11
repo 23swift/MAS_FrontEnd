@@ -6140,6 +6140,6 @@ export class BranchFormService {
 
   constructor() { }
   getBranchFields(): FormlyFieldConfig[] {
-    return this.ao;
+    return this.mdcsChecker;
   }
 }
