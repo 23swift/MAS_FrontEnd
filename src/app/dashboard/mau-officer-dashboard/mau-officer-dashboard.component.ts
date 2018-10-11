@@ -27,9 +27,9 @@ export class MauOfficerDashboardComponent implements OnInit {
     private _router: Router) { }
 
   ngOnInit() {
-    this.displayedColumns = ['TrackingNo', 'RequestType', 'BusinessName',
-                             'RequestDate', 'BranchName', 'Location', 
-                             'RequestStatus', 'Operation']
+    this.displayedColumns = ['ReferenceNo', 'RequestType', 'BusinessName',
+                             'RequestDate', 'DBAName', 'Location', 
+                             'Status', 'Operation']
     this.dataSource = this._service.Get();
 
     this.mode = '';
