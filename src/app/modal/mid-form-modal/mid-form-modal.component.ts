@@ -18,7 +18,7 @@ export class MidFormModalComponent implements OnInit {
   fields: FormlyFieldConfig[];
 
   constructor(private _route: ActivatedRoute, private _router: Router, private _service: MidFormModalService,
-  public _modalRef: MatDialogRef<MidFormModalComponent>) {
+  private _modalRef: MatDialogRef<MidFormModalComponent>) {
 
   }
 
