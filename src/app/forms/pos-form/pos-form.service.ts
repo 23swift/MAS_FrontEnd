@@ -23,27 +23,27 @@ export class PosFormService {
         // {
         //   className: 'flex-1',
         //   type: 'input',
-        //   key: 'requestorsName',
+        //   key: 'requestersName',
         //   templateOptions: {
-        //     label: "Requestor's Name",
+        //     label: "Requester's Name",
         //     disabled: true
         //   }
         // },
         {
           className: 'flex-1',
           type: 'input',
-          key: 'requestorsBusinessUnit',
+          key: 'requestersBusinessUnit',
           templateOptions: {
-            label: "Requestor's Business Unit",
+            label: "Requester's Business Unit",
             disabled: true
           }
         },
         {
           className: 'flex-1',
           type: 'input',
-          key: 'requestorsContactNumber',
+          key: 'requestersContactNumber',
           templateOptions: {
-            label: "Requestor's Contact Number / Cellphone Number",
+            label: "Requester's Contact Number / Cellphone Number",
             disabled: true
           }
         }
@@ -75,9 +75,18 @@ export class PosFormService {
           type: 'select',
           key: 'businessTypeOfAccount',
           templateOptions: {
-            label: 'Business Type Of Account (AP / RM / HO)',
+            label: 'Business Type Of Account (AO / RM / HO)',
+            valueProp: 'BusinessTypeOfAcccount_Id',
+            labelProp: 'Description',
+            options: [
+              { BusinessTypeOfAcccount_Id: '1', Description: 'AO' },
+              { BusinessTypeOfAcccount_Id: '2', Description: 'RM' },
+              { BusinessTypeOfAcccount_Id: '3', Description: 'HO' }
+            ],
             disabled: true
-          }
+          },
+          defaultValue: '1'
+
         }
       ]
     },
@@ -251,27 +260,31 @@ export class PosFormService {
         {
           className: 'flex-1',
           type: 'calendar',
-          key: 'requiredDateAndTimeOfDispatch',
+          key: 'requestDateAndTimeOfDispatch',
           templateOptions: {
-            label: "Required Date And Time Of Dispatch",
+            label: "Request Date And Time Of Dispatch",
             disabled: true
           }
         },
         {
           className: 'flex-1',
-          type: 'select',
-          key: 'installationTeam',
+          type: 'radio',
+          key: 'installationTerm',
           templateOptions: {
-            label: "Installation Team",
+            label: "Installation Term",
+            options: [
+              { value: 'Permanent', label: 'Permanent' },
+              { value: 'Temporary', label: 'Temporary' },
+            ],
             disabled: true
           }
         },
         {
           className: 'flex-1',
           type: 'calendar',
-          key: 'requiredPullOutDateForTempPOSTerminals',
+          key: 'requestPullOutDateForTempPOSTerminals',
           templateOptions: {
-            label: "Required Pull Out Date For Temporary POS Terminals",
+            label: "Request Pull Out Date For Temporary POS Terminals",
             disabled: true
           }
         },
@@ -298,6 +311,15 @@ export class PosFormService {
             disabled: true
           }
         },
+        // {
+        //   className: 'flex-1',
+        //   type: 'radio',
+        //   key: 'tipAdjust',
+        //   templateOptions: {
+        //     label: "TIP Adjust",
+        //     disabled: true
+        //   }
+        // },
         {
           className: 'flex-1',
           type: 'select',
@@ -740,21 +762,30 @@ export class PosFormService {
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
+        // {
+        //   className: 'flex-1',
+        //   type: 'input',
+        //   key: 'requestersName',
+        //   templateOptions: {
+        //     label: "Requester's Name",
+
+        //   }
+        // },
         {
           className: 'flex-1',
           type: 'input',
-          key: 'requestorsBusinessUnit',
+          key: 'requestersBusinessUnit',
           templateOptions: {
-            label: "Requestor's Business Unit",
+            label: "Requester's Business Unit",
 
           }
         },
         {
           className: 'flex-1',
           type: 'input',
-          key: 'requestorsContactNumber',
+          key: 'requestersContactNumber',
           templateOptions: {
-            label: "Requestor's Contact Number / Cellphone Number",
+            label: "Requester's Contact Number / Cellphone Number",
 
           }
         }
@@ -786,9 +817,17 @@ export class PosFormService {
           type: 'select',
           key: 'businessTypeOfAccount',
           templateOptions: {
-            label: 'Business Type Of Account (AP / RM / HO)',
+            label: 'Business Type Of Account (AO / RM / HO)',
+            valueProp: 'BusinessTypeOfAcccount_Id',
+            labelProp: 'Description',
+            options: [
+              { BusinessTypeOfAcccount_Id: '1', Description: 'AO' },
+              { BusinessTypeOfAcccount_Id: '2', Description: 'RM' },
+              { BusinessTypeOfAcccount_Id: '3', Description: 'HO' }
+            ]
+          },
+          defaultValue: '1'
 
-          }
         }
       ]
     },
@@ -886,7 +925,8 @@ export class PosFormService {
               { value: 'true', label: 'Yes' },
               { value: 'false', label: 'No' }
             ],
-          }
+          },
+          defaultValue: 'false'
         }
       ]
     },
@@ -939,7 +979,8 @@ export class PosFormService {
           key: 'numberOfPrintedSlips',
           templateOptions: {
             label: "Number of Printed Slips",
-          }
+          },
+          defaultValue: 2
         },
         {
           className: 'flex-1',
@@ -957,27 +998,30 @@ export class PosFormService {
         {
           className: 'flex-1',
           type: 'calendar',
-          key: 'requiredDateAndTimeOfDispatch',
+          key: 'requestDateAndTimeOfDispatch',
           templateOptions: {
-            label: "Required Date And Time Of Dispatch",
+            label: "Request Date And Time Of Dispatch",
 
           }
         },
         {
           className: 'flex-1',
-          type: 'select',
-          key: 'installationTeam',
+          type: 'radio',
+          key: 'installationTerm',
           templateOptions: {
-            label: "Installation Team",
-
+            label: "Installation Term",
+            options: [
+              { value: 'Permanent', label: 'Permanent' },
+              { value: 'Temporary', label: 'Temporary' },
+            ]
           }
         },
         {
           className: 'flex-1',
           type: 'calendar',
-          key: 'requiredPullOutDateForTempPOSTerminals',
+          key: 'requestPullOutDateForTempPOSTerminals',
           templateOptions: {
-            label: "Required Pull Out Date For Temporary POS Terminals",
+            label: "Request Pull Out Date For Temporary POS Terminals",
 
           }
         }
@@ -1003,12 +1047,7 @@ export class PosFormService {
             label: "Other Required Profiling Facility (tip adjust, binver, BDO Pay, etc)",
 
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'select',
@@ -1040,7 +1079,7 @@ export class PosFormService {
             label: "Date and Time Endorsed To MAU",
 
           }
-        },
+        }
         //     {
         //       className: 'flex-1',
         //       type: 'input',
@@ -1212,91 +1251,94 @@ export class PosFormService {
         //     }
         //   ]
         // },
-        // {
-        //   fieldGroupClassName: 'display-flex',
-        //   fieldGroup: [
-        //     {
-        //       className: 'flex-1',
-        //       type: 'input',
-        //       key: 'bdoPayMobileNumberOfTerminals',
-        //       templateOptions: {
-        //         label: "BDO Pay Mobile – Number of Terminals (Count)",
+        // 
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'bdoPayMobileNumberOfTerminals',
+          templateOptions: {
+            label: "BDO Pay Mobile – Number of Terminals (Count)",
 
-        //       }
-        //     },
-        //     {
-        //       className: 'flex-1',
-        //       type: 'input',
-        //       key: 'bdoPayMobileBusinessGroup',
-        //       templateOptions: {
-        //         label: "BDO Pay Mobile – Business Group (If applicable)",
+          }
+        },
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'bdoPayMobileBusinessGroup',
+          templateOptions: {
+            label: "BDO Pay Mobile – Business Group (If applicable)",
 
-        //       }
-        //     },
-        //     {
-        //       className: 'flex-1',
-        //       type: 'input',
-        //       key: 'bdoPayMobileMerchantPortalUserEmailAddress',
-        //       templateOptions: {
-        //         label: "BDO Pay Mobile – Merchant Portal User's Email Address",
+          }
+        },
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'bdoPayMobileMerchantPortalUserEmailAddress',
+          templateOptions: {
+            label: "BDO Pay Mobile – Merchant Portal User's Email Address",
 
-        //       }
-        //     }
-        //   ]
-        // },
-        // {
-        //   fieldGroupClassName: 'display-flex',
-        //   fieldGroup: [
-        //     {
-        //       className: 'flex-1',
-        //       type: 'input',
-        //       key: 'bdoPayMobileMerchantPortalNominatedUsername',
-        //       templateOptions: {
-        //         label: "BDO Pay Mobile – Merchant Portal Nominated Username",
+          }
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'bdoPayMobileMerchantPortalNominatedUsername',
+          templateOptions: {
+            label: "BDO Pay Mobile – Merchant Portal Nominated Username",
 
-        //       }
-        //     },
-        //     {
-        //       className: 'flex-1',
-        //       type: 'input',
-        //       key: 'bdoPayMobileInternetConnection',
-        //       templateOptions: {
-        //         label: "BDO Pay Mobile – Internet Connection",
+          }
+        },
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'bdoPayMobileInternetConnection',
+          templateOptions: {
+            label: "BDO Pay Mobile – Internet Connection",
 
-        //       }
-        //     },
-        //     {
-        //       className: 'flex-1',
-        //       type: 'input',
-        //       key: 'bdoPayMobileInternetProvider',
-        //       templateOptions: {
-        //         label: "BDO Pay Mobile – Internet Provider",
+          }
+        },
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'bdoPayMobileInternetProvider',
+          templateOptions: {
+            label: "BDO Pay Mobile – Internet Provider",
 
-        //       }
-        //     }
-        //   ]
-        // },
-        // {
-        //   fieldGroupClassName: 'display-flex',
-        //   fieldGroup: [
-        //     {
-        //       className: 'flex-1',
-        //       type: 'input',
-        //       key: 'bdoPayMobileReferenceField',
-        //       templateOptions: {
-        //         label: "BDO Pay Mobile – Reference Field",
+          }
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'bdoPayMobileReferenceField',
+          templateOptions: {
+            label: "BDO Pay Mobile – Reference Field",
 
-        //       }
-        //     },
-        //     {
-        //       className: 'flex-1',
-        //       type: 'input',
-        //       key: 'bdoPayMobileRfName',
-        //       templateOptions: {
-        //         label: "BDO Pay Mobile – If RF is Customized, pls Include RF Name (Max 10 Characters)",
+          }
+        },
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'bdoPayMobileRfName',
+          templateOptions: {
+            label: "BDO Pay Mobile – If RF is Customized, pls Include RF Name (Max 10 Characters)",
 
-        //       }
-        //     }
+          }
+        }
       ]
     }
   ]
