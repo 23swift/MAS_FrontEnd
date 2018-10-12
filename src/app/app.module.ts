@@ -136,6 +136,10 @@ import { PosTerminalFormModalComponent } from './modal/pos-terminal-form-modal/p
 import { PosTerminalBrandListComponent } from './pos-terminal-brand-list/pos-terminal-brand-list.component';
 import { PrintDebitFacilityTypeComponent } from './print-debit-facility-type/print-debit-facility-type.component';
 import { PrintAdmrcSectionTypeComponent } from './print-admrc-section-type/print-admrc-section-type.component';
+import { OwnersFormModalComponent } from './modal/owners-form-modal/owners-form-modal.component';
+import { SignatoriesFormModalComponent } from './modal/signatories-form-modal/signatories-form-modal.component';
+import { SignatoriesListComponent } from './signatories-list/signatories-list.component';
+import { OwnersListComponent } from './owners-list/owners-list.component';
 
 
 
@@ -245,7 +249,11 @@ import { PrintAdmrcSectionTypeComponent } from './print-admrc-section-type/print
     PosTerminalFormModalComponent,
     PosTerminalBrandListComponent,
     PrintDebitFacilityTypeComponent,
-    PrintAdmrcSectionTypeComponent
+    PrintAdmrcSectionTypeComponent,
+    OwnersFormModalComponent,
+    SignatoriesFormModalComponent,
+    SignatoriesListComponent,
+    OwnersListComponent
   ],
   imports: [
     BrowserModule,
@@ -319,7 +327,7 @@ import { PrintAdmrcSectionTypeComponent } from './print-admrc-section-type/print
     DocumentChecklistConfigurationFormComponent, ParameterMaintenanceFormComponent,
     ParameterMaintenanceDetailsComponent, AoMaintenanceFormComponent, BuMaintenanceFormComponent, 
     DefaultMidMaintenanceFormComponent, MidFormComponent, MidModalComponent, DeleteModalComponent, 
-    SearchModalComponent, PosTerminalFormModalComponent],
+    SearchModalComponent, PosTerminalFormModalComponent, OwnersFormModalComponent, SignatoriesFormModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
