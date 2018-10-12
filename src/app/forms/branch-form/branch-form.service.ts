@@ -20,7 +20,7 @@ export class BranchFormService {
 
           },
           templateOptions: {
-            label: 'DBA Name(DBA/Trade Name)11',
+            label: 'DBA Name(DBA/Trade Name)',
             placeholder: 'DBA Name(DBA/Trade Name)',
             required: true,
             maxLength: 22
@@ -6140,6 +6140,10 @@ export class BranchFormService {
 
   constructor() { }
   getBranchFields(): FormlyFieldConfig[] {
+<<<<<<< HEAD
+    return this.mdcsEncoder;
+=======
     return this.mdcsChecker;
+>>>>>>> 6497e94a9c4f8b35614aefd986f7208cefd4068d
   }
 }
