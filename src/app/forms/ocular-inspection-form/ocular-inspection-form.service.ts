@@ -60,6 +60,7 @@ export class OcularInspectionFormService {
                 }
             ]
         },
+
         {
             fieldGroupClassName: 'display-flex',
             fieldGroup: [
@@ -72,6 +73,19 @@ export class OcularInspectionFormService {
                     }
 
                 },
+            ]
+        },
+        {
+            fieldGroupClassName: 'display-flex',
+            fieldGroup: [
+                {
+                    key: 'DBACity',
+                    type: 'select',
+                    className: 'flex-1',
+                    templateOptions: {
+                        placeholder: 'DBA City'
+                    }
+                }
             ]
         },
         {
@@ -251,8 +265,9 @@ export class OcularInspectionFormService {
                         label: 'Location',
                         labelProp: 'Description',
                         valueProp: 'Location_Id',
-                        options: []
-                    }
+                        options: [{ Description: 'Please provide', Location_Id: 0 }]
+                    },
+                    defaultValue: 0
                 },
                 {
                     key: 'businessSignage',
@@ -272,8 +287,9 @@ export class OcularInspectionFormService {
                         label: 'Type of Premise',
                         labelProp: 'Description',
                         valueProp: 'TypeOfPremise_Id',
-                        options: []
-                    }
+                        options: [{ Description: 'Please provide', TypeOfPremise_Id: 0 }]
+                    },
+                    defaultValue: 0 
                 }
             ]
         },
@@ -293,12 +309,12 @@ export class OcularInspectionFormService {
                     className: 'flex-1',
                     key: 'interiorAppearance',
                     type: 'radio',
-                    defaultValue: 'true',
+                    defaultValue: 'Good',
                     templateOptions: {
                         label: 'Interior Appearance',
                         options: [
-                            { value: 'true', label: 'Yes' },
-                            { value: 'false', label: 'No' }
+                            { value: 'Good', label: 'Good' },
+                            { value: 'Poor', label: 'Poor' }
                         ]
                     }
                 },
@@ -306,12 +322,12 @@ export class OcularInspectionFormService {
                     className: 'flex-1',
                     key: 'exteriorAppearance',
                     type: 'radio',
-                    defaultValue: 'true',
+                    defaultValue: 'Good',
                     templateOptions: {
                         label: 'Exterior Appearance',
                         options: [
-                            { value: 'true', label: 'Yes' },
-                            { value: 'false', label: 'No' }
+                            { value: 'Good', label: 'Good' },
+                            { value: 'Poor', label: 'Poor' }
                         ]
                     }
                 }
@@ -324,12 +340,12 @@ export class OcularInspectionFormService {
                     className: 'flex-1',
                     key: 'stocksInventory',
                     type: 'radio',
-                    defaultValue: 'true',
+                    defaultValue: 'Good',
                     templateOptions: {
                         label: 'Stocks / Inventory',
                         options: [
-                            { value: 'true', label: 'Yes' },
-                            { value: 'false', label: 'No' }
+                            { value: 'Good', label: 'Good' },
+                            { value: 'Poor', label: 'Poor' }
                         ]
                     }
                 },
@@ -337,12 +353,12 @@ export class OcularInspectionFormService {
                     className: 'flex-1',
                     key: 'equipment',
                     type: 'radio',
-                    defaultValue: 'true',
+                    defaultValue: 'Good',
                     templateOptions: {
                         label: 'Equipment',
                         options: [
-                            { value: 'true', label: 'Yes' },
-                            { value: 'false', label: 'No' }
+                            { value: 'Good', label: 'Good' },
+                            { value: 'Poor', label: 'Poor' }
                         ]
                     }
                 },
@@ -358,6 +374,7 @@ export class OcularInspectionFormService {
                             { value: 'false', label: 'No' }
                         ]
                     }
+
                 }
             ]
         },
@@ -444,6 +461,10 @@ export class OcularInspectionFormService {
             ]
         },
         {
+            className: 'section-label',
+            template: '<span class="mat-headline mat-subheading-1">If Exhibit</span>'
+        },
+        {
             fieldGroupClassName: 'display-flex',
             fieldGroup: [
                 {
@@ -473,6 +494,10 @@ export class OcularInspectionFormService {
                     }
                 }
             ]
+        },
+        {
+            className: 'section-label',
+            template: '<span class="mat-headline mat-subheading-1">If Conference Or Like</span>'
         },
         {
             fieldGroupClassName: 'display-flex',
@@ -592,8 +617,8 @@ export class OcularInspectionFormService {
                     templateOptions: {
                         label: 'Adverse Findings',
                         options: [
-                            { value: 'true', label: 'Yes' },
-                            { value: 'false', label: 'No' }
+                            { value: 'MISREPRESENTATION', label: 'MISREPRESENTATION' },
+                            { value: 'OTHERS', label: 'OTHERS' }
                         ]
                     }
                 },
@@ -604,8 +629,9 @@ export class OcularInspectionFormService {
                     templateOptions: {
                         label: 'Incomplete Report Due To',
                         options: [
-                            { value: 'true', label: 'Yes' },
-                            { value: 'false', label: 'No' }
+                            { value: 'NORELIABLEINFORMANT', label: 'NO RELIABLE INFORMANT' },
+                            { value: 'INFORMANTREFUSEDTOPROVIDE', label: 'INFORMANT REFUSED TO PROVIDE' },
+                            { value: 'OTHERS', label: 'OTHERS' }
                         ]
                     }
                 }
