@@ -5,11 +5,13 @@ export class OwnersListService {
 
   constructor() { }
 
-  getFields() {
-
+  getTableFields() {
+    return ["Name", "PercentOfOwnership", "TypeOfRelatedParty", "Remarks", "Action"];
   }
 
   get() {
-    
+    return [
+      
+    ];
   }
 }

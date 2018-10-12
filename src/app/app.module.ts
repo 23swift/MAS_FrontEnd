@@ -140,6 +140,7 @@ import { OwnersFormModalComponent } from './modal/owners-form-modal/owners-form-
 import { SignatoriesFormModalComponent } from './modal/signatories-form-modal/signatories-form-modal.component';
 import { SignatoriesListComponent } from './signatories-list/signatories-list.component';
 import { OwnersListComponent } from './owners-list/owners-list.component';
+import { PosListContainerComponent } from './pos-list-container/pos-list-container.component';
 
 
 
@@ -253,7 +254,8 @@ import { OwnersListComponent } from './owners-list/owners-list.component';
     OwnersFormModalComponent,
     SignatoriesFormModalComponent,
     SignatoriesListComponent,
-    OwnersListComponent
+    OwnersListComponent,
+    PosListContainerComponent
   ],
   imports: [
     BrowserModule,

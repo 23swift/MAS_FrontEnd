@@ -10,20 +10,14 @@ export class MidService {
   get() {
     // return this._http.get(apiUrl);
     return [
-      { Id: 1, Currency: 'PHP', MonitorCode: 'OTC', MerchantGroupCode: 'DM01 - Diners' },
-      { Id: 2, Currency: 'PHP', MonitorCode: 'Installment Reg', MerchantGroupCode: 'MerchGrp24' },
-      { Id: 3, Currency: 'USD', MonitorCode: 'Reg Inst', MerchantGroupCode: 'MerchGrp1Z' },
-      { Id: 4, Currency: 'PHP', MonitorCode: '0% Inst', MerchantGroupCode: '' },
-      { Id: 5, Currency: 'PHP', MonitorCode: 'BNPL Reg', MerchantGroupCode: 'MerchGrp4' },
-      { Id: 6, Currency: 'PHP', MonitorCode: 'BNPL 0%', MerchantGroupCode: 'MerchGrp1Z' }
+      { Id: 1, Currency: 'PHP', MonitorCode: 'OTC', CardPlans: 'MCVCJCACCCDC', Status: 'ACTIVE' },
+      { Id: 2, Currency: 'PHP', MonitorCode: 'Installment Reg', CardPlans: 'MCVCJCACCCDC', Status: 'ACTIVE' },
+      { Id: 3, Currency: 'USD', MonitorCode: 'Reg Inst', CardPlans: 'MCVCJCACCCDC', Status: 'ACTIVE' },
+      { Id: 4, Currency: 'PHP', MonitorCode: '0% Inst', CardPlans: 'AC', Status: 'ACTIVE' },
     ];
   }
   getTableFields(update) {
-    if (update) {
-      return ['Currency', 'MonitorCode', 'MerchantGroupCode', 'MID', 'TID', 'Action'];
-    } else {
-      return ['Currency', 'MonitorCode', 'MerchantGroupCode', 'Action'];
-    }
+    return ['Currency', 'MonitorCode', 'CardPlans', 'Status', 'Mid', 'DebitTid', 'Action'];
   }
 
   create(): void {

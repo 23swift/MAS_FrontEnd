@@ -5,18 +5,18 @@ export interface DocumentDisplayInfo {
   Submitted: boolean;
   DocumentName: String;
   Remarks: String;
-  DateSubmitted: String;
+  TargetDateOfSubmission: String;
   FileUpload: String;
 }
 
 const TEST_DATA: DocumentDisplayInfo[] = [
   {
     Id: 1, Submitted: true, DocumentName: 'BDO\'s Merchant Information Sheet (MIS)',
-    Remarks: 'Marked as submitted but no file is attached.', DateSubmitted: '08/29/2018', FileUpload: ''
+    Remarks: 'Marked as submitted but no file is attached.', TargetDateOfSubmission: '08/29/2018', FileUpload: ''
   },
   {
     Id: 2, Submitted: true, DocumentName: 'BDO\'s Ocular Inspection Form (OIF)',
-    Remarks: 'Marked as submitted but no file is attached.', DateSubmitted: '08/29/2018', FileUpload: ''
+    Remarks: 'Marked as submitted but no file is attached.', TargetDateOfSubmission: '08/29/2018', FileUpload: ''
   }
 ];
 
@@ -30,6 +30,6 @@ export class DocumentCheckListService {
   }
   GetById() { }
   GetTableFields() {
-    return ['DocumentName', 'Submitted', 'Remarks', 'DateSubmitted', 'FileUpload', 'Action'];
+    return ['DocumentName', 'Submitted', 'Remarks', 'TargetDateOfSubmission', 'FileUpload', 'Action'];
   }
 }
