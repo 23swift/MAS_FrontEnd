@@ -1211,14 +1211,14 @@ export class BranchFormService {
        },  */
 
     {
-      fieldGroupClassName: 'display-flex', //conditional mandatory
+      fieldGroupClassName: 'display-flex', 
       fieldGroup: [
         {
-          className: 'flex-1',//not yet
+          className: 'flex-1',
           type: 'select',
           key: 'forMoto',
+          //defaultValue: '2',
           expressionProperties: {
-
           },
           templateOptions: {
             label: 'For MOTO',
@@ -1227,7 +1227,7 @@ export class BranchFormService {
               { label: 'Manual', value: '2' },
               { label: 'eMoto', value: '3' },
               { label: 'Others', value: '4' }
-            ]
+            ],
           },
         },
         {
@@ -1644,8 +1644,8 @@ export class BranchFormService {
           options: [
             { value: '1', label: 'ATM/DEBIT' },
             { value: '2', label: 'Cash Agad' },
-            { value: '1', label: 'SM Gift Card' },
-            { value: '2', label: 'SM Cash Card' }
+            { value: '3', label: 'SM Gift Card' },
+            { value: '4', label: 'SM Cash Card' }
           ],
         },
 
@@ -1657,11 +1657,13 @@ export class BranchFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-          className: 'flex-1',  //decimal format   //conditional mandatory
+          className: 'flex-1',  
           type: 'input',
           key: 'merchDiscountRateDebitCrd',
           expressionProperties: {
-
+            'templateOptions.required': (model: any, formState: any) => {
+              return model['typeDebitTidReq'] == '1';
+            }
           },
           templateOptions: {
             type: 'number',
@@ -1670,11 +1672,13 @@ export class BranchFormService {
           }
         },
         {
-          className: 'flex-1',  //decimal format   //conditional mandatory
+          className: 'flex-1',  
           type: 'input',
           key: 'mdrCashAgad',
           expressionProperties: {
-
+            'templateOptions.required': (model: any, formState: any) => {
+              return model['typeDebitTidReq'] == '2';
+            }
           },
           templateOptions: {
             type: 'number',
@@ -1689,11 +1693,13 @@ export class BranchFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-          className: 'flex-1',  //decimal format   //conditional mandatory
+          className: 'flex-1',  
           type: 'input',
           key: 'mdrSmGiftCard',
           expressionProperties: {
-
+            'templateOptions.required': (model: any, formState: any) => {
+              return model['typeDebitTidReq'] == '3';
+            }
           },
           templateOptions: {
             type: 'number',
@@ -1702,11 +1708,13 @@ export class BranchFormService {
           }
         },
         {
-          className: 'flex-1',  //decimal format   //conditional mandatory
+          className: 'flex-1',  
           type: 'input',
           key: 'mdrSmCashCard',
           expressionProperties: {
-
+            'templateOptions.required': (model: any, formState: any) => {
+              return model['typeDebitTidReq'] == '4';
+            }
           },
           templateOptions: {
             type: 'number',
@@ -1750,7 +1758,6 @@ export class BranchFormService {
           templateOptions: {
             type: 'number',
             label: 'INTES Code for Diners',
-            placeholder: 'INTES Code for Diners',
             maxLength: 4
           }
         }
@@ -1788,6 +1795,7 @@ export class BranchFormService {
           className: 'flex-1',//not yet
           type: 'select',
           key: 'forMoto',
+          defaultValue: '2',
           expressionProperties: {
 
           },
