@@ -3,7 +3,7 @@
     <span class="mat-headline">
 
         Branch List</span>
-    <a *ngIf="mode=='create' && outlet=='branch'" [routerLink]="[{ outlets: {branch: ['branch','create'] } }]" mat-mini-fab>
+    <a *ngIf="mode=='create' || outlet=='branch'" [routerLink]="[{ outlets: {branch: ['branch','create'] } }]" mat-mini-fab>
 
         <mat-icon>playlist_add</mat-icon>
     </a>
@@ -38,31 +38,31 @@
 
                 </th>
                 <td mat-cell *matCellDef="let element">
-                    <div fxLayout fxLayout.xs="row" fxLayoutAlign="center" fxLayoutGap="2px" fxLayoutGap.xs="0">
-                        <a *ngIf="outlet=='branch'" [routerLink]="[{ outlets: {branch: ['branch','update',element.Id] } }]" mat-icon-button color="primary">
-                            <mat-icon style="color:accent">rate_review</mat-icon>
+                    <!-- <div fxLayout fxLayout.xs="row" fxLayoutAlign="center" fxLayoutGap="2px" fxLayoutGap.xs="0"> -->
+                    <a *ngIf="outlet=='branch'" [routerLink]="[{ outlets: {branch: ['branch','update',element.Id] } }]" mat-mini-fab color="primary"
+                        matTooltip="Update Branch">
+                        <mat-icon style="color:white;">edit</mat-icon>
 
-                        </a>
-                        <button *ngIf="outlet=='branchPOS' || outlet=='branchOIF'" mat-icon-button [matMenuTriggerFor]="requestMenu">
-                            <mat-icon color="primary">attachment</mat-icon>
-                        </button>
+                    </a>
+                    <button *ngIf="outlet=='branchPOS' || outlet=='branchOIF'" mat-icon-button [matMenuTriggerFor]="requestMenu">
+                        <mat-icon color="primary">attachment</mat-icon>
+                    </button>
 
-                        <mat-menu class="request-menu-container" #requestMenu="matMenu" style="padding:0;">
+                    <mat-menu class="request-menu-container" #requestMenu="matMenu" style="padding:0;">
 
-                            <div *ngIf="outlet=='branchPOS' || outlet=='branchOIF'" fxLayout="column" fxLayoutAlign="start">
+                        <div *ngIf="outlet=='branchPOS' || outlet=='branchOIF'" fxLayout="column" fxLayoutAlign="start">
 
-                                <button *ngIf="outlet=='branchPOS'" mat-menu-item color="primary" matTooltip="POS Request">
-                                    <mat-icon class="request-mat-icon">insert_drive_file</mat-icon>POS Request</button>
-                                <button *ngIf="outlet=='branchOIF'" mat-menu-item color="primary" matTooltip="Ocular Inspection Form">
-                                    <mat-icon class="request-mat-icon">insert_drive_file</mat-icon>Ocular Inspection Form</button>
+                            <button *ngIf="outlet=='branchPOS'" mat-menu-item color="primary" matTooltip="POS Request">
+                                <mat-icon class="request-mat-icon">insert_drive_file</mat-icon>POS Request</button>
+                            <button *ngIf="outlet=='branchOIF'" mat-menu-item color="primary" matTooltip="Ocular Inspection Form">
+                                <mat-icon class="request-mat-icon">insert_drive_file</mat-icon>Ocular Inspection Form</button>
+                        </div>
 
-
-
-                            </div>
-
-                        </mat-menu>
-                    </div>
-
+                    </mat-menu>
+                    <a (click)="deleteItem(element.Id)" mat-mini-fab color="primary" matTooltip="Delete Branch">
+                        <mat-icon style="color:white;">delete_outline</mat-icon>
+                    </a>
+                    <!-- </div> -->
                 </td>
             </ng-container>
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
