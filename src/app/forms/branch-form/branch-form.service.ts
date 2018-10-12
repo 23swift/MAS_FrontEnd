@@ -20,7 +20,7 @@ export class BranchFormService {
 
           },
           templateOptions: {
-            label: 'DBA Name(DBA/Trade Name)11',
+            label: 'DBA Name(DBA/Trade Name)',
             placeholder: 'DBA Name(DBA/Trade Name)',
             required: true,
             maxLength: 22
@@ -1479,38 +1479,21 @@ export class BranchFormService {
             required: true,
             maxLength: 22
           }
+        },
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'adminContactPerson',
+          expressionProperties: {
+  
+          },
+          templateOptions: {
+            label: 'Administrator(Contact Person)',
+            placeholder: 'Administrator(Contact Person)',
+            required: true,
+            maxLength: 30
+          }
         }
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'registeredBusinessNumber',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          label: 'Registered Business Number',
-          placeholder: 'Registered Business Number',
-          maxLength: 11
-        },
-      },
-      {
-        className: 'flex-1',
-        type: 'input',
-        key: 'adminContactPerson',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          label: 'Administrator(Contact Person)',
-          placeholder: 'Administrator(Contact Person)',
-          maxLength: 30
-        }
-      }
       ]
     },
 
@@ -1581,13 +1564,6 @@ export class BranchFormService {
       ]
     },
 
-    //dropdown  mandatory
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-      ]
-    },
-
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
@@ -1636,7 +1612,6 @@ export class BranchFormService {
           templateOptions: {
             label: 'Mobile Number',
             placeholder: 'Mobile Number',
-            required: true,
             maxLength: 15
           }
         }
@@ -1662,13 +1637,15 @@ export class BranchFormService {
       },
       {
         key: 'typeDebitTidReq',
+        className: 'flex-1',
         type: 'radio',
         templateOptions: {
           label: 'Type of Debit TID Request?',
-          required: true,
           options: [
             { value: '1', label: 'ATM/DEBIT' },
-            { value: '2', label: 'Cash Agad' }
+            { value: '2', label: 'Cash Agad' },
+            { value: '1', label: 'SM Gift Card' },
+            { value: '2', label: 'SM Cash Card' }
           ],
         },
 
@@ -1688,9 +1665,53 @@ export class BranchFormService {
           },
           templateOptions: {
             type: 'number',
-            label: 'Merchant Discount Rate For Debit Cards',
-            placeholder: 'Merchant Discount Rate For Debit Cards',
-            pattern: '^\\d\\.\\d{2}$|^\\d\\.\\d{4}$'
+            label: 'MDR For Debit Cards',
+            maxLength: 4
+          }
+        },
+        {
+          className: 'flex-1',  //decimal format   //conditional mandatory
+          type: 'input',
+          key: 'mdrCashAgad',
+          expressionProperties: {
+
+          },
+          templateOptions: {
+            type: 'number',
+            label: 'MDR For Cash Agad',
+            maxLength: 4
+          }
+        }
+      ]
+    },
+
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
+        {
+          className: 'flex-1',  //decimal format   //conditional mandatory
+          type: 'input',
+          key: 'mdrSmGiftCard',
+          expressionProperties: {
+
+          },
+          templateOptions: {
+            type: 'number',
+            label: 'MDR For SM Gift Card',
+            maxLength: 4
+          }
+        },
+        {
+          className: 'flex-1',  //decimal format   //conditional mandatory
+          type: 'input',
+          key: 'mdrSmCashCard',
+          expressionProperties: {
+
+          },
+          templateOptions: {
+            type: 'number',
+            label: 'MDR For SM Cash Card',
+            maxLength: 4
           }
         }
       ]
@@ -1699,9 +1720,9 @@ export class BranchFormService {
 
     {
       fieldGroupClassName: 'display-flex',
-      fieldGroup: [  //conditional mandatory
+      fieldGroup: [  
         {
-          className: 'flex-1', //dropdown
+          className: 'flex-1', 
           type: 'select',
           key: 'mcc',
           expressionProperties: {
@@ -1709,6 +1730,7 @@ export class BranchFormService {
           },
           templateOptions: {
             label: 'MCC',
+            required: true,
             options: [
               { label: '5421-Department Store', value: '1' },
               { label: '5422-Food Store', value: '2' },
@@ -1729,7 +1751,6 @@ export class BranchFormService {
             type: 'number',
             label: 'INTES Code for Diners',
             placeholder: 'INTES Code for Diners',
-            pattern: '^\\d\\.\\d{2}$|^\\d\\.\\d{4}$',
             maxLength: 4
           }
         }
@@ -1760,10 +1781,6 @@ export class BranchFormService {
       ]
     },
 
-    /* {
-       template: '<span class="mat-subheading-1">Settlement Per Branch</span>',
-       },  */
-
     {
       fieldGroupClassName: 'display-flex', //conditional mandatory
       fieldGroup: [
@@ -1779,8 +1796,7 @@ export class BranchFormService {
             options: [
               { label: 'Key-In', value: '1' },
               { label: 'Manual', value: '2' },
-              { label: 'eMoto', value: '3' },
-              { label: 'Others', value: '4' }
+              { label: 'eMoto', value: '3' }
             ]
           },
         },
@@ -1803,20 +1819,7 @@ export class BranchFormService {
 
     {
       fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1', //not yet
-        type: 'select',
-        key: 'defaultTransactionSource',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          label: 'Default Transaction Source',
-          options: [
-            { label: ' ', value: '1' }
-          ]
-        }
-      },
+      fieldGroup: [
       {
         className: 'flex-1',
         type: 'input',
@@ -1982,21 +1985,60 @@ export class BranchFormService {
       ]
     },
 
-    { //numeric
+    { 
       fieldGroupClassName: 'display-flex',
       fieldGroup: [{
         className: 'flex-1',
-        type: 'input',
-        key: 'payDelayDays',
+        type: 'checkbox',
+        key: 'directPaymentLink',
         expressionProperties: {
 
         },
         templateOptions: {
-          label: 'Pay Delay Days',
-          placeholder: 'Pay Delay Days',
-          maxLength: 2
+          label: 'Direct Payment Link'
         }
       },
+      {
+        className: 'flex-1',
+        type: 'select',
+        key: 'fraudToolProvider',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          options: [
+            { label: 'Asiapay', value: '1' },
+            { label: 'Paynamics', value: '2' },
+            { label: 'IPay88', value: '3' }
+          ],
+          label: 'Fraud Tool Provider'
+        }
+      },
+      { 
+        className: 'flex-1',
+        type: 'select',
+        key: 'gatewayIntegrationType',
+        expressionProperties: {
+
+        },
+        templateOptions: {
+          options: [
+            { label: 'Asiapay 3-Party', value: '1' },
+            { label: 'Asiapay 2.5-Party', value: '2' },
+            { label: 'Asiapay 2-Party', value: '3' },
+            { label: 'MIGS 3-Party', value: '4' },
+            { label: 'MIGS 2.5-Party', value: '5' },
+            { label: 'MIGS 2-Party', value: '6' }
+          ],
+          label: 'Hold-out Amount'
+        }
+      }
+      ]
+    },
+
+    { //numeric
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
       {
         className: 'flex-1',
         type: 'input',
@@ -6140,6 +6182,6 @@ export class BranchFormService {
 
   constructor() { }
   getBranchFields(): FormlyFieldConfig[] {
-    return this.mdcsChecker;
+    return this.ao;
   }
 }
