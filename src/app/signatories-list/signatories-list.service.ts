@@ -5,11 +5,13 @@ export class SignatoriesListService {
 
   constructor() { }
 
-  getFields() {
-
+  getTableFields() {
+    return ['Name', 'SigningAuthority', 'Position', 'ApplicableTo'];
   }
 
   get() {
-    
+    return [
+      
+    ];
   }
 }

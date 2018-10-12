@@ -45,7 +45,7 @@ export class MidFormModalService {
           },
           {
             className: 'flex-1',
-            key: 'typeOfCnp',
+            key: 'defaultTransSrc',
             type: 'select',
             expressionProperties: {
               'templateOptions.required': (model: any, formState: any) => {
@@ -53,7 +53,7 @@ export class MidFormModalService {
               }
             },
             templateOptions: {
-              label: 'Type of CNP',
+              label: 'Default Transaction Source',
               options: [
                 { value: 1, label: 'ECOM' },
                 { value: 2, label: 'MOTO' },
@@ -148,12 +148,12 @@ export class MidFormModalService {
         fieldGroup: [
           {
             className: 'flex-1',
-            key: 'sfcStraight',
+            key: 'serviceFeeStraight',
             type: 'select',
             expressionProperties: {
               'templateOptions.disabled': (model: any, formState: any) => {
                 if (model['majorPurchase']) {
-                  model['sfcStraight'] = undefined;
+                  model['serviceFeeStraight'] = undefined;
                 }
                 return model['majorPurchase'];
               },
@@ -190,6 +190,53 @@ export class MidFormModalService {
                 { value: 1, label: 'DM01 - Diners' },
                 { value: 2, label: 'MerchGrp24' }
               ]
+            }
+          },
+          {
+            className: 'flex-1',
+            key: 'serviceFeeRate',
+            type: 'input',
+            expressionProperties: {
+              'templateOptions.required': (model: any, formState: any) => {
+                return model['merchantGroupCode'] == undefined && model['serviceFeeStraight'] == undefined;
+              }
+            },
+            templateOptions: {
+              label: 'Service Fee Rate',
+              pattern: '^(\\d{2})\.\\1$',
+            }
+          }
+        ]
+      },
+      {
+        fieldGroupClassName: 'display-flex',
+        fieldGroup: [
+          {
+            className: 'flex-1',
+            key: 'merchantMpPromotionGroup',
+            type: 'checkbox',
+            defaultValue: 1,
+            templateOptions: {
+              label: 'Amex MNA'
+            }
+          },
+          {
+            className: 'flex-1',
+            key: 'defaultMpPromotion',
+            type: 'checkbox',
+            templateOptions: {
+              label: 'Diners ISE',
+            }
+          },
+          {
+            className: 'flex-1',
+            key: 'defaultMpPromotion',
+            type: 'input',
+            defaultValue: 1,
+            templateOptions: {
+              label: 'Pay Delay Days',
+              pattern: '^\\d+$',
+              maxLength: 2
             }
           }
         ]

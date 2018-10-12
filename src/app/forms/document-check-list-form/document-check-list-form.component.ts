@@ -20,7 +20,7 @@ export class DocumentCheckListFormComponent implements OnInit {
     this.documentForm = new FormGroup({
       documentName: new FormControl(''),
       remarks: new FormControl(''),
-      dateSubmitted: new FormControl(''),
+      targetDateOfSubmission: new FormControl(''),
       fileUpload: new FormControl('')
     });
     
