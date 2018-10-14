@@ -70,6 +70,7 @@ import { MdcsCheckerComponent } from './new-affiliation/mdcs-checker/mdcs-checke
 import { MamVerificationScreenFormComponent } from './forms/mam-verification-screen-form/mam-verification-screen-form.component';
 import { PosTerminalBrandListComponent } from './pos-terminal-brand-list/pos-terminal-brand-list.component';
 import { PosListContainerComponent } from './pos-list-container/pos-list-container.component';
+import { PosListComponent } from './pos-list/pos-list.component';
 
 
 const routes: Routes = [
@@ -152,7 +153,13 @@ const routes: Routes = [
       { path: '', component: BranchListAttachmentComponent, outlet: 'branchOIF' },
       { path: 'OIF/:id?', component: OcularInspectionFormComponent, outlet: 'branchOIF' },
       { path: '', component: BranchListAttachmentPOSComponent, outlet: 'branchPOS' },
-      { path: 'POS/:id?', component: PosListContainerComponent, outlet: 'branchPOS' },
+      {
+        path: 'POS/:id?', component: PosListContainerComponent, outlet: 'branchPOS', children: [
+          { path: '', component: PosListComponent, outlet: 'listContainer' },
+          { path: 'pos/create/:id', component: PosFormComponent, outlet: 'listContainer' },
+          { path: 'pos/update/:id', component: PosFormComponent, outlet: 'listContainer' }
+        ]
+      },
       { path: 'MID/:form', component: MidComponent, outlet: 'mid', data: { showDeleteMid: false } },
       { path: '', component: DocumentCheckListComponent, outlet: 'documentCheckList' },
       { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
@@ -309,7 +316,7 @@ const routes: Routes = [
   { path: 'defaultMIDMaintenance', component: DefaultMidMaintenanceComponent },
   { path: 'debitTid', component: DebitTidComponent },
   { path: 'custProfile', component: CustomerProfileComponent },
-  { path: 'mam', component:  MamVerificationScreenFormComponent }
+  { path: 'mam', component: MamVerificationScreenFormComponent }
 ];
 
 @NgModule({
