@@ -141,6 +141,8 @@ import { SignatoriesFormModalComponent } from './modal/signatories-form-modal/si
 import { SignatoriesListComponent } from './signatories-list/signatories-list.component';
 import { OwnersListComponent } from './owners-list/owners-list.component';
 import { PosListContainerComponent } from './pos-list-container/pos-list-container.component';
+import { PosListComponent } from './pos-list/pos-list.component';
+import { PosFormModalComponent } from './modal/pos-form-modal/pos-form-modal.component';
 
 
 
@@ -255,7 +257,9 @@ import { PosListContainerComponent } from './pos-list-container/pos-list-contain
     SignatoriesFormModalComponent,
     SignatoriesListComponent,
     OwnersListComponent,
-    PosListContainerComponent
+    PosListContainerComponent,
+    PosListComponent,
+    PosFormModalComponent
   ],
   imports: [
     BrowserModule,
@@ -329,7 +333,8 @@ import { PosListContainerComponent } from './pos-list-container/pos-list-contain
     DocumentChecklistConfigurationFormComponent, ParameterMaintenanceFormComponent,
     ParameterMaintenanceDetailsComponent, AoMaintenanceFormComponent, BuMaintenanceFormComponent, 
     DefaultMidMaintenanceFormComponent, MidFormComponent, MidModalComponent, DeleteModalComponent, 
-    SearchModalComponent, PosTerminalFormModalComponent, OwnersFormModalComponent, SignatoriesFormModalComponent],
+    SearchModalComponent, PosTerminalFormModalComponent, OwnersFormModalComponent, SignatoriesFormModalComponent,
+    PosFormModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
