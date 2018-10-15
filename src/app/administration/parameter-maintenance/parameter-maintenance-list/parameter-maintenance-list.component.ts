@@ -34,8 +34,7 @@ export class ParameterMaintenanceListComponent implements OnInit {
 
   openDialog() {
     const dialogRef = this._dialog.open(ParameterMaintenanceFormComponent, {
-      width: '600px',
-      height: '220px'
+
     });
 
     dialogRef.afterClosed().subscribe(data => {
