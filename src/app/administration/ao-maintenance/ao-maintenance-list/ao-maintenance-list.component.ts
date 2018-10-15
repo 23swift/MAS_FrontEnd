@@ -47,8 +47,7 @@ export class AoMaintenanceListComponent implements OnInit {
 
   openDialog() {
     const dialogRef = this._dialog.open(AoMaintenanceFormComponent, {
-      width: '850px',
-      height: '250px'
+
     });
 
     dialogRef.afterClosed().subscribe(data => {
