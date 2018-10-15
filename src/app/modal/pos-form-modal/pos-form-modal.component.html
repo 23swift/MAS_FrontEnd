@@ -11,8 +11,10 @@
     </formly-form>
   </form>
 </div> -->
-
-<h2 mat-dialog-title class="mat-headline">POS Form</h2>
+<div fxLayout="row" fxLayoutAlign="space-between">
+    <h2 mat-dialog-title class="mat-headline">POS Form</h2>
+    <mat-checkbox>Waive POS</mat-checkbox>
+</div>
 
 <mat-dialog-content style="overflow: auto;">
   <form [formGroup]="form" (ngSubmit)="submit()">
@@ -26,5 +28,9 @@
 
   <div style="margin: 20px 0px">
     <app-pos-terminal-brand-list [showAdd]="true"></app-pos-terminal-brand-list>
+  </div>
+
+  <div style="margin-top: 20px;">
+      <app-mid [action]="false"></app-mid>
   </div>
 </mat-dialog-content>

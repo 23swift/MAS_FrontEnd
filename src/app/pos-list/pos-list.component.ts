@@ -1,7 +1,7 @@
 import { Overlay } from '@angular/cdk/overlay';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog } from '@angular/material';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { PosListService } from './pos-list.service';
 import { PosFormModalComponent } from '../modal/pos-form-modal/pos-form-modal.component';
@@ -15,13 +15,24 @@ import { PosFormModalComponent } from '../modal/pos-form-modal/pos-form-modal.co
 export class PosListComponent implements OnInit {
   displayedColumns: string[];
   dataSource: Object[];
+  @Input() showAdd: boolean;
 
-  constructor(private _service: PosListService, private _router: Router, private _dialog: MatDialog,
-  private _overlay: Overlay) { }
+  constructor(private _service: PosListService, private _route: ActivatedRoute, private _dialog: MatDialog,
+    private _overlay: Overlay) { }
 
   ngOnInit() {
     this.displayedColumns = this._service.getTableFields();
     this.dataSource = this._service.get();
+
+    this._route.data.subscribe(data => {
+      if (this.showAdd == undefined) {
+        if (data['showAdd']) {
+          this.showAdd = true;
+        } else {
+          this.showAdd = false;
+        }
+      }
+    });
   }
 
   addPos() {
