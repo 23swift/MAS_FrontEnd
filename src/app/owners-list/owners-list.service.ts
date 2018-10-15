@@ -11,7 +11,7 @@ export class OwnersListService {
 
   get() {
     return [
-      
+      { Name: 'Juan dela Cruz', PercentOfOwnership: '50', TypeOfRelatedParty: 'Subsidiary', Remarks: 'Remarks' }
     ];
   }
 }

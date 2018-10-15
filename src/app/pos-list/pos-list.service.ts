@@ -6,10 +6,12 @@ export class PosListService {
   constructor() { }
 
   getTableFields() {
-    return ['PosTrackingNumber','NatureOfRequest','DateRequested','RequestedBy'];
+    return ['PosTrackingNumber','NatureOfRequest','DateRequested','RequestedBy', 'Action'];
   }
 
   get() {
-    return [];
+    return [
+      { PosTrackingNumber: '00000001', NatureOfRequest: 'New Installation', DateRequested: '10/15/2018', RequestedBy: 'Juan dela Cruz' }
+    ];
   }
 }

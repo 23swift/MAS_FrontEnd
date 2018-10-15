@@ -163,6 +163,7 @@ const routes: Routes = [
       { path: 'MID/:form', component: MidComponent, outlet: 'mid', data: { showDeleteMid: false } },
       { path: '', component: DocumentCheckListComponent, outlet: 'documentCheckList' },
       { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },
+      { path: 'dcl/addDocument', component: DocumentCheckListFormRequestLevelComponent, outlet: 'documentCheckList' }
     ]
   },
   { path: 'newAffSum', component: NewAffiliationSumComponent },
@@ -232,13 +233,19 @@ const routes: Routes = [
       },
       {
         path: 'branch/:mode', component: BranchFormComponent, outlet: 'branch', children: [
-          { path: '', component: MidComponent, outlet: 'mid' }
+          { path: '', component: MidComponent, outlet: 'mid', data: { showDeleteMid: true } }
         ]
       },
       { path: '', component: BranchListAttachmentComponent, outlet: 'branchOIF' },
       { path: 'OIF/:id?', component: OcularInspectionFormComponent, outlet: 'branchOIF' },
       { path: '', component: BranchListAttachmentPOSComponent, outlet: 'branchPOS' },
-      { path: 'POS/:id?', component: PosFormComponent, outlet: 'branchPOS' },
+      {
+        path: 'POS/:id?', component: PosListContainerComponent, outlet: 'branchPOS', children: [
+          { path: '', component: PosListComponent, outlet: 'listContainer' },
+          { path: 'pos/create/:id', component: PosFormComponent, outlet: 'listContainer' },
+          { path: 'pos/update/:id', component: PosFormComponent, outlet: 'listContainer' }
+        ]
+      },
       { path: 'MID/:form', component: MidComponent, outlet: 'mid' },
       { path: '', component: DocumentCheckListComponent, outlet: 'documentCheckList' },
       { path: 'dcl/:docMode/:id', component: DocumentCheckListFormComponent, outlet: 'documentCheckList' },

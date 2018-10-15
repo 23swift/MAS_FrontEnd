@@ -15,13 +15,16 @@
 <h2 mat-dialog-title class="mat-headline">POS Form</h2>
 
 <mat-dialog-content style="overflow: auto;">
-    <form [formGroup]="form" (ngSubmit)="submit()">
-        <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form">
-        </formly-form>
-      </form>
-</mat-dialog-content>
-
-<mat-dialog-actions fxLayoutAlign="end center">
-    <button type="submit" color="primary" mat-raised-button>Create </button>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form">
+    </formly-form>
+  </form>
+  <div fxLayoutAlign="end center">
+    <button type="submit" color="primary" mat-raised-button>Update </button>
     <button type="button" (click)="cancel();" color="accent" mat-raised-button>Cancel</button>
-</mat-dialog-actions>
+  </div>
+
+  <div style="margin: 20px 0px">
+    <app-pos-terminal-brand-list [showAdd]="true"></app-pos-terminal-brand-list>
+  </div>
+</mat-dialog-content>
