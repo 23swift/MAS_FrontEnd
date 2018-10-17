@@ -16,7 +16,7 @@ export class PosTerminalBrandListComponent implements OnInit {
   dataSource;
   @Input() showAdd: boolean;
   showAddTerminal: boolean;
-
+  
   constructor(private _service: PosTerminalBrandListService, private _dialog: MatDialog, private _route: ActivatedRoute) { }
 
   ngOnInit() {

@@ -271,6 +271,20 @@ export class MidFormModalService {
                 { value: 2, label: 'Installament Reg' }
               ]
             }
+          },
+          {
+            className: 'flex-1',
+            key: 'forMoto',
+            type: 'radio',
+            defaultValue: 1,
+            templateOptions: {
+              label: 'For MOTO',
+              options: [
+                { value: 1, label: 'Manual' },
+                { value: 2, label: 'Key-In' },
+                { value: 3, label: 'eMOTO' }
+              ]
+            }
           }
         ]
       },

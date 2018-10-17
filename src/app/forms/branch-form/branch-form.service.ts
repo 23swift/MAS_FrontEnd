@@ -317,7 +317,7 @@ export class BranchFormService {
             placeholder: 'Date From'
           }
         },
-        { 
+        {
           className: 'flex-1 mat-form-field-infix',
           type: 'calendar',
           key: 'taxExemptValidityTo',
@@ -1201,34 +1201,6 @@ export class BranchFormService {
             placeholder: '(TPP Only)',
             maxLength: 20
           }
-        }
-
-      ]
-    },
-
-    /* {
-       template: '<span class="mat-subheading-1">Settlement Per Branch</span>',
-       },  */
-
-    {
-      fieldGroupClassName: 'display-flex', 
-      fieldGroup: [
-        {
-          className: 'flex-1',
-          type: 'select',
-          key: 'forMoto',
-          //defaultValue: '2',
-          expressionProperties: {
-          },
-          templateOptions: {
-            label: 'For MOTO',
-            options: [
-              { label: 'Key-In', value: '1' },
-              { label: 'Manual', value: '2' },
-              { label: 'eMoto', value: '3' },
-              { label: 'Others', value: '4' }
-            ],
-          },
         },
         {
           className: 'flex-1',
@@ -1242,11 +1214,10 @@ export class BranchFormService {
             options: [
               { label: '1', value: '1' }
             ]
-          },
+          }
         }
       ]
     },
-
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [{
@@ -1485,7 +1456,7 @@ export class BranchFormService {
           type: 'input',
           key: 'adminContactPerson',
           expressionProperties: {
-  
+
           },
           templateOptions: {
             label: 'Administrator(Contact Person)',
@@ -1657,7 +1628,7 @@ export class BranchFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-          className: 'flex-1',  
+          className: 'flex-1',
           type: 'input',
           key: 'merchDiscountRateDebitCrd',
           expressionProperties: {
@@ -1672,7 +1643,7 @@ export class BranchFormService {
           }
         },
         {
-          className: 'flex-1',  
+          className: 'flex-1',
           type: 'input',
           key: 'mdrCashAgad',
           expressionProperties: {
@@ -1693,7 +1664,7 @@ export class BranchFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-          className: 'flex-1',  
+          className: 'flex-1',
           type: 'input',
           key: 'mdrSmGiftCard',
           expressionProperties: {
@@ -1708,7 +1679,7 @@ export class BranchFormService {
           }
         },
         {
-          className: 'flex-1',  
+          className: 'flex-1',
           type: 'input',
           key: 'mdrSmCashCard',
           expressionProperties: {
@@ -1728,9 +1699,9 @@ export class BranchFormService {
 
     {
       fieldGroupClassName: 'display-flex',
-      fieldGroup: [  
+      fieldGroup: [
         {
-          className: 'flex-1', 
+          className: 'flex-1',
           type: 'select',
           key: 'mcc',
           expressionProperties: {
@@ -1783,30 +1754,6 @@ export class BranchFormService {
             placeholder: '(TPP Only)',
             maxLength: 20
           }
-        }
-
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex', //conditional mandatory
-      fieldGroup: [
-        {
-          className: 'flex-1',//not yet
-          type: 'select',
-          key: 'forMoto',
-          defaultValue: '2',
-          expressionProperties: {
-
-          },
-          templateOptions: {
-            label: 'For MOTO',
-            options: [
-              { label: 'Key-In', value: '1' },
-              { label: 'Manual', value: '2' },
-              { label: 'eMoto', value: '3' }
-            ]
-          },
         },
         {
           className: 'flex-1',
@@ -1824,39 +1771,38 @@ export class BranchFormService {
         }
       ]
     },
-
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
-      {
-        className: 'flex-1',
-        type: 'input',
-        key: 'mcAssignedId',
-        expressionProperties: {
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'mcAssignedId',
+          expressionProperties: {
 
+          },
+          templateOptions: {
+            label: 'MC Assigned Id',
+            placeholder: 'MC Assigned Id',
+            maxLength: 6
+          }
         },
-        templateOptions: {
-          label: 'MC Assigned Id',
-          placeholder: 'MC Assigned Id',
-          maxLength: 6
-        }
-      },
-      {
-        className: 'flex-1',//dropdown
-        type: 'select',
-        key: 'areaMallCode',
-        expressionProperties: {
+        {
+          className: 'flex-1',//dropdown
+          type: 'select',
+          key: 'areaMallCode',
+          expressionProperties: {
 
-        },
-        templateOptions: {
-          label: 'Area Mall Code',
-          options: [
-            { label: 'AREA MALL CODE 1', value: '1' },
-            { label: 'AREA MALL CODE 2', value: '2' },
-            { label: 'AREA MALL CODE 3', value: '3' }
-          ]
+          },
+          templateOptions: {
+            label: 'Area Mall Code',
+            options: [
+              { label: 'AREA MALL CODE 1', value: '1' },
+              { label: 'AREA MALL CODE 2', value: '2' },
+              { label: 'AREA MALL CODE 3', value: '3' }
+            ]
+          }
         }
-      }
       ]
     },
 
@@ -1993,7 +1939,7 @@ export class BranchFormService {
       ]
     },
 
-    { 
+    {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [{
         className: 'flex-1',
@@ -2022,7 +1968,7 @@ export class BranchFormService {
           label: 'Fraud Tool Provider'
         }
       },
-      { 
+      {
         className: 'flex-1',
         type: 'select',
         key: 'gatewayIntegrationType',
@@ -2047,18 +1993,18 @@ export class BranchFormService {
     { //numeric
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
-      {
-        className: 'flex-1',
-        type: 'input',
-        key: 'principalDetailsRemarks',
-        expressionProperties: {
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'principalDetailsRemarks',
+          expressionProperties: {
 
-        },
-        templateOptions: {
-          label: 'Remarks',
-          placeholder: 'Remarks'
+          },
+          templateOptions: {
+            label: 'Remarks',
+            placeholder: 'Remarks'
+          }
         }
-      }
       ]
     },
   ];
@@ -4178,35 +4124,6 @@ export class BranchFormService {
             placeholder: '(TPP Only)',
             disabled: true
           }
-        }
-
-      ]
-    },
-
-    /* {
-       template: '<span class="mat-subheading-1">Settlement Per Branch</span>',
-       },  */
-
-    {
-      fieldGroupClassName: 'display-flex', //conditional mandatory
-      fieldGroup: [
-        {
-          className: 'flex-1',//not yet
-          type: 'select',
-          key: 'forMoto',
-          expressionProperties: {
-
-          },
-          templateOptions: {
-            label: 'For MOTO',
-            options: [
-              { label: 'Key-In', value: '1' },
-              { label: 'Manual', value: '2' },
-              { label: 'eMoto', value: '3' },
-              { label: 'Others', value: '4' }
-            ],
-            disabled: true
-          },
         },
         {
           className: 'flex-1',
@@ -4225,10 +4142,10 @@ export class BranchFormService {
         }
       ]
     },
-
     {
       fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
+      fieldGroup: [
+        {
         className: 'flex-1', //not yet
         type: 'select',
         key: 'defaultTransactionSource',
@@ -4439,9 +4356,9 @@ export class BranchFormService {
       }
       ]
     },
-    { 
+    {
       type: 'printAdmrc'
-     },
+    },
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
@@ -5750,32 +5667,9 @@ export class BranchFormService {
 
       ]
     },
-
-    /* {
-       template: '<span class="mat-subheading-1">Settlement Per Branch</span>',
-       },  */
-
     {
-      fieldGroupClassName: 'display-flex', //conditional mandatory
+      fieldGroupClassName: 'display-flex',
       fieldGroup: [
-        {
-          className: 'flex-1',//not yet
-          type: 'select',
-          key: 'forMoto',
-          expressionProperties: {
-
-          },
-          templateOptions: {
-            label: 'For MOTO',
-            options: [
-              { label: 'Key-In', value: '1' },
-              { label: 'Manual', value: '2' },
-              { label: 'eMoto', value: '3' },
-              { label: 'Others', value: '4' }
-            ],
-            disabled: true
-          },
-        },
         {
           className: 'flex-1',
           type: 'select',
@@ -5790,57 +5684,52 @@ export class BranchFormService {
             ],
             disabled: true
           },
-        }
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1', //not yet
-        type: 'select',
-        key: 'defaultTransactionSource',
-        expressionProperties: {
-
         },
-        templateOptions: {
-          label: 'Default Transaction Source',
-          options: [
-            { label: ' ', value: '1' }
-          ],
-          disabled: true
-        }
-      },
-      {
-        className: 'flex-1',
-        type: 'input',
-        key: 'mcAssignedId',
-        expressionProperties: {
+        {
+          className: 'flex-1', //not yet
+          type: 'select',
+          key: 'defaultTransactionSource',
+          expressionProperties: {
 
+          },
+          templateOptions: {
+            label: 'Default Transaction Source',
+            options: [
+              { label: ' ', value: '1' }
+            ],
+            disabled: true
+          }
         },
-        templateOptions: {
-          label: 'MC Assigned Id',
-          placeholder: 'MC Assigned Id',
-          disabled: true
-        }
-      },
-      {
-        className: 'flex-1',//dropdown
-        type: 'select',
-        key: 'areaMallCode',
-        expressionProperties: {
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'mcAssignedId',
+          expressionProperties: {
 
+          },
+          templateOptions: {
+            label: 'MC Assigned Id',
+            placeholder: 'MC Assigned Id',
+            disabled: true
+          }
         },
-        templateOptions: {
-          label: 'Area Mall Code',
-          options: [
-            { label: 'AREA MALL CODE 1', value: '1' },
-            { label: 'AREA MALL CODE 2', value: '2' },
-            { label: 'AREA MALL CODE 3', value: '3' }
-          ],
-          disabled: true
+        {
+          className: 'flex-1',//dropdown
+          type: 'select',
+          key: 'areaMallCode',
+          expressionProperties: {
+
+          },
+          templateOptions: {
+            label: 'Area Mall Code',
+            options: [
+              { label: 'AREA MALL CODE 1', value: '1' },
+              { label: 'AREA MALL CODE 2', value: '2' },
+              { label: 'AREA MALL CODE 3', value: '3' }
+            ],
+            disabled: true
+          }
         }
-      }
       ]
     },
 
@@ -6190,6 +6079,6 @@ export class BranchFormService {
 
   constructor() { }
   getBranchFields(): FormlyFieldConfig[] {
-    return this.mdcsEncoder;
+    return this.mdcsChecker;
   }
 }

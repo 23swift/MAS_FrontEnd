@@ -3,17 +3,13 @@
 </div>
 <div fxLayout="row">
     <table mat-table [dataSource]="dataSource">
-        <ng-container matColumnDef="BranchName">
-            <th mat-header-cell *matHeaderCellDef> Branch Name </th>
-            <td mat-cell *matCellDef="let element"> {{element.BranchName}} </td>
-        </ng-container>
-        <ng-container matColumnDef="BranchCode">
-            <th mat-header-cell *matHeaderCellDef> Branch Code </th>
-            <td mat-cell *matCellDef="let element"> {{element.BranchCode}} </td>
-        </ng-container>
         <ng-container matColumnDef="DBAName">
             <th mat-header-cell *matHeaderCellDef> DBA Name </th>
             <td mat-cell *matCellDef="let element"> {{element.DBAName}} </td>
+        </ng-container>
+        <ng-container matColumnDef="DBAAddress">
+            <th mat-header-cell *matHeaderCellDef> DBA Address </th>
+            <td mat-cell *matCellDef="let element"> {{element.DBAAddress}} </td>
         </ng-container>
         <ng-container matColumnDef="Attachment">
             <th mat-header-cell *matHeaderCellDef>

@@ -2,17 +2,17 @@ import { Component, OnInit,Input } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 export interface BranchDisplayInfo {
-  Id:number;
-  BranchName: String;
-  BranchCode: String;
+  Id: number;
+  // BranchName: String;
+  DBAAddress: String;
   DBAName: String;
-}
 
+
+}
 const ELEMENT_DATA: BranchDisplayInfo[] = [
-  {Id:1,BranchName: 'Aldo', BranchCode: 'BR300', DBAName: 'AldoMegamall'},
-  {Id:2,BranchName: 'Bench', BranchCode: 'BR300', DBAName: 'Bench'}
- 
- ];
+  { Id: 1, DBAName: 'AldoMegamall', DBAAddress: 'Mandaluyong' },
+  { Id: 2, DBAName: 'Bench', DBAAddress: 'Mandaluyong' }
+];
 
 @Component({
   selector: 'app-branch-list-attachment-pos',
@@ -21,7 +21,7 @@ const ELEMENT_DATA: BranchDisplayInfo[] = [
 })
 export class BranchListAttachmentPOSComponent implements OnInit {
 
-  displayedColumns: string[] = ['BranchName', 'BranchCode', 'DBAName', 'Attachment'];
+  displayedColumns: string[] = ['DBAName', 'DBAAddress', 'Attachment'];
   dataSource = ELEMENT_DATA;
  
   constructor(
