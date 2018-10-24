@@ -6,7 +6,6 @@ export interface IRequestDisplay {
     BusinessName: string;
     DBAName: string;
     RequestedBy: string;
-    Aging: string;
     Status: string;
     TAT: string;
 }

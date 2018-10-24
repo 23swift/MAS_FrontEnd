@@ -41,7 +41,7 @@ export class CustomerProfileComponent extends AppBaseComponent implements OnInit
   ngOnInit() {
     this.initialize();
     this.model.businessName = 'Bench';
-    this.model.dtiRegDate = new Date();
+    //this.model.dtiRegDate = new Date();
     this.model.ownership = 1;
     // apply expressionProperty for disabled based on formState to all fields
     if (this.displayMode == true) {

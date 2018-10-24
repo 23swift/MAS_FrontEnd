@@ -17,7 +17,7 @@ export class MdcsCheckerDashboardService implements OnInit {
 
   getTableFields() {
     console.log(this._dashboard);
-    return this._dashboard.Fields;
+    return this._dashboard.MdcsFields;
   }
   
   getAll() {
@@ -26,7 +26,7 @@ export class MdcsCheckerDashboardService implements OnInit {
 
   get(id) {
     // return this._http.get(apiUrl + id);
-    return this._dashboard.ElementData;
+    return this._dashboard.MdcsData;
   }
 
   create(): void {

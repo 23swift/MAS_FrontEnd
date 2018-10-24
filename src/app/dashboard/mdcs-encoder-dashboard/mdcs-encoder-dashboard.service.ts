@@ -16,7 +16,7 @@ export class MdcsEncoderDashboardService implements OnInit {
   }
 
   getTableFields() {
-    return this._dashboard.Fields;
+    return this._dashboard.MdcsFields;
   }
   
   getAll() {
@@ -25,7 +25,7 @@ export class MdcsEncoderDashboardService implements OnInit {
 
   get(id) {
     // return this._http.get(apiUrl + id);
-    return this._dashboard.ElementData;
+    return this._dashboard.MdcsData;
   }
 
   create(): void {

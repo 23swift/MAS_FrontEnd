@@ -20,7 +20,7 @@ export class SearchModalComponent implements OnInit {
   ngOnInit() {
     this.searchCriteria = {
       mqr: ['RT Number', 'Request Type', 'DBA Name', 'Date Requested', 'Request Status', 'Account Officer', 'Aging'],
-      mdcsEncoder: ['Business Name', 'Branch Name', 'AO Name']
+      mdcsEncoder: ['Business Name', 'DBA Name', 'AO Name']
     };
     this.criteriaContainer = new Array<Array<string>>();
     var rawArray = [];

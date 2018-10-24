@@ -13,7 +13,7 @@ import { MatDialog } from '@angular/material';
 })
 export class MdcsCheckerDashboardComponent implements OnInit {
   displayedColumns: string[];
-  dataSource: IRequestDisplay[];
+  dataSource;
   
   constructor(private _route: ActivatedRoute, private _router: Router, private _service: MdcsCheckerDashboardService,
   private _matDialog: MatDialog) { }

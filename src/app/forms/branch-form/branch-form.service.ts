@@ -1197,7 +1197,7 @@ export class BranchFormService {
 
           },
           templateOptions: {
-            label: 'To Fee Account(TPP Only)',
+            label: 'Fee Account(TPP Only)',
             placeholder: '(TPP Only)',
             maxLength: 20
           }
@@ -1591,112 +1591,150 @@ export class BranchFormService {
     {
       template: '<span class="mat-headline">Other Details</span>',
     },
-
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [{
         className: 'flex-1',
-        type: 'input',
-        key: 'noOfDebitTidReq',
-        expressionProperties: {
-
-        },
+        type: 'checkbox',
+        key: 'isAtmDebit',
         templateOptions: {
-          label: 'No. of Debit TID Request for this outlet',
-          placeholder: 'No. of Debit TID Request for this outlet'
+          label: 'ATM/Debit',
         },
       },
       {
-        key: 'typeDebitTidReq',
-        className: 'flex-1',
-        type: 'radio',
+        key: 'numberOfDebitTidAtm',
+        className: 'flex-3',
+        type: 'input',
+        expressionProperties: {
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['isAtmDebit'];
+          },
+          'templateOptions.disabled': (model: any, formState: any) => {
+            return !model['isAtmDebit'];
+          }
+        },
         templateOptions: {
-          label: 'Type of Debit TID Request?',
-          options: [
-            { value: '1', label: 'ATM/DEBIT' },
-            { value: '2', label: 'Cash Agad' },
-            { value: '3', label: 'SM Gift Card' },
-            { value: '4', label: 'SM Cash Card' }
-          ],
-        },
-
+          label: 'No. of Debit TIDs'
+        }
       },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'merchDiscountRateDebitCrd',
-          expressionProperties: {
-            'templateOptions.required': (model: any, formState: any) => {
-              return model['typeDebitTidReq'] == '1';
-            }
+      {
+        key: 'mdrAtm',
+        className: 'flex-3',
+        type: 'input',
+        expressionProperties: {
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['isAtmDebit'];
           },
-          templateOptions: {
-            type: 'number',
-            label: 'MDR For Debit Cards',
-            maxLength: 4
+          'templateOptions.disabled': (model: any, formState: any) => {
+            return !model['isAtmDebit'];
           }
         },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'mdrCashAgad',
-          expressionProperties: {
-            'templateOptions.required': (model: any, formState: any) => {
-              return model['typeDebitTidReq'] == '2';
-            }
-          },
-          templateOptions: {
-            type: 'number',
-            label: 'MDR For Cash Agad',
-            maxLength: 4
-          }
+        templateOptions: {
+          label: 'MDR'
         }
+      }
       ]
     },
-
     {
       fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'mdrSmGiftCard',
-          expressionProperties: {
-            'templateOptions.required': (model: any, formState: any) => {
-              return model['typeDebitTidReq'] == '3';
-            }
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'checkbox',
+        key: 'isSmGiftCard',
+        templateOptions: {
+          label: 'SM Gift Card',
+        },
+      },
+      {
+        key: 'mdrSmGiftCard',
+        className: 'flex-6',
+        type: 'input',
+        expressionProperties: {
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['isSmGiftCard'];
           },
-          templateOptions: {
-            type: 'number',
-            label: 'MDR For SM Gift Card',
-            maxLength: 4
+          'templateOptions.disabled': (model: any, formState: any) => {
+            return !model['isSmGiftCard'];
           }
         },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'mdrSmCashCard',
-          expressionProperties: {
-            'templateOptions.required': (model: any, formState: any) => {
-              return model['typeDebitTidReq'] == '4';
-            }
-          },
-          templateOptions: {
-            type: 'number',
-            label: 'MDR For SM Cash Card',
-            maxLength: 4
-          }
+        templateOptions: {
+          label: 'MDR'
         }
+      }
       ]
     },
-
-
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'checkbox',
+        key: 'isSmShopCard',
+        templateOptions: {
+          label: 'SM Shop Card',
+        },
+      },
+      {
+        key: 'mdrSmShopCard',
+        className: 'flex-6',
+        type: 'input',
+        expressionProperties: {
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['isSmShopCard'];
+          },
+          'templateOptions.disabled': (model: any, formState: any) => {
+            return !model['isSmShopCard'];
+          }
+        },
+        templateOptions: {
+          label: 'MDR'
+        }
+      }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'checkbox',
+        key: 'isCashAgad',
+        templateOptions: {
+          label: 'Cash Agad',
+        },
+      },
+      {
+        className: 'flex-3',
+        type: 'input',
+        key: 'numberOfDebitTidCashAgad',
+        expressionProperties: {
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['isCashAgad'];
+          },
+          'templateOptions.disabled': (model: any, formState: any) => {
+            return !model['isCashAgad'];
+          }
+        },
+        templateOptions: {
+          label: 'No. of Debit TIDs'
+        }
+      },
+      {
+        key: 'mdrCashAgad',
+        className: 'flex-3',
+        type: 'input',
+        expressionProperties: {
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['isCashAgad'];
+          },
+          'templateOptions.disabled': (model: any, formState: any) => {
+            return !model['isCashAgad'];
+          }
+        },
+        templateOptions: {
+          label: 'MDR'
+        }
+      }
+      ]
+    },
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
@@ -1750,7 +1788,7 @@ export class BranchFormService {
 
           },
           templateOptions: {
-            label: 'To Fee Account(TPP Only)',
+            label: 'Fee Account(TPP Only)',
             placeholder: '(TPP Only)',
             maxLength: 20
           }
@@ -1984,7 +2022,7 @@ export class BranchFormService {
             { label: 'MIGS 2.5-Party', value: '5' },
             { label: 'MIGS 2-Party', value: '6' }
           ],
-          label: 'Hold-out Amount'
+          label: 'Gateway Integration Type'
         }
       }
       ]
@@ -4027,29 +4065,88 @@ export class BranchFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [{
         className: 'flex-1',
-        type: 'input',
-        key: 'noOfDebitTidReq',
-        expressionProperties: {
-
-        },
+        type: 'checkbox',
+        key: 'isAtmDebit',
         templateOptions: {
-          label: 'No. of Debit TID Request for this outlet',
-          placeholder: 'No. of Debit TID Request for this outlet',
-          disabled: true
+          label: 'ATM/Debit',
         },
       },
       {
-        key: 'typeDebitTidReq',
-        type: 'radio',
+        key: 'numberOfDebitTidAtm',
+        className: 'flex-3',
+        type: 'input',
+        expressionProperties: {
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['isAtmDebit'];
+          },
+          'templateOptions.disabled': (model: any, formState: any) => {
+            return !model['isAtmDebit'];
+          }
+        },
         templateOptions: {
-          label: 'Type of Debit TID Request?',
-          disabled: true,
-          options: [
-            { value: '1', label: 'ATM/DEBIT' },
-            { value: '2', label: 'Cash Agad' }
-          ],
+          label: 'No. of Debit TIDs'
+        }
+      },
+      {
+        key: 'mdrAtm',
+        className: 'flex-3',
+        type: 'input',
+        expressionProperties: {
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['isAtmDebit'];
+          },
+          'templateOptions.disabled': (model: any, formState: any) => {
+            return !model['isAtmDebit'];
+          }
+        },
+        templateOptions: {
+          label: 'MDR'
+        }
+      }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'checkbox',
+        key: 'isCashAgad',
+        templateOptions: {
+          label: 'Cash Agad',
         },
       },
+      {
+        className: 'flex-3',
+        type: 'input',
+        key: 'numberOfDebitTidCashAgad',
+        expressionProperties: {
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['isCashAgad'];
+          },
+          'templateOptions.disabled': (model: any, formState: any) => {
+            return !model['isCashAgad'];
+          }
+        },
+        templateOptions: {
+          label: 'No. of Debit TIDs'
+        }
+      },
+      {
+        key: 'mdrCashAgad',
+        className: 'flex-3',
+        type: 'input',
+        expressionProperties: {
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['isCashAgad'];
+          },
+          'templateOptions.disabled': (model: any, formState: any) => {
+            return !model['isCashAgad'];
+          }
+        },
+        templateOptions: {
+          label: 'MDR'
+        }
+      }
       ]
     },
     {
@@ -4146,50 +4243,50 @@ export class BranchFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
         {
-        className: 'flex-1', //not yet
-        type: 'select',
-        key: 'defaultTransactionSource',
-        expressionProperties: {
+          className: 'flex-1', //not yet
+          type: 'select',
+          key: 'defaultTransactionSource',
+          expressionProperties: {
 
+          },
+          templateOptions: {
+            label: 'Default Transaction Source',
+            options: [
+              { label: ' ', value: '1' }
+            ],
+            disabled: true
+          }
         },
-        templateOptions: {
-          label: 'Default Transaction Source',
-          options: [
-            { label: ' ', value: '1' }
-          ],
-          disabled: true
-        }
-      },
-      {
-        className: 'flex-1',
-        type: 'input',
-        key: 'mcAssignedId',
-        expressionProperties: {
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'mcAssignedId',
+          expressionProperties: {
 
+          },
+          templateOptions: {
+            label: 'MC Assigned Id',
+            placeholder: 'MC Assigned Id',
+            disabled: true
+          }
         },
-        templateOptions: {
-          label: 'MC Assigned Id',
-          placeholder: 'MC Assigned Id',
-          disabled: true
-        }
-      },
-      {
-        className: 'flex-1',//dropdown
-        type: 'select',
-        key: 'areaMallCode',
-        expressionProperties: {
+        {
+          className: 'flex-1',//dropdown
+          type: 'select',
+          key: 'areaMallCode',
+          expressionProperties: {
 
-        },
-        templateOptions: {
-          label: 'Area Mall Code',
-          options: [
-            { label: 'AREA MALL CODE 1', value: '1' },
-            { label: 'AREA MALL CODE 2', value: '2' },
-            { label: 'AREA MALL CODE 3', value: '3' }
-          ],
-          disabled: true
+          },
+          templateOptions: {
+            label: 'Area Mall Code',
+            options: [
+              { label: 'AREA MALL CODE 1', value: '1' },
+              { label: 'AREA MALL CODE 2', value: '2' },
+              { label: 'AREA MALL CODE 3', value: '3' }
+            ],
+            disabled: true
+          }
         }
-      }
       ]
     },
 
@@ -5566,29 +5663,88 @@ export class BranchFormService {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [{
         className: 'flex-1',
-        type: 'input',
-        key: 'noOfDebitTidReq',
-        expressionProperties: {
-
-        },
+        type: 'checkbox',
+        key: 'isAtmDebit',
         templateOptions: {
-          label: 'No. of Debit TID Request for this outlet',
-          placeholder: 'No. of Debit TID Request for this outlet',
-          disabled: true
+          label: 'ATM/Debit',
         },
       },
       {
-        key: 'typeDebitTidReq',
-        type: 'radio',
+        key: 'numberOfDebitTidAtm',
+        className: 'flex-3',
+        type: 'input',
+        expressionProperties: {
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['isAtmDebit'];
+          },
+          'templateOptions.disabled': (model: any, formState: any) => {
+            return !model['isAtmDebit'];
+          }
+        },
         templateOptions: {
-          label: 'Type of Debit TID Request?',
-          disabled: true,
-          options: [
-            { value: '1', label: 'ATM/DEBIT' },
-            { value: '2', label: 'Cash Agad' }
-          ],
+          label: 'No. of Debit TIDs'
+        }
+      },
+      {
+        key: 'mdrAtm',
+        className: 'flex-3',
+        type: 'input',
+        expressionProperties: {
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['isAtmDebit'];
+          },
+          'templateOptions.disabled': (model: any, formState: any) => {
+            return !model['isAtmDebit'];
+          }
+        },
+        templateOptions: {
+          label: 'MDR'
+        }
+      }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'checkbox',
+        key: 'isCashAgad',
+        templateOptions: {
+          label: 'Cash Agad',
         },
       },
+      {
+        className: 'flex-3',
+        type: 'input',
+        key: 'numberOfDebitTidCashAgad',
+        expressionProperties: {
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['isCashAgad'];
+          },
+          'templateOptions.disabled': (model: any, formState: any) => {
+            return !model['isCashAgad'];
+          }
+        },
+        templateOptions: {
+          label: 'No. of Debit TIDs'
+        }
+      },
+      {
+        key: 'mdrCashAgad',
+        className: 'flex-3',
+        type: 'input',
+        expressionProperties: {
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['isCashAgad'];
+          },
+          'templateOptions.disabled': (model: any, formState: any) => {
+            return !model['isCashAgad'];
+          }
+        },
+        templateOptions: {
+          label: 'MDR'
+        }
+      }
       ]
     },
     {

@@ -108,7 +108,7 @@ export class OcularInspectionFormService {
                     className: 'flex-1',
                     templateOptions: {
                         required: true,
-                        label: 'Administrator (Contact Person)'
+                        label: 'Admin Contact person'
                     }
                 },
                 {

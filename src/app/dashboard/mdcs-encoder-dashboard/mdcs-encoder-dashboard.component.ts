@@ -13,7 +13,7 @@ import { SearchModalComponent } from '../../modal/search-modal/search-modal.comp
 })
 export class MdcsEncoderDashboardComponent implements OnInit {
   displayedColumns: string[];
-  dataSource: IRequestDisplay[];
+  dataSource;
   
   constructor(private _route: ActivatedRoute, private _router: Router, private _service: MdcsEncoderDashboardService,
   private _matDialog: MatDialog) { }
