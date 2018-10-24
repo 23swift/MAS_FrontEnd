@@ -1,9 +1,42 @@
 import { Component, OnInit } from '@angular/core';
 import { MauOfficerDashboardService } from './mau-officer-dashboard.service';
-import { IRequestDisplay } from '../../temp/interface/irequest-display';
+//import { IRequestDisplay } from '../../temp/interface/irequest-display';
 import { MatDialogRef, MatDialog, MatSnackBar } from '../../../../node_modules/@angular/material';
 import { AoListModalComponent } from '../../modal/ao-list-modal/ao-list-modal.component';
 import { ActivatedRoute, Router } from '../../../../node_modules/@angular/router';
+
+const ElementData: IRequestDisplay[] =  [
+  {
+    Id: 1, TrackingNo: '0000001',
+    RequestType: 'New Affiliation', BusinessName: 'Bench',
+    RequestDate: '09/21/2018', BranchName: 'SM Megamall',
+    Location: 'Mandaluyong', RequestStatus: 'FOR EVALUATION',
+    AccountOfficer: 'Juanico Cabanit', TAT: '10 Hour(s)'
+    
+  },
+  {
+    Id: 2, TrackingNo: '0000002',
+    RequestType: 'New Affiliation', BusinessName: 'Bench',
+    RequestDate: '09/22/2018', BranchName: 'SM Calamba',
+    Location: 'Calamba', RequestStatus: 'FOR RE-EVALUATION',
+    AccountOfficer: 'Raquel Bernado', TAT: '20 Hour(s)'
+  }
+];
+
+export interface IRequestDisplay {
+  Id: number;
+  TrackingNo: string;
+  RequestType: string;
+  BusinessName: string;
+  RequestDate: string;
+  BranchName: string;
+  Location: string;
+  RequestStatus: string;
+  AccountOfficer: string;
+  TAT: string;
+}
+
+
 
 @Component({
   selector: 'app-mau-officer-dashboard',
@@ -27,10 +60,10 @@ export class MauOfficerDashboardComponent implements OnInit {
     private _router: Router) { }
 
   ngOnInit() {
-    this.displayedColumns = ['ReferenceNo', 'RequestType', 'BusinessName',
-                             'RequestDate', 'DBAName', 'Location', 
-                             'Status', 'Operation']
-    this.dataSource = this._service.Get();
+    this.displayedColumns = ['TrackingNo', 'RequestType', 'BusinessName',
+                             'RequestDate','BranchName', 'Location', 
+                             'RequestStatus','TAT', 'Operation']
+    this.dataSource = ElementData;
 
     this.mode = '';
     this.title = '';
