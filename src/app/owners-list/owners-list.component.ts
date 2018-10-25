@@ -13,6 +13,7 @@ export class OwnersListComponent implements OnInit {
   displayedColumns: string[];
   dataSource: Object[];
   @Input() displayMode: boolean;
+  @Input() userGroup: string;
 
   constructor(private _service: OwnersListService, private _dialog: MatDialog) { }
 
@@ -23,7 +24,10 @@ export class OwnersListComponent implements OnInit {
 
   addOwner() {
     this._dialog.open(OwnersFormModalComponent, {
-      width: '60%'
+      width: '60%',
+      data: {
+        userGroup: this.userGroup
+      }
     });
   }
 }
