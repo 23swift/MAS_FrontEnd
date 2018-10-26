@@ -3466,110 +3466,9 @@ export class BranchFormService {
         },
       ]
     },
-
-    {
-      template: '<span class="mat-subheading-1">If No, Please Select If For Installation (Yes or No) ?*</span>',
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          key: 'ifNoForInstallation',
-          className: 'flex-1',
-          type: 'radio',
-          templateOptions: {
-            label: '',
-            required: true,
-            options: [
-              { value: true, label: 'Yes' },
-              { value: false, label: 'No' }
-            ],
-          },
-
-        },
-      ]
-    },
-
-    {
-      template: '<span class="mat-subheading-1">If With Installed ECR, Do You Store Card Data By Swiping The Card To Your ECR Or Similar Equipment Other Than The BDO-ISSUED POS Terminal?*</span>',
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          key: 'withECRSwiping',
-          className: 'flex-1',
-          type: 'radio',
-          templateOptions: {
-            label: '',
-            required: true,
-            options: [
-              { value: true, label: 'Yes' },
-              { value: false, label: 'No' }
-            ],
-          },
-
-        },
-        {
-          className: 'flex-6',
-          type: 'input',
-          key: 'ifYesCardholder1',
-          expressionProperties: {
-            'templateOptions.disabled': (model: any, formState: any) => {
-              return !model['withECRSwiping'];
-            }
-          },
-          templateOptions: {
-            label: 'If Yes, Please Indicate The Cardholder Data To Be Stored',
-            placeholder: 'If Yes, Please Indicate The Cardholder Data To Be Stored',
-            maxLength: 50
-          }
-        }
-      ]
-    },
-    {
-      template: '<span class="mat-subheading-1">If For Installation, Will You Store Card Data By Swiping The Card To Your ECR Or Similar Equipment Other Than The BDO-Issued POS Terminal?*</span>',
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          key: 'forInstallationSwiping',
-          className: 'flex-1',
-          type: 'radio',
-          templateOptions: {
-            required: true,
-            options: [
-              { value: true, label: 'Yes' },
-              { value: false, label: 'No' }
-            ],
-          },
-
-        },
-        {
-          className: 'flex-6',
-          type: 'input',
-          key: 'ifYesCardholder2',
-          expressionProperties: {
-            'templateOptions.disabled': (model: any, formState: any) => {
-              return !model['forInstallationSwiping'];
-            }
-          },
-          templateOptions: {
-            label: 'If Yes, Please Indicate The Cardholder Data To Be Stored',
-            placeholder: 'If Yes, Please Indicate The Cardholder Data To Be Stored',
-            maxLength: 50
-          }
-        }
-      ]    ///// +++
-    },
-
     {
       type: 'printDebit'
     },
-
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [{
@@ -4269,7 +4168,8 @@ export class BranchFormService {
           templateOptions: {
             label: 'DCC Rebate Rate',
             placeholder: 'DCC Rebate Rate',
-            pattern: '^\d+\.\d{2}$'
+            pattern: '^\d+\.\d{2}$',
+            disabled: true
           }
         },
         {
@@ -4279,7 +4179,8 @@ export class BranchFormService {
           templateOptions: {
             label: 'Third Party CASA',
             placeholder: 'Third Party CASA',
-            pattern: '^[^\d]$'
+            pattern: '^[^\d]$',
+            disabled: true
           }
         }
       ]
@@ -4293,7 +4194,8 @@ export class BranchFormService {
           key: 'otherEmailAddress',
           templateOptions: {
             label: 'Other Email Address',
-            placeholder: 'Other Email Address'
+            placeholder: 'Other Email Address',
+            disabled: true
           }
         },
         {
@@ -4302,7 +4204,8 @@ export class BranchFormService {
           key: 'otherMobileNumber',
           templateOptions: {
             label: 'Other Mobile Number',
-            placeholder: 'Other Mobile Number'
+            placeholder: 'Other Mobile Number',
+            disabled: true
           }
         }
       ]
@@ -4317,7 +4220,8 @@ export class BranchFormService {
           key: 'typeOfRelatedParty',
           templateOptions: {
             label: 'Type of Related Party',
-            placeholder: 'Type of Related Party'
+            placeholder: 'Type of Related Party',
+            disabled: true
           }
         },
         {
@@ -4326,7 +4230,8 @@ export class BranchFormService {
           key: 'riNameRelation',
           templateOptions: {
             label: 'Ri-Name / Relation',
-            placeholder: 'Ri-Name / Relation'
+            placeholder: 'Ri-Name / Relation',
+            disabled: true
           }
         },
         {
@@ -4335,7 +4240,8 @@ export class BranchFormService {
           key: 'nameOfPep',
           templateOptions: {
             label: 'Name of PEP',
-            placeholder: 'Name of PEP'
+            placeholder: 'Name of PEP',
+            disabled: true
           }
         }
       ]
@@ -4350,7 +4256,8 @@ export class BranchFormService {
           key: 'fraudToolProvider',
           templateOptions: {
             label: 'Fraud Tool Provider',
-            placeholder: 'Fraud Tool Provider'
+            placeholder: 'Fraud Tool Provider',
+            disabled: true
           }
         },
         {
@@ -4359,7 +4266,8 @@ export class BranchFormService {
           key: 'cnpOrientationDate',
           templateOptions: {
             label: 'CNP Orientation Date',
-            placeholder: 'CNP Orientation Date'
+            placeholder: 'CNP Orientation Date',
+            disabled: true
           }
         }
       ]
@@ -4373,7 +4281,8 @@ export class BranchFormService {
           key: 'directPaymentLink',
           templateOptions: {
             label: 'Direct Payment Link',
-            placeholder: 'Direct Payment Link'
+            placeholder: 'Direct Payment Link',
+            disabled: true
           }
         },
         {
@@ -4382,7 +4291,8 @@ export class BranchFormService {
           key: 'gatewayIntegrationType',
           templateOptions: {
             label: 'Gateway Integration Type',
-            placeholder: 'Gateway Integration Type'
+            placeholder: 'Gateway Integration Type',
+            disabled: true
           }
         }
       ]
@@ -4397,7 +4307,8 @@ export class BranchFormService {
           key: 'crteIssuedByCnp',
           templateOptions: {
             label: 'CRTE Issued By',
-            placeholder: 'CRTE Issued By'
+            placeholder: 'CRTE Issued By',
+            disabled: true
           }
         },
         {
@@ -4406,7 +4317,8 @@ export class BranchFormService {
           key: 'taxExemptClassCnp',
           templateOptions: {
             label: 'Tax Exempt Classification',
-            placeholder: 'Tax Exempt Classification'
+            placeholder: 'Tax Exempt Classification',
+            disabled: true
           }
         }
       ]
@@ -4420,7 +4332,8 @@ export class BranchFormService {
           key: 'validFrom',
           templateOptions: {
             label: 'Valid From',
-            placeholder: 'Valid From'
+            placeholder: 'Valid From',
+            disabled: true
           }
         },
         {
@@ -4429,7 +4342,8 @@ export class BranchFormService {
           key: 'validUntil',
           templateOptions: {
             label: 'Valid Until',
-            placeholder: 'Valid Until'
+            placeholder: 'Valid Until',
+            disabled: true
           }
         }
       ]
@@ -4944,106 +4858,6 @@ export class BranchFormService {
         },
       ]
     },
-
-    {
-      template: '<span class="mat-subheading-1">If No, Please Select If For Installation (Yes or No) ?*</span>',
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          key: 'ifNoForInstallation',
-          className: 'flex-1',
-          type: 'radio',
-          templateOptions: {
-            label: '',
-            required: true,
-            options: [
-              { value: true, label: 'Yes' },
-              { value: false, label: 'No' }
-            ],
-          },
-
-        },
-      ]
-    },
-
-    {
-      template: '<span class="mat-subheading-1">If With Installed ECR, Do You Store Card Data By Swiping The Card To Your ECR Or Similar Equipment Other Than The BDO-ISSUED POS Terminal?*</span>',
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          key: 'withECRSwiping',
-          className: 'flex-1',
-          type: 'radio',
-          templateOptions: {
-            label: '',
-            required: true,
-            options: [
-              { value: true, label: 'Yes' },
-              { value: false, label: 'No' }
-            ],
-          },
-
-        },
-        {
-          className: 'flex-6',
-          type: 'input',
-          key: 'ifYesCardholder1',
-          expressionProperties: {
-            'templateOptions.disabled': (model: any, formState: any) => {
-              return !model['withECRSwiping'];
-            }
-          },
-          templateOptions: {
-            label: 'If Yes, Please Indicate The Cardholder Data To Be Stored',
-            placeholder: 'If Yes, Please Indicate The Cardholder Data To Be Stored',
-            maxLength: 50
-          }
-        }
-      ]
-    },
-    {
-      template: '<span class="mat-subheading-1">If For Installation, Will You Store Card Data By Swiping The Card To Your ECR Or Similar Equipment Other Than The BDO-Issued POS Terminal?*</span>',
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          key: 'forInstallationSwiping',
-          className: 'flex-1',
-          type: 'radio',
-          templateOptions: {
-            required: true,
-            options: [
-              { value: true, label: 'Yes' },
-              { value: false, label: 'No' }
-            ],
-          },
-
-        },
-        {
-          className: 'flex-6',
-          type: 'input',
-          key: 'ifYesCardholder2',
-          expressionProperties: {
-            'templateOptions.disabled': (model: any, formState: any) => {
-              return !model['forInstallationSwiping'];
-            }
-          },
-          templateOptions: {
-            label: 'If Yes, Please Indicate The Cardholder Data To Be Stored',
-            placeholder: 'If Yes, Please Indicate The Cardholder Data To Be Stored',
-            maxLength: 50
-          }
-        }
-      ]    ///// +++
-    },
-
     {
       type: 'printDebit'
     },
@@ -5671,7 +5485,8 @@ export class BranchFormService {
           templateOptions: {
             label: 'DCC Rebate Rate',
             placeholder: 'DCC Rebate Rate',
-            pattern: '^\d+\.\d{2}$'
+            pattern: '^\d+\.\d{2}$',
+            disabled: true
           }
         },
         {
@@ -5681,7 +5496,8 @@ export class BranchFormService {
           templateOptions: {
             label: 'Third Party CASA',
             placeholder: 'Third Party CASA',
-            pattern: '^[^\d]$'
+            pattern: '^[^\d]$',
+            disabled: true
           }
         }
       ]
@@ -5695,7 +5511,8 @@ export class BranchFormService {
           key: 'otherEmailAddress',
           templateOptions: {
             label: 'Other Email Address',
-            placeholder: 'Other Email Address'
+            placeholder: 'Other Email Address',
+            disabled: true
           }
         },
         {
@@ -5704,7 +5521,8 @@ export class BranchFormService {
           key: 'otherMobileNumber',
           templateOptions: {
             label: 'Other Mobile Number',
-            placeholder: 'Other Mobile Number'
+            placeholder: 'Other Mobile Number',
+            disabled: true
           }
         }
       ]
@@ -5719,7 +5537,8 @@ export class BranchFormService {
           key: 'typeOfRelatedParty',
           templateOptions: {
             label: 'Type of Related Party',
-            placeholder: 'Type of Related Party'
+            placeholder: 'Type of Related Party',
+            disabled: true
           }
         },
         {
@@ -5728,7 +5547,8 @@ export class BranchFormService {
           key: 'riNameRelation',
           templateOptions: {
             label: 'Ri-Name / Relation',
-            placeholder: 'Ri-Name / Relation'
+            placeholder: 'Ri-Name / Relation',
+            disabled: true
           }
         },
         {
@@ -5737,7 +5557,8 @@ export class BranchFormService {
           key: 'nameOfPep',
           templateOptions: {
             label: 'Name of PEP',
-            placeholder: 'Name of PEP'
+            placeholder: 'Name of PEP',
+            disabled: true
           }
         }
       ]
@@ -5752,7 +5573,8 @@ export class BranchFormService {
           key: 'fraudToolProvider',
           templateOptions: {
             label: 'Fraud Tool Provider',
-            placeholder: 'Fraud Tool Provider'
+            placeholder: 'Fraud Tool Provider',
+            disabled: true
           }
         },
         {
@@ -5761,7 +5583,8 @@ export class BranchFormService {
           key: 'cnpOrientationDate',
           templateOptions: {
             label: 'CNP Orientation Date',
-            placeholder: 'CNP Orientation Date'
+            placeholder: 'CNP Orientation Date',
+            disabled: true
           }
         }
       ]
@@ -5775,7 +5598,8 @@ export class BranchFormService {
           key: 'directPaymentLink',
           templateOptions: {
             label: 'Direct Payment Link',
-            placeholder: 'Direct Payment Link'
+            placeholder: 'Direct Payment Link',
+            disabled: true
           }
         },
         {
@@ -5784,7 +5608,8 @@ export class BranchFormService {
           key: 'gatewayIntegrationType',
           templateOptions: {
             label: 'Gateway Integration Type',
-            placeholder: 'Gateway Integration Type'
+            placeholder: 'Gateway Integration Type',
+            disabled: true
           }
         }
       ]
@@ -5799,7 +5624,8 @@ export class BranchFormService {
           key: 'crteIssuedByCnp',
           templateOptions: {
             label: 'CRTE Issued By',
-            placeholder: 'CRTE Issued By'
+            placeholder: 'CRTE Issued By',
+            disabled: true
           }
         },
         {
@@ -5808,7 +5634,8 @@ export class BranchFormService {
           key: 'taxExemptClassCnp',
           templateOptions: {
             label: 'Tax Exempt Classification',
-            placeholder: 'Tax Exempt Classification'
+            placeholder: 'Tax Exempt Classification',
+            disabled: true
           }
         }
       ]
@@ -5822,7 +5649,8 @@ export class BranchFormService {
           key: 'validFrom',
           templateOptions: {
             label: 'Valid From',
-            placeholder: 'Valid From'
+            placeholder: 'Valid From',
+            disabled: true
           }
         },
         {
@@ -5831,7 +5659,8 @@ export class BranchFormService {
           key: 'validUntil',
           templateOptions: {
             label: 'Valid Until',
-            placeholder: 'Valid Until'
+            placeholder: 'Valid Until',
+            disabled: true
           }
         }
       ]
