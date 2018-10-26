@@ -2969,7 +2969,7 @@ export class BranchFormService {
           type: 'input',
           key: 'businessName',
           templateOptions: {
-            label: 'Legal Name',
+            label: '',
             placeholder: 'Legal Name',
             disabled: true
           }
@@ -3281,266 +3281,9 @@ export class BranchFormService {
           pattern: '^\d{15}$',
           maxLength: 15
         }
-      },
-      {
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfPrincipalOwner',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          label: 'Name of Principal Owner',
-          placeholder: 'Name of Principal Owner',
-          required: true
-        }
       }
       ]
     },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory1',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          label: 'Name of Company Signatory/ies',
-          placeholder: 'Name of Company Signatory/ies',
-          required: true,
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory2',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory3',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory4',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory5',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory6',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory7',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory8',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory9',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory10',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory11',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory12',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory13',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory14',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory15',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [{
@@ -4069,6 +3812,7 @@ export class BranchFormService {
         key: 'isAtmDebit',
         templateOptions: {
           label: 'ATM/Debit',
+          disabled: true
         },
       },
       {
@@ -4110,9 +3854,68 @@ export class BranchFormService {
       fieldGroup: [{
         className: 'flex-1',
         type: 'checkbox',
+        key: 'isSmGiftCard',
+        templateOptions: {
+          label: 'SM Gift Card',
+          disabled: true
+        }
+      },
+      {
+        key: 'mdrSmGiftCard',
+        className: 'flex-6',
+        type: 'input',
+        expressionProperties: {
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['isSmGiftCard'];
+          },
+          'templateOptions.disabled': (model: any, formState: any) => {
+            return !model['isSmGiftCard'];
+          }
+        },
+        templateOptions: {
+          label: 'MDR'
+        }
+      }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'checkbox',
+        key: 'isSmShopCard',
+        templateOptions: {
+          label: 'SM Shop Card',
+          disabled: true
+        },
+      },
+      {
+        key: 'mdrSmShopCard',
+        className: 'flex-6',
+        type: 'input',
+        expressionProperties: {
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['isSmShopCard'];
+          },
+          'templateOptions.disabled': (model: any, formState: any) => {
+            return !model['isSmShopCard'];
+          }
+        },
+        templateOptions: {
+          label: 'MDR'
+        }
+      }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'checkbox',
         key: 'isCashAgad',
         templateOptions: {
           label: 'Cash Agad',
+          disabled: true
         },
       },
       {
@@ -4956,266 +4759,9 @@ export class BranchFormService {
           pattern: '^\d{15}$',
           maxLength: 15
         }
-      },
-      {
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfPrincipalOwner',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          label: 'Name of Principal Owner',
-          placeholder: 'Name of Principal Owner',
-          required: true
-        }
       }
       ]
     },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory1',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          label: 'Name of Company Signatory/ies',
-          placeholder: 'Name of Company Signatory/ies',
-          required: true,
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory2',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory3',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory4',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory5',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory6',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory7',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory8',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory9',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory10',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory11',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory12',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory13',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory14',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [{
-        className: 'flex-1',
-        type: 'input',
-        key: 'nameOfCompanySignatory15',
-        expressionProperties: {
-
-        },
-        templateOptions: {
-          maxLength: 50
-        },
-      },
-      ]
-    },
-
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [{
@@ -5667,6 +5213,7 @@ export class BranchFormService {
         key: 'isAtmDebit',
         templateOptions: {
           label: 'ATM/Debit',
+          disabled: true
         },
       },
       {
@@ -5708,9 +5255,68 @@ export class BranchFormService {
       fieldGroup: [{
         className: 'flex-1',
         type: 'checkbox',
+        key: 'isSmGiftCard',
+        templateOptions: {
+          label: 'SM Gift Card',
+          disabled: true
+        },
+      },
+      {
+        key: 'mdrSmGiftCard',
+        className: 'flex-6',
+        type: 'input',
+        expressionProperties: {
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['isSmGiftCard'];
+          },
+          'templateOptions.disabled': (model: any, formState: any) => {
+            return !model['isSmGiftCard'];
+          }
+        },
+        templateOptions: {
+          label: 'MDR'
+        }
+      }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'checkbox',
+        key: 'isSmShopCard',
+        templateOptions: {
+          label: 'SM Shop Card',
+          disabled: true
+        },
+      },
+      {
+        key: 'mdrSmShopCard',
+        className: 'flex-6',
+        type: 'input',
+        expressionProperties: {
+          'templateOptions.required': (model: any, formState: any) => {
+            return model['isSmShopCard'];
+          },
+          'templateOptions.disabled': (model: any, formState: any) => {
+            return !model['isSmShopCard'];
+          }
+        },
+        templateOptions: {
+          label: 'MDR'
+        }
+      }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [{
+        className: 'flex-1',
+        type: 'checkbox',
         key: 'isCashAgad',
         templateOptions: {
           label: 'Cash Agad',
+          disabled: true
         },
       },
       {
@@ -6235,6 +5841,6 @@ export class BranchFormService {
 
   constructor() { }
   getBranchFields(): FormlyFieldConfig[] {
-    return this.mdcsChecker;
+    return this.mdcsEncoder;
   }
 }

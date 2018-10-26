@@ -2,7 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { AoListModalService } from './ao-list-modal.service';
 import { IaolistData } from "../../temp/interface/iaolist-data";
-import { FormControl } from '../../../../node_modules/@angular/forms';
+import { FormControl } from '@angular/forms';
 
 
 @Component({

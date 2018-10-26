@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { hostElement } from '../../../node_modules/@angular/core/src/render3/instructions';
+import { hostElement } from '@angular/core/src/render3/instructions';
 
 interface IPosTerminalFields {
   TerminalBrand: string;

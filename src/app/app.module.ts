@@ -143,6 +143,8 @@ import { OwnersListComponent } from './owners-list/owners-list.component';
 import { PosListContainerComponent } from './pos-list-container/pos-list-container.component';
 import { PosListComponent } from './pos-list/pos-list.component';
 import { PosFormModalComponent } from './modal/pos-form-modal/pos-form-modal.component';
+import { BranchListPosComponent } from './branch-list-pos/branch-list-pos.component';
+import { DetailsForMdcsComponent } from './details-for-mdcs/details-for-mdcs.component';
 
 
 
@@ -259,7 +261,9 @@ import { PosFormModalComponent } from './modal/pos-form-modal/pos-form-modal.com
     OwnersListComponent,
     PosListContainerComponent,
     PosListComponent,
-    PosFormModalComponent
+    PosFormModalComponent,
+    BranchListPosComponent,
+    DetailsForMdcsComponent
   ],
   imports: [
     BrowserModule,

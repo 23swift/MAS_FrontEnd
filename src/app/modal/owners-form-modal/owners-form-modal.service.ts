@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FormlyFieldConfig } from '@ngx-formly/core';
-import { MaxLengthValidator } from '../../../../node_modules/@angular/forms';
+import { MaxLengthValidator } from '@angular/forms';
 
 @Injectable()
 export class OwnersFormModalService {

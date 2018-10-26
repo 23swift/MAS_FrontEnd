@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MauOfficerDashboardService } from './mau-officer-dashboard.service';
 //import { IRequestDisplay } from '../../temp/interface/irequest-display';
-import { MatDialogRef, MatDialog, MatSnackBar } from '../../../../node_modules/@angular/material';
+import { MatDialogRef, MatDialog, MatSnackBar } from '@angular/material';
 import { AoListModalComponent } from '../../modal/ao-list-modal/ao-list-modal.component';
-import { ActivatedRoute, Router } from '../../../../node_modules/@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 const ElementData: IRequestDisplay[] =  [
   {

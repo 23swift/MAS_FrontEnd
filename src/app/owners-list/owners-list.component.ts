@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { OwnersListService } from './owners-list.service';
-import { MatDialog } from '../../../node_modules/@angular/material';
+import { MatDialog } from '@angular/material';
 import { OwnersFormModalComponent } from '../modal/owners-form-modal/owners-form-modal.component';
 
 @Component({

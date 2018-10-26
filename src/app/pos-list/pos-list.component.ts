@@ -37,8 +37,11 @@ export class PosListComponent implements OnInit {
 
   addPos() {
     this._dialog.open(PosFormModalComponent, {
-      width: '95%',
-      height: '90%'
+      width: '98%',
+      height: '90%',
+      data: {
+        showAction: false
+      }
     });
   }
 }

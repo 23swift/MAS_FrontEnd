@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialogRef } from '@angular/material';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { FormlyFieldConfig } from '@ngx-formly/core';
 
 import { PosFormModalService } from './pos-form-modal.service';
@@ -14,11 +14,13 @@ export class PosFormModalComponent implements OnInit {
   fields: FormlyFieldConfig[];
   userGroup: string;
   model: Object;
-  constructor(private _service: PosFormModalService, private _dialog: MatDialogRef<PosFormModalComponent>) { }
+  showAction: boolean;
+  constructor(private _service: PosFormModalService, private _dialog: MatDialogRef<PosFormModalComponent>, @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit() {
     this.model = {};
     this.fields = this._service.getPosFields(this.userGroup);
+    this.showAction = this.data.showAction;
   }
 
 }
