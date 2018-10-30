@@ -6,13 +6,48 @@ export class PosFormModalService {
 
   fields: FormlyFieldConfig[] = [
     {
-      className: 'flex-1',
-      type: 'select',
-      key: 'natureOfRequest',
-      templateOptions: {
-        label: 'Nature Of Request',
-        disabled: true
-      }
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
+        {
+          className: 'flex-1',
+          type: 'select',
+          key: 'natureOfRequest',
+          templateOptions: {
+            label: 'Nature Of Request',
+            options: [
+              { value: 1, label: 'Installation' },
+              { value: 2, label: 'Reprogramming' },
+              { value: 3, label: 'TID Issuance' }
+            ]
+          }
+        },
+        {
+          className: 'flex-1',
+          type: 'select',
+          key: 'reprogrammingType',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] != 2;
+            }
+          },
+          templateOptions: {
+            label: 'Reprogramming Type',
+          }
+        },
+        {
+          className: 'flex-1',
+          type: 'select',
+          key: 'tidIssuanceType',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] != 3;
+            }
+          },
+          templateOptions: {
+            label: 'TID Issuance Type'
+          }
+        }
+      ]
     },
     {
       fieldGroupClassName: 'display-flex',
@@ -1637,6 +1672,6 @@ export class PosFormModalService {
       default:
         retFields = this.fields
     }
-    return retFields
-  };
+    return retFields;
+  }
 }

@@ -40,7 +40,7 @@ export class PosListComponent implements OnInit {
       width: '98%',
       height: '90%',
       data: {
-        showAction: false
+        showAction: true
       }
     });
   }
