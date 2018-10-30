@@ -45,7 +45,7 @@ export class BranchListComponent implements OnInit {
   private getItem(Id) {
 
     // this.router.navigateByUrl(this.detailsRoute+"/"+Id);
-    this.router.navigate([{ outlets: { branch: ["branch", 'update', Id] } }]);
+    this.router.navigate([{ outlets: { branch: ['branch', 'update', Id] } }]);
     // 'branch/update/'
   }
 
