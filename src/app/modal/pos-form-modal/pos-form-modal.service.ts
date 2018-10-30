@@ -127,7 +127,6 @@ export class PosFormModalService {
             ]
           },
           defaultValue: '1'
-
         }
       ]
     },
@@ -138,9 +137,17 @@ export class PosFormModalService {
           className: 'flex-1',
           type: 'select',
           key: 'businessUnitAO',
+          templateOptions: {
+            label: 'Business Unit (AO\'s Business Unit)',
+          }
+        },
+        {
+          className: 'flex-1',
+          type: 'select',
+          key: 'businessUnitAO',
           expressionProperties: {
             'templateOptions.disabled': (model: any, formState: any) => {
-              return model['natureOfRequest'] !== 1;
+              return model['natureOfRequest'] !== 1 || model['natureOfRequest'] !== 2;
             }
           },
           templateOptions: {
@@ -153,13 +160,18 @@ export class PosFormModalService {
           key: 'segment',
           expressionProperties: {
             'templateOptions.disabled': (model: any, formState: any) => {
-              return model['natureOfRequest'] !== 1;
+              return model['natureOfRequest'] !== 1 || model['natureOfRequest'] !== 2;
             }
           },
           templateOptions: {
             label: 'Segment'
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -172,12 +184,7 @@ export class PosFormModalService {
           templateOptions: {
             label: 'Approved By (Business Unit Head)'
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'input',
@@ -193,7 +200,12 @@ export class PosFormModalService {
           templateOptions: {
             label: 'Merchant\'s DBA Name'
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -206,6 +218,22 @@ export class PosFormModalService {
           templateOptions: {
             label: 'Merchant\'s Name on Signage'
           }
+        },
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'merchantDbaAddress',
+          templateOptions: {
+            label: 'Merchant\'s DBA Address'
+          }
+        },
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'merchantDbaAddressOld',
+          templateOptions: {
+            label: 'Merchant\'s DBA Address (old)'
+          }
         }
       ]
     },
@@ -215,22 +243,20 @@ export class PosFormModalService {
         {
           className: 'flex-1',
           type: 'input',
-          key: 'merchantDBAAddress',
-          templateOptions: {
-            label: 'Merchant\'s DBA Address'
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'merchantDBACity',
+          key: 'merchantDbaCity',
           templateOptions: {
             label: 'Merchant\'s DBA City'
           }
         },
         {
+          className: 'flex-1',
           key: 'isContactlessMerchant',
           type: 'radio',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
+            }
+          },
           templateOptions: {
             label: 'Contactless Merchant?',
             options: [
@@ -240,6 +266,7 @@ export class PosFormModalService {
           }
         },
         {
+          className: 'flex-1',
           key: 'isMultiMerchant',
           type: 'radio',
           templateOptions: {
@@ -275,6 +302,11 @@ export class PosFormModalService {
           className: 'flex-1',
           type: 'input',
           key: 'contactPerson',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
+            }
+          },
           templateOptions: {
             label: 'Contact Person (Outlet / Branch) Name / Email Address)'
           }
@@ -288,6 +320,11 @@ export class PosFormModalService {
           className: 'flex-1',
           type: 'input',
           key: 'contactNumber',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
+            }
+          },
           templateOptions: {
             label: 'Contact Number (Outlet / Branch) Name / Email Address)'
           }
@@ -296,6 +333,11 @@ export class PosFormModalService {
           className: 'flex-1',
           type: 'input',
           key: 'numberOfPrintedSlips',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
+            }
+          },
           templateOptions: {
             label: 'Number of Printed Slips'
           }
@@ -355,7 +397,7 @@ export class PosFormModalService {
           templateOptions: {
             label: 'Required Pull Out Date For Temporary POS Terminals'
           }
-        },
+        }
       ]
     },
     {
@@ -378,6 +420,11 @@ export class PosFormModalService {
           className: 'flex-1',
           type: 'input',
           key: 'otherRequiredProfilingFacility',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
+            }
+          },
           templateOptions: {
             label: 'Other Required Profiling Facility (tip adjust, binver, BDO Pay, etc)'
           }
@@ -386,14 +433,19 @@ export class PosFormModalService {
           className: 'flex-1',
           type: 'radio',
           key: 'isTipAdjust',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
+            }
+          },
           templateOptions: {
             label: 'TIP Adjust',
             options: [
               {
-                value: true, label: 'True'
+                value: true, label: 'Yes'
               },
               {
-                value: false, label: 'False'
+                value: false, label: 'No'
               }
             ]
           }
@@ -407,6 +459,11 @@ export class PosFormModalService {
           className: 'flex-1',
           type: 'select',
           key: 'mustSettle',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
+            }
+          },
           templateOptions: {
             label: 'Must Settle (No. of Days Required)'
           }
@@ -415,6 +472,11 @@ export class PosFormModalService {
           className: 'flex-1',
           key: 'isHotelSetupFacility',
           type: 'radio',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
+            }
+          },
           templateOptions: {
             label: 'HOTEL SET-UP FACILITY (PRE-AUTH, OFF-LINE)?',
             options: [
@@ -427,6 +489,11 @@ export class PosFormModalService {
           className: 'flex-1',
           key: 'isManualKeyInFacility',
           type: 'radio',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
+            }
+          },
           templateOptions: {
             label: 'MANUAL KEY-IN FACILITY?',
             options: [
@@ -456,22 +523,22 @@ export class PosFormModalService {
         {
           className: 'flex-1',
           type: 'input',
-          key: 'creditStraightTID',
+          key: 'creditStraightTidExisting',
           expressionProperties: {
             'templateOptions.disabled': (model: any, formState: any) => {
               return model['natureOfRequest'] !== 2;
             }
           },
           templateOptions: {
-            label: 'Credit Straight TID (new)'
+            label: 'Credit Straight TID (existing)'
           }
         },
         {
           className: 'flex-1',
-          type: 'calendar',
-          key: 'dateAndTimeEndorsedToMAU',
+          type: 'input',
+          key: 'creditStraightTidNew',
           templateOptions: {
-            label: 'Date and Time Endorsed To MAU'
+            label: 'Credit Straight TID (new)'
           }
         }
       ]
@@ -479,6 +546,14 @@ export class PosFormModalService {
     {
       fieldGroupClassName: 'display-flex',
       fieldGroup: [
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'dateAndTimeEndorsedToMAU',
+          templateOptions: {
+            label: 'Date and Time Endorsed To MAU'
+          }
+        },
         {
           className: 'flex-1',
           type: 'input',
@@ -494,7 +569,12 @@ export class PosFormModalService {
           templateOptions: {
             label: 'Credit Straight MID-VMJ'
           }
-        },
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
         {
           className: 'flex-1',
           type: 'input',
@@ -502,12 +582,7 @@ export class PosFormModalService {
           templateOptions: {
             label: 'Credit Straight MID-AMEX (If with VMJ)'
           }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
+        },
         {
           className: 'flex-1',
           type: 'input',
@@ -523,14 +598,6 @@ export class PosFormModalService {
           templateOptions: {
             label: 'CUP Acceptor ID'
           }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'merchantLoyalty',
-          templateOptions: {
-            label: 'Merchant Loyalty'
-          }
         }
       ]
     },
@@ -541,6 +608,24 @@ export class PosFormModalService {
           className: 'flex-1',
           type: 'input',
           key: 'merchantLoyalty',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
+            }
+          },
+          templateOptions: {
+            label: 'Merchant Loyalty'
+          }
+        },
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'merchantPrepaid',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
+            }
+          },
           templateOptions: {
             label: 'Merchant Prepaid'
           }
@@ -550,6 +635,37 @@ export class PosFormModalService {
           type: 'input',
           key: 'creditStraightMidVmjaVmjacVmjacdOffUs',
           templateOptions: {
+            label: 'Credit Straight MID-VMJA/VMJAC/VMJACD'
+          }
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'creditStraightMidVmjaVmjacVmjacdOffUs',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 2 && model['natureOfRequest'] !== 3;
+            }
+          },
+          templateOptions: {
+            label: 'Credit Straight MID-VMJA/VMJAC/VMJACD (New)'
+          }
+        },
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'creditStraightMidVmjaVmjacVmjacd',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1;
+            }
+          },
+          templateOptions: {
             label: 'Credit Straight MID-VMJA/VMJAC/VMJACD (off-us)'
           }
         },
@@ -557,6 +673,11 @@ export class PosFormModalService {
           className: 'flex-1',
           type: 'input',
           key: 'creditStraightMidVmjOffUs',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1;
+            }
+          },
           templateOptions: {
             label: 'Credit Straight MID-VMJ (off-us)'
           }
@@ -570,6 +691,11 @@ export class PosFormModalService {
           className: 'flex-1',
           type: 'input',
           key: 'creditStraightMidAmexOffUs',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1;
+            }
+          },
           templateOptions: {
             label: 'Credit Straight MID-AMEX (If with VMJ) (off-us)'
           }
@@ -578,6 +704,11 @@ export class PosFormModalService {
           className: 'flex-1',
           type: 'input',
           key: 'creditStraightMidVmjaVmjacVmjacdUsd',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1;
+            }
+          },
           templateOptions: {
             label: 'Credit Straight MID-VMJA/VMJAC/VMJACD (USD)'
           }
@@ -586,6 +717,11 @@ export class PosFormModalService {
           className: 'flex-1',
           type: 'input',
           key: 'creditStraightMidVmjUsd',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1;
+            }
+          },
           templateOptions: {
             label: 'Credit Straight MID-VMJ (USD)'
           }
@@ -607,6 +743,11 @@ export class PosFormModalService {
           className: 'flex-1',
           type: 'input',
           key: 'smEcardMid',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 3;
+            }
+          },
           templateOptions: {
             label: 'SM E-Card MID'
           }
@@ -615,6 +756,11 @@ export class PosFormModalService {
           className: 'flex-1',
           type: 'input',
           key: 'smPartnerPlusMid',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 3;
+            }
+          },
           templateOptions: {
             label: 'SM Partner Plus MID'
           }
@@ -715,16 +861,34 @@ export class PosFormModalService {
           className: 'flex-1',
           type: 'input',
           key: 'dccMarkup',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
+            }
+          },
           templateOptions: {
             label: 'DCC MARK UP'
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1',
           type: 'input',
-          key: 'dateTimeEndorsedPaymentSolutionsOperations',
+          key: 'emailSubject',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
+            }
+          },
           templateOptions: {
-            label: 'Date and Time Endorsed to Payment Solutions Operations'
+            label: 'Email Subject'
+          }
+        },
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'dateTimeAssignedPSProfiling',
+          templateOptions: {
+            label: 'Date and Time Assigned to PS Profiling'
           }
         }
       ]
@@ -735,7 +899,20 @@ export class PosFormModalService {
         {
           className: 'flex-1',
           type: 'input',
+          key: 'dateTimeEndorsedPaymentSolutionsOperations',
+          templateOptions: {
+            label: 'Date and Time Endorsed to Payment Solutions Operations'
+          }
+        },
+        {
+          className: 'flex-1',
+          type: 'input',
           key: 'bdoPayMobileNumberOfTerminals',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
+            }
+          },
           templateOptions: {
             label: 'BDO Pay Mobile – Number of Terminals (Count)'
           }
@@ -744,18 +921,15 @@ export class PosFormModalService {
           className: 'flex-1',
           type: 'input',
           key: 'bdoPayMobileBusinessGroup',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
+            }
+          },
           templateOptions: {
             label: 'BDO Pay Mobile – Business Group (If applicable)'
           }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'bdoPayMobileMerchantPortalUserEmailAddress',
-          templateOptions: {
-            label: 'BDO Pay Mobile – Merchant Portal User\'s Email Address'
-          }
-        },
+        }
       ]
     },
     {
@@ -764,7 +938,25 @@ export class PosFormModalService {
         {
           className: 'flex-1',
           type: 'input',
+          key: 'bdoPayMobileMerchantPortalUserEmailAddress',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
+            }
+          },
+          templateOptions: {
+            label: 'BDO Pay Mobile – Merchant Portal User\'s Email Address'
+          }
+        },
+        {
+          className: 'flex-1',
+          type: 'input',
           key: 'bdoPayMobileMerchantPortalNominatedUsername',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
+            }
+          },
           templateOptions: {
             label: 'BDO Pay Mobile – Merchant Portal Nominated Username'
           }
@@ -773,18 +965,15 @@ export class PosFormModalService {
           className: 'flex-1',
           type: 'input',
           key: 'bdoPayMobileInternetConnection',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
+            }
+          },
           templateOptions: {
             label: 'BDO Pay Mobile – Internet Connection'
           }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'bdoPayMobileInternetProvider',
-          templateOptions: {
-            label: 'BDO Pay Mobile – Internet Provider'
-          }
-        },
+        }
       ]
     },
     {
@@ -793,17 +982,71 @@ export class PosFormModalService {
         {
           className: 'flex-1',
           type: 'input',
+          key: 'bdoPayMobileInternetProvider',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
+            }
+          },
+          templateOptions: {
+            label: 'BDO Pay Mobile – Internet Provider'
+          }
+        },
+        {
+          className: 'flex-1',
+          type: 'input',
           key: 'bdoPayMobileReferenceField',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
+            }
+          },
           templateOptions: {
             label: 'BDO Pay Mobile – Reference Field'
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1',
           type: 'input',
           key: 'bdoPayMobileRfName',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
+            }
+          },
           templateOptions: {
             label: 'BDO Pay Mobile – If RF is Customized, pls Include RF Name (Max 10 Characters)'
+          }
+        }
+      ]
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'tidIssuedBy',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 3;
+            }
+          },
+          templateOptions: {
+            label: 'TID Issued By'
+          }
+        },
+        {
+          className: 'flex-2',
+          type: 'input',
+          key: 'dateAndTimeTidIssued',
+          expressionProperties: {
+            'templateOptions.disabled': (model: any, formState: any) => {
+              return model['natureOfRequest'] !== 3;
+            }
+          },
+          templateOptions: {
+            label: 'Date and Time TID Issued'
           }
         }
       ]
@@ -904,7 +1147,6 @@ export class PosFormModalService {
   //         key: 'businessUnitAO',
   //         templateOptions: {
   //           label: 'Business Unit (AO's Business Unit) ',
-
   //         }
   //       },
   //       {
@@ -954,7 +1196,6 @@ export class PosFormModalService {
   //         key: 'merchantNameOnSignage',
   //         templateOptions: {
   //           label: 'Merchant's Name on Signage',
-
   //         }
   //       }
   //     ]
@@ -986,11 +1227,11 @@ export class PosFormModalService {
   //         templateOptions: {
   //           label: 'Contactless Merchant?',
   //           options: [
-  //             { value: 'true', label: 'Yes' },
-  //             { value: 'false', label: 'No' }
+  //             { value: 'Yes', label: 'Yes' },
+  //             { value: 'No', label: 'No' }
   //           ],
   //         },
-  //         defaultValue: 'false'
+  //         defaultValue: 'No'
   //       }
   //     ]
   //   },
