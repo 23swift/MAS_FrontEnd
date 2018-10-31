@@ -431,32 +431,6 @@ export class PosFormModalService {
         },
         {
           className: 'flex-1',
-          type: 'radio',
-          key: 'isTipAdjust',
-          expressionProperties: {
-            'templateOptions.disabled': (model: any, formState: any) => {
-              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
-            }
-          },
-          templateOptions: {
-            label: 'TIP Adjust',
-            options: [
-              {
-                value: true, label: 'Yes'
-              },
-              {
-                value: false, label: 'No'
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          className: 'flex-1',
           type: 'select',
           key: 'mustSettle',
           expressionProperties: {
@@ -466,40 +440,6 @@ export class PosFormModalService {
           },
           templateOptions: {
             label: 'Must Settle (No. of Days Required)'
-          }
-        },
-        {
-          className: 'flex-1',
-          key: 'isHotelSetupFacility',
-          type: 'radio',
-          expressionProperties: {
-            'templateOptions.disabled': (model: any, formState: any) => {
-              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
-            }
-          },
-          templateOptions: {
-            label: 'HOTEL SET-UP FACILITY (PRE-AUTH, OFF-LINE)?',
-            options: [
-              { value: true, label: 'Yes' },
-              { value: false, label: 'No' }
-            ]
-          }
-        },
-        {
-          className: 'flex-1',
-          key: 'isManualKeyInFacility',
-          type: 'radio',
-          expressionProperties: {
-            'templateOptions.disabled': (model: any, formState: any) => {
-              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
-            }
-          },
-          templateOptions: {
-            label: 'MANUAL KEY-IN FACILITY?',
-            options: [
-              { value: true, label: 'Yes' },
-              { value: false, label: 'No' }
-            ]
           }
         }
       ]
@@ -523,351 +463,14 @@ export class PosFormModalService {
         {
           className: 'flex-1',
           type: 'input',
-          key: 'creditStraightTidExisting',
-          expressionProperties: {
-            'templateOptions.disabled': (model: any, formState: any) => {
-              return model['natureOfRequest'] !== 2;
-            }
-          },
-          templateOptions: {
-            label: 'Credit Straight TID (existing)'
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'creditStraightTidNew',
-          templateOptions: {
-            label: 'Credit Straight TID (new)'
-          }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'dateAndTimeEndorsedToMAU',
-          templateOptions: {
-            label: 'Date and Time Endorsed To MAU'
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'creditStraightMidVmjaVmjacd',
-          templateOptions: {
-            label: 'Credit Straight MID-VMJA/VMJACD'
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'creditStraightMidVmj',
-          templateOptions: {
-            label: 'Credit Straight MID-VMJ'
-          }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'creditStraightMidAmex',
-          templateOptions: {
-            label: 'Credit Straight MID-AMEX (If with VMJ)'
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'dinersMID',
-          templateOptions: {
-            label: 'Credit Straight MID-Diners (If with VMJ)'
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'cupAcceptorId',
-          templateOptions: {
-            label: 'CUP Acceptor ID'
-          }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'merchantLoyalty',
-          expressionProperties: {
-            'templateOptions.disabled': (model: any, formState: any) => {
-              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
-            }
-          },
-          templateOptions: {
-            label: 'Merchant Loyalty'
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'merchantPrepaid',
-          expressionProperties: {
-            'templateOptions.disabled': (model: any, formState: any) => {
-              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
-            }
-          },
-          templateOptions: {
-            label: 'Merchant Prepaid'
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'creditStraightMidVmjaVmjacVmjacdOffUs',
-          templateOptions: {
-            label: 'Credit Straight MID-VMJA/VMJAC/VMJACD'
-          }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'creditStraightMidVmjaVmjacVmjacdOffUs',
+          key: 'creditStraightMidVmjaVmjacVmjacd',
           expressionProperties: {
             'templateOptions.disabled': (model: any, formState: any) => {
               return model['natureOfRequest'] !== 2 && model['natureOfRequest'] !== 3;
             }
           },
           templateOptions: {
-            label: 'Credit Straight MID-VMJA/VMJAC/VMJACD (New)'
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'creditStraightMidVmjaVmjacVmjacd',
-          expressionProperties: {
-            'templateOptions.disabled': (model: any, formState: any) => {
-              return model['natureOfRequest'] !== 1;
-            }
-          },
-          templateOptions: {
-            label: 'Credit Straight MID-VMJA/VMJAC/VMJACD (off-us)'
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'creditStraightMidVmjOffUs',
-          expressionProperties: {
-            'templateOptions.disabled': (model: any, formState: any) => {
-              return model['natureOfRequest'] !== 1;
-            }
-          },
-          templateOptions: {
-            label: 'Credit Straight MID-VMJ (off-us)'
-          }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'creditStraightMidAmexOffUs',
-          expressionProperties: {
-            'templateOptions.disabled': (model: any, formState: any) => {
-              return model['natureOfRequest'] !== 1;
-            }
-          },
-          templateOptions: {
-            label: 'Credit Straight MID-AMEX (If with VMJ) (off-us)'
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'creditStraightMidVmjaVmjacVmjacdUsd',
-          expressionProperties: {
-            'templateOptions.disabled': (model: any, formState: any) => {
-              return model['natureOfRequest'] !== 1;
-            }
-          },
-          templateOptions: {
-            label: 'Credit Straight MID-VMJA/VMJAC/VMJACD (USD)'
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'creditStraightMidVmjUsd',
-          expressionProperties: {
-            'templateOptions.disabled': (model: any, formState: any) => {
-              return model['natureOfRequest'] !== 1;
-            }
-          },
-          templateOptions: {
-            label: 'Credit Straight MID-VMJ (USD)'
-          }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'creditStraightMidAmexUsd',
-          templateOptions: {
-            label: 'Credit Straight MID-AMEX (If with VMJ) (USD)'
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'smEcardMid',
-          expressionProperties: {
-            'templateOptions.disabled': (model: any, formState: any) => {
-              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 3;
-            }
-          },
-          templateOptions: {
-            label: 'SM E-Card MID'
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'smPartnerPlusMid',
-          expressionProperties: {
-            'templateOptions.disabled': (model: any, formState: any) => {
-              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 3;
-            }
-          },
-          templateOptions: {
-            label: 'SM Partner Plus MID'
-          }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'regularInstallmentMidVmjaVmjacVmjacd',
-          templateOptions: {
-            label: 'Regular Installment MID-VMJA/VMJAC/VMJACD'
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'regularInstallmentMidVmj',
-          templateOptions: {
-            label: 'Regular Installment MID-VMJ'
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'regularInstallmentMidAmex',
-          templateOptions: {
-            label: 'Regular Installment MID-AMEX (If with VMJ)'
-          }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'zeroInstallmentMidVmjaVmjacVmjacd',
-          templateOptions: {
-            label: 'Zero Installment MID-VMJA/VMJAC/VMJACD'
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'zeroInstallmentMidVmj',
-          templateOptions: {
-            label: 'Zero Installment MID-VMJ'
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'zeroInstallmentMidAmex',
-          templateOptions: {
-            label: 'Zero Installment MID-AMEX (If with VMJ)'
-          }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'regularBnplInstallmentMidVmjaVmjacVmjacd',
-          templateOptions: {
-            label: 'Regular BNPL Installment MID-VMJA/VMJAC/VMJACD'
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'zeroBnplInstallmentMidVmjaVmjacVmjacd',
-          templateOptions: {
-            label: 'Zero BNPL Installment MID-VMJA/VMJAC/VMJACD'
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'debitTid',
-          templateOptions: {
-            label: 'Debit TID'
-          }
-        }
-      ]
-    },
-    {
-      fieldGroupClassName: 'display-flex',
-      fieldGroup: [
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'dccMarkup',
-          expressionProperties: {
-            'templateOptions.disabled': (model: any, formState: any) => {
-              return model['natureOfRequest'] !== 1 && model['natureOfRequest'] !== 2;
-            }
-          },
-          templateOptions: {
-            label: 'DCC MARK UP'
+            label: 'Credit Straight MID-VMJA/VMJAC/VMJACD'
           }
         },
         {
@@ -882,15 +485,21 @@ export class PosFormModalService {
           templateOptions: {
             label: 'Email Subject'
           }
-        },
-        {
-          className: 'flex-1',
-          type: 'input',
-          key: 'dateTimeAssignedPSProfiling',
-          templateOptions: {
-            label: 'Date and Time Assigned to PS Profiling'
-          }
         }
+        // ,
+        // {
+        //   className: 'flex-1',
+        //   type: 'input',
+        //   key: 'creditStraightTidExisting',
+        //   expressionProperties: {
+        //     'templateOptions.disabled': (model: any, formState: any) => {
+        //       return model['natureOfRequest'] !== 2;
+        //     }
+        //   },
+        //   templateOptions: {
+        //     label: 'Credit Straight TID (existing)'
+        //   }
+        // },
       ]
     },
     {
@@ -1037,7 +646,7 @@ export class PosFormModalService {
           }
         },
         {
-          className: 'flex-2',
+          className: 'flex-1',
           type: 'input',
           key: 'dateAndTimeTidIssued',
           expressionProperties: {
@@ -1048,9 +657,31 @@ export class PosFormModalService {
           templateOptions: {
             label: 'Date and Time TID Issued'
           }
+        },
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'dateAndTimeEndorsedToMAU',
+          templateOptions: {
+            label: 'Date and Time Endorsed To MAU'
+          }
         }
       ]
-    }
+    },
+    {
+      fieldGroupClassName: 'display-flex',
+      fieldGroup: [
+        {
+          className: 'flex-1',
+          type: 'input',
+          key: 'dateTimeAssignedPSProfiling',
+          templateOptions: {
+            label: 'Date and Time Assigned to PS Profiling'
+          }
+        },
+        {className: 'flex-2'}
+      ]
+    },
   ];
 
   // aoFields: FormlyFieldConfig[] = [
