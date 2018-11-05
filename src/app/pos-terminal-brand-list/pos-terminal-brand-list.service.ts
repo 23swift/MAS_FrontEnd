@@ -58,6 +58,6 @@ export class PosTerminalBrandListService {
         HotelSetupFacility: 'NO',
         ManualKeyInFacility: 'NO'
       }
-    ]
+    ];
   }
 }

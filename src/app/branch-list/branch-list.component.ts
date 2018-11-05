@@ -10,8 +10,9 @@ export interface BranchDisplayInfo {
 
 }
 const ELEMENT_DATA: BranchDisplayInfo[] = [
-  { Id: 1, DBAName: 'AldoMegamall', DBAAddress: 'Mandaluyong' },
-  { Id: 2, DBAName: 'Bench', DBAAddress: 'Mandaluyong' }
+  { Id: 1, DBAName: 'AldoMegamall', DBAAddress: 'Mandaluyong' }
+  // ,
+  // { Id: 2, DBAName: 'Bench', DBAAddress: 'Mandaluyong' }
 ];
 
 @Component({

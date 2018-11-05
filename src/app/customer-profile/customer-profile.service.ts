@@ -146,7 +146,6 @@ export class CustomerProfileService {
   constructor() { }
 
   getCustomerProfileFields(userGroup): FormlyFieldConfig[] {
-    console.log(userGroup);
     var fields;
     if (userGroup == 'ao') {
       fields = this.aoFields
