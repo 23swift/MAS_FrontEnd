@@ -17,7 +17,7 @@
         <div style="display: flex">
             <div class="flex-1">
                 <div style="display: flex">
-                    <mat-checkbox class="flex-1 mat-form-field-infix"> Submitted</mat-checkbox>
+                    <mat-checkbox class="flex-1 mat-form-field-infix" formControlName="submitted"> Submitted</mat-checkbox>
                     <mat-form-field class="flex-1">
                         <input matInput [matDatepicker]="picker" placeholder="Target Date of Submission" formControlName="targetDateOfSubmission">
                         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>

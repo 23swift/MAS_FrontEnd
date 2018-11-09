@@ -137,14 +137,6 @@ export class PosFormModalService {
           className: 'flex-1',
           type: 'select',
           key: 'businessUnitAO',
-          templateOptions: {
-            label: 'Business Unit (AO\'s Business Unit)',
-          }
-        },
-        {
-          className: 'flex-1',
-          type: 'select',
-          key: 'businessUnitAO',
           expressionProperties: {
             'templateOptions.disabled': (model: any, formState: any) => {
               return model['natureOfRequest'] !== 1 || model['natureOfRequest'] !== 2;
@@ -633,7 +625,7 @@ export class PosFormModalService {
         {
           className: 'flex-1',
           type: 'input',
-          key: 'creditStraightMidVmjaVmjacVmjacdOffUs',
+          key: 'creditStraightMidVmjaVmjacVmjacd',
           templateOptions: {
             label: 'Credit Straight MID-VMJA/VMJAC/VMJACD'
           }
@@ -646,7 +638,7 @@ export class PosFormModalService {
         {
           className: 'flex-1',
           type: 'input',
-          key: 'creditStraightMidVmjaVmjacVmjacdOffUs',
+          key: 'creditStraightMidVmjaVmjacVmjacdNew',
           expressionProperties: {
             'templateOptions.disabled': (model: any, formState: any) => {
               return model['natureOfRequest'] !== 2 && model['natureOfRequest'] !== 3;
@@ -659,7 +651,7 @@ export class PosFormModalService {
         {
           className: 'flex-1',
           type: 'input',
-          key: 'creditStraightMidVmjaVmjacVmjacd',
+          key: 'creditStraightMidVmjaVmjacVmjacdOffUs',
           expressionProperties: {
             'templateOptions.disabled': (model: any, formState: any) => {
               return model['natureOfRequest'] !== 1;

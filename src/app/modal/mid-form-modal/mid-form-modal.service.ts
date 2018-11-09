@@ -84,7 +84,7 @@ export class MidFormModalService {
           },
           {
             className: 'flex-4',
-            key: 'currencyPhp',
+            key: 'currencyUsd',
             type: 'checkbox',
             templateOptions: {
               label: 'USD',

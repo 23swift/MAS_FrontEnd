@@ -8,7 +8,7 @@ import { Observable, of } from 'rxjs';
 export class OcularInspectionFormService {
     fields: FormlyFieldConfig[] = [
         {
-            key: 'DBATradeName',
+            key: 'dbaTradeName',
             type: 'input',
             className: 'flex-1',
             templateOptions: {
@@ -18,13 +18,13 @@ export class OcularInspectionFormService {
             }
         },
         {
-            template: "<span class='mat-subheading-1'> DBA (Branch / Outlet Address) </span>"
+            template: '<span class="mat-subheading-1"> DBA (Branch / Outlet Address) </span>'
         },
         {
             fieldGroupClassName: 'display-flex',
             fieldGroup: [
                 {
-                    key: 'DBAoutletAddress1',
+                    key: 'dbaOutletAddress1',
                     type: 'input',
                     className: 'flex-1',
                     templateOptions: {
@@ -38,7 +38,7 @@ export class OcularInspectionFormService {
             fieldGroupClassName: 'display-flex',
             fieldGroup: [
                 {
-                    key: 'DBAoutletAddress2',
+                    key: 'dbaOutletAddress2',
                     type: 'input',
                     className: 'flex-1',
                     templateOptions: {
@@ -51,7 +51,7 @@ export class OcularInspectionFormService {
             fieldGroupClassName: 'display-flex',
             fieldGroup: [
                 {
-                    key: 'DBAoutletAddress3',
+                    key: 'dbaOutletAddress3',
                     type: 'input',
                     className: 'flex-1',
                     templateOptions: {
@@ -65,7 +65,7 @@ export class OcularInspectionFormService {
             fieldGroupClassName: 'display-flex',
             fieldGroup: [
                 {
-                    key: 'DBAoutletAddress4',
+                    key: 'dbaOutletAddress4',
                     type: 'input',
                     className: 'flex-1',
                     templateOptions: {
@@ -79,7 +79,7 @@ export class OcularInspectionFormService {
             fieldGroupClassName: 'display-flex',
             fieldGroup: [
                 {
-                    key: 'DBACity',
+                    key: 'dbaCity',
                     type: 'select',
                     className: 'flex-1',
                     templateOptions: {
@@ -223,7 +223,7 @@ export class OcularInspectionFormService {
             fieldGroupClassName: 'display-flex',
             fieldGroup: [
                 {
-                    className: "flex-1",
+                    className: 'flex-1',
                     key: 'premiseStatus',
                     type: 'radio',
                     templateOptions: {
@@ -289,7 +289,7 @@ export class OcularInspectionFormService {
                         valueProp: 'TypeOfPremise_Id',
                         options: [{ Description: 'Please provide', TypeOfPremise_Id: 0 }]
                     },
-                    defaultValue: 0 
+                    defaultValue: 0
                 }
             ]
         },
