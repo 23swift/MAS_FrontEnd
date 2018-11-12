@@ -8,9 +8,9 @@
         </formly-form>
     </form>
 </div>
-<div style="margin: 20px 0px">
+<div style="margin: 20px 0px" *ngIf="isSaved">
     <app-owners-list [displayMode]="false" [userGroup]="userGroup"></app-owners-list>
 </div>
-<div style="margin: 20px 0px">
+<div style="margin: 20px 0px" *ngIf="isSaved">
     <app-signatories-list [displayMode]="false" [userGroup]="userGroup"></app-signatories-list>
 </div>
